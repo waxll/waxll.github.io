@@ -30,14 +30,14 @@
   </url>
   
   <url>
-    <loc>http://www.waxll.top/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E6%95%88%E6%9E%9C/index.html</loc>
+    <loc>http://www.waxll.top/vpn/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.waxll.top/vpn/index.html</loc>
+    <loc>http://www.waxll.top/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E6%95%88%E6%9E%9C/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -65,13 +65,6 @@
   </url>
   
   <url>
-    <loc>http://www.waxll.top/about/index.html</loc>
-    
-    <lastmod>2021-03-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.waxll.top/categories/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
@@ -79,7 +72,7 @@
   </url>
   
   <url>
-    <loc>http://www.waxll.top/mylist/index.html</loc>
+    <loc>http://www.waxll.top/about/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -93,6 +86,13 @@
   </url>
   
   <url>
+    <loc>http://www.waxll.top/mylist/index.html</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.waxll.top/photo/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
@@ -100,7 +100,7 @@
   </url>
   
   <url>
-    <loc>http://www.waxll.top/tags/index.html</loc>
+    <loc>http://www.waxll.top/photo3/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -114,7 +114,7 @@
   </url>
   
   <url>
-    <loc>http://www.waxll.top/photo3/index.html</loc>
+    <loc>http://www.waxll.top/tags/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -142,14 +142,14 @@
   </url>
   
   <url>
-    <loc>http://www.waxll.top/404.html</loc>
+    <loc>http://www.waxll.top/404/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.waxll.top/404/index.html</loc>
+    <loc>http://www.waxll.top/404.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -193,14 +193,14 @@
 
   
   <url>
-    <loc>http://www.waxll.top/tags/Hexo/</loc>
+    <loc>http://www.waxll.top/tags/PythonLearn/</loc>
     <lastmod>2021-03-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.waxll.top/tags/PythonLearn/</loc>
+    <loc>http://www.waxll.top/tags/Hexo/</loc>
     <lastmod>2021-03-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -223,14 +223,14 @@
 
   
   <url>
-    <loc>http://www.waxll.top/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <loc>http://www.waxll.top/categories/Python/</loc>
     <lastmod>2021-03-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.waxll.top/categories/Python/</loc>
+    <loc>http://www.waxll.top/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2021-03-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
