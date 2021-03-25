@@ -86,14 +86,14 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/mylist/index.html</loc>
+    <loc>http://waxll.top/photo/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://waxll.top/photo/index.html</loc>
+    <loc>http://waxll.top/mylist/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -107,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/photo3/index.html</loc>
-    
-    <lastmod>2021-03-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://waxll.top/tags/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
@@ -121,7 +114,7 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/blog/tags/index.html</loc>
+    <loc>http://waxll.top/photo3/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -129,6 +122,13 @@
   
   <url>
     <loc>http://waxll.top/blog/categories/index.html</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://waxll.top/blog/tags/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
