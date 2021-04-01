@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://waxll.top/2021/04/01/p3.html</loc>
+    
+    <lastmod>2021-04-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://waxll.top/2021/03/25/p2.html</loc>
     
     <lastmod>2021-03-24</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/vpn/Quantumult/index.html</loc>
+    <loc>http://waxll.top/vpn/SSR/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://waxll.top/vpn/SSR/index.html</loc>
+    <loc>http://waxll.top/vpn/Quantumult/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -121,14 +128,14 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/blog/categories/index.html</loc>
+    <loc>http://waxll.top/blog/tags/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://waxll.top/blog/tags/index.html</loc>
+    <loc>http://waxll.top/blog/categories/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -186,7 +193,7 @@
 
   <url>
     <loc>http://waxll.top/</loc>
-    <lastmod>2021-03-25</lastmod>
+    <lastmod>2021-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -194,28 +201,28 @@
   
   <url>
     <loc>http://waxll.top/tags/Hexo/</loc>
-    <lastmod>2021-03-25</lastmod>
+    <lastmod>2021-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://waxll.top/tags/PythonLearn/</loc>
-    <lastmod>2021-03-25</lastmod>
+    <lastmod>2021-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://waxll.top/tags/AT89C51/</loc>
-    <lastmod>2021-03-25</lastmod>
+    <lastmod>2021-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://waxll.top/tags/C51%E6%B1%87%E7%BC%96/</loc>
-    <lastmod>2021-03-25</lastmod>
+    <lastmod>2021-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -224,21 +231,21 @@
   
   <url>
     <loc>http://waxll.top/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2021-03-25</lastmod>
+    <lastmod>2021-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://waxll.top/categories/Python/</loc>
-    <lastmod>2021-03-25</lastmod>
+    <lastmod>2021-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://waxll.top/categories/%E5%8D%95%E7%89%87%E6%9C%BA/</loc>
-    <lastmod>2021-03-25</lastmod>
+    <lastmod>2021-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

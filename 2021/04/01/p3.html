@@ -1,0 +1,2785 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Python学习笔记3 - Waxll&#39;Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Waxll'Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/waxll/Imag/gif-2.png">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    <div id="clickCanvas" style=" position:fixed;left:0;top:0;z-index:999999999;pointer-events:none;"><canvas class=" sketch" height="0" width="0"></canvas></div>
+    <script src="js/dj.js"></script>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Waxll's Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="A Wonderful Theme for Hexo" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fas fa-book fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <i class='fa fa-map-signs fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/photo/"
+              
+              
+              id="photo">
+              <i class='fas fa-images fa-fw'></i><p>图库</p>
+            </a>
+          
+            <a href="/journal/"
+              
+              
+              id="journal">
+              <i class='fas fa-calendar fa-fw'></i><p>日志</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              id="friends">
+              <i class='fa fa-users fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python学习笔记3
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>XieSenshi</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年4月1日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：8k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：34分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python学习笔记3" data-path="/2021/04/01/p3.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2021/04/01/p3.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2021/04/01/p3.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p><img src="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210328233520957.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210328233520957.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210328233520957"></p>
+<span id="more"></span>
+
+<h1 id="第三章-数据类型：字符串"><a href="#第三章-数据类型：字符串" class="headerlink" title="第三章 数据类型：字符串"></a>第三章 数据类型：字符串</h1><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="字符串使用语法"><a href="#字符串使用语法" class="headerlink" title="字符串使用语法"></a>字符串使用语法</h3><h4 id="使用引号创建字符串类型数据"><a href="#使用引号创建字符串类型数据" class="headerlink" title="使用引号创建字符串类型数据"></a>使用<strong>引号</strong>创建字符串类型数据</h4><p> 知识点：</p>
+<ul>
+<li><strong>字符串</strong>就是一系列字符。</li>
+<li>使用引号创建字符串，<strong>引号必须要用英文输入法，中文会出错！</strong>。</li>
+<li>用<strong>引号</strong>括起的都是字符串，可以是单引号，也可以是双引号。</li>
+<li><strong>字面量</strong>：<strong>直接通过引号</strong>创建的字符串称为字面量。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;This is a string.&quot;</span></span><br><span class="line"><span class="string">&#x27;This is also a string.&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#&#x27;This is also a string.&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="通过print在Jupyter中输出所有内容"><a href="#通过print在Jupyter中输出所有内容" class="headerlink" title="通过print在Jupyter中输出所有内容"></a>通过print在Jupyter中输出所有内容</h4><p> 知识点：</p>
+<ul>
+<li>Jupyter只输出<strong>最后一个字符串</strong>。 </li>
+<li>使用<code>print()</code>函数输出需要输出的内容(不仅是字符串，也可是变量值)。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;This is a string.&quot;</span>)</span><br><span class="line">print(<span class="string">&#x27;This is also a string.&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#This is a string.</span></span><br><span class="line"><span class="comment">#This is also a string.</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="正确使用引号创建字符串类型数据"><a href="#正确使用引号创建字符串类型数据" class="headerlink" title="正确使用引号创建字符串类型数据"></a>正确使用引号创建字符串类型数据</h4><p> 知识点：</p>
+<ul>
+<li>由于引号在python中有特殊意义，<strong>用于标识字符串的起止标识</strong>。</li>
+<li>如果在<code>&quot;&quot;</code>双引号作为标识的字符串中使用<code>&quot;</code>字符，那么，<strong>python就只能把<code>&quot;</code>错误地解析为起止标识</strong>，而无法解析为该<code>&quot;</code>字符本身，进而引发语法错误。</li>
+<li>为了解决此歧义问题，Python引入了转移字符技术，即通过<strong>转义字符<code>\&#39;</code>和<code>\&quot;</code>方式</strong>来明确告诉Python，<strong>当前的字符解析为字符本身</strong>，而非起止标识。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;-----------两种引号的嵌套使用------------&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;I told my friend, &quot;Python is my favorite language!&quot;&#x27;</span>)</span><br><span class="line">print(<span class="string">&quot;The language \&#x27;Python\&quot; is named after Monty Python.&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;One of Python&#x27;s strengths is its diverse.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------两种引号的嵌套使用------------</span></span><br><span class="line"><span class="comment">#I told my friend, &quot;Python is my favorite language!&quot;</span></span><br><span class="line"><span class="comment">#The language &#x27;Python&quot; is named after Monty Python.</span></span><br><span class="line"><span class="comment">#One of Python&#x27;s strengths is its diverse.</span></span><br></pre></td></tr></table></figure>
+<h4 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h4><ul>
+<li>第1题</li>
+<li>第2题</li>
+<li>第3题</li>
+</ul>
+<h3 id="使用方法修改字符串的大小写"><a href="#使用方法修改字符串的大小写" class="headerlink" title="使用方法修改字符串的大小写"></a>使用方法修改字符串的大小写</h3><h4 id="使用方法title-修改字符串为首字母大写"><a href="#使用方法title-修改字符串为首字母大写" class="headerlink" title="使用方法title()修改字符串为首字母大写"></a>使用方法title()修改字符串为首字母大写</h4><p> 知识点：</p>
+<ul>
+<li><p>Python的字符串<strong>敏感于大小写</strong>。</p>
+</li>
+<li><p>比如<code>Ada</code>和<code>ada</code>是不同的字符串。</p>
+</li>
+<li><p><strong>方法</strong>：在类中定义的函数。这里的<strong>类</strong>指的是特定的类型。</p>
+<ul>
+<li>比如在字符串类型<code>str</code>中定义了字符串首字母大写转换函数<code>title()</code>。</li>
+</ul>
+</li>
+<li><p><strong>方法的调用</strong>：<code>变量名.方法()</code>。</p>
+<ul>
+<li>首先，创建该类型的变量。</li>
+</ul>
+</li>
+<li><p>然后，通过该变量来调用对应的方法。</p>
+<p> <strong>具体程序如下：</strong></p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;ada lovelace&quot;</span> <span class="comment"># 创建该类型的变量</span></span><br><span class="line">print(<span class="built_in">type</span>(name)) <span class="comment"># &lt;class &#x27;str&#x27;&gt; 查询变量类型</span></span><br><span class="line">print(name.title()) <span class="comment"># Ada Lovelace，通过该变量来调用对应的方法</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &lt;class &#x27;str&#x27;&gt;</span></span><br><span class="line"><span class="comment"># Ada Lovelace</span></span><br></pre></td></tr></table></figure>
+
+<p> 在这个示例中，小写的字符串<code>&quot;ada lovelace&quot;</code>存储到了变量<code>name</code>中。</p>
+<ul>
+<li>在<code>print()</code>语句中，方法<code>title()</code>出现在这个变量(对象)的后面。</li>
+<li>在<code>name.title()</code>中，<code>name</code>后面的句点（<code>.</code>）让Python对变量<code>name</code>执行方法<code>title()</code>指定的操作。</li>
+<li><strong>每个方法后面都跟着一对括号，为方法传入额外的参数(信息)。</strong> 函数<code>title()</code>不需要额外的信息，因此它后面的括号是空的。  </li>
+<li><code>title()</code>以首字母大写的方式显示每个单词，即将每个单词的首字母都改为大写。这很有用，因为你经常需要将名字视为信息。例如，你可能希望程序将值<code>Ada</code>、<code>ADA</code>和<code>ada</code>视为同一个名字，并将它们都显示为<code>Ada</code>。</li>
+</ul>
+<h4 id="使用方法upper-和lower-修改字符串大小写"><a href="#使用方法upper-和lower-修改字符串大小写" class="headerlink" title="使用方法upper()和lower()修改字符串大小写"></a>使用方法upper()和lower()修改字符串大小写</h4><p>  知识点：</p>
+<blockquote>
+<ul>
+<li><em># message.lower() : this is string example from runoob….wow!!!</em></li>
+</ul>
+<p> <em># message.upper() : THIS IS STRING EXAMPLE FROM RUNOOB….WOW!!!</em><code>str.lower()</code>：转换字符串中所有大写字符为小写。</p>
+</blockquote>
+<ul>
+<li><ul>
+<li>无参数，返回全为小写的字符串。</li>
+</ul>
+</li>
+<li><p><code>str.upper()</code>：转换字符串中所有小写字符为大写。</p>
+</li>
+<li><ul>
+<li>无参数，返回全为大写的字符串。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;Ada Lovelace&quot;</span></span><br><span class="line">print(name.upper())</span><br><span class="line">print(name.lower())</span><br><span class="line"></span><br><span class="line"><span class="comment"># ADA LOVELACE</span></span><br><span class="line"><span class="comment"># ada lovelace</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&quot;this is string example from runoob....wow!!!&quot;</span></span><br><span class="line">print(<span class="string">&quot;message.lower() : &quot;</span>, message.lower())</span><br><span class="line">print(<span class="string">&quot;message.upper() : &quot;</span>, message.upper())</span><br><span class="line"></span><br><span class="line"><span class="comment"># message.lower() :  this is string example from runoob....wow!!!</span></span><br><span class="line"><span class="comment"># message.upper() :  THIS IS STRING EXAMPLE FROM RUNOOB....WOW!!!</span></span><br></pre></td></tr></table></figure>
+<h4 id="习题-1"><a href="#习题-1" class="headerlink" title="习题"></a>习题</h4><ul>
+<li>第4题</li>
+</ul>
+<h3 id="合并（拼接-字符串"><a href="#合并（拼接-字符串" class="headerlink" title="合并（拼接)字符串"></a>合并（拼接)字符串</h3><h4 id="字符串拼接操作"><a href="#字符串拼接操作" class="headerlink" title="字符串拼接操作"></a>字符串拼接操作</h4><blockquote>
+<p>知识点：</p>
+<ul>
+<li><strong>Python使用加号（<code>+</code>）来合并字符串</strong>。</li>
+<li>拼接的类型必须是字符串，否则会出错。</li>
+</ul>
+</blockquote>
+<p>例如，你可能想将姓和名存储在不同的变量中，等要显示姓名时再将它们合而为一：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;--字符串的拼接 通过 + 操作----&quot;</span>)</span><br><span class="line">first_name = <span class="string">&quot;ada&quot;</span></span><br><span class="line">last_name = <span class="string">&quot;lovelace&quot;</span></span><br><span class="line">full_name = first_name + <span class="string">&quot; &quot;</span> + last_name</span><br><span class="line">print(full_name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># --字符串的拼接 通过 + 操作----</span></span><br><span class="line"><span class="comment"># ada lovelace</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，我们使用<code>+</code>来合并<code>first_name</code>、空格和<code>last_name</code>，以得到完整的姓名。这种合并字符串的方法称为<strong>拼接</strong>。通过拼接，可使用存储在变量中的信息来创建完整的消息。下面来看一个例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">first_name = <span class="string">&quot;ada&quot;</span></span><br><span class="line">last_name = <span class="string">&quot;lovelace&quot;</span></span><br><span class="line">full_name = first_name + <span class="string">&quot; &quot;</span> + last_name</span><br><span class="line">print(<span class="string">&quot;Hello, &quot;</span> + full_name.title() + <span class="string">&quot;!&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Hello, Ada Lovelace!</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="将字符串拼接的结果存变量中"><a href="#将字符串拼接的结果存变量中" class="headerlink" title="将字符串拼接的结果存变量中"></a>将字符串拼接的结果存变量中</h4><p>在这里，一个问候用户的句子中使用了全名，并使用了方法<code>title()</code>来将姓名设置为合适的格式。这些代码显示一条格式良好的简单问候语。还可以使用拼接来创建消息，再把整条消息都存储在一个变量中：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">first_name = <span class="string">&quot;ada&quot;</span></span><br><span class="line">last_name = <span class="string">&quot;lovelace&quot;</span></span><br><span class="line">full_name = first_name + <span class="string">&quot; &quot;</span> + last_name</span><br><span class="line"></span><br><span class="line">message = <span class="string">&quot;Hello, &quot;</span> + full_name.title() + <span class="string">&quot;!&quot;</span></span><br><span class="line">print(message)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Hello, Ada Lovelace!</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>上述代码也显示消息“Hello, Ada Lovelace!”，但将这条消息存储在了一个变量中，这让最后的<code>print</code>语句简单得多。</li>
+</ul>
+<h4 id="习题-2"><a href="#习题-2" class="headerlink" title="习题"></a>习题</h4><ul>
+<li>第5题</li>
+</ul>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><h4 id="使用制表符"><a href="#使用制表符" class="headerlink" title="使用制表符"></a>使用制表符</h4><blockquote>
+<p>知识点：</p>
+<ul>
+<li>在程序中，<strong>空白泛指任何非打印字符，如空格、制表符和换行符。</strong> </li>
+<li>可使用空白来组织输出，以使其更易读。</li>
+<li><strong>横向制表符</strong>：转义字符<code>\t</code>。</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;\tPython\tPython\tPython\tPython&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;\tJava\tJava\tJava\tJava&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Python Python Python Python</span></span><br><span class="line"><span class="comment">#Java Java Java Java</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="使用换行符"><a href="#使用换行符" class="headerlink" title="使用换行符"></a>使用换行符</h4><blockquote>
+<p>知识点：</p>
+<ul>
+<li><strong>换行符</strong> ：在字符串中添加换行符，可使用转义字符<code>\n</code>。</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;Languages:\nPython\nC\nJavaScript&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Languages:</span></span><br><span class="line"><span class="comment"># Python</span></span><br><span class="line"><span class="comment"># C</span></span><br><span class="line"><span class="comment"># JavaScript</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="组合使用"><a href="#组合使用" class="headerlink" title="组合使用"></a>组合使用</h4><blockquote>
+<p>知识点：</p>
+<ul>
+<li><strong>组合使用</strong>：可在同一个字符串中同时包含制表符和换行符。</li>
+<li>字符串<code>&quot;\n\t&quot;</code>让Python换到下一行，并在下一行开头添加一个制表符。</li>
+</ul>
+</blockquote>
+<p>下面的示例演示了如何使用一个单行字符串来生成四行输出：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;Languages:\n\tPython11111\tPython\tPython\n\tC\tC\n\tJava\tJava&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Languages:</span></span><br><span class="line"><span class="comment">#         Python11111     Python  Python</span></span><br><span class="line"><span class="comment">#         C       C</span></span><br><span class="line"><span class="comment">#         Java    Java</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="引号和反斜杠"><a href="#引号和反斜杠" class="headerlink" title="引号和反斜杠"></a>引号和反斜杠</h4><blockquote>
+<p>知识点：</p>
+<ul>
+<li>单引号：<code>\&#39;</code>。</li>
+<li>双引号：<code>\&quot;</code>。</li>
+<li>反斜杠符号：<code>\\</code>。</li>
+</ul>
+</blockquote>
+<h4 id="习题-3"><a href="#习题-3" class="headerlink" title="习题"></a>习题</h4><ul>
+<li>第6题</li>
+<li>第7题</li>
+</ul>
+<h3 id="删除字符串中的空白"><a href="#删除字符串中的空白" class="headerlink" title="删除字符串中的空白"></a>删除字符串中的空白</h3><h4 id="认识程序中的空白"><a href="#认识程序中的空白" class="headerlink" title="认识程序中的空白"></a>认识程序中的空白</h4><blockquote>
+<p>知识点：</p>
+<ul>
+<li>对人来说，<code>&#39;python&#39;</code>和<code>&#39;python &#39;</code>看起来几乎一样。</li>
+<li>对程序来说，它们<strong>却是两个不同的字符串</strong>。</li>
+<li>程序对<strong>字符串中的空白敏感</strong>。</li>
+</ul>
+</blockquote>
+<p><strong>处理字符串中的空白很重要，因为经常需要比较两个字符串是否相同。</strong>例如，在用户登录网站时检查其用户名。通过对字符串空白删除操作，对用户输入数据中的多余空白进行删除。</p>
+<h4 id="使用方法rstrip-删除字符串末尾空白"><a href="#使用方法rstrip-删除字符串末尾空白" class="headerlink" title="使用方法rstrip()删除字符串末尾空白"></a>使用方法<code>rstrip()</code>删除字符串末尾空白</h4><blockquote>
+<p>知识点：<code>rstrip()</code>方法</p>
+<ul>
+<li>调用语法：<code>str.rstrip([chars])</code>。</li>
+<li>描述：删除 <code>string</code>字符串末尾的指定字符，默认为空格。</li>
+<li>参数：<code>chars</code>，指定删除的字符，默认为空格。</li>
+<li>返回：删除 <code>string</code>字符串末尾的指定字符后生成的新字符串。</li>
+</ul>
+</blockquote>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">favorite_language = <span class="string">&#x27; python &#x27;</span></span><br><span class="line">print(favorite_language)</span><br><span class="line"><span class="comment"># &#x27; python &#x27;</span></span><br><span class="line"></span><br><span class="line">print(favorite_language.rstrip())</span><br><span class="line"><span class="comment"># &#x27; python&#x27;</span></span><br><span class="line"></span><br><span class="line">print(favorite_language)</span><br><span class="line"><span class="comment"># &#x27; python &#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>分析：</p>
+<ul>
+<li>存储在变量<code>favorite_language</code>中的字符串末尾包含多余的空白。Jupyter输出可看到末尾的空格。</li>
+<li>对变量<code>favorite_language</code>调用方法<code>rstrip()</code>后，这个多余的空格被删除了。</li>
+<li>然而，这种删除只是暂时的，在Jupyter输出中输出<code>favorite_language</code>时，会发现它依然包含多余的空白。</li>
+</ul>
+<p>设置参数<code>chars</code>，删除指定的字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">&quot;     this is string example....wow!!!     &quot;</span></span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">str</span>.rstrip()) <span class="comment"># 默认为空白</span></span><br><span class="line"><span class="comment">#      this is string example....wow!!!</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">str</span> = <span class="string">&quot;*****this is string example....wow!!!*****&quot;</span></span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">str</span>.rstrip(<span class="string">&#x27;*&#x27;</span>)) <span class="comment"># 指定字符*</span></span><br><span class="line"><span class="comment"># *****this is string example....wow!!!</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="永久删除字符串的空白"><a href="#永久删除字符串的空白" class="headerlink" title="永久删除字符串的空白"></a>永久删除字符串的空白</h4><p>要永久删除这个字符串中的空白，必须将删除操作的结果存回到变量中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;-------通过赋值的方式覆盖原字符串-----------&#x27;</span>)</span><br><span class="line">favorite_language = <span class="string">&#x27; python &#x27;</span></span><br><span class="line">favorite_language  = favorite_language.rstrip()</span><br><span class="line">print(favorite_language)</span><br><span class="line"><span class="comment"># &#x27; python&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>分析：</p>
+<ul>
+<li>因为<code>rstrip()</code>操作不直接修改字符串，而是返回一个新的字符串。</li>
+<li>在编程中，经常需要修改变量的值，再将新值存回到原来的变量中。 </li>
+</ul>
+<h4 id="使用方法lstrip-和strip-删除字符串首和两端空白"><a href="#使用方法lstrip-和strip-删除字符串首和两端空白" class="headerlink" title="使用方法lstrip()和strip()删除字符串首和两端空白"></a>使用方法<code>lstrip()</code>和<code>strip()</code>删除字符串首和两端空白</h4><p>Python还可以删除字符串开头的空白，或同时剔除字符串两端的空白。为此，可分别使用方法<code>lstrip()</code>和<code>strip()</code>。在这个示例中，我们首先创建了一个开头和末尾都有空白的字符串。接下来，我们分别删除末尾、开头和两端的空格。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;------Jupyter对赋值语句结果不输出----------&#x27;</span>)</span><br><span class="line">favorite_language = <span class="string">&#x27; python &#x27;</span></span><br><span class="line">print(favorite_language)</span><br><span class="line"><span class="comment"># &#x27; python &#x27;</span></span><br><span class="line"></span><br><span class="line">print(favorite_language.rstrip())</span><br><span class="line"><span class="comment"># &#x27; python&#x27;</span></span><br><span class="line"></span><br><span class="line">print(favorite_language.lstrip())</span><br><span class="line"><span class="comment"># &#x27;python &#x27;</span></span><br><span class="line"></span><br><span class="line">print(favorite_language.strip())</span><br><span class="line"><span class="comment"># &#x27;python&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="习题-4"><a href="#习题-4" class="headerlink" title="习题"></a>习题</h4><ul>
+<li>第8题</li>
+<li>第9题</li>
+</ul>
+<h3 id="字符串引起的语法错误"><a href="#字符串引起的语法错误" class="headerlink" title="字符串引起的语法错误"></a>字符串引起的语法错误</h3><h4 id="字符串引号引起的语法错误"><a href="#字符串引号引起的语法错误" class="headerlink" title="字符串引号引起的语法错误"></a>字符串引号引起的语法错误</h4><blockquote>
+<p>知识点：</p>
+<ul>
+<li><strong>语法错误</strong>在编程过中经常会被遇到，当程序中包含非法的Python代码时，就会导致语法错误。</li>
+<li>可通过Python解释器提供的错误信息，来较快的解决。</li>
+</ul>
+</blockquote>
+<p>下面演示了如何正确地使用单引号和双引号。撇号位于两个双引号之间，因此Python解释器能够正确地理解这个字符串：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&quot;One of Python&#x27;s strengths is its diverse community.&quot;</span></span><br><span class="line">print(message)</span><br><span class="line"></span><br><span class="line"><span class="comment"># One of Python&#x27;s strengths is its diverse community.</span></span><br></pre></td></tr></table></figure>
+
+<p>在用单引号括起的字符串中，如果包含撇号，就将导致错误。这是因为这会导致Python将第一个单引号和撇号之间的内容视为一个字符串，进而将余下的文本视为Python代码，从而引发错误。因为，Python将无法正确地确定字符串的结束位置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&#x27;One of Python&#x27;</span>s strengths <span class="keyword">is</span> its diverse community.<span class="string">&#x27;</span></span><br><span class="line"><span class="string">#  File &quot;&lt;stdin&gt;&quot;, line 1</span></span><br><span class="line"><span class="string">#    message = &#x27;</span>One of Python<span class="string">&#x27;s strengths is its diverse community.&#x27;</span></span><br><span class="line"><span class="comment">#                             ^</span></span><br><span class="line"><span class="comment">#SyntaxError: invalid syntax</span></span><br></pre></td></tr></table></figure>
+
+<p>从上述输出可知，错误发生在第二个单引号后面。这种<strong>语法错误</strong>表明，在解释器看来，其中的有些内容不是有效的Python代码。</p>
+<p>知识点：</p>
+<ul>
+<li>编写程序时，编辑器的语法突出功能可帮助你快速找出某些语法错误。</li>
+<li>看到Python代码以普通句子的颜色显示，或者普通句子以Python代码的颜色显示时，就可能意味着文件中存在引号不匹配的情况。</li>
+</ul>
+<h4 id="习题-5"><a href="#习题-5" class="headerlink" title="习题"></a>习题</h4><ul>
+<li>第10题</li>
+<li>第11题</li>
+<li>第12题</li>
+<li>第13题</li>
+<li>第14题</li>
+</ul>
+<h2 id="重要-格式化字符串"><a href="#重要-格式化字符串" class="headerlink" title="(重要)格式化字符串"></a>(重要)格式化字符串</h2><h3 id="format-函数的语法"><a href="#format-函数的语法" class="headerlink" title=".format()函数的语法"></a>.format()函数的语法</h3><h4 id="认识-format-字符串格式化函数"><a href="#认识-format-字符串格式化函数" class="headerlink" title="认识.format()字符串格式化函数"></a>认识<code>.format()</code>字符串格式化函数</h4><p>Python提供了<code>.format()</code>字符串格式化函数。该函数操作起来方便，可读性很强。 <code>.format()</code>函数常与<code>print()</code>函数结合使用，具备很强的格式化输出能力。</p>
+<p>知识点：<code>.format()</code>字符串格式化函数。</p>
+<ul>
+<li><p>语法：<code>str.format(**args)</code>。</p>
+</li>
+<li><p>例如：<code>&quot;&#123;&#125; &#123;&#125;&quot;.format(&quot;hello&quot;, &quot;world&quot;)</code>。</p>
+</li>
+<li><p>描述：该函数将通过<code>&#123;&#125;</code>和<code>:</code>来设置模板字符串<code>str</code>，然后通过<code>.format(**args)</code>传入实参来对<code>str</code>进行格式化。</p>
+</li>
+<li><ul>
+<li>模板字符串<code>str</code>中包含由大括号<code>&#123;&#125;</code>包围的“替换字段”。</li>
+<li><code>&#123;&#125;</code>中填写文本替换和格式化规则，如果不填任何规则(直接使用<code>&#123;&#125;</code>)，则进行直接替换。</li>
+<li>具体的“替换字段”由<code>args</code>参数传入。</li>
+<li><code>.format()</code>函数中有几个参数，模板字符串<code>str</code>中包含几个<code>&#123;&#125;</code>。</li>
+</ul>
+</li>
+<li><p>该函数使用方法较多，下面将一一介绍。</p>
+</li>
+</ul>
+<h4 id="认识-format-函数默认参数位置"><a href="#认识-format-函数默认参数位置" class="headerlink" title="认识.format()函数默认参数位置"></a>认识<code>.format()</code>函数默认参数位置</h4><p>知识点：<code>.format()</code>函数的<strong>默认位置</strong>。</p>
+<ul>
+<li>不指定格式化位置，按照默认顺序格式化。</li>
+<li><code>args</code>参数以<code>,</code>相隔，按顺序填入相应的<code>&#123;&#125;</code>。</li>
+<li><code>str</code>字符串模板中的<code>&#123;&#125;</code>数量不能超过参数个数，否则会出错。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">&quot;&#123;&#125; &#123;&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>)</span><br><span class="line">print(str1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># hello world</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>.format()</code>函数中有2个参数，模板字符串<code>str</code>中包含2个<code>&#123;&#125;</code>。</li>
+<li>模板字符串<code>str</code>为<code>&quot;&#123;&#125; &#123;&#125;&quot;</code>，仅包含两个<code>&#123;&#125;</code>。</li>
+<li><code>args</code>参数包括：<code>&quot;hello&quot;</code>和<code>&quot;world&quot;</code>。</li>
+<li>根据规则，按照默认顺序格式化<code>str</code>。<code>&quot;hello&quot;</code>填入第1个<code>&#123;&#125;</code>；<code>&quot;world&quot;</code>填入第2个<code>&#123;&#125;</code>。</li>
+</ul>
+<h4 id="IndexError错误"><a href="#IndexError错误" class="headerlink" title="IndexError错误"></a><code>IndexError</code>错误</h4><p>知识点：当<code>&#123;&#125;</code>超过<code>args</code>输入参数个数时，会出错<code>IndexError</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">&quot;&#123;&#125; &#123;&#125; &#123;&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>)</span><br><span class="line">print(str1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># IndexError                                Traceback (most recent call last)</span></span><br><span class="line"><span class="comment"># &lt;ipython-input-3-eb58e09cec2c&gt; in &lt;module&gt;</span></span><br><span class="line"><span class="comment"># ----&gt; 1 str1 = &quot;&#123;&#125; &#123;&#125; &#123;&#125;&quot;.format(&quot;hello&quot;, &quot;world&quot;)</span></span><br><span class="line"><span class="comment">#       2 print(str1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># IndexError: Replacement index 2 out of range for positional args tuple</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="format-函数的位置索引"><a href="#format-函数的位置索引" class="headerlink" title=".format()函数的位置索引"></a>.format()函数的位置索引</h3><p>知识点：<code>.format()</code>函数的3中位置索引方式：默认位置索引、序号位置索引和关键字位置索引。</p>
+<h4 id="参数的序号位置索引"><a href="#参数的序号位置索引" class="headerlink" title="参数的序号位置索引"></a>参数的序号位置索引</h4><blockquote>
+<p>知识点：<code>.format()</code>函数的<strong>参数的序号位置索引</strong>。</p>
+<ul>
+<li>设置参数索引来指定格式化的位置。</li>
+<li>为<code>str</code>字符串模板设置带参数索引的<code>&#123;&#125;</code>。</li>
+<li>参数索引从0开始，即第1个参数，对应<code>&#123;0&#125;</code>。</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">&quot;&#123;1&#125; &#123;0&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>)</span><br><span class="line">print(str1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># world hello</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>模板字符串<code>str</code>为<code>&quot;&#123;0&#125; &#123;1&#125;&quot;</code>，在每个<code>&#123;&#125;</code>中包含数字，来指明所替换的参数索引。</li>
+<li><code>args</code>参数包括：<code>&quot;hello&quot;</code>对应第0参数索引、<code>&quot;world&quot;</code>对应第1参数索引。</li>
+<li>根据规则，按照参数索引格式化<code>str</code>。<code>&quot;hello&quot;</code>填入<code>&#123;0&#125;</code>；<code>&quot;world&quot;</code>填入<code>&#123;1&#125;</code>。</li>
+</ul>
+<h4 id="位置索引可重复使用"><a href="#位置索引可重复使用" class="headerlink" title="位置索引可重复使用"></a>位置索引可重复使用</h4><blockquote>
+<p>知识点：参数索引可以<strong>重复使用</strong>来替换字符串。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">&quot;&#123;1&#125; &#123;0&#125; &#123;1&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>)</span><br><span class="line">print(str1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># world hello world</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="format-参数的关键字位置索引"><a href="#format-参数的关键字位置索引" class="headerlink" title=".format()参数的关键字位置索引"></a><code>.format()</code>参数的关键字位置索引</h4><blockquote>
+<p>知识点：<code>.format()</code>函数的<strong>关键字位置索引</strong>。</p>
+<ul>
+<li>设置关键字来指定格式化的位置。该功能与<strong>数字位置</strong>类似。</li>
+<li>为<code>str</code>字符串模板设置带关键字的<code>&#123;&#125;</code>，指定参数替代字符串模板的位置。</li>
+<li>关键字可以为位置取更有意义的标识。</li>
+<li><strong>注意</strong>：在使用关键字索引时，避免使用<code>0</code>和<code>o</code>、<code>1</code>和<code>l</code>，以免混淆。</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下面的关键字l很容易被误认为是1</span></span><br><span class="line">str1 = <span class="string">&#x27;I &#123;l&#125; &#123;p&#125;, and I\&#x27;am learning &#123;p&#125;&#x27;</span>.<span class="built_in">format</span>(p=<span class="string">&#x27;Python&#x27;</span>, l=<span class="string">&#x27;like&#x27;</span>)</span><br><span class="line">print(str1)</span><br></pre></td></tr></table></figure>
+
+<h3 id="format-函数样式格式输出"><a href="#format-函数样式格式输出" class="headerlink" title=".format()函数样式格式输出"></a>.format()函数样式格式输出</h3><h4 id="format-函数的填充与格式化"><a href="#format-函数的填充与格式化" class="headerlink" title=".format()函数的填充与格式化"></a><code>.format()</code>函数的填充与格式化</h4><blockquote>
+<p>知识点：<code>.format()</code>函数的填充与格式化。</p>
+<ul>
+<li>大括号中可以设定特殊的格式：<code>&#123;:[填充字符][对齐方式 &lt;^&gt;][宽度]&#125;</code></li>
+<li><code>:</code>为格式起始标志，不能少。</li>
+<li><code>:</code>号后面带填充的字符，只能是<strong>一个字符</strong>，不指定则默认是用空格填充。</li>
+<li>对齐方式：<code>&lt;^&gt;</code>分别为左、中、右对齐。</li>
+<li>宽度：整形，指定填充位置宽度，如果替换文本比这个宽度小，则用填充字符进行填充。</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左对齐，使用*填充，宽度为10</span></span><br><span class="line">str1 = <span class="string">&#x27;Hello &#123;:*&lt;10&#125; &#x27;</span>.<span class="built_in">format</span>(<span class="number">1111</span>)</span><br><span class="line">print(str1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 居中对齐，使用@填充，宽度为20</span></span><br><span class="line">str1 = <span class="string">&#x27;Hello &#123;:@^20&#125; &#x27;</span>.<span class="built_in">format</span>(<span class="number">1111</span>)</span><br><span class="line">print(str1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 右对齐，使用&gt;填充，宽度为12。</span></span><br><span class="line"><span class="comment">#第一个&gt;为填充字符，第2个&gt;为右对齐</span></span><br><span class="line">str1 = <span class="string">&#x27;Hello &#123;:&gt;&gt;12&#125; &#x27;</span>.<span class="built_in">format</span>(<span class="number">1111</span>)</span><br><span class="line">print(str1)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>定制输出格式：</p>
+<ul>
+<li><code>&#123;:&gt;n&#125;</code> 将字段设置为<code>n</code>个字符，并让内容右对齐。<strong>数字默认右对齐</strong>。</li>
+<li><code>&#123;: 将字段设置为</code>n`个字符，并让内容左对齐。<strong>非数字的字符默认左对齐</strong>。</li>
+<li><code>&#123;:^n&#125;</code> 将字段设置为<code>n</code>个字符，并让内容居中。</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">y = <span class="string">&#x27;hi&#x27;</span></span><br><span class="line">print(<span class="string">&#x27;------format(): 字符默认左对齐，数字默认右对齐 -----&#x27;</span>)</span><br><span class="line">format_str = <span class="string">&#x27;&#123;:8&#125; results in &#123;&#125;.&#x27;</span></span><br><span class="line">print(format_str.<span class="built_in">format</span>(x, y))</span><br><span class="line">print(format_str.<span class="built_in">format</span>(<span class="number">1111</span>, y))</span><br><span class="line"><span class="comment"># hello    results in hi.</span></span><br><span class="line"><span class="comment">#     1111 results in hi.</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------format(): 右对齐 -----&#x27;</span>)</span><br><span class="line">format_str = <span class="string">&#x27;&#123;:&gt;8&#125; results in &#123;&#125;.&#x27;</span></span><br><span class="line">print(format_str.<span class="built_in">format</span>(x, y))</span><br><span class="line">print(format_str.<span class="built_in">format</span>(<span class="number">1111</span>, y))</span><br><span class="line"><span class="comment">#    hello results in hi.</span></span><br><span class="line"><span class="comment">#     1111 results in hi.</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------普通输出 -----&#x27;</span>)</span><br><span class="line">print(x + <span class="string">&#x27; results in&#x27;</span> + y)</span><br><span class="line"><span class="comment"># hello results inhi</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>输出以右对齐的方式打印2~20的偶数，每个字段的宽度都设置为3个字符。</li>
+</ul>
+<h4 id="format-函数的精度"><a href="#format-函数的精度" class="headerlink" title=".format()函数的精度"></a><code>.format()</code>函数的精度</h4><blockquote>
+<p>知识点：<code>.format()</code>函数的精度。</p>
+<ul>
+<li><p>大括号中可以设定特殊的格式：<code>&#123;:[m].[n][格式]&#125;</code></p>
+</li>
+<li><p><code>:</code>为格式起始标志，不能少。</p>
+</li>
+<li><p><code>m</code>为整形，整数部分的宽度。</p>
+</li>
+<li><ul>
+<li>默认值为原数字整数部分的长度。</li>
+<li>如果<code>m</code>大于整数部分的长度，则有空格左边填充。</li>
+</ul>
+</li>
+<li><p><code>.</code>为小数点。</p>
+</li>
+<li><p><code>n</code>为整形，小数点后保留几位精度。</p>
+</li>
+<li><ul>
+<li>默认值为原数字小数部分的长度。</li>
+<li>如果<code>n</code>大于小数部分的长度，则有0补全填充。</li>
+</ul>
+</li>
+<li><p>格式：<code>f</code>为浮点数。</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#m=10，n=1，f为浮点数</span></span><br><span class="line">print(<span class="string">&#x27;&#123;:10.1f&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="number">311.1415926</span>))</span><br><span class="line"><span class="comment">#      311.1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#m为默认，n=4，f为浮点数</span></span><br><span class="line">print(<span class="string">&#x27;&#123;:.4f&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="number">3.14</span>))</span><br><span class="line"><span class="comment"># 3.1400</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="format-函数的进制转换"><a href="#format-函数的进制转换" class="headerlink" title=".format()函数的进制转换"></a><code>.format()</code>函数的进制转换</h4><blockquote>
+<p>知识点：进制转换，<code>b</code>、<code>d</code>、<code>o</code>、<code>x</code> 分别是二进制、十进制、八进制、十六进制。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#123;:b&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="number">11</span>))</span><br><span class="line">print(<span class="string">&#x27;&#123;:d&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="number">11</span>))</span><br><span class="line">print(<span class="string">&#x27;&#123;:o&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="number">11</span>))</span><br><span class="line">print(<span class="string">&#x27;&#123;:x&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="number">11</span>))</span><br><span class="line"><span class="comment"># 1011</span></span><br><span class="line"><span class="comment"># 11</span></span><br><span class="line"><span class="comment"># 13</span></span><br><span class="line"><span class="comment"># b</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="format-函数的数字格式输出"><a href="#format-函数的数字格式输出" class="headerlink" title=".format()函数的数字格式输出"></a><code>.format()</code>函数的数字格式输出</h4><ul>
+<li>请使用<code>.format()</code>函数得到下面的结果运行结果。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">数字(输入)</th>
+<th align="left">格式</th>
+<th align="left">输出</th>
+<th align="left">描述(结果)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">3.1415926</td>
+<td align="left">{:.2f}</td>
+<td align="left">3.14</td>
+<td align="left">保留小数点后两位</td>
+</tr>
+<tr>
+<td align="left">3.1415926</td>
+<td align="left">{:+.2f}</td>
+<td align="left">+3.14</td>
+<td align="left">带符号保留小数点后两位</td>
+</tr>
+<tr>
+<td align="left">-1</td>
+<td align="left">{:+.2f}</td>
+<td align="left">-1.00</td>
+<td align="left">带符号保留小数点后两位</td>
+</tr>
+<tr>
+<td align="left">2.71828</td>
+<td align="left">{:.0f}</td>
+<td align="left">3</td>
+<td align="left">不带小数</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">{:0&gt;2d}</td>
+<td align="left">05</td>
+<td align="left">数字补零 (填充左边, 宽度为2)</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">{:x&lt;4d}</td>
+<td align="left">5xxx</td>
+<td align="left">数字补x (填充右边, 宽度为4)</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">{:x&lt;4d}</td>
+<td align="left">10xx</td>
+<td align="left">数字补x (填充右边, 宽度为4)</td>
+</tr>
+<tr>
+<td align="left">1000000</td>
+<td align="left">{:,}</td>
+<td align="left">1,000,000</td>
+<td align="left">以逗号分隔的数字格式</td>
+</tr>
+<tr>
+<td align="left">0.25</td>
+<td align="left">{:.2%}</td>
+<td align="left">25.00%</td>
+<td align="left">百分比格式</td>
+</tr>
+<tr>
+<td align="left">1000000000</td>
+<td align="left">{:.2e}</td>
+<td align="left">1.00e+09</td>
+<td align="left">指数记法</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">{:&gt;10d}</td>
+<td align="left">13</td>
+<td align="left">右对齐 (默认, 宽度为10)</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">{:&lt;10d}</td>
+<td align="left">13</td>
+<td align="left">左对齐 (宽度为10)</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">{:^10d}</td>
+<td align="left">13</td>
+<td align="left">中间对齐 (宽度为10)</td>
+</tr>
+</tbody></table>
+<h2 id="f-string技术"><a href="#f-string技术" class="headerlink" title="f-string技术"></a>f-string技术</h2><h3 id="初识f-string"><a href="#初识f-string" class="headerlink" title="初识f-string"></a>初识f-string</h3><h4 id="f-string基本介绍"><a href="#f-string基本介绍" class="headerlink" title="f-string基本介绍"></a>f-string基本介绍</h4><p><code>f-string</code>，亦称为格式化字符串常量（formatted string literals），是Python3.6新引入的一种字符串格式化方法，主要目的是使格式化字符串的操作更加简便。</p>
+<blockquote>
+<p>知识点：</p>
+<ul>
+<li><code>f-string</code>在形式上是以 <code>f</code> 或 <code>F</code> 修饰符引领的字符串（<code>f&#39;xxx&#39;</code> 或 <code>F&#39;xxx&#39;</code>），以大括号 <code>&#123;&#125;</code> 标明被替换的字段</li>
+<li><code>f-string</code>在本质上并不是字符串常量，而是一个在运行时运算求值的<strong>表达式</strong>。</li>
+<li><code>f-string</code>在功能方面不逊于传统的<code>%-formatting</code>语句和<code>str.format()</code>函数，同时<strong>性能</strong>又优于二者，且使用起来也更加简洁明了，因此对于<strong>Python3.6</strong>及以后的版本，推荐使用<code>f-string</code>进行字符串格式化。</li>
+</ul>
+</blockquote>
+<h4 id="f-string语法"><a href="#f-string语法" class="headerlink" title="f-string语法"></a>f-string语法</h4><blockquote>
+<p>知识点：</p>
+<ul>
+<li>语法：<code>f&#39;&lt;text&gt; &#123;&lt;content:format specifier&gt;&#125; &lt;text&gt; ...&#39;</code></li>
+<li><code>f</code>是<code>f-string</code>的标识符，位于字符串标识符<code>&#39;</code>之前。<strong>标识符不能忘记。</strong></li>
+<li><code>&lt;text&gt;</code>：为普通字符串文本。</li>
+<li><code>&#123;&lt;content&gt;&#125;</code>：大括号是需要被替换的字段，外部传入的变量名为<code>&lt;expr&gt;</code>。</li>
+<li><code>&lt;:format specifier&gt;</code>：可选，类似于<code>.format()</code>，自定义的格式。</li>
+<li>例如：<code>f&#39;s is &#123;s:8s&#125;&#39;</code>，其中<code>s is</code> 是<code>&lt;text&gt;</code>；<code>&#123;s:8s&#125;</code>中<code>s</code>为<code>&lt;content&gt;</code>，<code>8s</code>为格式，中间<code>:</code>间隔。</li>
+</ul>
+</blockquote>
+<ul>
+<li><code>f-string</code>用大括号 <code>&#123;&#125;</code> 表示被替换字段，其中直接填入替换内容：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;Eric&#x27;</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;Hello, my name is <span class="subst">&#123;name&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;Hello, my name is Eric&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line">number = <span class="number">7</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;My lucky number is <span class="subst">&#123;number&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;My lucky number is 7&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">price = <span class="number">19.99</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;The price of this book is <span class="subst">&#123;price&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;The price of this book is 19.99&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="深入f-string"><a href="#深入f-string" class="headerlink" title="深入f-string"></a>深入f-string</h3><h4 id="表达式求值与函数调用"><a href="#表达式求值与函数调用" class="headerlink" title="表达式求值与函数调用"></a>表达式求值与函数调用</h4><p><code>f-string</code>的大括号 <code>&#123;&#125;</code> 可以填入表达式或调用函数，Python会求出其结果并填入返回的字符串内：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;A total number of <span class="subst">&#123;<span class="number">24</span> * <span class="number">8</span> + <span class="number">4</span>&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;A total number of 196&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;Complex number <span class="subst">&#123;(<span class="number">2</span> + <span class="number">2j</span>) / (<span class="number">2</span> - <span class="number">3j</span>)&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;Complex number (-0.15384615384615388+0.7692307692307692j)&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line">name = <span class="string">&#x27;ERIC&#x27;</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;My name is <span class="subst">&#123;name.lower()&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;My name is eric&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;The answer is <span class="subst">&#123;math.log(math.pi)&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;The answer is 1.1447298858494002&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="引号、大括号与反斜杠"><a href="#引号、大括号与反斜杠" class="headerlink" title="引号、大括号与反斜杠"></a>引号、大括号与反斜杠</h4><p><code>f-string</code>大括号内所用的引号<strong>不能</strong>和大括号外的引号定界符冲突，可灵活切换 <code>&#39;</code> 和 <code>&quot;</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;I am <span class="subst">&#123;<span class="string">&quot;Eric&quot;</span>&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;I am Eric&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># SyntaxError: invalid syntax</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;I am <span class="subst">&#123;<span class="string">&#x27;Eric&#x27;</span>&#125;</span>&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>若 <code>&#39;</code> 和 <code>&quot;</code> 不足以满足要求，还可以使用 <code>&#39;&#39;&#39;</code> 和 <code>&quot;&quot;&quot;</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># SyntaxError: invalid syntax</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&quot;He said <span class="subst">&#123;<span class="string">&quot;I&#x27;m Eric&quot;</span>&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># SyntaxError: invalid syntax</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;He said <span class="subst">&#123;<span class="string">&quot;I&#x27;m Eric&quot;</span>&#125;</span>&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">f&quot;&quot;&quot;He said <span class="subst">&#123;<span class="string">&quot;I&#x27;m Eric&quot;</span>&#125;</span>&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># &quot;He said I&#x27;m Eric&quot;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;&#x27;&#x27;He said <span class="subst">&#123;<span class="string">&quot;I&#x27;m Eric&quot;</span>&#125;</span>&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># &quot;He said I&#x27;m Eric&quot;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<p>大括号外的引号还可以使用 <code>\</code> 转义，但大括号内<strong>不能使用</strong> <code>\</code> 转义：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;&#x27;&#x27;He\&#x27;ll say <span class="subst">&#123;<span class="string">&quot;I&#x27;m Eric&quot;</span>&#125;</span>&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># &quot;He&#x27;ll say I&#x27;m Eric&quot;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># SyntaxError: f-string expression part cannot include a backslash</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;&#x27;&#x27;He&#x27;ll say <span class="subst">&#123;<span class="string">&quot;I\&#x27;m Eric&quot;</span>&#125;</span>&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>f-string</code>大括号<strong>外</strong>如果需要显示大括号，则应输入<strong>连续两个大括号</strong> <code>&#123;&#123;` 和 `&#125;&#125;</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;5 <span class="subst">&#123;<span class="string">&quot;&#123;stars&#125;&quot;</span>&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;5 &#123;stars&#125;&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;&#123;&#123;5&#125;&#125; <span class="subst">&#123;<span class="string">&quot;stars&quot;</span>&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;&#123;5&#125; stars&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<p><code>f-string</code>大括号内不能使用 <code>\</code> 转义，事实上不仅如此，<code>f-string</code>大括号内根本就不允许出现 <code>\</code>。如果确实需要 <code>\</code>，则应首先将包含 <code>\</code> 的内容用一个变量表示，再在<code>f-string</code>大括号内填入变量名：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># SyntaxError: f-string expression part cannot include a backslash</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&quot;newline: <span class="subst">&#123;<span class="built_in">ord</span>(<span class="string">&#x27;\n&#x27;</span>)&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ord()为将&#x27;\n&#x27;的ASCII码转为八进制</span></span><br><span class="line">newline = <span class="built_in">ord</span>(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;newline: <span class="subst">&#123;newline&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;newline: 10&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="多行f-string"><a href="#多行f-string" class="headerlink" title="多行f-string"></a>多行f-string</h4><p><code>f-string</code>还可用于多行字符串：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;Eric&#x27;</span></span><br><span class="line">age = <span class="number">27</span></span><br><span class="line"><span class="comment"># 多行字符串用 \ 拼接</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&quot;Hello!&quot;</span> \</span><br><span class="line"><span class="string">f&quot;I&#x27;m <span class="subst">&#123;name&#125;</span>.&quot;</span> \</span><br><span class="line"><span class="string">f&quot;I&#x27;m <span class="subst">&#123;age&#125;</span>.&quot;</span></span><br><span class="line"><span class="comment"># &quot;Hello!I&#x27;m Eric.I&#x27;m 27.&quot;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># &quot;&quot;&quot;中间的字符串可以直接换行</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&quot;&quot;&quot;Hello!</span></span><br><span class="line"><span class="string">I&#x27;m <span class="subst">&#123;name&#125;</span>.</span></span><br><span class="line"><span class="string">I&#x27;m <span class="subst">&#123;age&#125;</span>.&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># &quot;Hello!\n  I&#x27;m Eric.\n  I&#x27;m 27.&quot;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义f-string格式"><a href="#自定义f-string格式" class="headerlink" title="自定义f-string格式"></a>自定义f-string格式</h3><h4 id="自定义格式"><a href="#自定义格式" class="headerlink" title="自定义格式"></a>自定义格式</h4><p>f-string采用 <code>&#123;content:format&#125;</code> 设置字符串格式，其中 <code>content</code> 是替换并填入字符串的内容，可以是变量、表达式或函数等，<code>format</code> 是格式描述符。自定义格式与<code>.format()</code>类似。采用默认格式时不必指定 <code>&#123;:format&#125;</code>，如上面例子所示只写 <code>&#123;content&#125;</code> 即可。</p>
+<p><strong>宽度与精度</strong>相关格式描述符</p>
+<table>
+<thead>
+<tr>
+<th><strong>格式描述符</strong></th>
+<th><strong>含义与作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>width</code></td>
+<td>整数 <code>width</code> 指定宽度</td>
+</tr>
+<tr>
+<td><code>0width</code></td>
+<td>整数 <code>width</code> 指定宽度，开头的 <code>0</code> 指定高位用 <code>0</code> 补足宽度</td>
+</tr>
+<tr>
+<td><code>width.precision</code></td>
+<td>整数 <code>width</code> 指定宽度，整数 <code>precision</code> 指定显示精度</td>
+</tr>
+</tbody></table>
+<p><strong>数值类型</strong>基本格式</p>
+<table>
+<thead>
+<tr>
+<th><strong>格式描述符</strong></th>
+<th><strong>含义与作用</strong></th>
+<th><strong>适用变量类型</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>s</code></td>
+<td>普通字符串格式</td>
+<td>字符串</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>二进制整数格式</td>
+<td>整数</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>字符格式，按unicode编码将整数转换为对应字符</td>
+<td>整数</td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td>十进制整数格式</td>
+<td>整数</td>
+</tr>
+<tr>
+<td><code>o</code></td>
+<td>八进制整数格式</td>
+<td>整数</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>十六进制整数格式（小写字母）</td>
+<td>整数</td>
+</tr>
+<tr>
+<td><code>X</code></td>
+<td>十六进制整数格式（大写字母）</td>
+<td>整数</td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td>科学计数格式，以<code>e</code>表示<code>×10^</code></td>
+<td>浮点数、复数、整数（自动转换为浮点数）</td>
+</tr>
+<tr>
+<td><code>E</code></td>
+<td>与<code>e</code>等价，但以<code>E</code>表示<code>×10^</code></td>
+<td>浮点数、复数、整数（自动转换为浮点数）</td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td>定点数格式，默认精度（<code>precision</code>）是6</td>
+<td>浮点数、复数、整数（自动转换为浮点数）</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>与<code>f</code>等价，但将<code>nan</code>和<code>inf</code>换成<code>NAN</code>和<code>INF</code></td>
+<td>浮点数、复数、整数（自动转换为浮点数）</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>通用格式，小数用<code>f</code>，大数用<code>e</code></td>
+<td>浮点数、复数、整数（自动转换为浮点数）</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>与<code>G</code>等价，但小数用<code>F</code>，大数用<code>E</code></td>
+<td>浮点数、复数、整数（自动转换为浮点数）</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>百分比格式，数字自动乘上100后按<code>f</code>格式排版，并加<code>%</code>后缀</td>
+<td>浮点数、整数（自动转换为浮点数）</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &#123;content:format&#125;</span></span><br><span class="line"><span class="comment"># a 为 content</span></span><br><span class="line"><span class="comment"># : 之后为format</span></span><br><span class="line">a = <span class="number">123.456</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;a is <span class="subst">&#123;a:<span class="number">8.2</span>f&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;a is  123.46&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;a is <span class="subst">&#123;a:<span class="number">08.2</span>f&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;a is 00123.46&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;a is <span class="subst">&#123;a:<span class="number">8.2</span>e&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;a is 1.23e+02&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;a is <span class="subst">&#123;a:<span class="number">8.2</span>%&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;a is 12345.60%&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;a is <span class="subst">&#123;a:<span class="number">8.2</span>g&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;a is 1.2e+02&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line">s = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;s is <span class="subst">&#123;s:8s&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;s is hello  &#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;s is <span class="subst">&#123;s:<span class="number">8.3</span>s&#125;</span>&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;s is hel   &#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>对齐方式</strong>相关格式描述符</p>
+<table>
+<thead>
+<tr>
+<th align="left">格式描述符</th>
+<th align="left">含义与作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;</td>
+<td align="left">左对齐（字符串默认对齐方式）</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">右对齐（数值默认对齐方式）</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">居中</td>
+</tr>
+</tbody></table>
+<p><strong>数字符号</strong>相关格式描述符（只适合数值类型）</p>
+<table>
+<thead>
+<tr>
+<th align="left">格式描述符</th>
+<th align="left">含义与作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+</td>
+<td align="left">负数前加负号（-），正数前加正号（+）</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">负数前加负号（-），正数前不加任何符号（默认）</td>
+</tr>
+<tr>
+<td align="left">（空格）</td>
+<td align="left">负数前加负号（-），正数前加一个空格</td>
+</tr>
+</tbody></table>
+<p><strong>数字显示</strong>方式相关格式描述符(是否加<code>#</code>)</p>
+<table>
+<thead>
+<tr>
+<th align="left">数值类型</th>
+<th align="left">不加**#**（默认）</th>
+<th align="left">加**#**</th>
+<th align="left">区别</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">二进制整数</td>
+<td align="left">‘1111011’</td>
+<td align="left">‘0b1111011’</td>
+<td align="left">开头是否显示 0b</td>
+</tr>
+<tr>
+<td align="left">八进制整数</td>
+<td align="left">‘173’</td>
+<td align="left">‘0o173’</td>
+<td align="left">开头是否显示 0o</td>
+</tr>
+<tr>
+<td align="left">十进制整数</td>
+<td align="left">‘123’</td>
+<td align="left">‘123’</td>
+<td align="left">无区别</td>
+</tr>
+<tr>
+<td align="left">十六进制整数（小写字母）</td>
+<td align="left">‘7b’</td>
+<td align="left">‘0x7b’</td>
+<td align="left">开头是否显示 0x</td>
+</tr>
+<tr>
+<td align="left">十六进制整数（大写字母）</td>
+<td align="left">‘7B’</td>
+<td align="left">‘0X7B’</td>
+<td align="left">开头是否显示 0X</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 居中&#x27;^&#x27;，显示0X前缀&#x27;#&#x27;，宽度10位，十六进制整数（大写字母）</span></span><br><span class="line">a = <span class="number">1234</span></span><br><span class="line">str = f&#x27;a is &#123;a:^#10X&#125;&#x27;  </span><br><span class="line"><span class="comment"># &#x27;a is  0X4D2  &#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 左对齐，宽度10位，显示正号（+），定点数格式，2位小数</span></span><br><span class="line">b = <span class="number">1234.5678</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;b is <span class="subst">&#123;b:&lt;+<span class="number">10.2</span>f&#125;</span>&#x27;</span>  </span><br><span class="line"><span class="comment"># &#x27;b is +1234.57 &#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 高位补零，宽度15位，十进制整数，使用,作为千分分割位</span></span><br><span class="line">c = <span class="number">12345678</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;c is <span class="subst">&#123;c:015,d&#125;</span>&#x27;</span>  </span><br><span class="line"><span class="comment"># &#x27;c is 000,012,345,678&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 宽度30位，科学计数法，3位小数</span></span><br><span class="line">d = <span class="number">0.5</span> + <span class="number">2.5j</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">f&#x27;d is <span class="subst">&#123;d:<span class="number">30.3</span>e&#125;</span>&#x27;</span>  </span><br><span class="line"><span class="comment"># &#x27;d is      5.000e-01+2.500e+00j&#x27;</span></span><br><span class="line">print(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><h3 id="第1题"><a href="#第1题" class="headerlink" title="第1题"></a>第1题</h3><p>题目要求：</p>
+<ul>
+<li>使用单引号和双引号分别创建字符串(可以用中文作为字符串内容)。</li>
+</ul>
+<p>代码如下：</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hello world&quot;</span></span><br><span class="line"><span class="string">&#x27;hello world&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#39;hello world&#39;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第2题"><a href="#第2题" class="headerlink" title="第2题"></a>第2题</h3><p>题目要求：</p>
+<ul>
+<li>创建含有引号的字符串，观察引号错误使用引起的错误。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hello&quot;</span>world<span class="string">&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  File &quot;&lt;ipython-input-2-47bd8e44abc4&gt;&quot;, line 1</span><br><span class="line">    &quot;hello&quot;world&quot;</span><br><span class="line">           ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
+
+<h3 id="第3题"><a href="#第3题" class="headerlink" title="第3题"></a>第3题</h3><p>题目要求：</p>
+<ul>
+<li>创建含有引号的字符串，使用转义字符。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;\&quot;hello\&quot;wprld&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;hello&quot;wprld</span><br></pre></td></tr></table></figure>
+
+<h3 id="第4题"><a href="#第4题" class="headerlink" title="第4题"></a>第4题</h3><p>题目要求：</p>
+<ul>
+<li>使用<code>input()</code>输入1个字符串，并使用上述3个字符串的方法对该字符串进行修改操作，并输出结果。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">massage=<span class="built_in">input</span>()</span><br><span class="line">print(massage.title())</span><br><span class="line">print(massage.upper())</span><br><span class="line">print(massage.lower())</span><br><span class="line"><span class="comment"># massage=&#x27;hello world&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hello World</span><br><span class="line">HELLO WORLD</span><br><span class="line">hello world</span><br></pre></td></tr></table></figure>
+
+<h3 id="第5题"><a href="#第5题" class="headerlink" title="第5题"></a>第5题</h3><p>题目要求：</p>
+<ul>
+<li>接受键盘输入，将输入字符串储存到变量，然后进行字符串拼接，最后输出 “你好，姓名”。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="built_in">input</span>()</span><br><span class="line">print(<span class="string">&#x27;你好，&#x27;</span>+name)</span><br><span class="line"><span class="comment"># name=XieSenshi</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你好，XieSenshi</span><br></pre></td></tr></table></figure>
+
+<h3 id="第6题"><a href="#第6题" class="headerlink" title="第6题"></a>第6题</h3><p>题目要求：</p>
+<ul>
+<li>使用制表符和换行符分别自定义创建字符串(可以为中文)，并输出结果。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;System:\tWindows\tLinux\tMacOS\tAndroid\tiOS&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;System:\nWindows\nLinux\nMacOS\nAndroid\niOS&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">System:	Windows	Linux	MacOS	Android	iOS</span><br><span class="line">System:</span><br><span class="line">Windows</span><br><span class="line">Linux</span><br><span class="line">MacOS</span><br><span class="line">Android</span><br><span class="line">iOS</span><br></pre></td></tr></table></figure>
+
+<h3 id="第7题"><a href="#第7题" class="headerlink" title="第7题"></a>第7题</h3><p>题目要求：</p>
+<ul>
+<li>组合使用制表符(3列)和换行符(2行)自定义创建字符串(可以为中文)，并输出结果。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;System:\tWindows\tLinux\tMacOS\n\tAndroid\tiOS&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System:	Windows	Linux	MacOS</span><br><span class="line">	    Android	iOS</span><br></pre></td></tr></table></figure>
+
+<h3 id="第8题"><a href="#第8题" class="headerlink" title="第8题"></a>第8题</h3><p>题目要求：</p>
+<ul>
+<li>外部输入含有空格的字符串，使用上述方法对字符串进行空白删除处理。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">massage=<span class="built_in">input</span>()</span><br><span class="line">print(massage)</span><br><span class="line">print(massage.lstrip())</span><br><span class="line">print(massage.rstrip())</span><br><span class="line">print(massage.strip())</span><br><span class="line"><span class="comment"># massage=&quot;    Hello world    &quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    hello world    </span><br><span class="line">hello world    </span><br><span class="line">    hello world</span><br><span class="line">hello world</span><br></pre></td></tr></table></figure>
+
+<h3 id="第9题"><a href="#第9题" class="headerlink" title="第9题"></a>第9题</h3><p>题目要求：</p>
+<ul>
+<li>外部输入含有空格的字符串，指定<code>chars</code>参数，分别<code>rstrip()</code>、<code>lstrip()</code>和<code>strip()</code>调用删除特定字符。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">massage=<span class="built_in">input</span>()</span><br><span class="line">print(massage)</span><br><span class="line">print(massage.lstrip(<span class="string">&#x27;h&#x27;</span>))</span><br><span class="line">print(massage.rstrip(<span class="string">&#x27;d&#x27;</span>))</span><br><span class="line">print(massage.strip(<span class="string">&#x27;h&#x27;</span>))</span><br><span class="line"><span class="comment"># masage=&quot;hello world&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br><span class="line">ello world</span><br><span class="line">hello worl</span><br><span class="line">ello world</span><br></pre></td></tr></table></figure>
+
+<h3 id="第10题"><a href="#第10题" class="headerlink" title="第10题"></a>第10题</h3><p>题目要求：</p>
+<ul>
+<li><strong>个性化消息：</strong>将用户的姓名存到一个变量中，并向该用户显示一条消息。显示的消息应非常简单，如“Hello Eric, would you like to learn some Python today?”。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&#x27;Eric&#x27;</span></span><br><span class="line">print(<span class="string">&#x27;Hello &#x27;</span>+name+<span class="string">&#x27;, would you like to learn some Python today?&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello Eric, would you like to learn some Python today?</span><br></pre></td></tr></table></figure>
+
+<h3 id="第11题"><a href="#第11题" class="headerlink" title="第11题"></a>第11题</h3><p>题目要求：</p>
+<ul>
+<li><strong>调整名字的大小写：</strong>将一个人名存储到一个变量中，再以小写、大写和首字母大写的方式显示这个人名。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&quot;xiesenshi&quot;</span></span><br><span class="line">print(name.lower <span class="comment"># 小写</span></span><br><span class="line">print(name.upper()) <span class="comment"># 大写</span></span><br><span class="line">print(name.title()) <span class="comment"># 首字母大写</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xiesenshi</span><br><span class="line">XIESENSHI</span><br><span class="line">Xiesenshi</span><br></pre></td></tr></table></figure>
+
+<h3 id="第12题"><a href="#第12题" class="headerlink" title="第12题"></a>第12题</h3><p>题目要求：</p>
+<ul>
+<li><strong>名言：</strong>找一句你钦佩的名人说的名言，将这个名人的姓名和他的名言打印出来。输出应类似于下面这样（包括引号）：Albert Einstein once said, “A person who never made a mistake never tried anything new.”</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;Albert Einstein once said, “A person who never made a mistake never tried anything new.”&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Albert Einstein once said, “A person who never made a mistake never tried anything new.”</span><br></pre></td></tr></table></figure>
+
+<h3 id="第13题"><a href="#第13题" class="headerlink" title="第13题"></a>第13题</h3><p>题目要求：</p>
+<ul>
+<li><strong>名言2：</strong>重复练习11-14，但将名人的姓名存储在变量<code>famous_person</code>中，再创建要显示的消息，并将其存储在变量<code>message</code>中，然后打印这条消息。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">famous_person=<span class="string">&quot;Albert Einstein&quot;</span></span><br><span class="line">massage=famous_person + <span class="string">&quot; once said, “A person who never made a mistake never tried anything new.”&quot;</span></span><br><span class="line">print(massage)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Albert Einstein once said, “A person who never made a mistake never tried anything new.”</span><br></pre></td></tr></table></figure>
+
+<h3 id="第14题"><a href="#第14题" class="headerlink" title="第14题"></a>第14题</h3><p>题目要求：</p>
+<ul>
+<li><strong>剔除人名中的空白：</strong>存储一个人名，并在其开头和末尾都包含一些空白字符。务必至少使用字符组合<code>&quot;\t&quot;</code>和<code>&quot;\n&quot;</code>各一次。打印这个人名，以显示其开头和末尾的空白。然后，分别使用剔除函数<code>lstrip()</code>、<code>rstrip()</code>和<code>strip()</code>对人名进行处理，并将结果打印出来。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&quot;    XieSenshi    &quot;</span></span><br><span class="line">print(name+<span class="string">&#x27;\t&#x27;</span>+name+<span class="string">&#x27;\t&#x27;</span>+name)</span><br><span class="line">print(name+<span class="string">&#x27;\n&#x27;</span>+name+<span class="string">&#x27;\n&#x27;</span>+name)</span><br><span class="line">print(name.lstrip())</span><br><span class="line">print(name.rstrip())</span><br><span class="line">print(name.strip())</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    XieSenshi    	    XieSenshi    	    XieSenshi    </span><br><span class="line">    XieSenshi    </span><br><span class="line">    XieSenshi    </span><br><span class="line">    XieSenshi    </span><br><span class="line">XieSenshi    </span><br><span class="line">    XieSenshi</span><br><span class="line">XieSenshi</span><br></pre></td></tr></table></figure>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://waxll.top/2021/04/01/p3.html>http://waxll.top/2021/04/01/p3.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-01T21:56:12+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年4月1日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://waxll.top/2021/04/01/p3.html&title=Python学习笔记3 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://waxll.top/2021/04/01/p3.html&title=Python学习笔记3 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://waxll.top/2021/04/01/p3.html&title=Python学习笔记3 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2021/03/25/p2.html'>
+          <p class='title'>第二章 变量与数据类型<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+第二章 变量与数据类型变量变量的定义为何需要变量？
+
+变量的功能：通过一个有意义的标识(变量)，将变量与某个具体内容(数值、数组、对象等)进行关联，方便访问。
+
+门牌号与房子、人与人名。
+...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BD%BF%E7%94%A8%E8%AF%AD%E6%B3%95"><span class="toc-text">字符串使用语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BC%95%E5%8F%B7%E5%88%9B%E5%BB%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE"><span class="toc-text">使用引号创建字符串类型数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E8%BF%87print%E5%9C%A8Jupyter%E4%B8%AD%E8%BE%93%E5%87%BA%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9"><span class="toc-text">通过print在Jupyter中输出所有内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%BC%95%E5%8F%B7%E5%88%9B%E5%BB%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE"><span class="toc-text">正确使用引号创建字符串类型数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98"><span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="toc-text">使用方法修改字符串的大小写</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95title-%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%BA%E9%A6%96%E5%AD%97%E6%AF%8D%E5%A4%A7%E5%86%99"><span class="toc-text">使用方法title()修改字符串为首字母大写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95upper-%E5%92%8Clower-%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="toc-text">使用方法upper()和lower()修改字符串大小写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-1"><span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%EF%BC%88%E6%8B%BC%E6%8E%A5-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">合并（拼接)字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5%E6%93%8D%E4%BD%9C"><span class="toc-text">字符串拼接操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5%E7%9A%84%E7%BB%93%E6%9E%9C%E5%AD%98%E5%8F%98%E9%87%8F%E4%B8%AD"><span class="toc-text">将字符串拼接的结果存变量中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-2"><span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-text">转义字符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%88%B6%E8%A1%A8%E7%AC%A6"><span class="toc-text">使用制表符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8D%A2%E8%A1%8C%E7%AC%A6"><span class="toc-text">使用换行符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8"><span class="toc-text">组合使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E5%8F%B7%E5%92%8C%E5%8F%8D%E6%96%9C%E6%9D%A0"><span class="toc-text">引号和反斜杠</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-3"><span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E7%A9%BA%E7%99%BD"><span class="toc-text">删除字符串中的空白</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E7%A9%BA%E7%99%BD"><span class="toc-text">认识程序中的空白</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95rstrip-%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%AB%E5%B0%BE%E7%A9%BA%E7%99%BD"><span class="toc-text">使用方法rstrip()删除字符串末尾空白</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B0%B8%E4%B9%85%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E7%A9%BA%E7%99%BD"><span class="toc-text">永久删除字符串的空白</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95lstrip-%E5%92%8Cstrip-%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%A6%96%E5%92%8C%E4%B8%A4%E7%AB%AF%E7%A9%BA%E7%99%BD"><span class="toc-text">使用方法lstrip()和strip()删除字符串首和两端空白</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-4"><span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BC%95%E8%B5%B7%E7%9A%84%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF"><span class="toc-text">字符串引起的语法错误</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BC%95%E5%8F%B7%E5%BC%95%E8%B5%B7%E7%9A%84%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF"><span class="toc-text">字符串引号引起的语法错误</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-5"><span class="toc-text">习题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E8%A6%81-%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">(重要)格式化字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#format-%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-text">.format()函数的语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86-format-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%87%BD%E6%95%B0"><span class="toc-text">认识.format()字符串格式化函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86-format-%E5%87%BD%E6%95%B0%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E4%BD%8D%E7%BD%AE"><span class="toc-text">认识.format()函数默认参数位置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IndexError%E9%94%99%E8%AF%AF"><span class="toc-text">IndexError错误</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#format-%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%8D%E7%BD%AE%E7%B4%A2%E5%BC%95"><span class="toc-text">.format()函数的位置索引</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E7%9A%84%E5%BA%8F%E5%8F%B7%E4%BD%8D%E7%BD%AE%E7%B4%A2%E5%BC%95"><span class="toc-text">参数的序号位置索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE%E7%B4%A2%E5%BC%95%E5%8F%AF%E9%87%8D%E5%A4%8D%E4%BD%BF%E7%94%A8"><span class="toc-text">位置索引可重复使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#format-%E5%8F%82%E6%95%B0%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97%E4%BD%8D%E7%BD%AE%E7%B4%A2%E5%BC%95"><span class="toc-text">.format()参数的关键字位置索引</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#format-%E5%87%BD%E6%95%B0%E6%A0%B7%E5%BC%8F%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA"><span class="toc-text">.format()函数样式格式输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#format-%E5%87%BD%E6%95%B0%E7%9A%84%E5%A1%AB%E5%85%85%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">.format()函数的填充与格式化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#format-%E5%87%BD%E6%95%B0%E7%9A%84%E7%B2%BE%E5%BA%A6"><span class="toc-text">.format()函数的精度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#format-%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-text">.format()函数的进制转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#format-%E5%87%BD%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA"><span class="toc-text">.format()函数的数字格式输出</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#f-string%E6%8A%80%E6%9C%AF"><span class="toc-text">f-string技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E8%AF%86f-string"><span class="toc-text">初识f-string</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#f-string%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-text">f-string基本介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#f-string%E8%AF%AD%E6%B3%95"><span class="toc-text">f-string语法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5f-string"><span class="toc-text">深入f-string</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E4%B8%8E%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="toc-text">表达式求值与函数调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E5%8F%B7%E3%80%81%E5%A4%A7%E6%8B%AC%E5%8F%B7%E4%B8%8E%E5%8F%8D%E6%96%9C%E6%9D%A0"><span class="toc-text">引号、大括号与反斜杠</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8Cf-string"><span class="toc-text">多行f-string</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89f-string%E6%A0%BC%E5%BC%8F"><span class="toc-text">自定义f-string格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="toc-text">自定义格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1"><span class="toc-text">任务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E9%A2%98"><span class="toc-text">第1题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC2%E9%A2%98"><span class="toc-text">第2题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC3%E9%A2%98"><span class="toc-text">第3题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC4%E9%A2%98"><span class="toc-text">第4题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC5%E9%A2%98"><span class="toc-text">第5题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC6%E9%A2%98"><span class="toc-text">第6题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC7%E9%A2%98"><span class="toc-text">第7题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC8%E9%A2%98"><span class="toc-text">第8题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC9%E9%A2%98"><span class="toc-text">第9题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC10%E9%A2%98"><span class="toc-text">第10题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC11%E9%A2%98"><span class="toc-text">第11题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC12%E9%A2%98"><span class="toc-text">第12题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC13%E9%A2%98"><span class="toc-text">第13题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC14%E9%A2%98"><span class="toc-text">第14题</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Python学习笔记3";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5119353317'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <!-- <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div> -->
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题 | 由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>强力驱动
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://waxll.top/">Copyright © 2019-2020 XieSenshi</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $('#cover-backstretch').backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/friends/
+        
+        
+        
+        
+          id="friends"
+        >
+        <i class='fa fa-users fa-fw'></i> 友链
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/journal/
+        
+        
+        
+        
+          id="journal"
+        >
+        <i class='fa fa-calendar fa-fw'></i> 日志
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/about/
+        
+        
+        
+        
+          id="about"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 关于
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> Dark mode
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5119353317';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz","appKey":"jM85yucqi5IuVYCCQS1cUwko","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz',
+    app_key: 'jM85yucqi5IuVYCCQS1cUwko',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://waxll.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
