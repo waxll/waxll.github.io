@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Python学习笔记12 - Waxll&#39;Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Waxll'Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/waxll/Imag/gif-2.png">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    <div id="clickCanvas" style=" position:fixed;left:0;top:0;z-index:999999999;pointer-events:none;"><canvas class=" sketch" height="0" width="0"></canvas></div>
+    <script src="js/dj.js"></script>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Waxll's Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="A Wonderful Theme for Hexo" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fas fa-book fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <i class='fa fa-map-signs fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/photo/"
+              
+              
+              id="photo">
+              <i class='fas fa-images fa-fw'></i><p>图库</p>
+            </a>
+          
+            <a href="/journal/"
+              
+              
+              id="journal">
+              <i class='fas fa-calendar fa-fw'></i><p>日志</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              id="friends">
+              <i class='fa fa-users fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python学习笔记12
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://7bu.top/2020/07/14/8ba61fac048a2.jpeg">
+    <p>XieSenshi</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年6月17日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：7.6k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：29分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python学习笔记12" data-path="/2021/06/17/py12.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2021/06/17/py12.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2021/06/17/py12.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p><img src="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210617001955989.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210617001955989.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210617001955989"></p>
+<span id="more"></span>
+
+<h1 id="第十三章-文件"><a href="#第十三章-文件" class="headerlink" title="第十三章   文件"></a>第十三章   文件</h1><h2 id="13-1-计算机眼中的文件"><a href="#13-1-计算机眼中的文件" class="headerlink" title="13.1   计算机眼中的文件"></a>13.1   计算机眼中的文件</h2><h4 id="任务一：文件的概念和作用"><a href="#任务一：文件的概念和作用" class="headerlink" title="任务一：文件的概念和作用"></a><em>任务一：文件的概念和作用</em></h4><p>知识点：</p>
+<p>计算机的<strong>文件</strong>，就是存储在某种<strong>长期储存设备</strong>上的一段<strong>数据</strong></p>
+<p>存储设备包括：硬盘、U 盘、移动硬盘、光盘…</p>
+<p><strong>文件的作用</strong>：将数据长期保存下来，在需要的时候使用</p>
+<h4 id="任务二：计算机的文件储存方式"><a href="#任务二：计算机的文件储存方式" class="headerlink" title="任务二：计算机的文件储存方式"></a><em>任务二：计算机的文件储存方式</em></h4><p>知识点：</p>
+<p>在计算机中，文件是以<strong>二进制</strong>的方式保存在磁盘上的</p>
+<p><strong>文本文件</strong>：</p>
+<p>可以使用<strong>文本编辑软件</strong>查看内容，本质上还是二进制文件</p>
+<p>例如：python 的源程序</p>
+<p><strong>二进制文件</strong>：</p>
+<p>保存的内容不是给人直接阅读的，而<strong>提供给计算机其他程序使用的</strong></p>
+<p>例如：图片文件、音频文件、视频文件等等</p>
+<p>二进制文件不能使用<strong>文本编辑软件</strong>查看</p>
+<h4 id="任务三：在控制台中查看文件内容"><a href="#任务三：在控制台中查看文件内容" class="headerlink" title="任务三：在控制台中查看文件内容"></a><em>任务三：在控制台中查看文件内容</em></h4><p>知识点：</p>
+<p>在Windows中，控制台指令<strong>type</strong>查看文件内容</p>
+<p>在Linux或Mac中，控制台指令<strong>cat</strong>查看文件内容</p>
+<p>在Jupyter中，cell中输入指令**%pycat**查看文件内容</p>
+<p>中文字符可能会在控制台中<strong>乱码</strong></p>
+<h2 id="13-2-文件操作"><a href="#13-2-文件操作" class="headerlink" title="13.2   文件操作"></a>13.2   文件操作</h2><h3 id="13-2-1-基本流程"><a href="#13-2-1-基本流程" class="headerlink" title="13.2.1   基本流程"></a>13.2.1   基本流程</h3><h4 id="任务一：文件操作的基本流程"><a href="#任务一：文件操作的基本流程" class="headerlink" title="任务一：文件操作的基本流程"></a><em>任务一：文件操作的基本流程</em></h4><p>知识点：在<strong>计算机</strong>中要操作文件方式是非常固定，共包含<strong>三个步骤</strong>：</p>
+<p>1、打开文件</p>
+<p>2、读或写文件</p>
+<p>   <strong>读</strong>将文件内容读入内存</p>
+<p>   <strong>写</strong>将内存内容写入文件</p>
+<p>3、关闭文件</p>
+<h4 id="任务二：操作文件的基本流程"><a href="#任务二：操作文件的基本流程" class="headerlink" title="任务二：操作文件的基本流程"></a><em>任务二：操作文件的基本流程</em></h4><p>在 <strong>Python</strong> 中要操作文件需要记住1个函数和3个文件方法</p>
+<p><strong>open</strong> 函数负责打开文件，并且<strong>返回文件对象</strong></p>
+<p><strong>read/write/close</strong> 三个方法都需要通过<strong>文件对象</strong>来调用</p>
+<table>
+<thead>
+<tr>
+<th>函数/方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>open</td>
+<td>打开文件，并且返回文件操作对象</td>
+</tr>
+<tr>
+<td>read</td>
+<td>将文件内容读取到内存</td>
+</tr>
+<tr>
+<td>write</td>
+<td>将指定内容写入文件</td>
+</tr>
+<tr>
+<td>close</td>
+<td>关闭文件</td>
+</tr>
+</tbody></table>
+<p>知识点：文件操作的<strong>常用流程</strong></p>
+<p>调用**open()**函数打开要操作的文件</p>
+<p>调用文件方法**read()<strong>或</strong>write()**方法对文件进行读写操作</p>
+<p>调用**close()**方法关闭文件，释放资源</p>
+<h3 id="13-2-2-文件的open-函数与close-方法"><a href="#13-2-2-文件的open-函数与close-方法" class="headerlink" title="13.2.2   文件的open()函数与close()方法"></a>13.2.2   文件的open()函数与close()方法</h3><h4 id="任务一：open-函数用法"><a href="#任务一：open-函数用法" class="headerlink" title="任务一：open()函数用法"></a><em>任务一：open()函数用法</em></h4><p>知识点：</p>
+<p>语法：<strong>open(name[, mode, encoding])</strong></p>
+<p>描述：<strong>open()<strong>函数用于打开一个文件名为</strong>name</strong>的文件</p>
+<p>如果文件<strong>存在</strong>，返回一个<strong>file</strong>类型的对象，后续通过该对象进行文件的读写操作</p>
+<p>如果文件<strong>不存在</strong>，会<strong>抛出异常</strong></p>
+<p>参数：<strong>name</strong>为包含<strong>相对</strong>路径或<strong>绝对</strong>路径的文件名</p>
+<p><strong>文件名区分大小写</strong></p>
+<p>由于路径中会包含\字符，与转移标识符冲突。为此，需要使用r字符串前缀，告知Python当前字符串不进行转义</p>
+<p>返回：<strong>file</strong>类型的对象<strong>fileObject</strong>，用于后续的文件读写操作</p>
+<p>例子：相对路径和绝对路径的文件打开方式</p>
+<p>在当前目录下创建一个名为<strong>README.txt</strong>文件</p>
+<p>文件中输入几行字符串，然后保存关闭</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 相对路径，打开当前根目录文件</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;README.txt&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绝对路径，字符串前的r表示直接使用字符\而非转义字符</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">r&quot;D:\README.txt&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：open-函数的可选参数"><a href="#任务二：open-函数的可选参数" class="headerlink" title="任务二：open()函数的可选参数"></a><em>任务二：open()函数的可选参数</em></h4><p>知识点：</p>
+<p>参数：<strong>mode</strong>可选，指定文件打开模式(后续将给出详解)。<strong>默认以只读模式打开</strong></p>
+<p>参数：<strong>encoding</strong>关键字参数，<strong>可选</strong>，指定文件编码方式</p>
+<p><strong>对于中文文件，如果编码不匹配，会造成乱码</strong></p>
+<p>目前国际上最通用的是**’utf-8’<strong>编码。因此，可以设置文件打开的编码为</strong>encoding=’utf-8’**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用默认只读&quot;r&quot;、&#x27;utf-8&#x27;编码打开&quot;README.txt&quot;</span></span><br><span class="line"><span class="comment"># 返回文件对象为f</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;README.txt&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">print(<span class="built_in">type</span>(f))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：文件的关闭-close-方法"><a href="#任务三：文件的关闭-close-方法" class="headerlink" title="*任务三：文件的关闭**close()*方法"></a>*任务三：文件的关闭**close()*<em>方法</em></h4><p>知识点：关闭文件**close()**方法</p>
+<p>语法：<strong>fileObject.close()</strong></p>
+<p>描述：**close()**方法用于关闭一个已打开的文件</p>
+<p>关闭后的文件不能再进行读写操作，否则会触发<strong>ValueError</strong>异常</p>
+<p>当文件不再需要使用时，用 **close()**方法关闭文件释放资源是一个好的习惯</p>
+<p>参数和返回：无</p>
+<p>注意：如果<strong>忘记关闭文件，会造成系统资源消耗，而且会影响到后续对文件的访问</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关闭的文件对象必须要在内存中存在，否则会出错</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;README.txt&quot;</span>)</span><br><span class="line"><span class="comment"># 文件不再使用，释放资源</span></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：3种自定义文件路径方式-重要"><a href="#任务四：3种自定义文件路径方式-重要" class="headerlink" title="任务四：3种自定义文件路径方式(重要)"></a><em>任务四：3种自定义文件路径方式(重要)</em></h4><p>知识点：</p>
+<p>本地文件的访问需要指定路径。如果文件不在当前目录下，就需要明确文件的详细路径</p>
+<p>由于常用的路径使用\来标识路径的层级关系，但是这与\转移字符的标识冲突。为此，提供了三种解决方案</p>
+<p>单个反斜杠：/</p>
+<p>两个斜杠：\(第一个\是转义符)</p>
+<p>r用于防止字符转义</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 本地文件的界定：指向一个本地存储的文件，是一个链接或者一个映射</span></span><br><span class="line"><span class="comment"># 单个反斜杠：/</span></span><br><span class="line">path1 = <span class="string">&#x27;C:/Users/Hjx/Desktop/text.txt&#x27;</span></span><br><span class="line"><span class="comment"># 两个斜杠：\\（第一个\是转义符）</span></span><br><span class="line">path2 = <span class="string">&#x27;C:\\Users\\Hjx\\Desktop\\text.txt&#x27;</span>  </span><br><span class="line"><span class="comment"># r用于防止字符转义</span></span><br><span class="line">path3 = <span class="string">r&#x27;C:\Users\Hjx\Desktop\text.txt&#x27;</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出文件路径</span></span><br><span class="line">print(path1)</span><br><span class="line">print(path2)</span><br><span class="line">print(path3)</span><br></pre></td></tr></table></figure>
+
+<p><strong>扩展</strong>：任何文件都可以使用<strong>鼠标右键-&gt;属性</strong>来查看具体文件的<strong>绝对路径</strong></p>
+<h3 id="13-2-3-open-函数配置读写模式"><a href="#13-2-3-open-函数配置读写模式" class="headerlink" title="13.2.3   open()函数配置读写模式"></a>13.2.3   open()函数配置读写模式</h3><h4 id="任务一：文件的打开模式"><a href="#任务一：文件的打开模式" class="headerlink" title="任务一：文件的打开模式"></a><em>任务一：文件的打开模式</em></h4><p>知识点：</p>
+<p><strong>open()<strong>函数默认以</strong>只读方式</strong>打开文件，并且返回<strong>文件类型的对象</strong></p>
+<p>Python通过<strong>open()<strong>函数</strong>mode</strong>参数对文件的操作提供了丰富的控制模式</p>
+<p>语法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;文件名&quot;</span>, <span class="string">&quot;访问mode&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：6种文件读写模式"><a href="#任务二：6种文件读写模式" class="headerlink" title="任务二：6种文件读写模式"></a><em>任务二：6种文件读写模式</em></h4><p>知识点：<strong>open()<strong>函数</strong>mode</strong>参数解析</p>
+<p><strong>r</strong>以<strong>只读</strong>模式打开文件，增强型 <strong>r+<strong>以</strong>可读写</strong>模式打开文件</p>
+<p>文件的指针将会放在文件的开头</p>
+<p>需要<strong>该文件必须存在</strong>，否则会出错</p>
+<p>例如：<strong>f = open(“README.txt”, “r”)</strong></p>
+<p><strong>w</strong>以<strong>只写</strong>模式打开文件，增强型<strong>w+<strong>以</strong>可读写</strong>模式打开文件</p>
+<p>若文件存在则<strong>原内容会被清空</strong></p>
+<p>若文件不存在则建立该文件</p>
+<p>例如：<strong>f = open(“README.txt”, “w”)</strong></p>
+<p><strong>a</strong>以<strong>追加只写</strong>模式打开文件，增强型<strong>a+<strong>以</strong>追加可读写</strong>模式打开文件</p>
+<p>如果该文件已存在，<strong>文件指针</strong>将会放在文件的<strong>结尾</strong></p>
+<p>如果文件不存在，<strong>新建</strong>文件进行写入</p>
+<p>例如：<strong>f = open(“README.txt”, “a”)</strong></p>
+<p>注意：</p>
+<p>频繁的移动文件指针，<strong>会影响文件的读写效率</strong></p>
+<p>开发中更多的时候会以<strong>只读、只写</strong>的方式来操作文件</p>
+<h4 id="任务三：文件对象的属性"><a href="#任务三：文件对象的属性" class="headerlink" title="任务三：文件对象的属性"></a><em>任务三：文件对象的属性</em></h4><p>知识点：文件对象的3个属性</p>
+<p><strong>fileObject.closed</strong>：返回<strong>True</strong>如果文件已被关闭，否则返回<strong>False</strong></p>
+<p><strong>fileObject.mode</strong>：返回被打开文件的访问模式</p>
+<p><strong>fileObject.name</strong>：返回文件的名称</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;README.txt&quot;</span>)</span><br><span class="line">print(<span class="string">f&#x27;.closed: <span class="subst">&#123;f.closed&#125;</span>&#x27;</span>)</span><br><span class="line">print(<span class="string">f&#x27;.mode: <span class="subst">&#123;f.mode&#125;</span>&#x27;</span>)</span><br><span class="line">print(<span class="string">f&#x27;.name: <span class="subst">&#123;f.name&#125;</span>&#x27;</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-2-4-文件的读方法"><a href="#13-2-4-文件的读方法" class="headerlink" title="13.2.4   文件的读方法"></a>13.2.4   文件的读方法</h3><h4 id="任务一：文件的读方法"><a href="#任务一：文件的读方法" class="headerlink" title="任务一：文件的读方法"></a><em>任务一：文件的读方法</em></h4><p>知识点：</p>
+<p>语法：<strong>fileObject.read(size)</strong></p>
+<p>描述：<strong>read()<strong>从文件中一次性</strong>读入</strong>并<strong>返回</strong>文件的<strong>所有内容</strong></p>
+<p>参数：<strong>size</strong>为非负整数，<strong>可选</strong></p>
+<p>指定读取文件的字节数，包括 **”\n”**字符</p>
+<p>默认值，尝试尽可能多地读取文件内容，甚至读取当前整个文件内容</p>
+<p>返回：从文件中读取的<strong>字符串</strong></p>
+<p><strong>注意</strong>：<strong>read()<strong>方法执行后，会把</strong>文件指针</strong>移动到<strong>文件的末尾</strong></p>
+<p>例子：文件读程序</p>
+<p>首先在当前目录下<strong>手动创建</strong>一个名为<strong>README.txt</strong>的文本文件，里面随意写几行内容并保存关闭</p>
+<p>然后使用**read()**读取文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 打开 - 文件名需要注意大小写</span></span><br><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;README.txt&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 读取</span></span><br><span class="line">text = file.read()</span><br><span class="line">print(text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 关闭</span></span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+
+<p>注意：在开发中，通常会先编写<strong>打开</strong>和<strong>关闭</strong>的代码，再编写中间针对文件的<strong>读/写</strong> 操作！</p>
+<h4 id="任务二：文件指针"><a href="#任务二：文件指针" class="headerlink" title="任务二：文件指针"></a><em>任务二：文件指针</em></h4><p>知识点：</p>
+<p>文件指针<strong>并非</strong>C语言里的指针</p>
+<p><strong>文件指针</strong>标记<strong>从文件的哪个位置开始读写数据</strong></p>
+<p><strong>第一次打开</strong>文件时，通常<strong>文件指针会指向文件的开始位置</strong></p>
+<p>当执行了<strong>read()<strong>方法后，</strong>文件指针</strong>会随着读取的内容进行移动</p>
+<p>对于当前文件对象，文件指针<strong>具有记忆性</strong></p>
+<p>即下次再次调用<strong>read()<strong>方法会从</strong>上次读取内容之后</strong>开始</p>
+<p>默认情况下会移动到<strong>文件末尾</strong>，除非指定<strong>read()<strong>方法的</strong>size</strong>参数</p>
+<p>思考：</p>
+<p>如果执行了一次**read()**方法，读取了所有内容，那么再次调用 **read()**方法，还能够获得到内容吗</p>
+<p>答案：不能。第一次读取之后，<strong>文件指针移动到了文件末尾</strong>，再次调用不会读取到任何的内容</p>
+<h3 id="13-2-5-按行读取文件"><a href="#13-2-5-按行读取文件" class="headerlink" title="13.2.5   按行读取文件"></a>13.2.5   按行读取文件</h3><h4 id="任务一：按行读取文件"><a href="#任务一：按行读取文件" class="headerlink" title="任务一：按行读取文件"></a><em>任务一：按行读取文件</em></h4><p>需求分析：</p>
+<p><strong>read()<strong>方法默认会把文件的</strong>所有内容一次性读取到内存中</strong></p>
+<p>如果文件太大，对内存消耗会非常严重</p>
+<p>知识点：</p>
+<p>语法：<strong>fileObject.readline()</strong></p>
+<p>描述：**readline()**方法一次读取文件的一行内容</p>
+<p>参数：无</p>
+<p>返回：返回从文件当前行中读取的字符串</p>
+<p>注意：该方法执行后，会把<strong>文件指针</strong>移动到下一行，准备下次读取。<strong>依次</strong>读取所有行，直到文件结束符 <strong>EOF</strong></p>
+<p>例子：大文件读取方式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开文件</span></span><br><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;README.txt&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">   <span class="comment"># 读取一行内容</span></span><br><span class="line">   text = file.readline()</span><br><span class="line">   <span class="comment"># 判断是否读到内容</span></span><br><span class="line">   <span class="keyword">if</span> <span class="keyword">not</span> text:</span><br><span class="line">       <span class="keyword">break</span></span><br><span class="line">   <span class="comment"># 每读取一行的末尾已经有了一个 `\n`</span></span><br><span class="line">   print(text, end=<span class="string">&quot;&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭文件</span></span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="实例：爬取POI数据并转换为JSON格式"><a href="#实例：爬取POI数据并转换为JSON格式" class="headerlink" title="实例：爬取POI数据并转换为JSON格式"></a><em>实例：爬取POI数据并转换为JSON格式</em></h4><p>需求：</p>
+<p>利用百度POI小插件爬取一些POI数据，然后存成txt文档</p>
+<p>再用Python读取，编写成一个json格式(列表嵌套字典)：**[{‘name’:’…’,’lng’:…,’lat’:…,’address’:’…’},{…},…,]**</p>
+<p>第一步：爬取数据地址：<a target="_blank" rel="noopener" href="https://www.metrodata.cn/poi">https://www.metrodata.cn/poi</a> 。输入地区和关键字，稍等几分钟就会出现爬取的数据。可以自定义查询参数</p>
+<p>第二步：使用Python将数据转换为JSON格式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;shaoxian.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>)  <span class="comment"># 读取txt文件</span></span><br><span class="line">m = []  <span class="comment"># 新建一个空列表，用于存储数据</span></span><br><span class="line">n = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">   n += <span class="number">1</span></span><br><span class="line">   st1 = line.split(<span class="string">&#x27;:&#x27;</span>)</span><br><span class="line">   name = st1[<span class="number">0</span>]   <span class="comment"># 先以:拆分，筛选出name文本</span></span><br><span class="line">   information = st1[<span class="number">1</span>]  <span class="comment"># 第二部分包括lng，lat，address</span></span><br><span class="line">   st2 = information.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">   lng = <span class="built_in">float</span>(st2[<span class="number">0</span>])  <span class="comment"># 筛选出lng</span></span><br><span class="line">   lat = <span class="built_in">float</span>(st2[<span class="number">1</span>])  <span class="comment"># 筛选出lat</span></span><br><span class="line">   ad = st2[<span class="number">2</span>].strip()  <span class="comment"># 筛选出address，去除末尾空格</span></span><br><span class="line">   <span class="comment"># 做成嵌套列表</span></span><br><span class="line">    data = [[<span class="string">&#x27;name&#x27;</span>,name],[<span class="string">&#x27;lng&#x27;</span>,lng],[<span class="string">&#x27;lat&#x27;</span>,lat],[<span class="string">&#x27;address&#x27;</span>,ad]]  </span><br><span class="line">   m.append(<span class="built_in">dict</span>(data))  <span class="comment"># 生成字典，并追加如列表m</span></span><br><span class="line">   <span class="comment">#print(&#x27;成功转换%i个数据&#x27;%n)</span></span><br><span class="line"></span><br><span class="line">print(m)</span><br><span class="line">print(<span class="string">&#x27;\n数据转换完成！总共转换%i个数据&#x27;</span>%n)</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-2-6-文件的写方法"><a href="#13-2-6-文件的写方法" class="headerlink" title="13.2.6   文件的写方法"></a>13.2.6   文件的写方法</h3><h4 id="任务一：文件写方法write"><a href="#任务一：文件写方法write" class="headerlink" title="任务一：文件写方法write()"></a><em>任务一：文件写方法write()</em></h4><p>知识点：</p>
+<p>语法：<strong>fileObject.write(str)</strong></p>
+<p>描述：**write()**方法用于向文件中写入指定字符串</p>
+<p>参数：<strong>str</strong>为向文件写入指定的字符串</p>
+<p>返回：返回的是写入的字符长度</p>
+<p>注意：<strong>write()<strong>方法不会向字符串尾部自定添加换行符，需要</strong>手动</strong>添加**”\n”**</p>
+<p>例子：文件写操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 需要以写模式&quot;w&quot;打开文件</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;README.txt&quot;</span>, <span class="string">&quot;w&quot;</span>)</span><br><span class="line"></span><br><span class="line">f.write(<span class="string">&quot;hello python！\n&quot;</span>)</span><br><span class="line">f.write(<span class="string">&quot;今天天气真好&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭文件</span></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：将列表写入文件"><a href="#任务二：将列表写入文件" class="headerlink" title="任务二：将列表写入文件"></a><em>任务二：将列表写入文件</em></h4><p>通过**writelines()**函数，将列表作为参数，写入文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当前目录</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;test_write.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding = <span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">lst = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;e&#x27;</span>]</span><br><span class="line">f.writelines(lst)</span><br><span class="line">f.close()</span><br><span class="line"><span class="comment"># f.writelines(list)：依次把列表元素写入，但这里有没有换行？</span></span><br><span class="line"><span class="comment"># 如果想每一个元素换行怎么办？每个元素后都有&quot;\n&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过遍历为列表的每个元素添加换行符，考虑<strong>列表推导式方式</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;test_write2.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding = <span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">lst = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;e&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(lst)):</span><br><span class="line">   lst[i] = lst[i] + <span class="string">&#x27;\n&#x27;</span></span><br><span class="line">   </span><br><span class="line">f.writelines(lst)</span><br><span class="line">f.close()</span><br><span class="line"><span class="comment"># 通过遍历给每个元素最后加上&quot;\n&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="13-2-7-重要-with-as语句维护文件操作环境"><a href="#13-2-7-重要-with-as语句维护文件操作环境" class="headerlink" title="13.2.7   (重要) with as语句维护文件操作环境"></a>13.2.7   (重要) with as语句维护文件操作环境</h3><p>需求分析：</p>
+<p>任何一门编程语言中，文件的输入输出、数据库的连接断开等，都是很常见的资源管理操作。但<strong>资源都是有限的</strong>，在写程序时，必须保证这些<strong>资源在使用过后得到释放</strong>，不然就容易造成资源泄露，轻者使得系统处理缓慢，严重时会使系统崩溃</p>
+<p>例如，前面在介绍文件操作时，<strong>一直强调打开的文件最后一定要关闭，否则会程序的运行造成意想不到的隐患</strong></p>
+<p>但是，即便使用<strong>close()<strong>做好了关闭文件的操作，</strong>如果在打开文件或文件操作过程中抛出了异常，还是无法及时关闭文件</strong></p>
+<p>知识点：</p>
+<p>在Python中，对应的解决方式是使用 <strong>with as</strong> 语句操作上下文管理器(context manager)，它能够帮助我们自动分配并且释放资源</p>
+<p>通过使用 <strong>with as</strong> 语句，打开的文件对象，无论期间是否抛出异常，都能保证<strong>with as</strong>语句执行完毕后自动调用**close()**方法</p>
+<p>知识点：<strong>with as</strong> 语句的基本语法格式为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> 表达式 <span class="keyword">as</span> obj：</span><br><span class="line">   代码块</span><br></pre></td></tr></table></figure>
+
+<p>表达式：可以是资源打开函数的返回对象。比如文件**open()**函数，数据库连接函数等</p>
+<p>obj：资源对象。比如文件**open()**函数返回的文件对象</p>
+<p>将下面的代码改为为<strong>with…as</strong>语句</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 需要以写模式&quot;w&quot;打开文件</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;README.txt&quot;</span>, <span class="string">&quot;w&quot;</span>)</span><br><span class="line"></span><br><span class="line">f.write(<span class="string">&quot;hello python！\n&quot;</span>)</span><br><span class="line">f.write(<span class="string">&quot;今天天气真好&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭文件</span></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<p>有时候不得不承认Python编程就是一种享受，只要掌握该语言的某些特性</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将open()函数的返回值通过as赋值给f文件对象</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;README.txt&quot;</span>, <span class="string">&quot;w&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">   f.write(<span class="string">&quot;hello python！\n&quot;</span>)</span><br><span class="line">   f.write(<span class="string">&quot;今天天气真好&quot;</span>)</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 退出with作用域(语句块)，f对象自动销毁</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="13-3-综合实例"><a href="#13-3-综合实例" class="headerlink" title="13.3   综合实例"></a>13.3   综合实例</h2><h4 id="13-3-1-实例：文件指针问题"><a href="#13-3-1-实例：文件指针问题" class="headerlink" title="13.3.1   实例：文件指针问题"></a>13.3.1   实例：文件指针问题</h4><p>下面程序功能，打开一个文件，然后先向文件**write()<strong>写入字符串，然后再</strong>read()**读取字符串，并输出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 请换一个文件名，&quot;w+&quot;为读写模式</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;Data.txt&quot;</span>, <span class="string">&quot;w+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="comment"># 手动添加换行符\n</span></span><br><span class="line">data_str = <span class="string">&quot;hello python\n&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 写3行data_str</span></span><br><span class="line">f.write(data_str)</span><br><span class="line">f.write(data_str)</span><br><span class="line">f.write(data_str)</span><br><span class="line"></span><br><span class="line">file_str = f.read()</span><br><span class="line">print(file_str)</span><br><span class="line"></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>**f = open(“Data.txt”, “w+”, encoding=’utf-8’)<strong>，以增强型</strong>“w+”<strong>读写方式、</strong>‘utf-8’<strong>编码打开文件</strong>“Data.txt”<strong>，由于该文件不存在，所以</strong>“Data.txt”**文件会被创建</p>
+<p>调用3次写文件**f.write(data_str)**方法，在文件中写入3行字符串</p>
+<p>然后，再调用读文件**f.read()<strong>方法，希望读取之前写入的内容。但是发现，读取内容为空。但是打开</strong>“Data.txt”**后，发现字符串已经被写入到文件中</p>
+<p><strong>原因分析</strong>：</p>
+<p>当写文件完成时，文件的当前<strong>文件指针</strong>会处于文件末尾处</p>
+<p>如果继续执行读取操作，系统从该光标处向后读取，但该<strong>文件指针</strong>已处于文件的末尾，所以读出内容为空</p>
+<p><strong>解决方法一</strong>：规范代码，<strong>将写文件和读文件分开</strong>。在执行完一个操作后应及时关闭文件对象**f.close()**。使用这种方法可以是文件安全有效，不会被其他操作影响预计效果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;Data.txt&quot;</span>, <span class="string">&quot;w+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">data_str = <span class="string">&quot;hello python\n&quot;</span></span><br><span class="line">f.write(data_str)</span><br><span class="line">f.write(data_str)</span><br><span class="line">f.write(data_str)</span><br><span class="line">f.close() <span class="comment">#关闭文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新打开文件，文件指针回到文件开始</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;Data.txt&quot;</span>, <span class="string">&quot;r+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">file_str = f.read()</span><br><span class="line">print(file_str)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<p>或者使用文件的逐行遍历</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;Data.txt&quot;</span>, <span class="string">&quot;r+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">   print(line, end = <span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<p><strong>解决方法二</strong>：使用**seek()**方法移动光标至指定位置</p>
+<p>知识点：文件光标移动</p>
+<p>语法：<strong>fileObject.seek(offset,whence=0)</strong></p>
+<p>参数：<strong>offset</strong>为偏移量，即需要移动偏移的字节数</p>
+<p>参数：<strong>whence</strong>为要从哪个位置开始偏移，默认值为0；0代表从<strong>文件开始</strong>为起始点，1代表从<strong>当前位置</strong>为起始点，2代表从<strong>文件末尾</strong>为起始点</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;Data.txt&quot;</span>, <span class="string">&quot;w+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">data_str = <span class="string">&quot;hello python\n&quot;</span></span><br><span class="line">f.write(data_str)</span><br><span class="line">f.write(data_str)</span><br><span class="line">f.write(data_str)</span><br><span class="line"></span><br><span class="line"><span class="comment"># offset= 0，whence=0</span></span><br><span class="line"><span class="comment"># 从文件开始，以偏移量为0设置光标。</span></span><br><span class="line">f.seek(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">file_str = f.read()</span><br><span class="line">print(file_str)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="习题："><a href="#习题：" class="headerlink" title="习题："></a><strong>习题：</strong></h3><p>将上面文件操作程序修改为<strong>with as</strong>语句结构</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;Data.txt&quot;</span>, <span class="string">&quot;w+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    data_str = <span class="string">&quot;hello python\n&quot;</span></span><br><span class="line">    f.write(data_str)</span><br><span class="line">    f.write(data_str)</span><br><span class="line">    f.write(data_str)</span><br><span class="line">    f.seek(<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">    file_str = f.read()</span><br><span class="line">    print(file_str)</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-3-2-实例：文件数据的数值求和"><a href="#13-3-2-实例：文件数据的数值求和" class="headerlink" title="13.3.2   实例：文件数据的数值求和"></a>13.3.2   实例：文件数据的数值求和</h3><p>需求分析：</p>
+<p>在<strong>while</strong>循环章节中，所有平均值计算程序都有一个缺点：<strong>数字都需要用户手动输入</strong>。试想用户正在尝试着求100个数字的平均值，而恰巧在接近尾声时发生了打字错误。如果用户使用上面编写的程序，就需要从头开始，想想就崩溃</p>
+<p>为此，解决该问题的一个可行方法是首先<strong>将所有数字都输入到文件</strong>中，即使用户在文件中输错了数字，也可以很轻易地进行修改和编辑</p>
+<p>因此，需要将之前设计的平均值计算程序从<strong>用户输入数据</strong>改写为<strong>从文件中读取数据</strong></p>
+<p>这种面向文件的程序数据处理方式在现实应用中非常常见</p>
+<p>本节将学习如何从文件中读取数据，然后实现哨兵式循环来计算平均数</p>
+<h4 id="任务一：数据生成"><a href="#任务一：数据生成" class="headerlink" title="任务一：数据生成"></a><em>任务一：数据生成</em></h4><p>创建一个数据文件，共100行，每一行为一个随机数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random <span class="keyword">as</span> rd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 例如：Data.txt</span></span><br><span class="line">name = <span class="built_in">input</span>(<span class="string">&#x27;请输入文件名: &#x27;</span>)</span><br><span class="line">f = <span class="built_in">open</span>(name, <span class="string">&quot;w+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">   <span class="comment"># 随机生成[-10,10]区间的整数</span></span><br><span class="line">   num = rd.randint(-<span class="number">10</span>, <span class="number">10</span>)</span><br><span class="line">   <span class="comment"># 将num转换为字符串，与换行符&#x27;\n&#x27;拼接，写入文件中</span></span><br><span class="line">   f.write(<span class="built_in">str</span>(num) + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&#x27;生成结束，请打开<span class="subst">&#123;name&#125;</span>查看结果&#x27;</span>)    </span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：while哨兵式循环来计算平均值"><a href="#任务二：while哨兵式循环来计算平均值" class="headerlink" title="任务二：while哨兵式循环来计算平均值"></a><em>任务二：while哨兵式循环来计算平均值</em></h4><p>下面将对文件中的数字进行求平均，使用文件结束符<strong>EOF</strong>或空字符**””**作为循环的哨兵</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入之前生成数字的文件：Data.txt</span></span><br><span class="line">fileName = <span class="built_in">input</span>(<span class="string">&quot;输入文件名: &quot;</span>)</span><br><span class="line">infile = <span class="built_in">open</span>(fileName,<span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">total = <span class="number">0.0</span></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从文件中先读一行</span></span><br><span class="line">line = infile.readline()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将line为空作为哨兵，即读到文件末尾</span></span><br><span class="line"><span class="keyword">while</span> line != <span class="string">&quot;&quot;</span>:</span><br><span class="line">   total += <span class="built_in">float</span>(line)</span><br><span class="line">   count += <span class="number">1</span></span><br><span class="line">   line = infile.readline()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;平均值为：&quot;</span>, total / count)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：for循环来计算平均值"><a href="#任务三：for循环来计算平均值" class="headerlink" title="任务三：for循环来计算平均值"></a><em>任务三：for循环来计算平均值</em></h4><p>相对于其他语言，Python提供了简便的文件读取方式，使用**readlines()**方法读取整个文件，返回以行为元素的列表。然后，通过for循环遍历元素(行)，并对其做运算</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入之前生成数字的文件：Data.txt</span></span><br><span class="line">fileName = <span class="built_in">input</span>(<span class="string">&quot;输入文件名: &quot;</span>)</span><br><span class="line">infile = <span class="built_in">open</span>(fileName,<span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">total = <span class="number">0.0</span></span><br><span class="line"><span class="comment"># 将文件按行读，返回列表</span></span><br><span class="line">lines = infile.readlines()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再用for循环遍历列表元素</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">   total = total + <span class="built_in">float</span>(line)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;平均值为：&quot;</span>, total / <span class="built_in">len</span>(lines))</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>显然，<strong>for</strong>循环比<strong>while</strong>循环更简洁</p>
+<p>这程序<strong>for</strong>循环之所以能用，是因为Python提供了<strong>readlines()<strong>方法将整个文件以行为元素，返回列表。然后，就可以使用Python的</strong>确定循环</strong>(<strong>for</strong>循环)，来遍历和处理列表元素</p>
+<p>对于非Python语言，并不一定提供<strong>readlines()<strong>这么方便的方法。因此，只能通过哨兵式的</strong>while</strong>循环，进行文件读和相关运算</p>
+<h3 id="习题：-1"><a href="#习题：-1" class="headerlink" title="习题："></a><strong>习题</strong>：</h3><p>将上面文件操作程序修改为<strong>with as</strong>语句结构</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random <span class="keyword">as</span> rd</span><br><span class="line">name = <span class="built_in">input</span>(<span class="string">&#x27;请输入文件名: &#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(name, <span class="string">&quot;w+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">        num = rd.randint(-<span class="number">10</span>, <span class="number">10</span>)</span><br><span class="line">        f.write(<span class="built_in">str</span>(num) + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    print(<span class="string">f&#x27;生成结束，请打开<span class="subst">&#123;name&#125;</span>查看结果&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-3-3-实例：复制文件"><a href="#13-3-3-实例：复制文件" class="headerlink" title="13.3.3   实例：复制文件"></a>13.3.3   实例：复制文件</h3><h4 id="任务一：小文件复制"><a href="#任务一：小文件复制" class="headerlink" title="任务一：小文件复制"></a><em>任务一：小文件复制</em></h4><p>打开一个已有文件，读取完整内容，并写入到另外一个文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 打开文件</span></span><br><span class="line">file_read = <span class="built_in">open</span>(<span class="string">&quot;README&quot;</span>)</span><br><span class="line">file_write = <span class="built_in">open</span>(<span class="string">&quot;README[复件]&quot;</span>, <span class="string">&quot;w&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 读取并写入文件</span></span><br><span class="line">text = file_read.read()</span><br><span class="line">file_write.write(text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 关闭文件</span></span><br><span class="line">file_read.close()</span><br><span class="line">file_write.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：大文件复制"><a href="#任务二：大文件复制" class="headerlink" title="任务二：大文件复制"></a><em>任务二：大文件复制</em></h4><p>打开一个已有文件，逐行读取内容，并顺序写入到另外一个文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 打开文件</span></span><br><span class="line">file_read = <span class="built_in">open</span>(<span class="string">&quot;README&quot;</span>)</span><br><span class="line">file_write = <span class="built_in">open</span>(<span class="string">&quot;README[复件]&quot;</span>, <span class="string">&quot;w&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 读取并写入文件</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">   <span class="comment"># 每次读取一行</span></span><br><span class="line">   text = file_read.readline()</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 判断是否读取到内容</span></span><br><span class="line">   <span class="keyword">if</span> <span class="keyword">not</span> text:</span><br><span class="line">       <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">   file_write.write(text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 关闭文件</span></span><br><span class="line">file_read.close()</span><br><span class="line">file_write.close()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="13-4-常识-文件和目录管理操作"><a href="#13-4-常识-文件和目录管理操作" class="headerlink" title="13.4   (常识) 文件和目录管理操作"></a>13.4   (常识) 文件和目录管理操作</h2><h3 id="13-4-1-常用文件和目录函数介绍"><a href="#13-4-1-常用文件和目录函数介绍" class="headerlink" title="13.4.1   常用文件和目录函数介绍"></a>13.4.1   常用文件和目录函数介绍</h3><p>知识点：</p>
+<p>在<strong>控制台终端</strong>或<strong>文件系统</strong>中可以执行常规的<strong>文件/目录</strong>管理操作，例如：创建、重命名、删除、改变路径、查看目录内容等</p>
+<p>在<strong>Python</strong>中，实现上述功能需要导入 <strong>os</strong> 模块</p>
+<p>注意：</p>
+<p>Jupyter的cell支持IPython的文件和目录管理指令</p>
+<p>文件查询命令：**%ls**</p>
+<p>显示文件内容：**%cat**</p>
+<h4 id="任务三：文件操作"><a href="#任务三：文件操作" class="headerlink" title="任务三：文件操作"></a><em>任务三：文件操作</em></h4><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rename</td>
+<td>重命名文件</td>
+<td><strong>os.rename(源文件名, 目标文件名)</strong></td>
+</tr>
+<tr>
+<td>remove</td>
+<td>删除文件</td>
+<td><strong>os.remove(文件名)</strong></td>
+</tr>
+</tbody></table>
+<h4 id="任务四：目录操作"><a href="#任务四：目录操作" class="headerlink" title="任务四：目录操作"></a><em>任务四：目录操作</em></h4><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>listdir</td>
+<td>目录列表</td>
+<td><strong>os.listdir(目录名)</strong></td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td>创建目录</td>
+<td><strong>os.mkdir(目录名)</strong></td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>删除目录</td>
+<td><strong>os.rmdir(目录名）</strong></td>
+</tr>
+<tr>
+<td>getcwd</td>
+<td>获取当前目录</td>
+<td><strong>os.getcwd(）</strong></td>
+</tr>
+<tr>
+<td>chdir</td>
+<td>修改工作目录</td>
+<td><strong>os.chdir(目标目录)</strong></td>
+</tr>
+<tr>
+<td>path.isdir</td>
+<td>判断是否是文件</td>
+<td><strong>os.path.isdir(文件路径)</strong></td>
+</tr>
+</tbody></table>
+<h3 id="13-4-2-相对路径和绝对路径"><a href="#13-4-2-相对路径和绝对路径" class="headerlink" title="13.4.2   相对路径和绝对路径"></a>13.4.2   相对路径和绝对路径</h3><h4 id="任务一：当前目录"><a href="#任务一：当前目录" class="headerlink" title="任务一：当前目录"></a><em>任务一：当前目录</em></h4><p>知识点：什么是当前工作目录？</p>
+<p>每个运行在计算机上的程序，都有一个“当前工作目录”( <strong>cwd</strong>)</p>
+<p>使用**os.getcwd()**函数取得当前工作路径</p>
+<p>使用<strong>os.chdir()</strong> 切换当前目录，类似控制台的<strong>cd</strong>指令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入os模块</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获得当前目录</span></span><br><span class="line">print(os.getcwd())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换当前目录</span></span><br><span class="line">os.chdir(<span class="string">&#x27;C:\Windows\System32&#x27;</span>)</span><br><span class="line">print(os.getcwd())</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<p>如果使用<strong>os.chdir()<strong>修改当前目录，当指定目录不存在时，Python 解释器触发异常</strong>FileNotFoundError</strong></p>
+<p>例如，<strong>os.chdir(‘C:\error’)<strong>，假设</strong>error</strong>目录不存在</p>
+<h4 id="任务二：相对路径和绝对路径-重要"><a href="#任务二：相对路径和绝对路径-重要" class="headerlink" title="任务二：相对路径和绝对路径 (重要)"></a><em>任务二：相对路径和绝对路径 (重要)</em></h4><p>知识点：明确一个文件所在的路径，有 2 种表示方式，分别是：</p>
+<p><strong>绝对路径</strong>：总是从<strong>根文件夹</strong>开始</p>
+<p>Window 系统中以盘符(<strong>C:<strong>、</strong>D:</strong>)作为根文件夹</p>
+<p>Mac或Linux系统中以**/**作为根文件夹</p>
+<p><strong>相对路径</strong>：指的是文件<strong>相对于当前工作目录</strong>所在的位置</p>
+<p>例如，当前工作目录为”C:\Windows\System32”，若文件 <strong>demo.txt</strong> 就位于这个 System32 文件夹下，则<strong>demo.txt</strong>的相对路径表示为 “.\demo.txt”</p>
+<p>其中 .\ 就表示当前所在目录</p>
+<p>知识点(常识)：常用的相对路径表示</p>
+<p> .\ 表示当前所在目录。例如 <strong>.\data.txt</strong>，表示<strong>当前文件夹</strong>中<strong>data.txt</strong>文件</p>
+<p> ..\ 表示当前所在目录的父目录。例如 <strong>..\data.txt</strong>，表示<strong>父文件夹</strong>中的<strong>data.txt</strong>文件</p>
+<h4 id="任务三：os-path模块"><a href="#任务三：os-path模块" class="headerlink" title="任务三：os.path模块"></a><em>任务三：os.path模块</em></h4><p>知识点：Python os.path 模块提供了一些函数，可以实现绝对路径和相对路径之间的转换，以及检查给定的路径是否为绝对路径，例如：</p>
+<p>调用 <strong>os.path.abspath(path)</strong> 将返回 path 参数的绝对路径的字符串，这是将相对路径转换为绝对路径的简便方法</p>
+<p>调用 **os.path.isabs(path)**，如果参数是一个绝对路径，就返回 True，如果参数是一个相对路径，就返回 False</p>
+<p>调用 <strong>os.path.relpath(path, start)</strong> 将返回从 start 路径到 path 的相对路径的字符串。如果没有提供 start，就使用当前工作目录作为开始路径</p>
+<p>调用 <strong>os.path.dirname(path)</strong> 将返回一个字符串，<strong>表示文件夹路径</strong>。它包含 path 参数中最后一个斜杠之前的所有内容</p>
+<p>调用 <strong>os.path.basename(path)</strong> 将返回一个字符串，<strong>表示文件名</strong>。它包含 path 参数中最后一个斜杠之后的所有内容</p>
+<p><strong>注意</strong>：例子中的<strong>路径可以根据实际情况自定义</strong>，不必要完全遵照本节的例子，根据自己的系统环境对本节代码做适当调整即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获得当前路径</span></span><br><span class="line">print(os.getcwd())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获得当前路径的绝对路径</span></span><br><span class="line">print(os.path.abspath(<span class="string">&#x27;.&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获得相对路径&#x27;.\Scripts&#x27;的的绝对路径</span></span><br><span class="line">print(os.path.abspath(<span class="string">&#x27;.\Scripts&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试当前path是否为绝对路径，输出False</span></span><br><span class="line">print(os.path.abspath(<span class="string">&#x27;.&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># os.path.abspath(&#x27;.&#x27;)获得绝对路径</span></span><br><span class="line"><span class="comment"># 然后作为实参传递给os.path.isabs()函数</span></span><br><span class="line"><span class="comment"># 输出为True</span></span><br><span class="line">print(os.path.isabs(os.path.abspath(<span class="string">&#x27;.&#x27;</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从&#x27;C:\&#x27;开始，到&#x27;C:\Windows&#x27;的相对路径</span></span><br><span class="line"><span class="comment"># 输出为&#x27;Windows&#x27;，结合截图来理解</span></span><br><span class="line">print(os.path.relpath(<span class="string">&#x27;C:\Windows&#x27;</span>, <span class="string">&#x27;C:\&#x27;))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 从&#x27;</span>C:\spam\eggs<span class="string">&#x27;开始，到&#x27;</span>C:\Windows<span class="string">&#x27;的相对路径</span></span><br><span class="line"><span class="string"># 输出为&#x27;</span>..\..\Windows<span class="string">&#x27;，结合截图来理解</span></span><br><span class="line"><span class="string">print(os.path.relpath(&#x27;</span>C:\Windows<span class="string">&#x27;, &#x27;</span>C:\spam\eggs<span class="string">&#x27;))</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获得文件名(不含路径)，输出为&#x27;calc.exe&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;C:\Windows\System32\calc.exe&#x27;</span></span><br><span class="line">print(os.path.basename(path))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获得路径名(不含文件)</span></span><br><span class="line">print(os.path.dirname(path))</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-4-3-实例：文件目录操作"><a href="#13-4-3-实例：文件目录操作" class="headerlink" title="13.4.3   实例：文件目录操作"></a>13.4.3   实例：文件目录操作</h3><p>例子中的<strong>文件路径</strong>都需要根据具体文件位置进行<strong>自定义</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># os模块：系统模块 - 常用命令</span></span><br><span class="line"><span class="keyword">import</span> os  <span class="comment"># 导入模块</span></span><br><span class="line"><span class="comment"># 输出字符串指示正在使用的平台。</span></span><br><span class="line"><span class="comment"># 如果是window 则用&#x27;nt&#x27;表示</span></span><br><span class="line"><span class="comment"># 对Linux/Unix用户，它是&#x27;posix&#x27;。</span></span><br><span class="line">print(os.name)  </span><br><span class="line"><span class="comment"># 函数得到当前工作目录，即当前Python脚本工作的目录路径。</span></span><br><span class="line">print(os.getcwd())  </span><br><span class="line"><span class="comment"># 返回指定目录下的所有文件和目录名。</span></span><br><span class="line">print(os.listdir())  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到目标路径</span></span><br><span class="line"><span class="comment">#os.chdir(&#x27;C:\\Users\\Hjx\\Desktop\\&#x27; )  </span></span><br><span class="line"><span class="comment">#print(os.getcwd())</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除一个文件</span></span><br><span class="line"><span class="comment">#os.remove(&#x27;text2.txt&#x27;)  </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数返回一个路径的目录名和文件名</span></span><br><span class="line">print(os.path.split(<span class="string">&#x27;C:\\Users\\Hjx\\Desktop\\text.txt&#x27;</span>))  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 用来检验给出的路径是否真地存在</span></span><br><span class="line"><span class="comment"># 这里不存在改文件故False，但路径存在故True</span></span><br><span class="line">print(os.path.exists(<span class="string">&#x27;C:\\Users\\Hjx\\Desktop\\heheh.txt&#x27;</span>))</span><br><span class="line">print(os.path.exists(<span class="string">&#x27;C:\\Users\\Hjx\\Desktop\\&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="13-5-常识-UTF-8编码解决中文乱码问题"><a href="#13-5-常识-UTF-8编码解决中文乱码问题" class="headerlink" title="13.5   (常识) UTF-8编码解决中文乱码问题"></a>13.5   (常识) UTF-8编码解决中文乱码问题</h2><p>知识点：文本文件存储的内容是基于<strong>字符编码</strong>的文件，常见的编码有 <strong>ASCII</strong> 编码，<strong>UNICODE</strong> 编码等</p>
+<p>Python 2默认使用 <strong>ASCII</strong> 编码格式</p>
+<p>Python 3默认使用 <strong>UTF-8</strong> 编码格式</p>
+<p>如果<strong>文件</strong>或<strong>网络爬虫数据</strong>中包含非 <strong>ASCII</strong> 编码字符，首先要将字符转换为 <strong>UTF-8</strong> 编码，才能被<strong>不会出现乱码</strong>问题</p>
+<h4 id="任务一：ASCII-编码和-UTF-8-编码"><a href="#任务一：ASCII-编码和-UTF-8-编码" class="headerlink" title="任务一：ASCII 编码和 UTF-8 编码"></a><em>任务一：ASCII 编码和 UTF-8 编码</em></h4><p>知识点：<strong>ASCII</strong> 编码</p>
+<p>计算机中只有 <strong>256</strong> 个 <strong>ASCII</strong> 字符。</p>
+<p>一个 <strong>ASCII</strong> 在内存中占用 <strong>1 个字节</strong> 的空间。</p>
+<p><strong>8</strong> 个 <strong>0/1</strong> 的排列组合方式一共有 <strong>256</strong> 种，也就是 2 ** 8</p>
+<p>对于中文如果使用<strong>ASCII</strong> 码，将会出现乱码</p>
+<p>知识点：<strong>UTF-8</strong> 编码格式</p>
+<p>计算机中使用 <strong>1~6 个字节</strong>来表示一个<strong>UTF-8</strong>字符，涵盖了<strong>地球上几乎所有地区的文字</strong></p>
+<p>大多数汉字会使用<strong>3 个字节</strong>表示</p>
+<p><strong>UTF-8</strong>是<strong>UNICODE</strong>编码的一种编码格式</p>
+<h4 id="任务二：使用UTF-8-编码防止中文乱码"><a href="#任务二：使用UTF-8-编码防止中文乱码" class="headerlink" title="任务二：使用UTF-8 编码防止中文乱码"></a><em>任务二：使用UTF-8 编码防止中文乱码</em></h4><p>虽然Python 3.x默认使用 <strong>UTF-8</strong> 编码格式，但是对于中文文件也会出现乱码问题，特别是读取包含中文的文本</p>
+<p>知识点：建议在源文件的<strong>第一行</strong>增加以下代码，解释器会以 <strong>utf-8</strong> 编码来处理 python文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在源文件的第一行增加以下代码(二选一)</span></span><br><span class="line"><span class="comment"># *-* coding:utf8 *-*</span></span><br><span class="line"><span class="comment"># coding=utf8</span></span><br></pre></td></tr></table></figure>
+
+<p>在读取包含中文文件时，**open()**函数指定encoding参数为 <strong>utf-8</strong> 。例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;Data.txt&quot;</span>, <span class="string">&quot;r+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">   print(line, end = <span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：使用UTF-8编码字符串"><a href="#任务三：使用UTF-8编码字符串" class="headerlink" title="任务三：使用UTF-8编码字符串"></a><em>任务三：使用UTF-8编码字符串</em></h4><p>知识点：</p>
+<p>在 <strong>Python 2</strong> 中，即使指定了文件使用 <strong>UTF-8</strong> 的编码格式，但是在遍历字符串时，仍然会<strong>以字节为单位遍历</strong>字符串</p>
+<p>要能够<strong>正确的遍历字符串</strong>，在定义字符串时，需要<strong>在字符串的引号前</strong>，增加一个小写字母 <strong>u</strong>，告诉解释器这是一个 <strong>unicode</strong> 字符串</p>
+<p>虽然Python 3的字符串都使用 <strong>UTF-8</strong>编码，但是如果字符串来自<strong>文件</strong>或<strong>网络爬虫数据</strong>(可能不是使用<strong>UTF-8</strong>)，需要将它们先转换为<strong>UTF-8</strong>，程序才不会出现乱码问题</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># *-* coding:utf8 *-*</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在字符串前，增加一个 `u` 表示这个字符串是一个 utf8 字符串</span></span><br><span class="line">hello_str = <span class="string">u&quot;你好世界&quot;</span></span><br><span class="line"></span><br><span class="line">print(hello_str)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> hello_str:</span><br><span class="line">   print(c)</span><br></pre></td></tr></table></figure>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://waxll.top/2021/06/17/py12.html>http://waxll.top/2021/06/17/py12.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-17T00:43:10+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年6月17日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://waxll.top/2021/06/17/py12.html&title=Python学习笔记12 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://waxll.top/2021/06/17/py12.html&title=Python学习笔记12 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://waxll.top/2021/06/17/py12.html&title=Python学习笔记12 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2021/06/17/py11.html'>
+          <p class='title'>Python学习笔记11<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+第十一章   函数：返回值与进阶用法11.1   函数的返回值11.1.1   向函数外部传递信息：返回值函数返回值的用法需求：函数并非总是直接通过print()来显示结果。有时，希望函数...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#13-1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-text">13.1   计算机眼中的文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%96%87%E4%BB%B6%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="toc-text">任务一：文件的概念和作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%96%87%E4%BB%B6%E5%82%A8%E5%AD%98%E6%96%B9%E5%BC%8F"><span class="toc-text">任务二：计算机的文件储存方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%9C%A8%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B8%AD%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="toc-text">任务三：在控制台中查看文件内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-2-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-text">13.2   文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-1-%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="toc-text">13.2.1   基本流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="toc-text">任务一：文件操作的基本流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="toc-text">任务二：操作文件的基本流程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-2-%E6%96%87%E4%BB%B6%E7%9A%84open-%E5%87%BD%E6%95%B0%E4%B8%8Eclose-%E6%96%B9%E6%B3%95"><span class="toc-text">13.2.2   文件的open()函数与close()方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Aopen-%E5%87%BD%E6%95%B0%E7%94%A8%E6%B3%95"><span class="toc-text">任务一：open()函数用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Aopen-%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0"><span class="toc-text">任务二：open()函数的可选参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E6%96%87%E4%BB%B6%E7%9A%84%E5%85%B3%E9%97%AD-close-%E6%96%B9%E6%B3%95"><span class="toc-text">*任务三：文件的关闭**close()*方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A3%E7%A7%8D%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E6%96%B9%E5%BC%8F-%E9%87%8D%E8%A6%81"><span class="toc-text">任务四：3种自定义文件路径方式(重要)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-3-open-%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE%E8%AF%BB%E5%86%99%E6%A8%A1%E5%BC%8F"><span class="toc-text">13.2.3   open()函数配置读写模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%93%E5%BC%80%E6%A8%A1%E5%BC%8F"><span class="toc-text">任务一：文件的打开模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A6%E7%A7%8D%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%A8%A1%E5%BC%8F"><span class="toc-text">任务二：6种文件读写模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E6%96%87%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-text">任务三：文件对象的属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-4-%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E6%96%B9%E6%B3%95"><span class="toc-text">13.2.4   文件的读方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E6%96%B9%E6%B3%95"><span class="toc-text">任务一：文件的读方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%96%87%E4%BB%B6%E6%8C%87%E9%92%88"><span class="toc-text">任务二：文件指针</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-5-%E6%8C%89%E8%A1%8C%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><span class="toc-text">13.2.5   按行读取文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%8C%89%E8%A1%8C%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><span class="toc-text">任务一：按行读取文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E7%88%AC%E5%8F%96POI%E6%95%B0%E6%8D%AE%E5%B9%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAJSON%E6%A0%BC%E5%BC%8F"><span class="toc-text">实例：爬取POI数据并转换为JSON格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-6-%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%96%B9%E6%B3%95"><span class="toc-text">13.2.6   文件的写方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%96%87%E4%BB%B6%E5%86%99%E6%96%B9%E6%B3%95write"><span class="toc-text">任务一：文件写方法write()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%B0%86%E5%88%97%E8%A1%A8%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6"><span class="toc-text">任务二：将列表写入文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-7-%E9%87%8D%E8%A6%81-with-as%E8%AF%AD%E5%8F%A5%E7%BB%B4%E6%8A%A4%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83"><span class="toc-text">13.2.7   (重要) with as语句维护文件操作环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-3-%E7%BB%BC%E5%90%88%E5%AE%9E%E4%BE%8B"><span class="toc-text">13.3   综合实例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#13-3-1-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E6%96%87%E4%BB%B6%E6%8C%87%E9%92%88%E9%97%AE%E9%A2%98"><span class="toc-text">13.3.1   实例：文件指针问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-3-2-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E6%96%87%E4%BB%B6%E6%95%B0%E6%8D%AE%E7%9A%84%E6%95%B0%E5%80%BC%E6%B1%82%E5%92%8C"><span class="toc-text">13.3.2   实例：文件数据的数值求和</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90"><span class="toc-text">任务一：数据生成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Awhile%E5%93%A8%E5%85%B5%E5%BC%8F%E5%BE%AA%E7%8E%AF%E6%9D%A5%E8%AE%A1%E7%AE%97%E5%B9%B3%E5%9D%87%E5%80%BC"><span class="toc-text">任务二：while哨兵式循环来计算平均值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9Afor%E5%BE%AA%E7%8E%AF%E6%9D%A5%E8%AE%A1%E7%AE%97%E5%B9%B3%E5%9D%87%E5%80%BC"><span class="toc-text">任务三：for循环来计算平均值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-1"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-3-3-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6"><span class="toc-text">13.3.3   实例：复制文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%B0%8F%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6"><span class="toc-text">任务一：小文件复制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%A4%A7%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6"><span class="toc-text">任务二：大文件复制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-4-%E5%B8%B8%E8%AF%86-%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C"><span class="toc-text">13.4   (常识) 文件和目录管理操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-4-1-%E5%B8%B8%E7%94%A8%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E5%87%BD%E6%95%B0%E4%BB%8B%E7%BB%8D"><span class="toc-text">13.4.1   常用文件和目录函数介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-text">任务三：文件操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C"><span class="toc-text">任务四：目录操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-4-2-%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%92%8C%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-text">13.4.2   相对路径和绝对路径</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95"><span class="toc-text">任务一：当前目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%92%8C%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84-%E9%87%8D%E8%A6%81"><span class="toc-text">任务二：相对路径和绝对路径 (重要)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9Aos-path%E6%A8%A1%E5%9D%97"><span class="toc-text">任务三：os.path模块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-4-3-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C"><span class="toc-text">13.4.3   实例：文件目录操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-5-%E5%B8%B8%E8%AF%86-UTF-8%E7%BC%96%E7%A0%81%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98"><span class="toc-text">13.5   (常识) UTF-8编码解决中文乱码问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9AASCII-%E7%BC%96%E7%A0%81%E5%92%8C-UTF-8-%E7%BC%96%E7%A0%81"><span class="toc-text">任务一：ASCII 编码和 UTF-8 编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8UTF-8-%E7%BC%96%E7%A0%81%E9%98%B2%E6%AD%A2%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81"><span class="toc-text">任务二：使用UTF-8 编码防止中文乱码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E4%BD%BF%E7%94%A8UTF-8%E7%BC%96%E7%A0%81%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">任务三：使用UTF-8编码字符串</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Python学习笔记12";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5119353317'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <!-- <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div> -->
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题 | 由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>强力驱动
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://waxll.top/">Copyright © 2019-2020 XieSenshi</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $('#cover-backstretch').backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/friends/
+        
+        
+        
+        
+          id="friends"
+        >
+        <i class='fa fa-users fa-fw'></i> 友链
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/journal/
+        
+        
+        
+        
+          id="journal"
+        >
+        <i class='fa fa-calendar fa-fw'></i> 日志
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/about/
+        
+        
+        
+        
+          id="about"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 关于
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> Dark mode
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5119353317';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz","appKey":"jM85yucqi5IuVYCCQS1cUwko","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz',
+    app_key: 'jM85yucqi5IuVYCCQS1cUwko',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://waxll.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>

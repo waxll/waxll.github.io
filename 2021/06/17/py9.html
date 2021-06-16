@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Python学习笔记9 - Waxll&#39;Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Waxll'Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/waxll/Imag/gif-2.png">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    <div id="clickCanvas" style=" position:fixed;left:0;top:0;z-index:999999999;pointer-events:none;"><canvas class=" sketch" height="0" width="0"></canvas></div>
+    <script src="js/dj.js"></script>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Waxll's Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="A Wonderful Theme for Hexo" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fas fa-book fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <i class='fa fa-map-signs fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/photo/"
+              
+              
+              id="photo">
+              <i class='fas fa-images fa-fw'></i><p>图库</p>
+            </a>
+          
+            <a href="/journal/"
+              
+              
+              id="journal">
+              <i class='fas fa-calendar fa-fw'></i><p>日志</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              id="friends">
+              <i class='fa fa-users fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python学习笔记9
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://7bu.top/2020/07/14/8ba61fac048a2.jpeg">
+    <p>XieSenshi</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年6月17日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：11.3k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：44分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python学习笔记9" data-path="/2021/06/17/py9.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2021/06/17/py9.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2021/06/17/py9.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p><img src="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210521125048404.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210521125048404.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210521125048404"></p>
+<span id="more"></span>
+
+<h1 id="第九章-不定循环：while循环"><a href="#第九章-不定循环：while循环" class="headerlink" title="第九章   不定循环：while循环"></a>第九章   不定循环：while循环</h1><h2 id="9-1-（回顾）用户输入与for循环"><a href="#9-1-（回顾）用户输入与for循环" class="headerlink" title="9.1   （回顾）用户输入与for循环"></a>9.1   （回顾）用户输入与for循环</h2><h3 id="9-1-1-用户输入"><a href="#9-1-1-用户输入" class="headerlink" title="9.1.1   用户输入"></a>9.1.1   用户输入</h3><h4 id="任务一：用户输入input-函数"><a href="#任务一：用户输入input-函数" class="headerlink" title="任务一：用户输入input()函数"></a><em>任务一：用户输入input()函数</em></h4><p>知识点：接收用户输入</p>
+<p>语法：<strong>input([prompt])</strong></p>
+<p>描述：程序会一直等待用户输入，直到用户按<strong>回车键</strong>后继续运行</p>
+<p>参数：(可选) <strong>prompt</strong>为字符串类型，用于提示输入信息</p>
+<p>返回：字符串类型</p>
+<p>当等待输入时，程序会被<strong>中断</strong>/阻塞(cell的左边<strong>In[*]</strong>)，直到接收输入后程序才能继续运行</p>
+<p>注意：此<strong>中断是全局的</strong>，即会影响当前整个jupyter程序的其他cell，导致其他cell运行程序时也会出现<strong>In[*]</strong></p>
+<p><strong>input()<strong>函数的程序</strong>中断</strong>测试</p>
+<p>首先运行下面的输入程序，不输入，此时程序会阻塞，左边出现<strong>In[*]</strong></p>
+<p>再运行其他cell的程序程序，会发现其他cell程序也会被中断，左边出现<strong>In[*]</strong></p>
+<p>然后在**input()**函数的cell中输入数据之后，程序的阻塞会被解除。此时，其他cell的程序也恢复了正常</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先运行这个cell，不输入任何东西</span></span><br><span class="line">a = <span class="built_in">input</span>(<span class="string">&quot;请输入：&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 然后 运行这个cell，会发现程序被中断</span></span><br><span class="line">print(<span class="string">&#x27;只有在解除中断之后，才能运行该cell&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：多次运行带input-的cell"><a href="#任务二：多次运行带input-的cell" class="headerlink" title="任务二：多次运行带input()的cell"></a><em>任务二：多次运行带input()的cell</em></h4><p>知识点：</p>
+<p>多次运行带**input()<strong>的cell，不接受用户输入，整个jupyter将会卡死，此时</strong>input()**输入框也会消失</p>
+<p>为此，需要手动重启kernel：<strong>Kernel–&gt; Restart</strong></p>
+<p>多次运行下面cell，然后通过手动重启kernel来重置Python解释器</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先运行这个cell，不输入任何东西</span></span><br><span class="line">a = <span class="built_in">input</span>(<span class="string">&quot;请输入：&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：input-函数的的返回是字符串"><a href="#任务三：input-函数的的返回是字符串" class="headerlink" title="任务三：input()函数的的返回是字符串"></a><em>任务三：input()函数的的返回是字符串</em></h4><p>知识点(回顾)：</p>
+<p>**input()**函数的返回是字符串类型</p>
+<p>如果直接对返回值进行数值运算，会引起异常<strong>TypeError</strong></p>
+<p>为此，需要对返回值显式地调用类型转换函数，例如：**int()、float()**等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">input</span>(<span class="string">&quot;请输入整形：&quot;</span>)</span><br><span class="line">print(<span class="built_in">type</span>(a), a)</span><br><span class="line"></span><br><span class="line">b = <span class="built_in">int</span>(a)</span><br><span class="line">print(<span class="built_in">type</span>(b), b)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：求模运算符"><a href="#任务四：求模运算符" class="headerlink" title="任务四：求模运算符(%)"></a><em>任务四：求模运算符(%)</em></h4><p>知识点：</p>
+<p><strong>求模运算符</strong>(<strong>%</strong>)将两个数相除并返回余数</p>
+<p>如果一个数可被另一个数整除，余数就为0，因此**%**将返回0</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">4</span> % <span class="number">3</span>)</span><br><span class="line">print(<span class="number">5</span> % <span class="number">3</span>)</span><br><span class="line">print(<span class="number">6</span> % <span class="number">3</span>)</span><br><span class="line">print(<span class="number">7</span> % <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<p>奇偶数判断程序。偶数都能被2整除，因此对<strong>number</strong>和2执行求模运算的结果为零，即<strong>number % 2 == 0</strong>；否则就是奇数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">number = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;输入整数：&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> number % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">   print(<span class="string">f&quot;数字<span class="subst">&#123;number&#125;</span>为偶数。&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   print(<span class="string">f&quot;数字<span class="subst">&#123;number&#125;</span>为奇数。&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="习题："><a href="#习题：" class="headerlink" title="习题："></a>习题：</h3><p><strong>7-1 汽车租赁</strong>：编写一个程序，询问用户要租赁什么样的汽车，并打印一条消息，如“Let me see if I can find you a Subaru”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">car=<span class="string">&#x27;What kind of car do you need?&#x27;</span></span><br><span class="line">kids=<span class="built_in">input</span>(car)</span><br><span class="line">print(<span class="string">&#x27;let me see if can find you a &#x27;</span>+kids)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let me see <span class="keyword">if</span> can find you a Benz</span><br></pre></td></tr></table></figure>
+
+<p><strong>7-2 餐馆订位</strong>：编写一个程序，询问用户有多少人用餐。如果超过8人，就打印一条消息，指出没有空桌；否则指出有空桌</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">inquiry=<span class="string">&#x27;How many people have dinner, please?&#x27;</span></span><br><span class="line">num=<span class="built_in">input</span>(inquiry)  <span class="comment"># 3</span></span><br><span class="line">num=<span class="built_in">int</span>(num)</span><br><span class="line"><span class="keyword">if</span> num&gt;<span class="number">8</span>:</span><br><span class="line">    print(<span class="string">&#x27;There are no empty tables&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;There is a table available&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">There <span class="keyword">is</span> a table available</span><br></pre></td></tr></table></figure>
+
+<p><strong>7-3 10的整数倍</strong>：让用户输入一个数字，并指出这个数字是否是10的整数倍</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">num=<span class="string">&#x27;plese input one number:&#x27;</span></span><br><span class="line">nums=<span class="built_in">input</span>(num)   <span class="comment"># 20</span></span><br><span class="line">nums=<span class="built_in">int</span>(nums)</span><br><span class="line"><span class="keyword">if</span> nums%<span class="number">10</span>==<span class="number">0</span>:</span><br><span class="line">    nums=<span class="built_in">str</span>(nums)</span><br><span class="line">    print(nums+<span class="string">&#x27; is an integral multiple of ten&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    nums = <span class="built_in">str</span>(nums)</span><br><span class="line">    print(nums+<span class="string">&#x27; is not inteqral multiple of ten&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">20</span> <span class="keyword">is</span> an integral multiple of ten</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-1-2-程序的三大流程"><a href="#9-1-2-程序的三大流程" class="headerlink" title="9.1.2   程序的三大流程"></a>9.1.2   程序的三大流程</h3><h4 id="任务一：掌握程序开发的三大流程"><a href="#任务一：掌握程序开发的三大流程" class="headerlink" title="任务一：掌握程序开发的三大流程"></a><em>任务一：掌握程序开发的三大流程</em></h4><p>在程序开发中，一共有<strong>三种</strong>流程方式：</p>
+<p><strong>顺序：从上向下</strong>，顺序执行代码</p>
+<p><strong>分支</strong>：根据<strong>条件判断</strong>，决定执行代码的<strong>分支</strong></p>
+<p><strong>循环</strong>：让 <strong>特定代码块重复</strong> 执行</p>
+<h3 id="9-1-3-确定循环：for循环"><a href="#9-1-3-确定循环：for循环" class="headerlink" title="9.1.3   确定循环：for循环"></a>9.1.3   确定循环：for循环</h3><h4 id="任务一：回顾for循环"><a href="#任务一：回顾for循环" class="headerlink" title="任务一：回顾for循环"></a><em>任务一：回顾for循环</em></h4><p><strong>for</strong>循环语法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> &lt;sequence&gt;:</span><br><span class="line">&lt;statements&gt;</span><br></pre></td></tr></table></figure>
+
+<p>知识点：回顾请看第4章</p>
+<p>描述： <strong>for</strong>循环用于<strong>遍历序列或集合类型对象</strong>(列表、元组、字典、字符串等)，在循环体中实现对每个元素执行批量操作</p>
+<p>在每次迭代中，循环临时变量<strong>item</strong>依次获取序列**<sequence>**中的元素</p>
+<p>然后，循环体**<statements><strong>针对每个</strong>item**执行一次</p>
+<p><strong>思考：for语句的循环次数是多少？</strong></p>
+<h4 id="任务二：for循环的不足"><a href="#任务二：for循环的不足" class="headerlink" title="任务二：for循环的不足"></a><em>任务二：for循环的不足</em></h4><p><strong>需求分析</strong>：编写一个程序，计算用户输入的一系列数的平均值</p>
+<p>平均值：数的和<strong>除以</strong>数的个数</p>
+<p>为了让程序通用，它应该适用于<strong>任意数量</strong>的数</p>
+<p>思路：</p>
+<p>首先询问用户总共有几个数，通过<strong>input()<strong>输入一个总数量</strong>n</strong></p>
+<p>然后使用循环，通过<strong>input()<strong>接受用户输入的</strong>n</strong>个数，然后依次对它们进行累积total。</p>
+<p>循环结束后对<strong>total</strong>除以n求平均</p>
+<p>算法伪代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">input</span>()输入总共有n个数</span><br><span class="line">初始化 total = <span class="number">0</span></span><br><span class="line">循环 n 次</span><br><span class="line">　　<span class="built_in">input</span>()输入数x</span><br><span class="line">　　total += x</span><br><span class="line">求均值 average = total / n</span><br></pre></td></tr></table></figure>
+
+<p>根据伪代码，直接转换为Python程序：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;共有多个数？&quot;</span>))</span><br><span class="line">total = <span class="number">0.0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">   x = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入数字：&quot;</span>))</span><br><span class="line">   total += x</span><br><span class="line">print(<span class="string">&quot;均值为：&quot;</span>, total / n)</span><br></pre></td></tr></table></figure>
+
+<p><strong>缺陷分析：</strong></p>
+<p>上述的求平均值程序肯定是有效的，但是它的人机交互<strong>存在缺陷</strong></p>
+<p>它首先<strong>需要询问用户有多少个数字</strong>。数字较少时，用户可以数一数输入的数字规模。但如果有很多很多的数需要求平均值，那么把所有的数都数一遍是不太可行的</p>
+<p>造成这现象的原因是<strong>for</strong>循环需要提前<strong>明确循环次数。换言之，for循环是有限的确定循环</strong></p>
+<h2 id="9-2-不定循环：while循环"><a href="#9-2-不定循环：while循环" class="headerlink" title="9.2   不定循环：while循环"></a>9.2   不定循环：while循环</h2><h3 id="9-2-1-while循环语法"><a href="#9-2-1-while循环语法" class="headerlink" title="9.2.1   while循环语法"></a>9.2.1   while循环语法</h3><h4 id="任务一：while循环的流程分析"><a href="#任务一：while循环的流程分析" class="headerlink" title="任务一：while循环的流程分析"></a><em>任务一：while循环的流程分析</em></h4><p>需求分析：</p>
+<p>循环的作用就是让<strong>指定的代码</strong>在满足一定的条件下重复的执行</p>
+<p><strong>while</strong> 循环最常用的应用场景就是<strong>让执行的代码根据指定的条件来重复</strong>执行</p>
+<p>需求：打印 5 遍 <strong>Hello Python</strong></p>
+<p>思考：如果要求打印 100 遍怎么办？</p>
+<p><strong>while</strong>循环的伪代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">初始条件设置 —— 通常是重复执行的 计数器</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> 条件(判断 计数器 是否达到 目标次数):</span><br><span class="line">   条件满足时，做的事情<span class="number">1</span></span><br><span class="line">   条件满足时，做的事情<span class="number">2</span></span><br><span class="line">   条件满足时，做的事情<span class="number">3</span></span><br><span class="line">   ...(省略)...</span><br><span class="line">   </span><br><span class="line">   处理条件(计数器 + <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p><strong>while</strong> 语句以及缩进部分是一个<strong>完整的代码块</strong></p>
+<p><strong>while</strong>循环通过<strong>判断条件</strong>来决定循环是否执行，因此它适用于指定次数(<strong>for</strong>循环擅长做)和不指定次数(<strong>for</strong>循环不擅长做)的场景</p>
+<h4 id="任务二：while循环语法"><a href="#任务二：while循环语法" class="headerlink" title="任务二：while循环语法"></a><em>任务二：while循环语法</em></h4><p>需求分析：</p>
+<p><strong>for</strong>循环是一个有限的确定循环。即定义<strong>for</strong>循环时，必须确定迭代次数</p>
+<p>在<strong>for</strong>循环求平均数程序中，如果不让用户提前输入总数量，那么程序就无法知道循环迭代次数。这导致程序设计陷入了困境</p>
+<p>如何让程序拥有自动计数功能？</p>
+<p><strong>while</strong>循环语法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> &lt;condition&gt;:</span><br><span class="line">　　&lt;statements&gt;</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>Python提供了<strong>不定循环</strong>或<strong>条件循环</strong>机制——<strong>while</strong>循环</p>
+<p>类似于<strong>if</strong>语句，<strong>while</strong>循环使用**<condition>**布尔表达式来控制循环</p>
+<p>只要条件为<strong>True</strong>，循环体**<statements><strong>就会重复执行；当条件为</strong>false**时，循环终止</p>
+<p><strong>while</strong>循环不需明确循环次数，它通过**<condition><strong>来控制循环的运行。因此，相对</strong>确定循环for<strong>语句，它被称为</strong>不定循环**</p>
+<p><strong>先测试</strong>的循环结构：</p>
+<p>在<strong>while</strong>循环体执行之前**<condition>**条件</p>
+<p>如果循环**<condition><strong>最初为</strong>False<strong>，则循环体</strong><statements>**就根本不会被执行</p>
+<p>该循环结构，循环次数**&gt;=0**次，最少为0次</p>
+<p>使用<strong>while</strong>实现5、4、3、2、1倒计时打印</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">5</span></span><br><span class="line"><span class="comment"># a &gt; 0为循环条件</span></span><br><span class="line"><span class="keyword">while</span> (a &gt; <span class="number">0</span>):   </span><br><span class="line">   print(a)</span><br><span class="line">   a -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：-while循环实现循环打印"><a href="#任务三：-while循环实现循环打印" class="headerlink" title="任务三： while循环实现循环打印"></a><em>任务三： while循环实现循环打印</em></h4><p>打印5遍 <strong>Hello Python</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 定义重复次数计数器</span></span><br><span class="line">i = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 使用 while 判断条件</span></span><br><span class="line"><span class="keyword">while</span> i &lt;= <span class="number">5</span>:</span><br><span class="line">   <span class="comment"># 要重复执行的代码</span></span><br><span class="line">   print(<span class="string">&quot;Hello Python&quot;</span>)</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 处理计数器 i</span></span><br><span class="line">   i = i + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># print(&quot;循环结束后的 i = %d&quot; % i)</span></span><br><span class="line">print(<span class="string">&quot;循环结束后的 i = &#123;i&#125;&quot;</span>) <span class="comment"># f-string方式</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：循环结束后，之前定义的计数器变量<strong>i</strong>是依旧存在的</p>
+<h4 id="任务四：赋值运算符"><a href="#任务四：赋值运算符" class="headerlink" title="任务四：赋值运算符"></a><em>任务四：赋值运算符</em></h4><p>知识点：</p>
+<p>在 Python 中，使用 <strong>=</strong> 可以给变量赋值</p>
+<p>在算术运算时，为了简化代码的编写，<strong>Python</strong> 还提供了一系列的与<strong>算术运算符</strong> 对应的<strong>赋值运算符</strong></p>
+<p>注意：<strong>赋值运算符中间不能使用空格</strong></p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>=</td>
+<td>简单的赋值运算符</td>
+<td>c = a + b</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>加法赋值运算符</td>
+<td>c += a 等效于 c = c + a</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>减法赋值运算符</td>
+<td>c -= a 等效于 c = c - a</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>乘法赋值运算符</td>
+<td>c *= a 等效于 c = c * a</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>除法赋值运算符</td>
+<td>c /= a 等效于 c = c / a</td>
+</tr>
+<tr>
+<td>//=</td>
+<td>取整除赋值运算符</td>
+<td>c //= a 等效于 c = c // a</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>取模 (余数)赋值运算符</td>
+<td>c %= a 等效于 c = c % a</td>
+</tr>
+<tr>
+<td>**=</td>
+<td>幂赋值运算符</td>
+<td>c* *=a 等效于 c=c**a</td>
+</tr>
+</tbody></table>
+<h4 id="任务五：Python-中的计数方法"><a href="#任务五：Python-中的计数方法" class="headerlink" title="任务五：Python 中的计数方法"></a><em>任务五：Python 中的计数方法</em></h4><p>常见的计数方法有两种，可以分别称为：</p>
+<p><strong>自然计数法</strong>（从 <strong>1</strong> 开始）—— 更符合人类的习惯</p>
+<p><strong>程序计数法</strong>（从 <strong>0</strong> 开始）—— 几乎所有的程序语言都选择从0开始计数</p>
+<p>因此，在编写程序时，应养成习惯：<strong>除非需求的特殊要求，否则循环的计数都从0开始</strong></p>
+<h3 id="9-2-2-实例：while循环计算求和"><a href="#9-2-2-实例：while循环计算求和" class="headerlink" title="9.2.2   实例：while循环计算求和"></a>9.2.2   实例：while循环计算求和</h3><h4 id="任务一：循环实现累加求和"><a href="#任务一：循环实现累加求和" class="headerlink" title="任务一：循环实现累加求和"></a><em>任务一：循环实现累加求和</em></h4><p>需求分析：在程序开发中，通常会遇到<strong>利用循环</strong>，进行<strong>重复计算</strong>(比如求和)的需求</p>
+<p>通常需要在 <strong>while</strong>循环<strong>之前</strong>先定义一个变量，用于<strong>存放累积的计算结果</strong></p>
+<p>然后，在循环体内部，根据计算结果对该变量进行<strong>更新</strong></p>
+<p>计算0~100之间所有数字的累计求和结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 计算 0 ~ 100 之间所有数字的累计求和结果</span></span><br><span class="line"><span class="comment"># 0. 定义最终结果的变量</span></span><br><span class="line">result = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 定义一个整数的变量记录循环的次数</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 开始循环</span></span><br><span class="line"><span class="keyword">while</span> i &lt;= <span class="number">100</span>:</span><br><span class="line">   print(i)</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 每一次循环，都让 result 这个变量和 i 这个计数器相加</span></span><br><span class="line">   result += i</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 处理计数器</span></span><br><span class="line">   i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;0~100之间的数字求和结果 = <span class="subst">&#123;result&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：循环实现偶数累加求和"><a href="#任务二：循环实现偶数累加求和" class="headerlink" title="任务二：循环实现偶数累加求和"></a><em>任务二：循环实现偶数累加求和</em></h4><p>计算0~100之间所有<strong>偶数</strong>的累计求和结果。在之前的程序基础上，添加奇偶判断</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 0. 最终结果</span></span><br><span class="line">result = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 计数器</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 开始循环</span></span><br><span class="line"><span class="keyword">while</span> i &lt;= <span class="number">100</span>:</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 判断偶数</span></span><br><span class="line">   <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">       print(i)</span><br><span class="line">       result += i</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 处理计数器</span></span><br><span class="line">   i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;0~100之间的数字求和结果 = <span class="subst">&#123;result&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-2-3-循环变量"><a href="#9-2-3-循环变量" class="headerlink" title="9.2.3   循环变量"></a>9.2.3   循环变量</h3><p>知识点(术语)：循环变量</p>
+<p><strong>while</strong>循环需要通过一个额外的循环变量来控制循环流程</p>
+<p>通过<strong>循环变量</strong>来检验**<condition>**是否满足</p>
+<p>在循环体中，需要对<strong>循环变量</strong>进行更新</p>
+<h4 id="任务一：认识循环变量"><a href="#任务一：认识循环变量" class="headerlink" title="任务一：认识循环变量"></a><em>任务一：认识循环变量</em></h4><p>下面是一个简单的<strong>while</strong>循环，按步长为2，从1数到9</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#循环变量为a</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> a &lt; <span class="number">10</span>:</span><br><span class="line">   print(a)</span><br><span class="line">   <span class="comment"># 朝循环终止条件更新a</span></span><br><span class="line">   a += <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>将<strong>a</strong>称为<strong>循环变量</strong>，用来控制循环</p>
+<p>在第1行，将循环变量<strong>a</strong>设置为1，从而指定从1开始数</p>
+<p>接下来的<strong>while</strong>循环被设置成这样：只要<strong>a &lt; 10</strong>，就执行循环体</p>
+<p>循环体中打印<strong>print(a)<strong>的值，再更新循环变量</strong>a += 2(a = a + 2</strong>的简写)</p>
+<p>只要满足条件<strong>a &lt; 10</strong>，就继续循环。下图对<strong>while</strong>循环每步运行进行可视化</p>
+<p>上面<strong>while</strong>代码的输出与下面的<strong>for</strong>循环等价</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">2</span>):</span><br><span class="line">   print(a)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p><strong>while</strong>循环要求在循环之前负责初始化<strong>a</strong>，并在循环体的底部让<strong>a</strong>增加，不需要指定循环迭代次数</p>
+<p>在<strong>for</strong>循环中，循环临时变量<strong>a</strong>是自动处理的，迭代次数由**range()**生成的序列来决定</p>
+<p>知识点：循环变量可以是显式的定义变量，也可以是<strong>隐式</strong>的，例如列表的长度等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">12</span>, <span class="number">37</span>, <span class="number">5</span>, <span class="number">42</span>, <span class="number">8</span>, <span class="number">3</span>]</span><br><span class="line">even = []</span><br><span class="line">odd = []</span><br><span class="line"><span class="comment"># 将列表长度作为循环变量</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">len</span>(numbers) &gt; <span class="number">0</span>:</span><br><span class="line">   <span class="comment">#通过pop()将numbers尾部元素弹出</span></span><br><span class="line">   <span class="comment"># 本质上朝条件更新循环变量的</span></span><br><span class="line">   number = numbers.pop()</span><br><span class="line">   <span class="comment"># 奇偶判断</span></span><br><span class="line">   <span class="keyword">if</span> (number%<span class="number">2</span>==<span class="number">0</span>):</span><br><span class="line">       even.append(number)</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       odd.append(number)</span><br><span class="line">       </span><br><span class="line">print(even)</span><br><span class="line">print(odd)</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-2-4-无限循环"><a href="#9-2-4-无限循环" class="headerlink" title="9.2.4   无限循环"></a>9.2.4   无限循环</h3><h4 id="任务一：while循环容易导致死循环"><a href="#任务一：while循环容易导致死循环" class="headerlink" title="任务一：while循环容易导致死循环"></a><em>任务一：while循环容易导致死循环</em></h4><p>知识点：由于程序员的原因，<strong>忘记</strong>在循环内部<strong>修改循环的判断条件</strong>，导致循环持续执行(无限循环)，程序无法终止！</p>
+<p>知识点：不恰当的使用循环变量容易导致无限循环</p>
+<p>由于<strong>while</strong>循环的终止条件是通过<condition>来控制的，使得<strong>while</strong>循环功能强大，它可以处理非序列或集合类型的循环</p>
+<p><strong>while</strong>循环每次通过循环变量a来判断<condition>是否满足</p>
+<p>在循环体中，如果<strong>不恰当或忘记更新</strong>循环变量<strong>a</strong>，将会造成<strong>程序无限循环</strong>，cell一直*<em>In[</em>]**状态</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 忘记更新a导致无限循环</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> a &lt; <span class="number">10</span>:</span><br><span class="line">   print(a)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>当Python到达<strong>while</strong>循环时，<strong>a</strong>是1，小于10，所以循环体执行，打印1</p>
+<p>现在控制变量<strong>a</strong>返回到条件，<strong>a</strong>仍是1，所以循环体再次执行，打印1</p>
+<p>现在控制返回到条件，<strong>a</strong>仍是0，所以循环体再次执行，打印1…… (死循环)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不恰当更新a导致无限循环</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> a &lt; <span class="number">10</span>:</span><br><span class="line">   print(a)</span><br><span class="line">   a -= <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>当Python到达<strong>while</strong>循环时，<strong>a</strong>是1，小于10，所以循环体执行，打印1</p>
+<p>现在控制变量<strong>a</strong>返回到条件，<strong>a</strong>是-1，所以循环体再次执行，打印-1</p>
+<p>现在控制返回到条件，<strong>a</strong>是-3，所以循环体再次执行，打印-3…… (死循环)</p>
+<p>知识点：</p>
+<p>作为初学者，很容易一不小心会写出无限循环程序，这是通往高手的必经之路</p>
+<p>如果出现无限循环，要检查循环变量的更新是否是朝终止条件的</p>
+<p>换言之，<strong>循环变量的更新是否收敛于循环控制条件</strong></p>
+<p>出现无限循环是，Jupyter通过<strong>Kernel–&gt;Interrupt</strong>进行重置</p>
+<h2 id="9-3-常见循环模式"><a href="#9-3-常见循环模式" class="headerlink" title="9.3   常见循环模式"></a>9.3   常见循环模式</h2><h3 id="9-3-1-交互式循环"><a href="#9-3-1-交互式循环" class="headerlink" title="9.3.1   交互式循环"></a>9.3.1   交互式循环</h3><h4 id="任务一：交互式循环"><a href="#任务一：交互式循环" class="headerlink" title="任务一：交互式循环"></a><em>任务一：交互式循环</em></h4><p>知识点：</p>
+<p>不定循环<strong>while</strong>可以实现程序与用户的交互式循环</p>
+<p>所谓的交互式循环，就是在<strong>while</strong>循环期间，程序通过不断询问用户，来决定是否继续循环</p>
+<p>下面将通过数字平均值求解来分析交互式循环的机制</p>
+<p>需求分析：</p>
+<p>回忆，该程序之前需要<strong>强制用户提前输入一个需要参与运算数字的总数</strong></p>
+<p>为此，希望<strong>while</strong>循环能自动记录这个数。定义变量<strong>count</strong>来实现计数功能，初识从0开始，每次循环增加1</p>
+<p><strong>交互式循环</strong>：为了允许用户可以控制循环是否结束，在每次迭代过程中，程序都将交互式地询问用户是否还有数据要处理</p>
+<p><strong>交互式循环</strong>的<strong>通用算法流程</strong>描述如下，其中<strong>moredata</strong>为循环循环变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">设置 moredata 为 <span class="string">&quot;yes&quot;</span></span><br><span class="line"><span class="keyword">while</span> (moredata 是否 <span class="string">&quot;yes&quot;</span>)</span><br><span class="line">　　获得 the <span class="built_in">next</span> data item</span><br><span class="line">　　处理 the item</span><br><span class="line">　　询问用户是否有还有数据要处理，来控制moredata</span><br></pre></td></tr></table></figure>
+
+<p>将交互式循环与计数器<strong>count</strong>相结合，得到这个平均值程序算法的<strong>伪代码</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">初始 total to 0.0</span><br><span class="line">初始 count to 0</span><br><span class="line">设置 moredata to &quot;yes&quot;</span><br><span class="line">while moredata is &quot;yes&quot;</span><br><span class="line">　　input a number, x</span><br><span class="line">　　total +&#x3D; x</span><br><span class="line">　　count +&#x3D; 1</span><br><span class="line">　　ask user if there is moredata</span><br><span class="line">输出 total &#x2F; count</span><br></pre></td></tr></table></figure>
+
+<p>根据上面的伪代码，转换为Python程序：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">total = <span class="number">0.0</span></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line">moredata = <span class="string">&quot;yes&quot;</span></span><br><span class="line"><span class="keyword">while</span> moredata[<span class="number">0</span>] == <span class="string">&quot;y&quot;</span>:</span><br><span class="line"> x = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入数字：&quot;</span>))</span><br><span class="line"> total += x</span><br><span class="line"> count += <span class="number">1</span></span><br><span class="line"> moredata = <span class="built_in">input</span>(<span class="string">&quot;是否有额外数字需要处理 (yes or no)? &quot;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;\n平均数为：&quot;</span>, total / count)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>使用<strong>total</strong>变量来累加求和；使用<strong>count</strong>变量来统计用户输入数据的数量</p>
+<p>使用<strong>moredata</strong>来控制循环，<strong>while</strong>循环判断条件**moredata[0] == “y”<strong>为用户输入的字符串第一个字母是否为</strong>“y”<strong>。例如，</strong>“y”、”yes”、”yeah”<strong>等。对于非</strong>“y”**开始的字符串，则终止循环</p>
+<p><strong>缺陷</strong>：在这个版本中，虽然用户不必对数据量提前进行计数，但是人机交互不太友好，<strong>很繁琐</strong>，程序要不断地询问用户是否有输入</p>
+<h3 id="9-3-2-哨兵式循环（重要）"><a href="#9-3-2-哨兵式循环（重要）" class="headerlink" title="9.3.2   哨兵式循环（重要）"></a>9.3.2   哨兵式循环（重要）</h3><p>需求分析：</p>
+<p>上面程序虽然实现了<strong>while</strong>循环能自动提供计数功能，但它在每次迭代中询问用户是否有数据输入，人机交互非常繁琐</p>
+<p>如果程序能<strong>根据输入的数据本身特点来控制循环是否继续</strong>，就可以避免显式地询问用户的步骤，这种模式称为哨兵式循环</p>
+<h4 id="任务一：哨兵式循环"><a href="#任务一：哨兵式循环" class="headerlink" title="任务一：哨兵式循环"></a><em>任务一：哨兵式循环</em></h4><p>知识点：</p>
+<p><strong>哨兵式循环</strong>：循环体中，不断接收新数据，直到用户输入某些特殊值，表明迭代结束。例如，程序需要输入**&gt;=0<strong>的整数，根据数据特点，如果用户输入</strong>&lt;0**的数，就可以将它作为循环终止条件</p>
+<p><strong>哨兵(sentinel)<strong>：可以选择任何数据值作为</strong>哨兵</strong>，唯一的限制是<strong>能与实际数据值区分</strong>开来。例如，正常数据为**&gt;=0<strong>的整数，那么</strong>&lt;0**的数就可以作为哨兵。</p>
+<p><strong>哨兵式循环</strong>的<strong>通用算法流程</strong>描述如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入 the first item</span><br><span class="line"><span class="keyword">while</span> (item 是否为 哨兵)</span><br><span class="line">　　处理 the item</span><br><span class="line">　　输入 the <span class="built_in">next</span> item</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<p>在循环开始之前要求用户输入第一项数据<strong>item</strong>，称为“启动输入”</p>
+<p>如果第一项是哨兵，<strong>while</strong>循环将立即终止。否则，进入循环体，处理该项数据<strong>item</strong>，并读取下一项</p>
+<p>在下次循环开始前，<strong>while</strong>的循环条件会判断上次输入的<strong>item</strong>是否为哨兵，来控制循环是否继续被执行。如果遇到哨兵，循环终止</p>
+<p><strong>启动输入</strong>和<strong>循环体内的输入</strong>是一样的，都是用于接受新数据</p>
+<p>将哨兵式循环用于数字平均值计算问题。首先要<strong>选择哨兵</strong>，即循环终止条件。假设数据是来源于期末考试成绩，通常成绩都是**&gt;=0<strong>的。因此，可以选用</strong>&lt;0**作为哨兵。具体Python程序如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">total = <span class="number">0.0</span></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line">x = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入数字(负数退出循环)：&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># x&lt;0 作为哨兵</span></span><br><span class="line"><span class="keyword">while</span> x &gt;= <span class="number">0</span>:</span><br><span class="line"> total = total + x</span><br><span class="line"> count = count + <span class="number">1</span></span><br><span class="line"> x = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入数字(负数退出循环)：&quot;</span>))</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;平均值：&quot;</span>, total / count)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>相比于交互式循环，哨兵式循环的用户交互简单易用，省去了一直输入<strong>yes</strong>的麻烦</p>
+<p><strong>x = float(input(“输入数字(负数退出循环):”))：while</strong>循环体外的<strong>启动输入</strong>和<strong>循环体内的输入</strong>是一样的，都是用于接受新数据。哨兵式循环需要在<strong>while</strong>循环外，提前接受一项数据</p>
+<p><strong>while x &gt;= 0</strong>，此时哨兵为<strong>x&lt;0</strong>，即循环结束条件</p>
+<p><strong>缺陷</strong>：该程序不能用于对一组既包含负值又包含正值的数字求平均值</p>
+<h4 id="任务二：扩大哨兵范围"><a href="#任务二：扩大哨兵范围" class="headerlink" title="任务二：扩大哨兵范围"></a><em>任务二：扩大哨兵范围</em></h4><p>需求分析：</p>
+<p>为了使得问题能处理任何范围的数值输入，需要拥有一个<strong>真正独特的哨兵</strong></p>
+<p>首先可以将用户的输入作为字符串来获取，并定义一个<strong>特殊的非数字字符串</strong>(比如空字符串**””<strong>，</strong>“Q”<strong>或</strong>“q”**)，作为循环结束标识(<strong>哨兵</strong>)</p>
+<p>其他的数值类型输入都将被转换为数字，用于计算</p>
+<p>一个空字符串在Python中被表示为**””<strong>(不含空格)。如果用户输入空白行(只需输入<Enter>)，Python将返回一个空字符串。可以使用</strong>“”**作为哨兵，来改进平均数计算程序。Python程序如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">total = <span class="number">0.0</span></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line">xStr = <span class="built_in">input</span>(<span class="string">&quot;输入数字(&lt;Enter&gt;退出循环)：&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 哨兵为 空字符串</span></span><br><span class="line"><span class="keyword">while</span> xStr != <span class="string">&quot;&quot;</span>:</span><br><span class="line"> x = <span class="built_in">float</span>(xStr)</span><br><span class="line"> total = total + x</span><br><span class="line"> count = count + <span class="number">1</span></span><br><span class="line"> xStr = <span class="built_in">input</span>(<span class="string">&quot;输入数字(&lt;Enter&gt;退出循环)：&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;平均值：&quot;</span>, total / count)</span><br></pre></td></tr></table></figure>
+
+<p>这段代码检查并确保输入不是哨兵**””<strong>后，然后将输入转换成浮点数</strong>float**用于均值计算</p>
+<h3 id="9-3-3-使用Flag来控制循环（重要）"><a href="#9-3-3-使用Flag来控制循环（重要）" class="headerlink" title="9.3.3   使用Flag来控制循环（重要）"></a>9.3.3   使用Flag来控制循环（重要）</h3><h4 id="任务一：掌握为何需要使用Flag"><a href="#任务一：掌握为何需要使用Flag" class="headerlink" title="任务一：掌握为何需要使用Flag"></a><em>任务一：掌握为何需要使用Flag</em></h4><p>需求分析：</p>
+<p><strong>while</strong>循环的执行依赖于循环条件</p>
+<p>之前，<strong>影响循环条件的都只有1个变量</strong>。然而，某些循环场景往往又会受到多个变量的同时影响，即有<strong>多个变量会影响循环的终止</strong>。例如，游戏程序中，游戏失败往往会有多个触发条件</p>
+<p>如果<strong>while</strong>循环在一条语句中同时检测所有条件，将会导致程序变得非常复杂</p>
+<p>本质上，就是有<strong>多个哨兵</strong>时，程序如何来控制循环条件</p>
+<p>知识点：循环控制标志(<strong>Flag</strong>)</p>
+<p>为了解决上述问题，可以定义一个<strong>bool</strong>类型的变量<strong>Flag</strong>作为<strong>循环控制标志</strong>，用于监测(判断)循环是否处于活跃状态</p>
+<p>它充当了程序的<strong>信号灯</strong>作用，如果<strong>Flag</strong>为<strong>True</strong>，说明程序是活跃状态，可以继续执行循环；如果是<strong>False</strong>，那么有循环终止事件被触发了，它将终止循环</p>
+<p>多个循环影响因素(哨兵)可以通过<strong>Flag</strong>间接的来控制循环的执行</p>
+<p>在<strong>while</strong>循环条件中，只需要检查<strong>Flag</strong>是否为<strong>True</strong>。而触发<strong>Flag</strong>值为<strong>False</strong>的事件(哨兵)可以放在循环体的其他地方。从而使得程序整个逻辑变得更清晰</p>
+<p>下面的程序，将上节的平均值计算程序添加一个<strong>Flag</strong>变量，来控制<strong>while</strong>循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">total = <span class="number">0.0</span></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">Flag = <span class="literal">True</span></span><br><span class="line"><span class="comment"># 哨兵为 空字符串</span></span><br><span class="line"><span class="keyword">while</span> Flag:</span><br><span class="line">   xStr = <span class="built_in">input</span>(<span class="string">&quot;输入数字(&lt;Enter&gt;退出循环)：&quot;</span>)</span><br><span class="line">   </span><br><span class="line">   <span class="comment"># 哨兵1：输入不为空</span></span><br><span class="line">   <span class="keyword">if</span> (xStr == <span class="string">&#x27;&#x27;</span>):</span><br><span class="line">       Flag = <span class="literal">False</span></span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       x = <span class="built_in">float</span>(xStr)</span><br><span class="line">       total += x</span><br><span class="line">       count += <span class="number">1</span></span><br><span class="line">   <span class="comment"># 哨兵2：总数不超过9    </span></span><br><span class="line">   <span class="keyword">if</span> count &gt; <span class="number">9</span>:</span><br><span class="line">       Flag = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (count != <span class="number">0</span>):</span><br><span class="line">   print(<span class="string">&quot;平均值：&quot;</span>, total / count)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   print(<span class="string">&quot;没输入任何数！&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>定义一个<strong>Flag</strong>变量，使用它来作为<strong>while</strong>循环的控制条件</p>
+<p><strong>Flag</strong>变量的初始值为<strong>True</strong>；并在循环体中，有2个哨兵</p>
+<p>第1个哨兵<strong>xStr == ‘’<strong>来触发</strong>Flag</strong>为<strong>False</strong>；第2个哨兵<strong>count &gt; 9</strong>来触发<strong>Flag</strong>为<strong>False</strong></p>
+<h4 id="任务二：Flag和哨兵的关系"><a href="#任务二：Flag和哨兵的关系" class="headerlink" title="任务二：Flag和哨兵的关系"></a><em>任务二：Flag和哨兵的关系</em></h4><p>知识点：使用<strong>Flag</strong>来控制<strong>while</strong>循环，本质上，就是根据<strong>if</strong>语句来检测哨兵，然后触发<strong>Flag</strong>变量为<strong>False</strong></p>
+<p>下面这个程序为<strong>消息回音</strong>，即计算机会将用户输入的字符串，原封不动的输出。这里使用**’quit’**作为哨兵</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">&quot;输入&#x27;quit&#x27;结束程序&quot;</span></span><br><span class="line"></span><br><span class="line">Flag = <span class="literal">True</span></span><br><span class="line"><span class="keyword">while</span> Flag:</span><br><span class="line">   message = <span class="built_in">input</span>(prompt)</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> message == <span class="string">&#x27;quit&#x27;</span>:</span><br><span class="line">       Flag = <span class="literal">False</span></span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       print(message)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>将变量<strong>Flag</strong>设置成了<strong>True</strong>，让程序最初处于活动状态</p>
+<p>在<strong>while</strong>循环中，在用户输入后使用一条<strong>if</strong>语句来检查变量<strong>message</strong>的值</p>
+<p>如果用户输入的是**’quit’<strong>，就将变量</strong>Flag<strong>设置为</strong>False<strong>，这将导致</strong>while**循环不再继续执行</p>
+<p>如果用户输入的不是**’quit’**，就将输入作为一条消息打印出来</p>
+<h3 id="9-3-4-break和continue控制循环流程"><a href="#9-3-4-break和continue控制循环流程" class="headerlink" title="9.3.4   break和continue控制循环流程"></a>9.3.4   break和continue控制循环流程</h3><h4 id="任务一：控制循环流程"><a href="#任务一：控制循环流程" class="headerlink" title="任务一：控制循环流程"></a><em>任务一：控制循环流程</em></h4><p>知识点：<strong>break</strong> 和 <strong>continue</strong> 是专门用于循环流程中断控制的关键字</p>
+<p><strong>break</strong>：退出循环，不再执行循环的后续代码</p>
+<p><strong>continue</strong>：不执行<strong>本次</strong>循环的后续代码，并执行下一轮循环</p>
+<p>嵌套循环时，<strong>break</strong> 和 <strong>continue</strong> 只针对<strong>当前所在循环</strong>有效</p>
+<h4 id="任务二：break退出循环"><a href="#任务二：break退出循环" class="headerlink" title="任务二：break退出循环"></a><em>任务二：break退出循环</em></h4><p><strong>在循环过程中</strong>，如果<strong>某一个条件满足后</strong>，<strong>不</strong>再希望<strong>循环继续执行</strong>，可以使用 <strong>break</strong>退出循环。<strong>break</strong> 只针对当前所在循环有效</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line"></span><br><span class="line">   <span class="comment"># break 某一条件满足时，退出循环，不再执行后续重复的代码</span></span><br><span class="line">   <span class="comment"># i == 3</span></span><br><span class="line">   <span class="keyword">if</span> i == <span class="number">3</span>:</span><br><span class="line">       <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">   print(i)</span><br><span class="line"></span><br><span class="line">   i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;over&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>在循环中，可以使用<strong>break</strong>语句强制彻底地退出循环，不管循环条件是否满足</p>
+<p>如果使用<strong>break</strong>语句，即使<strong>while</strong>条件为<strong>True</strong>，也随时停止循环</p>
+<p><strong>break</strong>语句也适用于for循环，来退出遍历</p>
+<p>下面程序让用户输入一系列去过的城市，并在输入**’quit’<strong>后使用</strong>break<strong>语句立即退出</strong>while**循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">&quot;输入喜欢的城市，并以&#x27;quit&#x27;结束程序&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置条件为永True</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">   message = <span class="built_in">input</span>(prompt)</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> message == <span class="string">&#x27;quit&#x27;</span>:</span><br><span class="line">       <span class="keyword">break</span> </span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       print(<span class="string">&quot;I&#x27;d love to go to &quot;</span> + city.title() + <span class="string">&quot;!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p><strong>while</strong>条件设置为永真，即如果没有<strong>break</strong>语句，程序将会无止境的运行</p>
+<p>循环体中，要求用户不断输入去过的城市名字，直到输入**’quit’**为止</p>
+<p>当用户输入**’quit’<strong>后，将执行</strong>break**语句来退出循环</p>
+<h4 id="任务三：continue跳过该次循环"><a href="#任务三：continue跳过该次循环" class="headerlink" title="任务三：continue跳过该次循环"></a><em>任务三：continue跳过该次循环</em></h4><p><strong>在循环过程中</strong>，如果<strong>某一个条件满足后，不</strong>希望<strong>执行循环代码</strong>，<strong>但是又不希望退出循环</strong>，可以使用 <strong>continue</strong></p>
+<p>知识点：相对于<strong>break</strong>语句彻底退出循环，<strong>continue</strong>语句近跳过该次循环，不执行该语句之后的语句，重新返回到循环开头</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line">   <span class="comment"># 当 i == 7 时，不希望执行需要重复执行的代码</span></span><br><span class="line">   <span class="keyword">if</span> i == <span class="number">7</span>:</span><br><span class="line">       <span class="comment"># 在使用 continue 之前，同样应该修改计数器</span></span><br><span class="line">       <span class="comment"># 否则会出现死循环</span></span><br><span class="line">       i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">   <span class="comment"># 重复执行的代码</span></span><br><span class="line">   print(i)</span><br><span class="line"></span><br><span class="line">   i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>使用 <strong>continue</strong> 时，<strong>条件处理部分的代码，需要特别注意</strong>，不小心会出现 <strong>死循环</strong></p>
+<p>下面例子中，通过<strong>continue</strong>语句实现，在循环体中只打印从1到10的奇数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">current_number = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> current_number &lt; <span class="number">10</span>:</span><br><span class="line">   current_number += <span class="number">1</span></span><br><span class="line">   <span class="keyword">if</span> current_number % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">       <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">   print(current_number)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>首先将<strong>current_number</strong>设置成了0，由于它小于10，Python进入<strong>while</strong>循环</p>
+<p>进入循环后，我们以步长1的方式往上数，因此<strong>current_number</strong>为1</p>
+<p>接下来，<strong>if</strong>语句检查<strong>current_number</strong>与2的求模运算结果</p>
+<p>如果结果为0(意味着<strong>current_number</strong>可被2整除)，就执行<strong>continue</strong>语句，让Python忽略余下的代码，并返回到循环的开头。如果当前的数字不能被2整除，就执行循环中余下的代码，Python将这个数字打印出来</p>
+<h3 id="习题：-1"><a href="#习题：-1" class="headerlink" title="习题："></a>习题：</h3><p><strong>7-4 比萨配料</strong>：编写一个循环，提示用户输入一系列的比萨配料，并在用户输入**’quit’**时结束循环。每当用户输入一种配料后，都打印一条消息，说我们会在比萨中添加这种配料</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">shuru = <span class="string">&quot;请输入你需要添加的pizza配料：&quot;</span></span><br><span class="line">shuru +=<span class="string">&quot;\n当你输入quit，将停止添加配料：&quot;</span></span><br><span class="line">pizzas = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">while</span> pizzas != <span class="string">&#x27;quit&#x27;</span>:</span><br><span class="line">    pizzas = <span class="built_in">input</span>(shuru)</span><br><span class="line">    <span class="keyword">if</span> pizzas != <span class="string">&#x27;quit&#x27;</span>:</span><br><span class="line">        print(<span class="string">&quot;你的比萨添加&quot;</span>+pizzas+<span class="string">&quot;成功\n&quot;</span>)    </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">你的比萨添加牛肉成功</span><br><span class="line"></span><br><span class="line">你的比萨添加羊肉成功</span><br><span class="line"></span><br><span class="line">你的比萨添加猪肉成功</span><br></pre></td></tr></table></figure>
+
+<p><strong>7-5 电影票</strong>：有家电影院根据观众的年龄收取不同的票价：不到3岁的观众免费；3~12岁的观众为10美元；超过12岁的观众为15美元。请编写一个循环，在其中询问用户的年龄，并指出其票价</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入用户年龄:&quot;</span>)) <span class="comment"># 5</span></span><br><span class="line">    <span class="keyword">if</span> age &lt; <span class="number">3</span>:</span><br><span class="line">        print(<span class="string">&quot;该用户免费&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> <span class="number">3</span> &lt;= age &lt; <span class="number">12</span>:</span><br><span class="line">        print(<span class="string">&quot;该年龄段用户收费的是10美元&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&quot;该年龄段用户收费的是15美元&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">该年龄段用户收费的是<span class="number">10</span>美元</span><br></pre></td></tr></table></figure>
+
+<p><strong>7-6 三个出口</strong>：以另一种方式完成练习7-4或练习7-5，在程序中采取如下所有做法</p>
+<p>在<strong>while</strong>循环中使用条件测试来结束循环</p>
+<p>使用变量<strong>active</strong>来控制循环结束的时机</p>
+<p>使用<strong>break</strong>语句在用户输入**’quit’**时退出循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">active = <span class="built_in">input</span>(<span class="string">&quot;请输入你的年龄:&quot;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入用户年龄:&quot;</span>))</span><br><span class="line">    <span class="keyword">if</span> age &lt; <span class="number">3</span>:</span><br><span class="line">        print(<span class="string">&quot;该用户免费&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> <span class="number">3</span> &lt;= age &lt; <span class="number">12</span>:</span><br><span class="line">        print(<span class="string">&quot;该年龄段用户收费的是10美元&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&quot;该年龄段用户收费的是15美元&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> active == <span class="string">&quot;quit&quot;</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>7-7 无限循环</strong>：编写一个没完没了的循环，并运行它，并Jupyter通过<strong>Kernel–&gt; Interrupt</strong>进行重置</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> a &gt;<span class="number">0</span>:</span><br><span class="line">    a += <span class="number">1</span></span><br><span class="line">    print(a)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="9-4-嵌套循环"><a href="#9-4-嵌套循环" class="headerlink" title="9.4   嵌套循环"></a>9.4   嵌套循环</h2><h3 id="9-4-1-while循环嵌套流程分析"><a href="#9-4-1-while循环嵌套流程分析" class="headerlink" title="9.4.1   while循环嵌套流程分析"></a>9.4.1   while循环嵌套流程分析</h3><p><strong>while</strong> 嵌套就是：<strong>while</strong> 里面还有 <strong>while</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> 条件 <span class="number">1</span>:</span><br><span class="line">   条件满足时，做的事情<span class="number">1</span></span><br><span class="line">   条件满足时，做的事情<span class="number">2</span></span><br><span class="line">   条件满足时，做的事情<span class="number">3</span></span><br><span class="line">   ...(省略)...</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">while</span> 条件 <span class="number">2</span>:</span><br><span class="line">       条件满足时，做的事情<span class="number">1</span></span><br><span class="line">       条件满足时，做的事情<span class="number">2</span></span><br><span class="line">       条件满足时，做的事情<span class="number">3</span></span><br><span class="line">       ...(省略)...</span><br><span class="line">   </span><br><span class="line">       处理条件 <span class="number">2</span></span><br><span class="line">   </span><br><span class="line">   处理条件 <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-4-2-实例：九九乘法表"><a href="#9-4-2-实例：九九乘法表" class="headerlink" title="9.4.2   实例：九九乘法表"></a>9.4.2   实例：九九乘法表</h3><h4 id="任务一：打印小星星"><a href="#任务一：打印小星星" class="headerlink" title="任务一：打印小星星"></a><em>任务一：打印小星星</em></h4><p>在控制台连续输出五行 *****，每一行星号的数量依次递增：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">**</span><br><span class="line">***</span><br><span class="line">****</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>字符串的乘法，表示复制字符串内容</p>
+<p>例如，**”<em>“ * 2*<em>，表示复制字符</em></em>`”*”**两次</p>
+<p>使用字符串 ***** 打印</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 定义一个计数器变量，从数字1开始，循环会比较方便</span></span><br><span class="line">row = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> row &lt;= <span class="number">5</span>:</span><br><span class="line">   print(<span class="string">&quot;*&quot;</span> * row)</span><br><span class="line">   row += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：print-函数的end-””参数"><a href="#任务二：print-函数的end-””参数" class="headerlink" title="任务二：print 函数的end=””参数"></a><em>任务二：print 函数的end=””参数</em></h4><p>知识点(回顾)：</p>
+<p>在默认情况下，<strong>print</strong> 函数输出内容之后，会自动在内容末尾增加换行</p>
+<p>如果不希望末尾增加换行，可以通过<strong>print</strong> 函数的**end=””**关键字参数指定结束字符</p>
+<p><strong>end=”@”<strong>：</strong>print</strong> 函数输出的尾部添加**@**字符</p>
+<p><strong>end=””</strong> ：<strong>print</strong> 函数输出的尾部不添加任何字符，也不再换行了。</p>
+<p>语法格式如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 向控制台输出内容结束之后，不会换行</span></span><br><span class="line">print(<span class="string">&quot;*&quot;</span>, end=<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="comment"># 单纯的换行</span></span><br><span class="line">print(<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：使用循环嵌套打印小星星"><a href="#任务三：使用循环嵌套打印小星星" class="headerlink" title="任务三：使用循环嵌套打印小星星"></a><em>任务三：使用循环嵌套打印小星星</em></h4><p>假设<strong>Python</strong> 没有提供字符串的 ***** 复制操作运算，需要通过嵌套<strong>while</strong>循环来实现该功能，来实现连续输出五行 *****，每一行星号的数量依次递增</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">**</span><br><span class="line">***</span><br><span class="line">****</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
+
+<p>思路分析：</p>
+<p>完成 5 行内容的简单输出</p>
+<p>分析每行内部的 ***** 应该如何处理？</p>
+<p>每行显示的星星和当前所在的行数是一致的</p>
+<p>嵌套一个小的循环，专门处理每一行中<strong>列</strong>的星星显示</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">row = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> row &lt;= <span class="number">5</span>:</span><br><span class="line">   <span class="comment"># 假设 python 没有提供字符串 * 操作</span></span><br><span class="line">   <span class="comment"># 在循环内部，再增加一个循环，实现每一行的 星星 打印</span></span><br><span class="line">   col = <span class="number">1</span></span><br><span class="line">   <span class="keyword">while</span> col &lt;= row:</span><br><span class="line">       print(<span class="string">&quot;*&quot;</span>, end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">       col += <span class="number">1</span></span><br><span class="line">   <span class="comment"># 每一行星号输出完成后，再增加一个换行</span></span><br><span class="line">   print(<span class="string">&quot;&quot;</span>)</span><br><span class="line">   row += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：嵌套打印九九乘法表"><a href="#任务四：嵌套打印九九乘法表" class="headerlink" title="任务四：嵌套打印九九乘法表"></a><em>任务四：嵌套打印九九乘法表</em></h4><p>输出九九乘法表，格式如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> * <span class="number">1</span> = <span class="number">1</span></span><br><span class="line"><span class="number">1</span> * <span class="number">2</span> = <span class="number">22</span> * <span class="number">2</span> = <span class="number">4</span></span><br><span class="line"><span class="number">1</span> * <span class="number">3</span> = <span class="number">32</span> * <span class="number">3</span> = <span class="number">63</span> * <span class="number">3</span> = <span class="number">9</span></span><br><span class="line"><span class="number">1</span> * <span class="number">4</span> = <span class="number">42</span> * <span class="number">4</span> = <span class="number">83</span> * <span class="number">4</span> = <span class="number">12</span> <span class="number">4</span> * <span class="number">4</span> = <span class="number">16</span> </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>步骤一：打印 9 行小星星</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">**</span><br><span class="line">***</span><br><span class="line">****</span><br><span class="line">*****</span><br><span class="line">******</span><br><span class="line">*******</span><br><span class="line">********</span><br><span class="line">*********</span><br></pre></td></tr></table></figure>
+
+<p>步骤二：将每一个 ***** 替换成对应的行与列相乘</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义起始行</span></span><br><span class="line">row = <span class="number">1</span></span><br><span class="line"><span class="comment"># 最大打印 9 行</span></span><br><span class="line"><span class="keyword">while</span> row &lt;= <span class="number">9</span>:</span><br><span class="line">   <span class="comment"># 定义起始列</span></span><br><span class="line">   col = <span class="number">1</span></span><br><span class="line">   <span class="comment"># 最大打印 row 列</span></span><br><span class="line">   <span class="keyword">while</span> col &lt;= row:</span><br><span class="line">       <span class="comment"># end = &quot;&quot;，表示输出结束后，不换行</span></span><br><span class="line">       <span class="comment"># &quot;\t&quot; 可以在控制台输出一个制表符，协助在输出文本时对齐</span></span><br><span class="line">       <span class="comment"># print(&quot;%d * %d = %d&quot; % (col, row, row * col), end=&quot;\t&quot;)</span></span><br><span class="line">       <span class="comment"># f-string方式，相对%输出更简洁</span></span><br><span class="line">       print(<span class="string">f&quot;<span class="subst">&#123;col&#125;</span> * <span class="subst">&#123;row&#125;</span> = <span class="subst">&#123;row * col&#125;</span>&quot;</span>, end=<span class="string">&quot;\t&quot;</span>)</span><br><span class="line">       <span class="comment"># 列数 + 1</span></span><br><span class="line">       col += <span class="number">1</span></span><br><span class="line">   <span class="comment"># 一行打印完成的换行</span></span><br><span class="line">   print(<span class="string">&quot;&quot;</span>)</span><br><span class="line">   <span class="comment"># 行数 + 1</span></span><br><span class="line">   row += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务五：字符串中的转义字符-回顾"><a href="#任务五：字符串中的转义字符-回顾" class="headerlink" title="任务五：字符串中的转义字符(回顾)"></a><em>任务五：字符串中的转义字符(回顾)</em></h4><p><strong>\t</strong> 在控制台输出一个 <strong>制表符</strong>，协助在输出文本时 <strong>垂直方向</strong> 保持对齐。<strong>制表符</strong>的功能是在不使用表格的情况下在垂直方向按列对齐文本</p>
+<p><strong>\n</strong> 在控制台输出一个 <strong>换行符</strong></p>
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\</td>
+<td>反斜杠符号</td>
+</tr>
+<tr>
+<td>&#39;</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>横向制表符</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+</tr>
+</tbody></table>
+<h3 id="9-4-3-实例：进阶平均数计算"><a href="#9-4-3-实例：进阶平均数计算" class="headerlink" title="9.4.3   实例：进阶平均数计算"></a>9.4.3   实例：进阶平均数计算</h3><h4 id="任务一：数据生成"><a href="#任务一：数据生成" class="headerlink" title="任务一：数据生成"></a><em>任务一：数据生成</em></h4><p>创建一个数据文件，共100行，每行为10~20个随机数，以数字之间**,**为间隔</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random <span class="keyword">as</span> rd</span><br><span class="line"><span class="comment"># 例如：Data.txt</span></span><br><span class="line">name = <span class="built_in">input</span>(<span class="string">&#x27;请输入文件名: &#x27;</span>)</span><br><span class="line">f = <span class="built_in">open</span>(name, <span class="string">&quot;w+&quot;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">   <span class="comment"># 每行元素个数为10~20个</span></span><br><span class="line">   s = rd.randint(<span class="number">10</span>, <span class="number">20</span>)</span><br><span class="line">   <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(s):</span><br><span class="line">       <span class="comment"># 随机生成[-10,10]区间的整数</span></span><br><span class="line">       num = rd.randint(-<span class="number">10</span>, <span class="number">10</span>)</span><br><span class="line">       <span class="comment"># 将num转换为字符串，并用&#x27;,&#x27;拼接，写入文件中</span></span><br><span class="line">       <span class="comment"># 最后一个元素(j=s-1)，添加换行符&#x27;\n&#x27;</span></span><br><span class="line">       <span class="keyword">if</span> j &lt; s - <span class="number">1</span>:</span><br><span class="line">           f.write(<span class="built_in">str</span>(num) + <span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">       <span class="keyword">else</span>:</span><br><span class="line">           f.write(<span class="built_in">str</span>(num) + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&#x27;生成结束，请打开<span class="subst">&#123;name&#125;</span>查看结果&#x27;</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：字符串拆分"><a href="#任务二：字符串拆分" class="headerlink" title="任务二：字符串拆分"></a><em>任务二：字符串拆分</em></h4><p>知识点：</p>
+<p>语法：<strong>str.split(str=””)</strong></p>
+<p>描述：通过指定分隔符<strong>str</strong>对字符串进行切分</p>
+<p>参数：<strong>str</strong>为分隔符，默认为所有的空字符，包括空格、换行(<strong>\n</strong>)、制表符(<strong>\t</strong>)等</p>
+<p>返回：返回分割后的字符串列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">&quot;Line1-abcdef \nLine2-abc \nLine4-abcd&quot;</span></span><br><span class="line"><span class="comment"># 以空格为分隔符，包含 \n</span></span><br><span class="line">print(<span class="built_in">str</span>.split());  </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">txt = <span class="string">&quot;Google#Runoob#Taobao#Facebook&quot;</span></span><br><span class="line"><span class="comment">#以#为分隔符</span></span><br><span class="line">print(txt.split(<span class="string">&quot;#&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：嵌套式循环求平均值"><a href="#任务三：嵌套式循环求平均值" class="headerlink" title="任务三：嵌套式循环求平均值"></a><em>任务三：嵌套式循环求平均值</em></h4><p>算法分析：</p>
+<p>外层循环使用哨兵式循环<strong>while</strong>循环，<strong>for</strong>循环会更简单</p>
+<p>外层循环：在循环体中，通过<strong>readline()<strong>按行读取文件。以</strong>‘’<strong>作为</strong>while</strong>循环哨兵</p>
+<p>内层循环：对每行的字符串使用<strong>split()<strong>方法进行拆分字符串，返回的是一个子列表，再嵌套</strong>for</strong>循环，对子列表元素进行计算</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入之前生成数字的文件：Data.txt</span></span><br><span class="line">fileName = <span class="built_in">input</span>(<span class="string">&quot;输入文件名: &quot;</span>)</span><br><span class="line">infile = <span class="built_in">open</span>(fileName,<span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">total = <span class="number">0.0</span></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从文件中先读一行</span></span><br><span class="line">line = infile.readline()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将line为空作为哨兵，即读到文件末尾</span></span><br><span class="line"><span class="keyword">while</span> line != <span class="string">&quot;&quot;</span>:</span><br><span class="line">   <span class="keyword">for</span> num <span class="keyword">in</span> line.split(<span class="string">&quot;,&quot;</span>):  </span><br><span class="line">       total += <span class="built_in">float</span>(num)</span><br><span class="line">       count += <span class="number">1</span></span><br><span class="line">   line = infile.readline()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;平均值为：&quot;</span>, total / count)</span><br></pre></td></tr></table></figure>
+
+<p>嵌套循环的设计准则：</p>
+<ul>
+<li>首先设计外层，不考虑内层的内容</li>
+<li>然后设计内层，忽略外层循环</li>
+<li>最后放在一起，注意保留嵌套循环变量间的<strong>耦合性</strong>。如果单个循环是正确的，则嵌套的结果就会正常工作，要相信这一点</li>
+<li>通过一点练习，将轻松掌握双重甚至三重嵌套循环</li>
+</ul>
+<h2 id="9-5-使用while循环来处理列表和字典"><a href="#9-5-使用while循环来处理列表和字典" class="headerlink" title="9.5   使用while循环来处理列表和字典"></a>9.5   使用while循环来处理列表和字典</h2><h4 id="任务一：for循环和while循环的不同定位"><a href="#任务一：for循环和while循环的不同定位" class="headerlink" title="任务一：for循环和while循环的不同定位"></a><em>任务一：for循环和while循环的不同定位</em></h4><p>知识点：</p>
+<p><strong>只读模式</strong>：<strong>for</strong>循环的目的是通过遍历列表(序列或容器)的每个元素，对它们执行相同的批量化操作。循环体中，对临时变量进行修改，并不会影响原列表元素内容。因此，<strong>for</strong>循环是一种只读模式</p>
+<p><strong>可写模式</strong>：如果需要在迭代列表的同时，对元素进行修改，建议使用<strong>while</strong>循环</p>
+<h4 id="任务二：在列表间移动元素"><a href="#任务二：在列表间移动元素" class="headerlink" title="任务二：在列表间移动元素"></a><em>任务二：在列表间移动元素</em></h4><p>假设有一个列表，其中包含新注册但还未验证的网站用户；验证这些用户后，如何将他们移到另一个已验证用户列表中呢？</p>
+<p>使用<strong>while</strong>循环可以有效的满足上述的需求。在验证用户的同时将其从未验证用户列表中提取出来，再将其加入到另一个已验证用户列表中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先，创建一个待验证用户列表</span></span><br><span class="line"><span class="comment">#  和一个用于存储已验证用户的空列表</span></span><br><span class="line">unconfirmed_users = [<span class="string">&#x27;alice&#x27;</span>, <span class="string">&#x27;brian&#x27;</span>, <span class="string">&#x27;candace&#x27;</span>]</span><br><span class="line">confirmed_users = []</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证每个用户，直到没有未验证用户为止</span></span><br><span class="line"><span class="comment">#  将每个经过验证的列表都移到已验证用户列表中</span></span><br><span class="line"><span class="keyword">while</span> unconfirmed_users:</span><br><span class="line">   current_user = unconfirmed_users.pop()</span><br><span class="line"></span><br><span class="line">   print(<span class="string">&quot;待验证用户: &quot;</span> + current_user.title())</span><br><span class="line">   confirmed_users.append(current_user)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示所有已验证的用户</span></span><br><span class="line">print(<span class="string">&quot;已验证用户:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> confirmed_user <span class="keyword">in</span> confirmed_users:</span><br><span class="line">   print(confirmed_user.title())</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>首先创建了一个未验证用户列表，其中包含用户Alice、Brian和Candace，还创建了一个空列表，用于存储已验证的用户</p>
+<p>然后，<strong>while</strong>循环将不断地运行，直到列表<strong>unconfirmed_users</strong>变成空的。</p>
+<p>在这个循环中，函数<strong>pop()<strong>以每次一个的方式从列表</strong>unconfirmed_users</strong>末尾删除未验证的用户</p>
+<p>由于Candace位于列表<strong>unconfirmed_users</strong>末尾，因此其名字将首先被删除、存储到变量<strong>current_user</strong>中并加入到列表<strong>confirmed_users</strong>中。接下来是Brian，然后是Alice</p>
+<p>为模拟用户验证过程，打印一条验证消息并将用户加入到已验证用户列表中。未验证用户列表会越来越短，而已验证用户列表越来越长。未验证用户列表为空后结束循环，最后打印已验证用户列表</p>
+<h4 id="任务三：删除包含特定值的所有列表元素"><a href="#任务三：删除包含特定值的所有列表元素" class="headerlink" title="任务三：删除包含特定值的所有列表元素"></a><em>任务三：删除包含特定值的所有列表元素</em></h4><p><strong>remove()<strong>方法在删除列表特定值时，只能删除列表中，首次出现的元素值。那么如何删除列表中</strong>所有</strong>等于特定值的元素呢？</p>
+<p>假设有一个宠物列表，其中包含多个值为**’cat’<strong>的元素。要删除所有</strong>‘cat’<strong>元素，可以使用</strong>while<strong>循环，通过</strong>in<strong>表达式检测列表是否包含</strong>‘cat’**来作为循环条件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pets = [<span class="string">&#x27;dog&#x27;</span>, <span class="string">&#x27;cat&#x27;</span>, <span class="string">&#x27;dog&#x27;</span>, <span class="string">&#x27;goldfish&#x27;</span>, <span class="string">&#x27;cat&#x27;</span>, <span class="string">&#x27;rabbit&#x27;</span>, <span class="string">&#x27;cat&#x27;</span>]</span><br><span class="line">print(pets)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="string">&#x27;cat&#x27;</span> <span class="keyword">in</span> pets:</span><br><span class="line">   pets.remove(<span class="string">&#x27;cat&#x27;</span>)</span><br><span class="line"></span><br><span class="line">print(pets)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>首先创建了一个列表，其中包含多个值为**’cat’**的元素</p>
+<p>打印这个列表后，Python进入<strong>while</strong>循环，因为它发现**’cat’**在列表中至少出现了一次</p>
+<p>进入这个循环后，Python删除第一个**’cat’<strong>并返回到</strong>while<strong>代码行，然后发现</strong>‘cat’**还包含在列表中，因此再次进入循环</p>
+<p>它不断删除**’cat’**，直到这个值不再包含在列表中，然后退出循环并再次打印列表</p>
+<h4 id="任务四：接收用户输入来填充字典"><a href="#任务四：接收用户输入来填充字典" class="headerlink" title="任务四：接收用户输入来填充字典"></a><em>任务四：接收用户输入来填充字典</em></h4><p>下面来创建一个调查程序，定义<strong>responses</strong>字典用于存相关问卷信息。核心程序使用带<strong>Flag</strong>标志变量的<strong>while</strong>循环。在循环体中，接收用户的问卷信息(用户名和问卷回答)，并保存到字典中<strong>responses[name] = response</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">responses = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置一个Flag标志，指出调查是否继续</span></span><br><span class="line">Flag = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> Flag:</span><br><span class="line">   <span class="comment"># 提示输入被调查者的名字和回答</span></span><br><span class="line">   name = <span class="built_in">input</span>(<span class="string">&quot;\nWhat is your name? &quot;</span>)</span><br><span class="line">   response = <span class="built_in">input</span>(<span class="string">&quot;Which mountain would you like to climb someday? &quot;</span>)</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 将答卷存储在字典中</span></span><br><span class="line">   responses[name] = response</span><br><span class="line"></span><br><span class="line">   <span class="comment"># repeat为循环的哨兵</span></span><br><span class="line">   repeat = <span class="built_in">input</span>(<span class="string">&quot;Would you like to let another person respond? (yes/ no) &quot;</span>)</span><br><span class="line">   <span class="keyword">if</span> repeat == <span class="string">&#x27;no&#x27;</span>:</span><br><span class="line">       Flag = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调查结束，显示结果</span></span><br><span class="line">print(<span class="string">&quot;\n--- Poll Results ---&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> name, response <span class="keyword">in</span> responses.items():</span><br><span class="line">   print(name + <span class="string">&quot; would like to climb &quot;</span> + response + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="习题：-2"><a href="#习题：-2" class="headerlink" title="习题："></a>习题：</h3><p><strong>7-8 熟食店</strong>：创建一个名为<strong>sandwich_orders</strong>的列表，在其中包含各种三明治的名字；再创建一个名为<strong>finished_sandwiches</strong>的空列表。遍历列表<strong>sandwich_orders</strong>，对于其中的每种三明治，都打印一条消息，如<strong>I made your tuna sandwich</strong>，并将其移到列表<strong>finished_sandwiches</strong>。所有三明治都制作好后，打印一条消息，将这些三明治列出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sandwich_orders=[<span class="string">&#x27;Tuna sandwich&#x27;</span>,<span class="string">&#x27;Ham cheese sandwich&#x27;</span>,<span class="string">&#x27;Chicken sandwich&#x27;</span>]</span><br><span class="line">finished_sandwiches=[]</span><br><span class="line"><span class="keyword">while</span> sandwich_orders:</span><br><span class="line">    current_orders=sandwich_orders.pop()</span><br><span class="line">    print(<span class="string">&quot;I made your &quot;</span>+current_orders.title()+<span class="string">&quot;.&quot;</span>)</span><br><span class="line">    finished_sandwiches.append(current_orders)</span><br><span class="line">print(<span class="string">&quot;\nAll the sandwiches have been finished.&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> finished_sandwiche <span class="keyword">in</span> finished_sandwiches:</span><br><span class="line">    print(finished_sandwiche.title())</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">I made your Chicken Sandwich.</span><br><span class="line">I made your Ham Cheese Sandwich.</span><br><span class="line">I made your Tuna Sandwich.</span><br><span class="line"></span><br><span class="line">All the sandwiches have been finished.</span><br><span class="line">Chicken Sandwich</span><br><span class="line">Ham Cheese Sandwich</span><br><span class="line">Tuna Sandwich</span><br></pre></td></tr></table></figure>
+
+<p><strong>7-9 五香烟熏牛肉（pastrami）卖完了</strong>：使用为完成练习7-8而创建的列表<strong>sandwich_orders</strong>，并确保**’pastrami’<strong>在其中至少出现了三次。在程序开头附近添加这样的代码：打印一条消息，指出熟食店的五香烟熏牛肉卖完了；再使用一个</strong>while<strong>循环将列表</strong>sandwich_orders<strong>中的</strong>‘pastrami’<strong>都删除。确认最终的列表</strong>finished_sandwiches<strong>中不包含</strong>‘pastrami’**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sandwich_orders = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;pastrami&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;pastrami&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;pastrami&quot;</span>]</span><br><span class="line">print(<span class="string">&quot;五香熏牛肉卖完啦&quot;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="string">&quot;pastrami&quot;</span> <span class="keyword">in</span> sandwich_orders:</span><br><span class="line">    sandwich_orders.remove(<span class="string">&quot;pastrami&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> sandwich_orders:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">五香熏牛肉卖完啦</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">d</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="9-6-习题"><a href="#9-6-习题" class="headerlink" title="9.6   习题"></a>9.6   习题</h2><ul>
+<li><p>猜数字游戏：</p>
+</li>
+<li><ul>
+<li>系统随机生成一个1～100的数字；</li>
+<li>用户共有6次机会猜；</li>
+<li>如果用户猜测数字大于系统给出的数字，打印”big”。</li>
+<li>如果用户猜测数字小于系统给出的数字，打印”small”。</li>
+<li>如果用户猜测的数字等于系统给出的数字，打印”恭喜中奖”，并退出循环</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">x = random.randint(<span class="number">1</span>,<span class="number">100</span>)</span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">trycount = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> trycount &lt; <span class="number">6</span>:</span><br><span class="line">    tk = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入你猜测的数字:&#x27;</span>))</span><br><span class="line">    <span class="keyword">if</span> tk == x:</span><br><span class="line">        print(<span class="string">&#x27;恭喜中奖&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">elif</span> tk &lt; x:</span><br><span class="line">        print(<span class="string">&#x27;too small&#x27;</span>)</span><br><span class="line">        trycount += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&#x27;too big&#x27;</span>)</span><br><span class="line">        trycount += <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;机会已经用完&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>制造星星，根据用户的输入星星行数，分奇数和偶数情况讨论。</p>
+<p>对于偶数，比如输出10行内容，第1行一个星号，第2行2个星号，第5行5个星号和第6行5个星号，第7行4个星号，以此类推第10行1个星号。</p>
+<p>对于奇数，比如输出9行内容，第1行一个星号，第2行2个星号，第5行5个星号，第6行4个星号，以此类推第9行1个星号</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;num:&#x27;</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">2</span>*n,<span class="number">2</span>):</span><br><span class="line">    print((<span class="string">&#x27;*&#x27;</span> * i).center(<span class="number">3</span> * n))</span><br><span class="line">s = <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">2</span>*(n-<span class="number">1</span>),<span class="number">2</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> s[::-<span class="number">1</span>]:</span><br><span class="line">    print((<span class="string">&#x27;*&#x27;</span> * i).center(<span class="number">3</span> * n))</span><br></pre></td></tr></table></figure>
+
+<p>计算从1到1000以内所有能同时被3，5和7整除的数的和并输出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">1001</span>):</span><br><span class="line">    <span class="keyword">if</span> i%<span class="number">3</span>==<span class="number">0</span> <span class="keyword">and</span> i%<span class="number">5</span>==<span class="number">0</span> <span class="keyword">and</span> i%<span class="number">7</span>==<span class="number">0</span>:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br><span class="line">        a=<span class="built_in">sum</span>(<span class="built_in">list</span>)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4725</span></span><br></pre></td></tr></table></figure>
+
+<p>计算从1到100临近两个整数的合并依次输出。比如第一次输出3(1+2)，第二次输出5(2+3)，最后一次输出199(99+100)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">s=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>):</span><br><span class="line">    <span class="keyword">if</span> i&gt;=<span class="number">2</span>:</span><br><span class="line">        a=i-<span class="number">1</span>+i</span><br><span class="line">        s.append(a)</span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">15</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">21</span>, <span class="number">23</span>, <span class="number">25</span>, <span class="number">27</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">33</span>, <span class="number">35</span>, <span class="number">37</span>, <span class="number">39</span>, <span class="number">41</span>, <span class="number">43</span>, <span class="number">45</span>, <span class="number">47</span>, <span class="number">49</span>, <span class="number">51</span>, <span class="number">53</span>, <span class="number">55</span>, <span class="number">57</span>, <span class="number">59</span>, <span class="number">61</span>, <span class="number">63</span>, <span class="number">65</span>, <span class="number">67</span>, <span class="number">69</span>, <span class="number">71</span>, <span class="number">73</span>, <span class="number">75</span>, <span class="number">77</span>, <span class="number">79</span>, <span class="number">81</span>, <span class="number">83</span>, <span class="number">85</span>, <span class="number">87</span>, <span class="number">89</span>, <span class="number">91</span>, <span class="number">93</span>, <span class="number">95</span>, <span class="number">97</span>, <span class="number">99</span>, <span class="number">101</span>, <span class="number">103</span>, <span class="number">105</span>, <span class="number">107</span>, <span class="number">109</span>, <span class="number">111</span>, <span class="number">113</span>, <span class="number">115</span>, <span class="number">117</span>, <span class="number">119</span>, <span class="number">121</span>, <span class="number">123</span>, <span class="number">125</span>, <span class="number">127</span>, <span class="number">129</span>, <span class="number">131</span>, <span class="number">133</span>, <span class="number">135</span>, <span class="number">137</span>, <span class="number">139</span>, <span class="number">141</span>, <span class="number">143</span>, <span class="number">145</span>, <span class="number">147</span>, <span class="number">149</span>, <span class="number">151</span>, <span class="number">153</span>, <span class="number">155</span>, <span class="number">157</span>, <span class="number">159</span>, <span class="number">161</span>, <span class="number">163</span>, <span class="number">165</span>, <span class="number">167</span>, <span class="number">169</span>, <span class="number">171</span>, <span class="number">173</span>, <span class="number">175</span>, <span class="number">177</span>, <span class="number">179</span>, <span class="number">181</span>, <span class="number">183</span>, <span class="number">185</span>, <span class="number">187</span>, <span class="number">189</span>, <span class="number">191</span>, <span class="number">193</span>, <span class="number">195</span>, <span class="number">197</span>, <span class="number">199</span>]</span><br></pre></td></tr></table></figure>
+
+<p>一球从100米高度自由落下，每次落地后反跳回原高度的一半，再落下。求它在第n次落地时，共经过多少米？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">input</span>()  <span class="comment"># 5</span></span><br><span class="line">far = []</span><br><span class="line">high = <span class="number">100</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">int</span>(n)):</span><br><span class="line">    <span class="keyword">if</span> i == <span class="number">1</span>:</span><br><span class="line">        far.append(high)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        far.append(high * <span class="number">2</span>)</span><br><span class="line">    high = high / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">f&#x27;经过的总距离：far = <span class="subst">&#123;<span class="built_in">sum</span>(far)&#125;</span>&#x27;</span>)</span><br><span class="line">print(<span class="string">f&#x27;第n次反弹多高：high = <span class="subst">&#123;high&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">经过的总距离：far = <span class="number">275.0</span></span><br><span class="line">第n次反弹多高：high = <span class="number">6.25</span></span><br></pre></td></tr></table></figure>
+
+<p>输出所有的三位水仙花数，其各位数字立方和等于该数本身</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>, <span class="number">1000</span>):</span><br><span class="line">    x = num // <span class="number">100</span></span><br><span class="line">    y = num // <span class="number">10</span> % <span class="number">10</span></span><br><span class="line">    z = num % <span class="number">10</span></span><br><span class="line">    <span class="keyword">if</span> x ** <span class="number">3</span> + y ** <span class="number">3</span> + z ** <span class="number">3</span> == num:</span><br><span class="line">        print(<span class="built_in">str</span>(num) + <span class="string">&quot;是水仙花&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">153</span>是水仙花</span><br><span class="line"><span class="number">370</span>是水仙花</span><br><span class="line"><span class="number">371</span>是水仙花</span><br><span class="line"><span class="number">407</span>是水仙花</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>石头剪刀布，使用while死循环，用户不停输入“石头剪刀布”与计算机对弈，直到<code>quit</code>退出。</p>
+<p>计算机随机生成石头剪刀布。提示，随机生成1~3的整数，来代替 石头：rock；剪刀：scissors；布：paper。</p>
+<p>用户从外部输入对应的字符串，计算机判断，并给结果</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    print(<span class="string">&quot;---石头剪刀布游戏开始---&quot;</span>)</span><br><span class="line">    print(<span class="string">&quot;请按下面提示出拳：石头[1]剪刀[2]布[3]退出[4]&quot;</span>)</span><br><span class="line">    user=<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入你的选项：&quot;</span>))</span><br><span class="line">    <span class="keyword">if</span> user==<span class="number">4</span>:</span><br><span class="line">        print(<span class="string">&quot;游戏退出&quot;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    computer=random.randint(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">    <span class="keyword">if</span> ((computer==<span class="number">1</span> <span class="keyword">and</span> user==<span class="number">3</span>) <span class="keyword">or</span> (computer==<span class="number">2</span> <span class="keyword">and</span> user==<span class="number">1</span>) <span class="keyword">or</span> (computer==<span class="number">3</span> <span class="keyword">and</span> user==<span class="number">2</span>)):</span><br><span class="line">        print(<span class="string">&quot;玩家出拳为&#123;&#125;，电脑出拳为&#123;&#125;，玩家胜利&quot;</span>.<span class="built_in">format</span>(user,computer))</span><br><span class="line">    <span class="keyword">elif</span> computer==user:</span><br><span class="line">        print(<span class="string">&quot;玩家出拳为&#123;&#125;，电脑出拳为&#123;&#125;，平局&quot;</span>.<span class="built_in">format</span>(user,computer))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&quot;玩家出拳为&#123;&#125;，电脑出拳为&#123;&#125;，电脑胜利&quot;</span>.<span class="built_in">format</span>(user,computer))</span><br><span class="line">print(<span class="string">&quot;游戏结束&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://waxll.top/2021/06/17/py9.html>http://waxll.top/2021/06/17/py9.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-17T00:37:26+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年6月17日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://waxll.top/2021/06/17/py9.html&title=Python学习笔记9 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://waxll.top/2021/06/17/py9.html&title=Python学习笔记9 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://waxll.top/2021/06/17/py9.html&title=Python学习笔记9 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/06/17/py10.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python学习笔记10</p>
+          <p class='content'>
+
+
+第十章   函数：定义与参数10.1   函数的定义10.1.1   为何需要函数？任务一：函数的需求分析函数的需求分析：
+代码的组织结构不清晰，可读性差
+遇到重复的功能只能重复编写实现相...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/06/17/py8.html'>
+          <p class='title'>Python学习笔记8<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+第八章   数据类型：dict字典8.1   初识字典8.1.1   为何需要字典？任务一：为何需要字典？知识点：
+字典也是Python提供的一种常用的容器类型的数据结构，它用于存放一组具...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-%EF%BC%88%E5%9B%9E%E9%A1%BE%EF%BC%89%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E4%B8%8Efor%E5%BE%AA%E7%8E%AF"><span class="toc-text">9.1   （回顾）用户输入与for循环</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-1-%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5"><span class="toc-text">9.1.1   用户输入</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5input-%E5%87%BD%E6%95%B0"><span class="toc-text">任务一：用户输入input()函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%A4%9A%E6%AC%A1%E8%BF%90%E8%A1%8C%E5%B8%A6input-%E7%9A%84cell"><span class="toc-text">任务二：多次运行带input()的cell</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9Ainput-%E5%87%BD%E6%95%B0%E7%9A%84%E7%9A%84%E8%BF%94%E5%9B%9E%E6%98%AF%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">任务三：input()函数的的返回是字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E6%B1%82%E6%A8%A1%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">任务四：求模运算符(%)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-2-%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%B8%89%E5%A4%A7%E6%B5%81%E7%A8%8B"><span class="toc-text">9.1.2   程序的三大流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%8E%8C%E6%8F%A1%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%9A%84%E4%B8%89%E5%A4%A7%E6%B5%81%E7%A8%8B"><span class="toc-text">任务一：掌握程序开发的三大流程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-3-%E7%A1%AE%E5%AE%9A%E5%BE%AA%E7%8E%AF%EF%BC%9Afor%E5%BE%AA%E7%8E%AF"><span class="toc-text">9.1.3   确定循环：for循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%9B%9E%E9%A1%BEfor%E5%BE%AA%E7%8E%AF"><span class="toc-text">任务一：回顾for循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Afor%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%B8%8D%E8%B6%B3"><span class="toc-text">任务二：for循环的不足</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-%E4%B8%8D%E5%AE%9A%E5%BE%AA%E7%8E%AF%EF%BC%9Awhile%E5%BE%AA%E7%8E%AF"><span class="toc-text">9.2   不定循环：while循环</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-1-while%E5%BE%AA%E7%8E%AF%E8%AF%AD%E6%B3%95"><span class="toc-text">9.2.1   while循环语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Awhile%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-text">任务一：while循环的流程分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Awhile%E5%BE%AA%E7%8E%AF%E8%AF%AD%E6%B3%95"><span class="toc-text">任务二：while循环语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A-while%E5%BE%AA%E7%8E%AF%E5%AE%9E%E7%8E%B0%E5%BE%AA%E7%8E%AF%E6%89%93%E5%8D%B0"><span class="toc-text">任务三： while循环实现循环打印</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">任务四：赋值运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9APython-%E4%B8%AD%E7%9A%84%E8%AE%A1%E6%95%B0%E6%96%B9%E6%B3%95"><span class="toc-text">任务五：Python 中的计数方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-2-%E5%AE%9E%E4%BE%8B%EF%BC%9Awhile%E5%BE%AA%E7%8E%AF%E8%AE%A1%E7%AE%97%E6%B1%82%E5%92%8C"><span class="toc-text">9.2.2   实例：while循环计算求和</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%BE%AA%E7%8E%AF%E5%AE%9E%E7%8E%B0%E7%B4%AF%E5%8A%A0%E6%B1%82%E5%92%8C"><span class="toc-text">任务一：循环实现累加求和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%BE%AA%E7%8E%AF%E5%AE%9E%E7%8E%B0%E5%81%B6%E6%95%B0%E7%B4%AF%E5%8A%A0%E6%B1%82%E5%92%8C"><span class="toc-text">任务二：循环实现偶数累加求和</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-3-%E5%BE%AA%E7%8E%AF%E5%8F%98%E9%87%8F"><span class="toc-text">9.2.3   循环变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E8%AE%A4%E8%AF%86%E5%BE%AA%E7%8E%AF%E5%8F%98%E9%87%8F"><span class="toc-text">任务一：认识循环变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-4-%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF"><span class="toc-text">9.2.4   无限循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Awhile%E5%BE%AA%E7%8E%AF%E5%AE%B9%E6%98%93%E5%AF%BC%E8%87%B4%E6%AD%BB%E5%BE%AA%E7%8E%AF"><span class="toc-text">任务一：while循环容易导致死循环</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-3-%E5%B8%B8%E8%A7%81%E5%BE%AA%E7%8E%AF%E6%A8%A1%E5%BC%8F"><span class="toc-text">9.3   常见循环模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-1-%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%BE%AA%E7%8E%AF"><span class="toc-text">9.3.1   交互式循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%BE%AA%E7%8E%AF"><span class="toc-text">任务一：交互式循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-2-%E5%93%A8%E5%85%B5%E5%BC%8F%E5%BE%AA%E7%8E%AF%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-text">9.3.2   哨兵式循环（重要）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%93%A8%E5%85%B5%E5%BC%8F%E5%BE%AA%E7%8E%AF"><span class="toc-text">任务一：哨兵式循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%89%A9%E5%A4%A7%E5%93%A8%E5%85%B5%E8%8C%83%E5%9B%B4"><span class="toc-text">任务二：扩大哨兵范围</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-3-%E4%BD%BF%E7%94%A8Flag%E6%9D%A5%E6%8E%A7%E5%88%B6%E5%BE%AA%E7%8E%AF%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-text">9.3.3   使用Flag来控制循环（重要）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%8E%8C%E6%8F%A1%E4%B8%BA%E4%BD%95%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8Flag"><span class="toc-text">任务一：掌握为何需要使用Flag</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9AFlag%E5%92%8C%E5%93%A8%E5%85%B5%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">任务二：Flag和哨兵的关系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-4-break%E5%92%8Ccontinue%E6%8E%A7%E5%88%B6%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B"><span class="toc-text">9.3.4   break和continue控制循环流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%8E%A7%E5%88%B6%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B"><span class="toc-text">任务一：控制循环流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Abreak%E9%80%80%E5%87%BA%E5%BE%AA%E7%8E%AF"><span class="toc-text">任务二：break退出循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9Acontinue%E8%B7%B3%E8%BF%87%E8%AF%A5%E6%AC%A1%E5%BE%AA%E7%8E%AF"><span class="toc-text">任务三：continue跳过该次循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-1"><span class="toc-text">习题：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-4-%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF"><span class="toc-text">9.4   嵌套循环</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-1-while%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-text">9.4.1   while循环嵌套流程分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-2-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8"><span class="toc-text">9.4.2   实例：九九乘法表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%89%93%E5%8D%B0%E5%B0%8F%E6%98%9F%E6%98%9F"><span class="toc-text">任务一：打印小星星</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Aprint-%E5%87%BD%E6%95%B0%E7%9A%84end-%E2%80%9D%E2%80%9D%E5%8F%82%E6%95%B0"><span class="toc-text">任务二：print 函数的end&#x3D;””参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97%E6%89%93%E5%8D%B0%E5%B0%8F%E6%98%9F%E6%98%9F"><span class="toc-text">任务三：使用循环嵌套打印小星星</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%B5%8C%E5%A5%97%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8"><span class="toc-text">任务四：嵌套打印九九乘法表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6-%E5%9B%9E%E9%A1%BE"><span class="toc-text">任务五：字符串中的转义字符(回顾)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-3-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E8%BF%9B%E9%98%B6%E5%B9%B3%E5%9D%87%E6%95%B0%E8%AE%A1%E7%AE%97"><span class="toc-text">9.4.3   实例：进阶平均数计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90"><span class="toc-text">任务一：数据生成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%86%E5%88%86"><span class="toc-text">任务二：字符串拆分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%B5%8C%E5%A5%97%E5%BC%8F%E5%BE%AA%E7%8E%AF%E6%B1%82%E5%B9%B3%E5%9D%87%E5%80%BC"><span class="toc-text">任务三：嵌套式循环求平均值</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-5-%E4%BD%BF%E7%94%A8while%E5%BE%AA%E7%8E%AF%E6%9D%A5%E5%A4%84%E7%90%86%E5%88%97%E8%A1%A8%E5%92%8C%E5%AD%97%E5%85%B8"><span class="toc-text">9.5   使用while循环来处理列表和字典</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Afor%E5%BE%AA%E7%8E%AF%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%B8%8D%E5%90%8C%E5%AE%9A%E4%BD%8D"><span class="toc-text">任务一：for循环和while循环的不同定位</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%9C%A8%E5%88%97%E8%A1%A8%E9%97%B4%E7%A7%BB%E5%8A%A8%E5%85%83%E7%B4%A0"><span class="toc-text">任务二：在列表间移动元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%88%A0%E9%99%A4%E5%8C%85%E5%90%AB%E7%89%B9%E5%AE%9A%E5%80%BC%E7%9A%84%E6%89%80%E6%9C%89%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="toc-text">任务三：删除包含特定值的所有列表元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E6%8E%A5%E6%94%B6%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E6%9D%A5%E5%A1%AB%E5%85%85%E5%AD%97%E5%85%B8"><span class="toc-text">任务四：接收用户输入来填充字典</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-2"><span class="toc-text">习题：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-6-%E4%B9%A0%E9%A2%98"><span class="toc-text">9.6   习题</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Python学习笔记9";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5119353317'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <!-- <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div> -->
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题 | 由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>强力驱动
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://waxll.top/">Copyright © 2019-2020 XieSenshi</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $('#cover-backstretch').backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/friends/
+        
+        
+        
+        
+          id="friends"
+        >
+        <i class='fa fa-users fa-fw'></i> 友链
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/journal/
+        
+        
+        
+        
+          id="journal"
+        >
+        <i class='fa fa-calendar fa-fw'></i> 日志
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/about/
+        
+        
+        
+        
+          id="about"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 关于
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> Dark mode
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5119353317';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz","appKey":"jM85yucqi5IuVYCCQS1cUwko","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz',
+    app_key: 'jM85yucqi5IuVYCCQS1cUwko',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://waxll.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>

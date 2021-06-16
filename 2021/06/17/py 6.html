@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Python学习笔记6 - Waxll&#39;Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Waxll'Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/waxll/Imag/gif-2.png">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    <div id="clickCanvas" style=" position:fixed;left:0;top:0;z-index:999999999;pointer-events:none;"><canvas class=" sketch" height="0" width="0"></canvas></div>
+    <script src="js/dj.js"></script>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Waxll's Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="A Wonderful Theme for Hexo" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fas fa-book fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <i class='fa fa-map-signs fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/photo/"
+              
+              
+              id="photo">
+              <i class='fas fa-images fa-fw'></i><p>图库</p>
+            </a>
+          
+            <a href="/journal/"
+              
+              
+              id="journal">
+              <i class='fas fa-calendar fa-fw'></i><p>日志</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              id="friends">
+              <i class='fa fa-users fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python学习笔记6
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://7bu.top/2020/07/14/8ba61fac048a2.jpeg">
+    <p>XieSenshi</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年6月17日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：8.7k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：37分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python学习笔记6" data-path="/2021/06/17/py%206.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2021/06/17/py%206.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2021/06/17/py%206.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p><img src="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210513000137970.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210513000137970.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210513000137970"></p>
+<span id="more"></span>
+
+<h1 id="第六章-列表：推导式与切片"><a href="#第六章-列表：推导式与切片" class="headerlink" title="第六章   列表：推导式与切片"></a>第六章   列表：推导式与切片</h1><h2 id="6-1-重要-列表推导式"><a href="#6-1-重要-列表推导式" class="headerlink" title="6.1   (重要) 列表推导式"></a>6.1   (重要) 列表推导式</h2><h3 id="6-1-1-为何要用列表推导式"><a href="#6-1-1-为何要用列表推导式" class="headerlink" title="6.1.1   为何要用列表推导式?"></a>6.1.1   为何要用列表推导式?</h3><h4 id="任务一：生成列表元素"><a href="#任务一：生成列表元素" class="headerlink" title="任务一：生成列表元素"></a><em>任务一：生成列表元素</em></h4><p>为创建一个元素为<strong>整数平方项</strong>的列表<strong>squares</strong>，可使用如下方式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#声明空列表</span></span><br><span class="line">squares = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">   val = x**<span class="number">2</span></span><br><span class="line">   squares.append(val)</span><br><span class="line"></span><br><span class="line">print(squares)</span><br><span class="line"><span class="comment"># [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span></span><br></pre></td></tr></table></figure>
+
+<p>代码解析：</p>
+<p>在<strong>for</strong>循环中，通过对序列的临时变量<strong>x</strong>，进行<strong>x****</strong>2**运算来创建列表的新元素</p>
+<p>然后将新元素**append()**到列表中，直到循环结束</p>
+<p>上述列表<strong>squares</strong>创建方式包含至少3行以上的代码</p>
+<p>下面介绍的<strong>列表推导式只需一行代码</strong>就能生成相同的列表</p>
+<h4 id="任务二：初识列表推导式"><a href="#任务二：初识列表推导式" class="headerlink" title="任务二：初识列表推导式"></a><em>任务二：初识列表推导式</em></h4><p>知识点：列表推导式的语法</p>
+<p>语法：<strong>newlist = [expression for expr1 in sequence1 if condition1]</strong></p>
+<p><strong>expression</strong>：生成列表新元素的表达式</p>
+<p><strong>for expr1 in sequence1</strong>：遍历序列<strong>sequence1</strong>。必须<strong>包含至少一个for</strong>语句</p>
+<p><strong>if condition1</strong>：<strong>可选</strong>，筛选满足条件的元素</p>
+<p>列表推导式中的<strong>for</strong>语句<strong>末尾没有冒号</strong></p>
+<p>描述：根据序列<strong>sequence1</strong>，筛选满足条件的元素，并根据表达式<strong>expression</strong>，生成新列表</p>
+<p>返回：一个<strong>新列表</strong>。不管原序列是什么类型，返回的是列表<strong>list</strong>类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">squares = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]</span><br><span class="line">print(squares)</span><br><span class="line"><span class="comment"># [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span></span><br></pre></td></tr></table></figure>
+
+<p>程序解析(列表推导式规则的角度)：</p>
+<p>列表推导式，由一个有**[]**括号所包含的表达式组成，用于定义列表元素生成规则</p>
+<p><strong>遍历原序列</strong>：<strong>for x in range(10)</strong> 遍历<strong>range(10)<strong>序列，并赋值给临时变量</strong>x</strong></p>
+<p><strong>定义新元素生成的表达式</strong>：根据表达式 (x<strong>2)，对</strong>x实现运算操作来生成新列表元素</p>
+<p><strong>自动添加元素</strong>：将新元素添加到列表中</p>
+<p><strong>squares</strong>类型为<strong>list</strong>对象</p>
+<h4 id="任务三：列表推导式的等价形式"><a href="#任务三：列表推导式的等价形式" class="headerlink" title="任务三：列表推导式的等价形式"></a><em>任务三：列表推导式的等价形式</em></h4><p>知识点：列表推导式和普通代码的逻辑等价</p>
+<p>列表推导式：<strong>newlist = [expression for expr1 in sequence1 if condition1]</strong></p>
+<p>等价的普通代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">newlist = []</span><br><span class="line"><span class="keyword">for</span> expr1 <span class="keyword">in</span> sequence1:</span><br><span class="line"> <span class="keyword">if</span> condition1:</span><br><span class="line">     val = expression</span><br><span class="line">     newlist.append(val)</span><br></pre></td></tr></table></figure>
+
+<p>列表推导式为<strong>从序列中生成新元素来创建列表</strong>提供了一个优雅且简明的方法。代码简洁，可读性强，是Python程序开发时应用最多的技术之一</p>
+<h4 id="任务四：函数映射角度来理解列表推导式"><a href="#任务四：函数映射角度来理解列表推导式" class="headerlink" title="任务四：函数映射角度来理解列表推导式"></a><em>任务四：函数映射角度来理解列表推导式</em></h4><p>知识点：函数映射角度来理解列表推导式：</p>
+<p>定义域：序列<strong>sequence1</strong></p>
+<p>函数映射：特定的表达式规则**(expression)**</p>
+<p>值域：新的列表<strong>newlist</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">squares = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]</span><br><span class="line">print(squares)</span><br><span class="line"><span class="comment"># [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span></span><br></pre></td></tr></table></figure>
+
+<p>程序解析(函数映射的角度)：</p>
+<p>定义域：序列<strong>range(10)</strong></p>
+<p>函数映射：表达式x**2</p>
+<p>值域：新列表<strong>squares</strong></p>
+<h3 id="6-1-2-深入列表推导式用法"><a href="#6-1-2-深入列表推导式用法" class="headerlink" title="6.1.2   深入列表推导式用法"></a>6.1.2   深入列表推导式用法</h3><h4 id="任务一：再识列表推导式"><a href="#任务一：再识列表推导式" class="headerlink" title="任务一：再识列表推导式"></a><em>任务一：再识列表推导式</em></h4><p>知识点：列表推导式(list comprehension)</p>
+<p>语法：<strong>newlist = [expression for expr1 in sequence1 if condition1]</strong></p>
+<p>又称列表解析式，它对<strong>序列或可迭代对象</strong>进行<strong>遍历(for)<strong>、</strong>过滤(if)或计算(expression)<strong>，来生成</strong>新列表</strong></p>
+<p>简单地说：<strong>列表推导式</strong>将<strong>for</strong>循环和创建新元素的规则合并成一行，并自动实现元素的添加</p>
+<h4 id="任务二：使用带if条件的列表推导式"><a href="#任务二：使用带if条件的列表推导式" class="headerlink" title="任务二：使用带if条件的列表推导式"></a>任务二：使用带if条件的列表推导式</h4><p>生成一个<strong>aList</strong>列表，它的元素是<strong>nums</strong>列表中，元素值大于3的元素平方项。</p>
+<p>通过<strong>if</strong>从<strong>nums</strong>列表中选择符合条件的元素来组成新的列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通版本</span></span><br><span class="line">nums = [<span class="number">10</span>, -<span class="number">2</span>, <span class="number">13</span>, <span class="number">4</span>, <span class="number">25</span>]</span><br><span class="line"></span><br><span class="line">aList = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> nums:</span><br><span class="line">   <span class="keyword">if</span> x &gt; <span class="number">3</span>:</span><br><span class="line">       aList.append(x * x)</span><br><span class="line"></span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [100, 169, 16, 625]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 推导式版本</span></span><br><span class="line">nums = [<span class="number">10</span>, -<span class="number">2</span>, <span class="number">13</span>, <span class="number">4</span>, <span class="number">25</span>]</span><br><span class="line">aList = [x * x  <span class="keyword">for</span> x <span class="keyword">in</span> nums  <span class="keyword">if</span> x &gt; <span class="number">3</span>]</span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [100, 169, 16, 625]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：二重循环的列表推导式"><a href="#任务三：二重循环的列表推导式" class="headerlink" title="任务三：二重循环的列表推导式"></a><em>任务三：二重循环的列表推导式</em></h4><p>知识点：嵌套的列表推导式理解</p>
+<p>列表推导式包含一个由中括号**[]**组成的表达式。</p>
+<p>表达式之后紧跟一个 <strong>for</strong>循环，之后可以<strong>嵌套</strong>有零或多个 <strong>for</strong>或 <strong>if</strong>语句。</p>
+<p>嵌套的多个<strong>for</strong>或<strong>if</strong>语句，按<strong>从左到右的顺序</strong>(外层语句块到内层语句块)来解读代码</p>
+<p>生成一个<strong>aList</strong>列表，它的元素是二维列表<strong>nums</strong>中，元素值大于0的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通版本</span></span><br><span class="line">nums = [[<span class="number">1</span>,-<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,-<span class="number">6</span>],[<span class="number">7</span>,-<span class="number">8</span>,<span class="number">9</span>]]</span><br><span class="line"></span><br><span class="line">aList = []</span><br><span class="line"><span class="comment"># 二维数组，先遍历行，后遍历列</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> nums:</span><br><span class="line">   <span class="keyword">for</span> col <span class="keyword">in</span> row:</span><br><span class="line">       <span class="comment"># 选择&gt;0的元素</span></span><br><span class="line">       <span class="keyword">if</span> col &gt; <span class="number">0</span>:</span><br><span class="line">           aList.append(col)</span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [1, 3, 4, 5, 7, 9]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums = [[<span class="number">1</span>, -<span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, -<span class="number">6</span>], [<span class="number">7</span>, -<span class="number">8</span>, <span class="number">9</span>]]</span><br><span class="line">aList = [col  <span class="keyword">for</span> row <span class="keyword">in</span> nums  <span class="keyword">for</span> col <span class="keyword">in</span> row  <span class="keyword">if</span> col &gt; <span class="number">0</span>]</span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [1, 3, 4, 5, 7, 9]</span></span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>注意列表推导式中的<strong>for</strong>和<strong>if</strong>语句的顺序</p>
+<p>列表推导式中，省略了**:**冒号</p>
+<h4 id="任务四：多个列表同时遍历的列表推导式"><a href="#任务四：多个列表同时遍历的列表推导式" class="headerlink" title="任务四：多个列表同时遍历的列表推导式"></a><em>任务四：多个列表同时遍历的列表推导式</em></h4><p>两个列表<strong>num1</strong>和<strong>num2</strong>，生成的新列表元素为<strong>num1</strong>和<strong>num2</strong>中元素值不同的成对元素组合</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通版本(外层与内层语句块注意缩进)</span></span><br><span class="line">aList = []</span><br><span class="line">num1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>]</span><br><span class="line">num2 = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> num1:</span><br><span class="line">   <span class="keyword">for</span> y <span class="keyword">in</span> num2:</span><br><span class="line">       <span class="keyword">if</span> x != y:</span><br><span class="line">           aList.append((x, y))</span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [(1, 3), (1, 4), (1, 3), (2, 3), (2, 1), (2, 4), (2, 3), (3, 1), (3, 4), (5, 3), (5, 1), (5, 4), (5, 3)]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>(x,y)<strong>为</strong>元组</strong>，它是不可变列表，后面章节会学到</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>]</span><br><span class="line">num2 = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>]</span><br><span class="line">aList = [(x, y)   <span class="keyword">for</span> x <span class="keyword">in</span> num1   <span class="keyword">for</span> y <span class="keyword">in</span> num2  <span class="keyword">if</span> x != y]</span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [(1, 3), (1, 4), (1, 3), (2, 3), (2, 1), (2, 4), (2, 3), (3, 1), (3, 4), (5, 3), (5, 1), (5, 4), (5, 3)]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务五：调用函数的列表推导式"><a href="#任务五：调用函数的列表推导式" class="headerlink" title="任务五：调用函数的列表推导式"></a><em>任务五：调用函数的列表推导式</em></h4><p>列表推导式中可以调用函数</p>
+<p>定义函数<strong>f</strong>：若<strong>v</strong>能被<strong>2</strong>整除，则返回<strong>v</strong>的平方，不能被2整除，返回<strong>v+1</strong>。具体的函数定义会在后续章节详细讲解</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">v</span>):</span></span><br><span class="line">   <span class="keyword">if</span> v % <span class="number">2</span> == <span class="number">0</span>:  <span class="comment"># 被2整除</span></span><br><span class="line">       v = v**<span class="number">2</span></span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       v = v + <span class="number">1</span></span><br><span class="line">   <span class="keyword">return</span> v</span><br></pre></td></tr></table></figure>
+
+<p>先运行**f(v)**函数的cell</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通版本</span></span><br><span class="line">nums = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]]</span><br><span class="line"></span><br><span class="line">aList = []</span><br><span class="line"><span class="comment"># 二维数组，先遍历行，后遍历列</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> nums:</span><br><span class="line">   <span class="keyword">for</span> col <span class="keyword">in</span> row:</span><br><span class="line">       <span class="comment">#调用函数，需要先运行前面的cell</span></span><br><span class="line">       aList.append(f(col))</span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [2, 4, 4, 16, 6, 36, 8, 64, 10]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]]</span><br><span class="line">aList = [f(col)  <span class="keyword">for</span> row <span class="keyword">in</span> nums  <span class="keyword">for</span> col <span class="keyword">in</span> row]</span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [2, 4, 4, 16, 6, 36, 8, 64, 10]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务六：列表推导式的嵌套"><a href="#任务六：列表推导式的嵌套" class="headerlink" title="任务六：列表推导式的嵌套"></a><em>任务六：列表推导式的嵌套</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="comment"># [x**2 for x in nums]为内层推导式</span></span><br><span class="line">aList = [x + <span class="number">1</span> <span class="keyword">for</span> x <span class="keyword">in</span> [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nums]]</span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [2, 5, 10]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="comment"># 将嵌套的推导式进行等价分解</span></span><br><span class="line">tempList = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> nums]</span><br><span class="line">aList = [x + <span class="number">1</span> <span class="keyword">for</span> x <span class="keyword">in</span> tempList]</span><br><span class="line">print(aList)</span><br><span class="line"><span class="comment"># [2, 5, 10]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="习题："><a href="#习题：" class="headerlink" title="习题："></a>习题：</h3><p>1、用列表推导式的方法，把列表**[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]**中的每个元素都加100，生成一个新列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> =[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">10</span>):</span><br><span class="line">    <span class="built_in">list</span>.append(i+<span class="number">100</span>)</span><br><span class="line">print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">100</span>, <span class="number">101</span>, <span class="number">102</span>, <span class="number">103</span>, <span class="number">104</span>, <span class="number">105</span>, <span class="number">106</span>, <span class="number">107</span>, <span class="number">108</span>, <span class="number">109</span>]</span><br></pre></td></tr></table></figure>
+
+<p>2、用列表推导式生成1-20000之间所有能被3整除不能被5整除的数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">numbers = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">20001</span>) <span class="keyword">if</span> x%<span class="number">3</span>==<span class="number">0</span> <span class="keyword">and</span> x%<span class="number">5</span>!=<span class="number">0</span>]</span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
+
+<p>3、用列表推导式生成列表：**[[0,0,0,0,0],[0,1,2,3,4],[0,2,4,6,8],[0,3,6,9,12]]**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = [[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]]</span><br><span class="line"><span class="built_in">list</span>.append([x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">5</span>) <span class="keyword">if</span> x%<span class="number">1</span>==<span class="number">0</span>])</span><br><span class="line"><span class="built_in">list</span>.append([x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">9</span>) <span class="keyword">if</span> x%<span class="number">2</span>==<span class="number">0</span>])</span><br><span class="line"><span class="built_in">list</span>.append([x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">13</span>) <span class="keyword">if</span> x%<span class="number">3</span>==<span class="number">0</span>])</span><br><span class="line">print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>], [<span class="number">0</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">12</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>4、<strong>3的倍数</strong>：创建一个列表，其中包含3~30内能被3整除的数字；再使用一个for循环将这个列表中的数字都打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">3</span>, <span class="number">31</span>, <span class="number">3</span>))</span><br><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> numbers:</span><br><span class="line">    print(number)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="number">18</span></span><br><span class="line"><span class="number">21</span></span><br><span class="line"><span class="number">24</span></span><br><span class="line"><span class="number">27</span></span><br><span class="line"><span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+<p>5、<strong>立方</strong>：将同一个数字乘三次称为立方。例如，在Python中，2的立方用2**3表示。请创建一个列表，其中包含前10个整数（即1~10）的立方，再使用一个for循环将这些立方数都打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">numbers = []</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">    numbers.append(value ** <span class="number">3</span>)</span><br><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> numbers:</span><br><span class="line">    print(number)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">27</span></span><br><span class="line"><span class="number">64</span></span><br><span class="line"><span class="number">125</span></span><br><span class="line"><span class="number">216</span></span><br><span class="line"><span class="number">343</span></span><br><span class="line"><span class="number">512</span></span><br><span class="line"><span class="number">729</span></span><br><span class="line"><span class="number">1000</span></span><br></pre></td></tr></table></figure>
+
+<p>6、<strong>立方解析</strong>：使用列表解析生成一个列表，其中包含前10个整数的立方</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">numbers = [value ** <span class="number">3</span> <span class="keyword">for</span> value <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>)]</span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">8</span>, <span class="number">27</span>, <span class="number">64</span>, <span class="number">125</span>, <span class="number">216</span>, <span class="number">343</span>, <span class="number">512</span>, <span class="number">729</span>, <span class="number">1000</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-2-切片：列表索引"><a href="#6-2-切片：列表索引" class="headerlink" title="6.2  切片：列表索引"></a>6.2  切片：列表索引</h2><h3 id="6-2-1-切片的定义"><a href="#6-2-1-切片的定义" class="headerlink" title="6.2.1   切片的定义"></a>6.2.1   切片的定义</h3><h4 id="任务一：初识切片"><a href="#任务一：初识切片" class="headerlink" title="任务一：初识切片"></a><em>任务一：初识切片</em></h4><p>知识点：切片(slide)用于获取<strong>列表片段</strong></p>
+<p>之前学习了如何使用通过<strong>索引</strong>来访问列表的单个元素。比如：<strong>x[0]</strong></p>
+<p>在实际应用中，经常需要访问列表的片段或子集</p>
+<p>为此，Python专门设计了<strong>切片</strong>技术来实现列表元素的<strong>一次性批量访问</strong></p>
+<p><strong>str</strong>字符串、<strong>list</strong>列表、<strong>tupple</strong>元组、<strong>ndarray</strong>多维数组等都支持切片操作</p>
+<p>知识点：切片语法</p>
+<p>语法：<strong>x[start:stop:step]</strong></p>
+<p>描述：从列表<strong>x</strong>中获得子列表，索引范围为**[start stop)左闭右开<strong>区间，步长为</strong>step**</p>
+<p>参数：3个参数必须是整数(包括负整数)</p>
+<p><strong>start</strong>为起始索引，默认值为0</p>
+<p><strong>stop</strong>为终止索引，默认值为<strong>len(x)</strong></p>
+<p><strong>step</strong>为步长，默认值为1。<strong>不能为0，否则会出错</strong></p>
+<p>返回：子列表。从<strong>start</strong>开始到<strong>stop</strong>，但不包括<strong>stop</strong>元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从索引0开始，到索引3为止，步长为1</span></span><br><span class="line">x_sub = x[<span class="number">0</span>:<span class="number">4</span>:<span class="number">1</span>]</span><br><span class="line">print(<span class="string">&#x27;x[0:4:1]：&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[0:4:1]： [1, 4, 2, 5]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：切片不包含stop元素"><a href="#任务二：切片不包含stop元素" class="headerlink" title="任务二：切片不包含stop元素"></a><em>任务二：切片不包含stop元素</em></h4><p>知识点：<strong>常见的逻辑错误(坑)</strong></p>
+<p>切片返回的子列表，不包括<strong>stop</strong>索引元素</p>
+<p>例如：<strong>x[0:3:1]<strong>，返回的子列表元素为</strong>x[0]<strong>，</strong>x[1]<strong>，</strong>x[2]<strong>，但不包括</strong>x[3]</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切片不包括stop=4的索引元素</span></span><br><span class="line">x_sub = x[<span class="number">0</span>:<span class="number">4</span>:<span class="number">1</span>]</span><br><span class="line">print(<span class="string">&#x27;x[0:4:1]：&#x27;</span>, x_sub)</span><br><span class="line">print(<span class="string">&#x27;x[4]：&#x27;</span>, x[<span class="number">4</span>])</span><br><span class="line"><span class="comment"># x[0:4:1]： [1, 4, 2, 5]</span></span><br><span class="line"><span class="comment"># x[4]： -1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-2-重要-深入切片"><a href="#6-2-2-重要-深入切片" class="headerlink" title="6.2.2  (重要) 深入切片"></a>6.2.2  (重要) 深入切片</h3><h4 id="任务一：掌握切片常见用法"><a href="#任务一：掌握切片常见用法" class="headerlink" title="任务一：掌握切片常见用法"></a><em>任务一：掌握切片常见用法</em></h4><p>知识点：切片的理解</p>
+<p>切片的用法与**range(start:stop:step)**类似，3个参数的意义也类似</p>
+<p>可以这么理解切片：首先使用<strong>range(start:stop:step)<strong>生成</strong>一组列表元素的索引</strong>。然后，再应用于列表<strong>x</strong>，来获得索引范围为**[start, stop)**的子列表</p>
+<p>切片使用较灵活，具体包括如下几种情况：</p>
+<p><strong>情况1</strong>： <strong>三个</strong>参数<strong>x[start:stop:step]<strong>，包含</strong>两个:</strong></p>
+<p>这是<strong>完整</strong>的切片表达式</p>
+<p><strong>两个:<strong>用于分隔三个参数</strong>(start、stop、step)</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 3个参数，2个：</span></span><br><span class="line">x_sub = x[<span class="number">0</span>:<span class="number">4</span>:<span class="number">2</span>]</span><br><span class="line">print(<span class="string">&#x27;x[0:4:2]：&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[0:4:2]： [1, 2]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>情况2</strong>：<strong>两个</strong>参数<strong>x[start:stop]<strong>，包含</strong>一个:</strong></p>
+<p>默认值步长<strong>step=1</strong></p>
+<p>等价于<strong>x[start:stop:1]</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 2个参数，1个：</span></span><br><span class="line">x_sub = x[<span class="number">0</span>:<span class="number">4</span>]</span><br><span class="line">print(<span class="string">&#x27;x[0:4]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[0:4] [1, 4, 2, 5]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等价于step=1的3参数</span></span><br><span class="line">x_sub = x[<span class="number">0</span>:<span class="number">4</span>:<span class="number">1</span>]</span><br><span class="line">print(<span class="string">&#x27;x[0:4:1]&#x27;</span>, x_sub)</span><br><span class="line"></span><br><span class="line"><span class="comment"># x[0:4:1] [1, 4, 2, 5]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>情况3.1</strong>：<strong>一个</strong>参数<strong>x[start:]<strong>，包含</strong>一个:</strong></p>
+<p>此时，默认值<strong>stop=len(x)<strong>，表示切片的终止于列表末尾。默认值步长</strong>step=1</strong></p>
+<p>等价于<strong>x[start:len(x):1]</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 1个参数，1个：</span></span><br><span class="line">x_sub = x[<span class="number">3</span>:]</span><br><span class="line">print(<span class="string">&#x27;x[3:]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[3:] [5, -1, 4, 9, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等价于stop=start+1，step=1的3参数</span></span><br><span class="line">x_sub = x[<span class="number">3</span>:<span class="built_in">len</span>(x):<span class="number">1</span>]</span><br><span class="line">print(<span class="string">&#x27;x[3:len(x):1]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[3:len(x):1] [5, -1, 4, 9, 10]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>情况3.2****：一个</strong>参数<strong>x[:stop]<strong>，包含</strong>一个:</strong></p>
+<p>此时，默认值<strong>start=0</strong>，表示切片的起始为0。默认值步长<strong>step=1</strong></p>
+<p>等价于<strong>x[0:stop:1]</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 1个参数，1个：</span></span><br><span class="line">x_sub = x[:<span class="number">3</span>]</span><br><span class="line">print(<span class="string">&#x27;x[:3]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[:3] [1, 4, 2]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等价于start=0，step=1的3参数</span></span><br><span class="line">x_sub = x[<span class="number">0</span>:<span class="number">3</span>:<span class="number">1</span>]</span><br><span class="line">print(<span class="string">&#x27;x[0:3:1]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[0:3:1] [1, 4, 2]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>情况4</strong>：一个参数<strong>x[start]<strong>，</strong>没有:</strong></p>
+<p>退化为<strong>单索引</strong></p>
+<p>此时，<strong>stop=start+1</strong>，表示切取<strong>start</strong>指定的那个元素。默认值步长<strong>step=1</strong></p>
+<p>等价于<strong>x[start:start+1:1]</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 1个参数，没有：</span></span><br><span class="line">x_sub = x[<span class="number">3</span>]</span><br><span class="line">print(<span class="string">&#x27;x[3]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[3] 5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等价于stop=start+1=4，step=1的3参数</span></span><br><span class="line">x_sub = x[<span class="number">3</span>:<span class="number">4</span>:<span class="number">1</span>]</span><br><span class="line">print(<span class="string">&#x27;x[3:4:1]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[3:4:1] [5]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>情况5</strong>：<strong>没有</strong>参数，<strong>x[::]或x[:]</strong></p>
+<p>如果以上3个参数都未指定，那么它们会被设置默认值：<strong>start=0、stop=len(x)和 step=1</strong></p>
+<p>此时，为返回的子列表为<strong>x</strong>本身</p>
+<p>等价于<strong>x[start=0:len(x):1]</strong></p>
+<p>功能：复制列表<strong>x</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 0个参数，1个：</span></span><br><span class="line">x_sub = x[:]</span><br><span class="line">print(<span class="string">&#x27;x[:]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[:] [1, 4, 2, 5, -1, 4, 9, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 0个参数，2个：</span></span><br><span class="line">x_sub = x[::]</span><br><span class="line">print(<span class="string">&#x27;x[::]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[::] [1, 4, 2, 5, -1, 4, 9, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等价于x[start=0:len(x):1]</span></span><br><span class="line">x_sub = x[<span class="number">0</span>:<span class="built_in">len</span>(x):<span class="number">1</span>]</span><br><span class="line">print(<span class="string">&#x27;x[0:len(x):1]&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[0:len(x):1] [1, 4, 2, 5, -1, 4, 9, 10]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-3-参数缺省的切片"><a href="#6-2-3-参数缺省的切片" class="headerlink" title="6.2.3   参数缺省的切片"></a>6.2.3   参数缺省的切片</h3><h4 id="任务一：掌握参数缺省的切片使用"><a href="#任务一：掌握参数缺省的切片使用" class="headerlink" title="任务一：掌握参数缺省的切片使用"></a><em>任务一：掌握参数缺省的切片使用</em></h4><p>知识点：</p>
+<p>当<strong>step&gt;0</strong>时为正序，<strong>索引</strong>可以从<strong>正数的0</strong>开始<strong>从左向右(正序)</strong></p>
+<p>当<strong>step&lt;0</strong>时为逆序，从<strong>负数的-1</strong>开始<strong>从右向左(逆序)</strong></p>
+<p>知识点(总结)：参数缺省的切片</p>
+<p><strong>x[start:stop]<strong>：缺省</strong>step=1</strong></p>
+<p><strong>x[start:]<strong>：缺省</strong>stop=len(x)，step=1</strong></p>
+<p><strong>x[:stop]<strong>：缺省</strong>start=0，step=1</strong></p>
+<p>**x[:stop:step]**：</p>
+<p>当<strong>step&gt;0</strong>正序，缺省<strong>start=0</strong></p>
+<p>当<strong>step&lt;0</strong>逆序，缺省<strong>start=len(x)</strong></p>
+<p>**x[start::step]**：</p>
+<p>当<strong>step&gt;1</strong>正序，缺省<strong>stop=len(x)</strong></p>
+<p>当<strong>step&lt;1</strong>逆序，缺省<strong>stop=-len(x)-1</strong></p>
+<p>了解：逆序最后个元素为**-len(x)<strong>(即列表第1个元素)，由于切片返回的子列表不包括</strong>stop<strong>元素。因此，为了获得逆序最后个元素，需要设置</strong>stop=-len(x)-1**</p>
+<p><strong>x[:]<strong>和</strong>x[::]<strong>：缺省</strong>start=0，stop=len(x)，step=1</strong>。相当于复制列表<strong>x</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line">print(<span class="string">&#x27;x[1:4]：&#x27;</span>, x[<span class="number">1</span>:<span class="number">4</span>])</span><br><span class="line"><span class="comment"># x[1:4]： [4, 2, 5]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># x[start:stop]：缺省step=1。</span></span><br><span class="line">print(<span class="string">&#x27;x[1:4:1]：&#x27;</span>, x[<span class="number">1</span>:<span class="number">4</span>:<span class="number">1</span>])</span><br><span class="line"><span class="comment"># x[1:4:1]： [4, 2, 5]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line">print(<span class="string">&#x27;x[1:]：&#x27;</span>, x[<span class="number">1</span>:])</span><br><span class="line"><span class="comment"># x[1:]： [4, 2, 5, -1, 4, 9, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># x[start:]：缺省stop=len(x)，step=1。</span></span><br><span class="line">print(<span class="string">&#x27;x[1:len(x):1]：&#x27;</span>, x[<span class="number">1</span>:<span class="built_in">len</span>(x):<span class="number">1</span>])</span><br><span class="line"><span class="comment"># x[1:len(x):1]： [4, 2, 5, -1, 4, 9, 10]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment">#x[:stop]：缺省start=0，step=1。</span></span><br><span class="line">print(<span class="string">&#x27;x[:4]：&#x27;</span>, x[:<span class="number">4</span>])</span><br><span class="line"><span class="comment"># x[:4]： [1, 4, 2, 5]</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;x[0:4:1]：&#x27;</span>, x[<span class="number">0</span>:<span class="number">4</span>:<span class="number">1</span>])</span><br><span class="line"><span class="comment"># x[0:4:1]： [1, 4, 2, 5]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment">#x[:stop:step]：当step&gt;1正序，缺省start=0；</span></span><br><span class="line">print(<span class="string">&#x27;x[:4:2]&#x27;</span>, x[:<span class="number">4</span>:<span class="number">2</span>])</span><br><span class="line">print(<span class="string">&#x27;x[0:4:2]&#x27;</span>, x[<span class="number">0</span>:<span class="number">4</span>:<span class="number">2</span>])</span><br><span class="line"><span class="comment"># x[:4:2] [1, 2]</span></span><br><span class="line"><span class="comment"># x[0:4:2] [1, 2]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#x[:stop:step]：当step&lt;1逆序，缺省start=len(x)；</span></span><br><span class="line">print(<span class="string">&#x27;x[:4:-2]&#x27;</span>, x[:<span class="number">4</span>:-<span class="number">2</span>])</span><br><span class="line">print(<span class="string">&#x27;x[len(x):4:-2]&#x27;</span>, x[<span class="built_in">len</span>(x):<span class="number">4</span>:-<span class="number">2</span>])</span><br><span class="line"><span class="comment"># x[:4:-2] [10, 4]</span></span><br><span class="line"><span class="comment"># x[len(x):4:-2] [10, 4]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment">#x[start::step]：当step&gt;1正序，缺省stop=len(x)；</span></span><br><span class="line">print(<span class="string">&#x27;x[1::2]&#x27;</span>, x[<span class="number">1</span>::<span class="number">2</span>])</span><br><span class="line">print(<span class="string">&#x27;x[1:len(x):2]&#x27;</span>, x[<span class="number">1</span>:<span class="built_in">len</span>(x):<span class="number">2</span>])</span><br><span class="line"><span class="comment"># x[1::2] [4, 5, 4, 10]</span></span><br><span class="line"><span class="comment"># x[1:len(x):2] [4, 5, 4, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#x[start::step]：当step&lt;1逆序，缺省stop=-len(x)-1。</span></span><br><span class="line"><span class="comment"># 具体解释看知识点</span></span><br><span class="line">print(<span class="string">&#x27;x[4::-2]&#x27;</span>, x[<span class="number">4</span>::-<span class="number">2</span>])</span><br><span class="line">print(<span class="string">&#x27;x[4:-len(x)-1:-2]&#x27;</span>, x[<span class="number">4</span>:-<span class="built_in">len</span>(x)-<span class="number">1</span>:-<span class="number">2</span>])  </span><br><span class="line"><span class="comment"># x[4::-2] [-1, 2, 1]</span></span><br><span class="line"><span class="comment"># x[4:-len(x)-1:-2] [-1, 2, 1]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-4-列表元素的两种拷贝方式"><a href="#6-2-4-列表元素的两种拷贝方式" class="headerlink" title="6.2.4   列表元素的两种拷贝方式"></a>6.2.4   列表元素的两种拷贝方式</h3><h4 id="任务一：列表元素的赋值拷贝"><a href="#任务一：列表元素的赋值拷贝" class="headerlink" title="任务一：列表元素的赋值拷贝"></a><em>任务一：列表元素的赋值拷贝</em></h4><p>知识点：列表拷贝的误区(赋值<strong>y=x</strong>实现了浅拷贝)</p>
+<p>误区：两个列表的拷贝，直接通过赋值语句</p>
+<p><strong>list_copy = list_org</strong>，通过赋值**=<strong>将</strong>list_org<strong>复制给</strong>list_copy**</p>
+<p><strong>赋值拷贝</strong>：赋值=并不能实现真正的拷贝，只拷贝了<strong>变量的地址</strong>，而非<strong>数据的本身内容</strong>。细节请回顾<strong>3.2 变量内涵</strong></p>
+<p>可以通过**id()**函数查看变量的内存地址</p>
+<p>通过<strong>a is b</strong>逻辑判断变量<strong>a</strong>和<strong>b</strong>是否指向同一个数据</p>
+<p><strong>赋值拷贝</strong>存在的问题：它们的修改会相互影响。即修改其中的一个列表对象，会影响另外个列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 赋值拷贝</span></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 复制成功了？</span></span><br><span class="line">y = x</span><br><span class="line">print(<span class="string">&#x27;y：&#x27;</span>, y)</span><br><span class="line"><span class="comment"># y： [1, 4, 2, 5, -1, 4, 9, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#观察x和y是同个内存地址</span></span><br><span class="line">print(<span class="string">&#x27;id(x):&#123;&#125;, id(y):&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(x), <span class="built_in">id</span>(y)))</span><br><span class="line"><span class="comment"># id(x):3057506266632, id(y):3057506266632</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#观察x和y是同个内存地址</span></span><br><span class="line">print(<span class="string">&#x27;x is y? &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(x <span class="keyword">is</span> y))</span><br><span class="line"><span class="comment"># x is y? True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改y，观察是否会影响x</span></span><br><span class="line"><span class="comment"># 发现x[1]和y[1]同时改变</span></span><br><span class="line"><span class="comment"># y = x 并不能实现拷贝</span></span><br><span class="line">y[<span class="number">1</span>] = -<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;修改后的x：&#x27;</span>, x)</span><br><span class="line">print(<span class="string">&#x27;修改后的y：&#x27;</span>, y)</span><br><span class="line"><span class="comment"># 修改后的x： [1, -100, 2, 5, -1, 4, 9, 10]</span></span><br><span class="line"><span class="comment"># 修改后的y： [1, -100, 2, 5, -1, 4, 9, 10]</span></span><br></pre></td></tr></table></figure>
+
+<p>分析：</p>
+<p>通过上面的例子看到了通过赋值<strong>y=x</strong>方式拷贝列表，并不能实现真正的列表元素拷贝</p>
+<p>即对<strong>x</strong>和<strong>y</strong>列表的改变，会相互影响。真正的拷贝是希望两个列表是独立的，它们的修改互不干扰</p>
+<p>通过<strong>id()<strong>和</strong>x is y</strong>发现它们本质上是同一个列表对象</p>
+<h4 id="任务二：列表元素的切片元素拷贝"><a href="#任务二：列表元素的切片元素拷贝" class="headerlink" title="任务二：列表元素的切片元素拷贝"></a><em>任务二：列表元素的切片元素拷贝</em></h4><p>知识点：**y = x[:]**实现了列表元素的拷贝</p>
+<p>切片元素拷贝：<strong>y</strong>拷贝的是<strong>x</strong>的所有元素，而非简单的地址</p>
+<p>理解：在内存空间中开辟一个与<strong>x</strong>同样大小的空间，然后，将x的所有元素依次拷贝，最后将新空间地址赋值给<strong>y</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切片元素拷贝</span></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 复制成功了？</span></span><br><span class="line">y = x[:]</span><br><span class="line">print(<span class="string">&#x27;y：&#x27;</span>, y)</span><br><span class="line"><span class="comment"># y： [1, 4, 2, 5, -1, 4, 9, 10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#观察x和y是同个内存地址</span></span><br><span class="line">print(<span class="string">&#x27;id(x):&#123;&#125;, id(y):&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(x), <span class="built_in">id</span>(y)))</span><br><span class="line"><span class="comment"># id(x):3057506814600, id(y):3057506786504</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#观察x和y是同个内存地址</span></span><br><span class="line">print(<span class="string">&#x27;x is y? &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(x <span class="keyword">is</span> y))</span><br><span class="line"><span class="comment"># x is y? False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改y，观察是否会影响x</span></span><br><span class="line"><span class="comment"># 发现x[1]和y[1]同时改变</span></span><br><span class="line"><span class="comment"># y = x 并不能实现拷贝</span></span><br><span class="line">y[<span class="number">1</span>] = -<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;修改后的x：&#x27;</span>, x)</span><br><span class="line">print(<span class="string">&#x27;修改后的y：&#x27;</span>, y)</span><br><span class="line"><span class="comment"># 修改后的x： [1, 4, 2, 5, -1, 4, 9, 10]</span></span><br><span class="line"><span class="comment"># 修改后的y： [1, -100, 2, 5, -1, 4, 9, 10]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-5-切片的逻辑位置转换公式"><a href="#6-2-5-切片的逻辑位置转换公式" class="headerlink" title="6.2.5   切片的逻辑位置转换公式"></a>6.2.5   切片的逻辑位置转换公式</h3><h4 id="任务一：掌握参数为负的切片"><a href="#任务一：掌握参数为负的切片" class="headerlink" title="任务一：掌握参数为负的切片"></a><em>任务一：掌握参数为负的切片</em></h4><p>知识点：</p>
+<p>如果<strong>step</strong>为负，那么返回的子列表为原列表的<strong>逆序</strong></p>
+<p>这里先假设<strong>start</strong>和<strong>stop</strong>都为正号</p>
+<p>子列表正序还是逆序，只与<strong>step</strong>符号有关，与<strong>start</strong>和<strong>stop</strong>无关</p>
+<p>正序<strong>step&gt;0</strong>要求<strong>start</strong>要位于<strong>stop</strong>的<strong>逻辑左边(start&lt;stop)<strong>。否则，返回空列表</strong>[]</strong></p>
+<p>逆序<strong>step&lt;0</strong>要求<strong>start</strong>要位于<strong>stop</strong>的<strong>逻辑右边(start)<strong>。否则，返回空列表</strong>[]</strong></p>
+<p>逆序时，不能缺省<strong>step</strong>参数。因为，缺省的<strong>step=1</strong>为正序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 逆序 start&gt;stop</span></span><br><span class="line">x_sub = x[<span class="number">4</span>:<span class="number">1</span>:-<span class="number">1</span>]</span><br><span class="line">print(<span class="string">&#x27;x[4:1:-1]：&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[4:1:-1]： [-1, 5, 2]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 逆序 start&lt;stop，则为空列表</span></span><br><span class="line">x_sub = x[<span class="number">1</span>:<span class="number">4</span>:-<span class="number">1</span>]</span><br><span class="line">print(<span class="string">&#x27;x[1:4:-1]：&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[1:4:-1]： []</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里使用.format()格式输出的3个参数，第1个为start，</span></span><br><span class="line"><span class="comment"># 第2个为stop，第3个为逆序条件start&gt;stop?</span></span><br><span class="line">print(<span class="string">&#x27;逆序条件 start=&#123;&#125; &gt; stop=&#123;&#125;? &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span> &gt; <span class="number">4</span>))</span><br><span class="line"><span class="comment"># 逆序条件 start=1 &gt; stop=4? False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 缺省的step=1</span></span><br><span class="line">x_sub = x[<span class="number">1</span>:<span class="number">4</span>]</span><br><span class="line">print(<span class="string">&#x27;x[1:4]缺省step=1，为正序：&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[1:4]缺省step=1，为正序： [4, 2, 5]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 正序 start&lt;stop</span></span><br><span class="line">x_sub = x[<span class="number">1</span>:<span class="number">4</span>:<span class="number">2</span>]</span><br><span class="line">print(<span class="string">&#x27;x[1:4:2]：&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[1:4:2]： [4, 5]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 正序 start&gt;stop，则为空列表</span></span><br><span class="line">x_sub = x[<span class="number">4</span>:<span class="number">1</span>:<span class="number">2</span>]</span><br><span class="line">print(<span class="string">&#x27;x[4:1:2]：&#x27;</span>, x_sub)</span><br><span class="line"><span class="comment"># x[4:1:2]： []</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;正序条件 start=&#123;&#125; &lt; stop=&#123;&#125;? &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="number">4</span>, <span class="number">1</span>, <span class="number">4</span> &lt; <span class="number">1</span>))</span><br><span class="line"><span class="comment"># 正序条件 start=4 &lt; stop=1? False</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：掌握逻辑位置转换公式"><a href="#任务二：掌握逻辑位置转换公式" class="headerlink" title="任务二：掌握逻辑位置转换公式"></a><em>任务二：掌握逻辑位置转换公式</em></h4><p>知识点：<strong>start</strong>和<strong>stop</strong>的逻辑位置转换公式</p>
+<p><strong>负索引与正索引逻辑位置转换公式</strong>：负索引**-n<strong>等价于正索引</strong>len(x)-n<strong>，其中</strong>n**为正整数</p>
+<p>例如，负索引**-1<strong>等价于正索引</strong>len(x)-1**</p>
+<p>切片的<strong>start</strong>和<strong>stop</strong>和可以<strong>正负号混用</strong>(不建议)，但是一定要注意：</p>
+<p>正序<strong>step&gt;0</strong>，要求<strong>start</strong>要位于<strong>stop</strong>的<strong>逻辑左边</strong>。所谓的<strong>逻辑左边</strong>，可以对负索引先用逻辑位置公式转换为对应的正索引，然后再判断是否满足`start</p>
+<p>逆序<strong>step&lt;0**，要求**start**要位于**stop**的**逻辑右边**。所谓的**逻辑右边**，可以对负索引先用逻辑位置公式转换为对应的正索引，然后再判断是否满足**start&gt;stop</strong></p>
+<p><strong>遇到切片中有负索引，建议先用逻辑位置公式转换为正索引</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 正序，start和stop为负值</span></span><br><span class="line">print(<span class="string">&#x27;x[-4:-1]：&#x27;</span>, x[-<span class="number">4</span>:-<span class="number">1</span>])</span><br><span class="line"><span class="comment"># x[-4:-1]： [-1, 4, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用逻辑位置转换公式len(x)-n</span></span><br><span class="line"><span class="comment"># 将负索引转换为正索引</span></span><br><span class="line">start = <span class="built_in">len</span>(x) - <span class="number">4</span></span><br><span class="line">stop = <span class="built_in">len</span>(x) - <span class="number">1</span></span><br><span class="line">print(<span class="string">&#x27;[len(x)-4 : len(x)-1]：&#x27;</span>, x[start:stop])</span><br><span class="line"><span class="comment"># [len(x)-4 : len(x)-1]： [-1, 4, 9]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 正负索引混用</span></span><br><span class="line">print(<span class="string">&#x27;x[1:-3:2]：&#x27;</span>, x[<span class="number">1</span>:-<span class="number">3</span>:<span class="number">2</span>])</span><br><span class="line"><span class="comment"># x[1:-3:2]： [4, 5]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用逻辑位置转换公式len(x)-n</span></span><br><span class="line"><span class="comment"># 将负索引转换为正索引</span></span><br><span class="line">stop = <span class="built_in">len</span>(x) - <span class="number">3</span></span><br><span class="line">print(<span class="string">&#x27;x[1:len(x)-3:2]：&#x27;</span>, x[<span class="number">1</span>:stop:<span class="number">2</span>])</span><br><span class="line"><span class="comment"># x[1:len(x)-3:2]： [4, 5]</span></span><br><span class="line">print(<span class="string">&#x27;正序条件 start=&#123;&#125; &lt; stop=&#123;&#125;? &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="number">1</span>, stop, <span class="number">1</span> &lt; stop))</span><br><span class="line"><span class="comment"># 正序条件 start=1 &lt; stop=5? True</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-6-遍历切片"><a href="#6-2-6-遍历切片" class="headerlink" title="6.2.6   遍历切片"></a>6.2.6   遍历切片</h3><h4 id="任务一：使用for遍历列表元素"><a href="#任务一：使用for遍历列表元素" class="headerlink" title="任务一：使用for遍历列表元素"></a><em>任务一：使用for遍历列表元素</em></h4><p>知识点：</p>
+<p>切片的类型为列表<strong>list</strong>，也是可迭代对象，因此可以使用<strong>for</strong>来遍历它的元素</p>
+<p>如果要遍历列表的部分元素，可在<strong>for</strong>循环中使用切片</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历切片x[:3]的元素</span></span><br><span class="line"><span class="keyword">for</span> val <span class="keyword">in</span> x[:<span class="number">3</span>]:</span><br><span class="line">   print(val, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"><span class="comment"># 1 4 2</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, -<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="comment"># 遍历切片x[-1:4:-2]的元素</span></span><br><span class="line"><span class="keyword">for</span> val <span class="keyword">in</span> x[-<span class="number">1</span>:<span class="number">4</span>:-<span class="number">2</span>]:</span><br><span class="line">   print(val, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"><span class="comment"># 10 4</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-3-元组：不可变列表"><a href="#6-3-元组：不可变列表" class="headerlink" title="6.3   元组：不可变列表"></a>6.3   元组：不可变列表</h2><h3 id="6-3-1-元组的定义"><a href="#6-3-1-元组的定义" class="headerlink" title="6.3.1   元组的定义"></a>6.3.1   元组的定义</h3><h4 id="任务一：为何需要元组？"><a href="#任务一：为何需要元组？" class="headerlink" title="任务一：为何需要元组？"></a><em>任务一：为何需要元组？</em></h4><p>知识点：<strong>不可变</strong>数据集合的需求</p>
+<p>列表适用于储存运行期间可以<strong>动态增、减、修改</strong>的数据集合</p>
+<p>Python为列表提供了强大数据处理技术：元素添加和删除、排序、列表遍历、切片、列表推导式等</p>
+<p>然而，有些场合需要提供<strong>不可变</strong>的数据集合，即其中的元素不能被增、减、修改等操作</p>
+<p>在现实世界中，<strong>很多物体的属性也都是不可被修改</strong></p>
+<p>比如课桌的长宽高，出厂之后是不变的</p>
+<p>如果在程序运行中，对它们的属性进行修改，这是非法操作</p>
+<p>为满足上述需求，Python专门设计了不可变的数据集合类型——元组(<strong>tuple</strong>)。相对于列表来说，元组是更简单和高效的数据结构。如果需要存储在整个程序生命周期内都不变的一组值，建议使用元组</p>
+<h4 id="任务二：元组的定义"><a href="#任务二：元组的定义" class="headerlink" title="任务二：元组的定义"></a><em>任务二：元组的定义</em></h4><p>知识点：</p>
+<p>Python的元组与列表功能类似，但是<strong>元组在创建之后，就永远不能被修改了</strong></p>
+<p>标识：元组使用小括号**()<strong>，列表使用方括号</strong>[]**</p>
+<p>元组创建：在<strong>小括号</strong>中添加元素，并使用逗号隔开，<strong>小括号可以被省略</strong>。例如：<strong>nums=(1,2,3)<strong>和</strong>nums=1,2,3</strong></p>
+<p>元组类型：使用<strong>type()<strong>函数查看，类型为</strong>tuple</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用()的元组创建</span></span><br><span class="line">info_tuple = (<span class="string">&quot;zhangsan&quot;</span>, <span class="number">18</span>, <span class="number">1.75</span>)</span><br><span class="line">print(<span class="built_in">type</span>(info_tuple), info_tuple)</span><br><span class="line"><span class="comment"># &lt;class &#x27;tuple&#x27;&gt; (&#x27;zhangsan&#x27;, 18, 1.75)</span></span><br><span class="line"></span><br><span class="line">nums = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">print(<span class="built_in">type</span>(nums), nums)</span><br><span class="line"><span class="comment"># &lt;class &#x27;tuple&#x27;&gt; (1, 2, 3, 4)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不使用()的元组创建</span></span><br><span class="line">nums = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span></span><br><span class="line">print(<span class="built_in">type</span>(nums), nums)</span><br><span class="line"><span class="comment"># &lt;class &#x27;tuple&#x27;&gt; (1, 2, 3, 4)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：创建空元组"><a href="#任务三：创建空元组" class="headerlink" title="任务三：创建空元组"></a><em>任务三：创建空元组</em></h4><p>知识点：</p>
+<p>不包含任何元素的元组为空元组，用**()**表示</p>
+<p><strong>info_tuple = ()</strong></p>
+<h4 id="任务四：只含一个元素的元组创建"><a href="#任务四：只含一个元素的元组创建" class="headerlink" title="任务四：只含一个元素的元组创建"></a><em>任务四：只含一个元素的元组创建</em></h4><p>知识点：</p>
+<p>对于只有<strong>一个元素的元组</strong>，为降低内存消耗，Python使用<strong>该元素原类型</strong>来代替元组。例如，**data = (123)**为数值类型。</p>
+<p>要创建只含有一个元素的元组，在值后面跟必须一个逗号**,<strong>。例如，</strong>data = (123, )**为元组类型。</p>
+<p>适用于带**()<strong>和不带</strong>()**的元组创建</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 虽带()，但是此时data并非元组</span></span><br><span class="line">data = (<span class="number">123</span>)</span><br><span class="line">print(<span class="built_in">type</span>(data), data)</span><br><span class="line"><span class="comment"># &lt;class &#x27;int&#x27;&gt; 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 需要在元素后跟`,`</span></span><br><span class="line">data = (<span class="number">123</span>, )</span><br><span class="line">print(<span class="built_in">type</span>(data), data)</span><br><span class="line"><span class="comment"># &lt;class &#x27;tuple&#x27;&gt; (123,)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不带()，也需要在元素后跟`,`</span></span><br><span class="line">data = <span class="number">123</span>,</span><br><span class="line">print(<span class="built_in">type</span>(data), data)</span><br><span class="line"><span class="comment"># &lt;class &#x27;tuple&#x27;&gt; (123,)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-3-2-元组的基本操作与遍历"><a href="#6-3-2-元组的基本操作与遍历" class="headerlink" title="6.3.2   元组的基本操作与遍历"></a>6.3.2   元组的基本操作与遍历</h3><h4 id="任务：使用-访问元组元素"><a href="#任务：使用-访问元组元素" class="headerlink" title="任务：使用[]访问元组元素"></a><em>任务：使用<code>[]</code>访问元组元素</em></h4><p>知识点：</p>
+<p>与列表一样，<strong>元组使用带[]的索引来访问元素</strong></p>
+<p>第1个元素对应0索引</p>
+<p>注意：虽然元组使用**()<strong>来标识，但是元组访问依然使用</strong>[]<strong>而不是</strong>()**</p>
+<p>在Python中，**()<strong>主要用于函数调用，传递参数。位于</strong>()<strong>之前的一般都是函数名。例如</strong>print(‘hello’)**</p>
+<p>知识点：</p>
+<p>类似列表，元组的<strong>索引</strong>从<strong>0</strong>开始</p>
+<p><strong>索引</strong>就是数据在<strong>元组</strong>中的位置编号</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 元组支持不同类型的元素</span></span><br><span class="line">data = (<span class="number">1</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4.12</span>)</span><br><span class="line">print(<span class="built_in">type</span>(data), data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 类似列表通过[]来索引元素，而非()。</span></span><br><span class="line">print(<span class="string">&#x27;data[0]: &#x27;</span>, data[<span class="number">0</span>])</span><br><span class="line">print(<span class="string">&#x27;data[2]: &#x27;</span>, data[<span class="number">2</span>])</span><br><span class="line">print(<span class="string">&#x27;使用data(2)来访问元组元素会出错！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：元组的元素统计与索引获取"><a href="#任务二：元组的元素统计与索引获取" class="headerlink" title="任务二：元组的元素统计与索引获取"></a><em>任务二：元组的元素统计与索引获取</em></h4><p>知识点：</p>
+<p>定义元组<strong>info = (“zhangsan”, 18, 1.75)</strong></p>
+<p> <strong>len(元组变量)<strong>：返回</strong>元组长度</strong>，值为最大索引n + 1</p>
+<p> <strong>元组变量.count(值)<strong>：返回某个元素在元组中出现的</strong>次数</strong></p>
+<p><strong>元组变量[索引]<strong>：根据索引从元组中，获得</strong>元素</strong></p>
+<p><strong>元组变量.index(值)<strong>：返回某个值第一次出现在元组的</strong>索引</strong></p>
+<p>知识点：在<strong>Jupyter</strong>中，使用<strong>Tab</strong>智能联想元组类型提供的方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">info_tuple = (<span class="string">&quot;zhangsan&quot;</span>, <span class="number">18</span>, <span class="number">1.75</span>, <span class="string">&quot;zhangsan&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 取值和取索引</span></span><br><span class="line">print(info_tuple[<span class="number">0</span>])</span><br><span class="line"><span class="comment"># 已经知道数据的内容，希望知道该数据在元组中的索引</span></span><br><span class="line">print(info_tuple.index(<span class="string">&quot;zhangsan&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 统计计数</span></span><br><span class="line">print(info_tuple.count(<span class="string">&quot;zhangsan&quot;</span>))</span><br><span class="line"><span class="comment"># 统计元组中包含元素的个数</span></span><br><span class="line">print(<span class="built_in">len</span>(info_tuple))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：遍历元组元素"><a href="#任务三：遍历元组元素" class="headerlink" title="任务三：遍历元组元素"></a><em>任务三：遍历元组元素</em></h4><p>知识点：与列表一样，使用<strong>for-in</strong>循环来遍历元组的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">info_tuple = (<span class="string">&quot;zhangsan&quot;</span>, <span class="number">18</span>, <span class="number">1.75</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用迭代遍历元组</span></span><br><span class="line"><span class="keyword">for</span> my_info <span class="keyword">in</span> info_tuple:</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 使用格式字符串拼接 my_info 这个变量不方便！</span></span><br><span class="line">   <span class="comment"># 因为元组中通常保存的数据类型是不同的！</span></span><br><span class="line">   print(my_info, end=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-3-3-元组的应用场景"><a href="#6-3-3-元组的应用场景" class="headerlink" title="6.3.3   元组的应用场景"></a>6.3.3   元组的应用场景</h3><h4 id="任务一：元组的主要应用场景"><a href="#任务一：元组的主要应用场景" class="headerlink" title="任务一：元组的主要应用场景"></a><em>任务一：元组的主要应用场景</em></h4><p>元组的3个主要的应用场景：</p>
+<p><strong>函数的参数和返回值</strong>，一个函数可以接收<strong>任意多个参数</strong>，或者<strong>一次返回多个数据</strong>。有关<strong>函数的参数和返回值</strong>，会在后续<strong>函数</strong>章节详细讲解</p>
+<p><strong>格式字符串</strong>，格式化字符串后面的**()**本质上就是一个元组</p>
+<p><strong>让列表不可以被修改</strong>，以保护数据安全</p>
+<h4 id="任务二：-字符串格式化"><a href="#任务二：-字符串格式化" class="headerlink" title="任务二：%字符串格式化"></a><em>任务二：%字符串格式化</em></h4><p>知识点：</p>
+<p>字符串的格式化方法在开发中非常实用</p>
+<p>使用**%<strong>操作符，可将元组中的内容，</strong>依次**填入到字符串占位符处</p>
+<p>后续<strong>字符串</strong>章节会专门讲解关于字符串的格式化高阶用法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">info_tuple = (<span class="string">&quot;小明&quot;</span>, <span class="number">21</span>, <span class="number">1.85</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 格式化字符串后面的 `()` 本质上就是元组</span></span><br><span class="line">print(<span class="string">&quot;%s 年龄是 %d 身高是 %.2f&quot;</span> % info_tuple)</span><br><span class="line"><span class="comment"># 小明 年龄是 21 身高是 1.85</span></span><br><span class="line"></span><br><span class="line">info_str = <span class="string">&quot;%s 年龄是 %d 身高是 %.2f&quot;</span> % info_tuple</span><br><span class="line">print(info_str)</span><br><span class="line"><span class="comment"># 小明 年龄是 21 身高是 1.85</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-3-4-重要-元组的不可变性质"><a href="#6-3-4-重要-元组的不可变性质" class="headerlink" title="6.3.4   (重要) 元组的不可变性质"></a>6.3.4   (重要) 元组的不可变性质</h3><h4 id="任务一：元组的元素值不可被修改"><a href="#任务一：元组的元素值不可被修改" class="headerlink" title="任务一：元组的元素值不可被修改"></a><em>任务一：元组的元素值不可被修改</em></h4><p>知识点：</p>
+<p>元组的元素值不能被修改，即不能进行增、减、删除等操作</p>
+<p>语法错误：<strong>TypeError: ‘tuple’ object does not support item xxx</strong>。<strong>tuple</strong>对象不支持xxx操作</p>
+<p>友情提醒：当出现语法错误，查看错误类型，尝试着自己根据错误提示来排除错误</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">data = (<span class="number">1</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4.12</span>)</span><br><span class="line"><span class="comment"># 不能修改元组的元素值</span></span><br><span class="line">data[<span class="number">0</span>] = <span class="number">100</span></span><br><span class="line"><span class="comment"># ----------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># TypeError                       Traceback (most recent call last)</span></span><br><span class="line"><span class="comment"># &lt;ipython-input-69-6bf349ffbb80&gt; in &lt;module&gt;</span></span><br><span class="line"><span class="comment">#       1 data = (1, &#x27;2&#x27;, &#x27;python&#x27;, 4.12)</span></span><br><span class="line"><span class="comment">#       2 # 不能修改元组的元素值</span></span><br><span class="line"><span class="comment"># ----&gt; 3 data[0] = 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># TypeError: &#x27;tuple&#x27; object does not support item assignment</span></span><br><span class="line">data = (<span class="number">1</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4.12</span>)</span><br><span class="line"><span class="comment"># 不能删除元组的元素值</span></span><br><span class="line"><span class="keyword">del</span> data[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># ----------------------------------------------------------</span></span><br><span class="line"><span class="comment"># TypeError                        raceback (most recent call last)</span></span><br><span class="line"><span class="comment"># &lt;ipython-input-73-916a07140e78&gt; in &lt;module&gt;</span></span><br><span class="line"><span class="comment">#       1 data = (1, &#x27;2&#x27;, &#x27;python&#x27;, 4.12)</span></span><br><span class="line"><span class="comment">#       2 # 不能删除元组的元素值</span></span><br><span class="line"><span class="comment"># ----&gt; 3 del data[0]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># TypeError: &#x27;tuple&#x27; object doesn&#x27;t support item deletion</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：元组变量允许被重新赋值"><a href="#任务二：元组变量允许被重新赋值" class="headerlink" title="任务二：元组变量允许被重新赋值"></a><em>任务二：元组变量允许被重新赋值</em></h4><p><strong>元组的元素值不能被修改，但是指向元组的变量可以被重新赋值</strong></p>
+<p>知识点：</p>
+<p>变量存的是指向具体元组数据的<strong>地址</strong>，而非存元组数据本身。回顾请看<strong>变量的内涵</strong></p>
+<p>变量的重新赋值仅仅只是更换了一个地址，指向了新的数据空间，而<strong>并未对原元素数据做任何修改</strong></p>
+<p>可以通过**id()**来查看变量赋值前后的所指向的地址是否发生变化</p>
+<p>元组元素不可修改指的是元组的数据空间的元素值不能被修改</p>
+<p><strong>因此，如果一定要修改元组的元素，可重新覆盖定义整个元组</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data = (<span class="number">1</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4.12</span>)</span><br><span class="line">print(<span class="string">&#x27;赋值前：&#x27;</span>, <span class="built_in">id</span>(data), data)</span><br><span class="line"><span class="comment"># 赋值前： 3057506924248 (1, &#x27;2&#x27;, &#x27;python&#x27;, 4.12)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对data进行重新赋值</span></span><br><span class="line">data = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">print(<span class="string">&#x27;赋值后：&#x27;</span>, <span class="built_in">id</span>(data), data)</span><br><span class="line"><span class="comment"># 赋值后： 3057505683640 (1, 2, 3)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：元组和列表之间的转换"><a href="#任务三：元组和列表之间的转换" class="headerlink" title="任务三：元组和列表之间的转换"></a><em>任务三：元组和列表之间的转换</em></h4><p>知识点：</p>
+<p>**list(元组)**：使用 <strong>list</strong> 函数可以把元组转换成列表</p>
+<p>**tuple(列表)**：使用 <strong>tuple</strong> 函数可以把列表转换成元组</p>
+<h3 id="6-3-5-重要-元组的解包和多个返回值函数"><a href="#6-3-5-重要-元组的解包和多个返回值函数" class="headerlink" title="6.3.5   (重要) 元组的解包和多个返回值函数"></a>6.3.5   (重要) 元组的解包和多个返回值函数</h3><h4 id="任务一：元组的解包"><a href="#任务一：元组的解包" class="headerlink" title="任务一：元组的解包"></a><em>任务一：元组的解包</em></h4><p>知识点：</p>
+<p>通过解包可以对<strong>元组的元素进行拆分</strong>，并刻赋值给多个变量</p>
+<p><strong>左边被赋值的变量个数</strong>必须和元组元素个数相同，否则出现解包错误。<strong>ValueError: too many values to unpack</strong></p>
+<p>通过**len()**查看元组元素个数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data = (<span class="number">1</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4.12</span>)</span><br><span class="line">print(data)</span><br><span class="line"><span class="comment"># (1, &#x27;2&#x27;, &#x27;python&#x27;, 4.12)</span></span><br><span class="line"></span><br><span class="line">x1, x2, x3, x4 = data</span><br><span class="line">print(<span class="string">&#x27;元组解包：&#x27;</span>, x1, x2, x3, x4)</span><br><span class="line"><span class="comment"># 元组解包： 1 2 python 4.12</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 元组元素个数必须等于赋值变量个数</span></span><br><span class="line">print(<span class="string">&#x27;len(data)：&#x27;</span>, <span class="built_in">len</span>(data))</span><br><span class="line"><span class="comment"># len(data)： 4</span></span><br><span class="line"></span><br><span class="line">x1, x2 = data</span><br><span class="line">print(<span class="string">&#x27;元组解包：&#x27;</span>, x1, x2)</span><br><span class="line"><span class="comment"># ----------------------------------------------------------</span></span><br><span class="line"><span class="comment"># ValueError                    Traceback (most recent call last)</span></span><br><span class="line"><span class="comment"># &lt;ipython-input-75-d5e254368fc9&gt; in &lt;module&gt;</span></span><br><span class="line"><span class="comment">#       2 print(&#x27;len(data)：&#x27;, len(data))</span></span><br><span class="line"><span class="comment">#       3</span></span><br><span class="line"><span class="comment"># ----&gt; 4 x1, x2 = data</span></span><br><span class="line"><span class="comment">#       5 print(&#x27;元组解包：&#x27;, x1, x2)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ValueError: too many values to unpack (expected 2)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：使用元组的解包接受多个函数返回值"><a href="#任务二：使用元组的解包接受多个函数返回值" class="headerlink" title="任务二：使用元组的解包接受多个函数返回值"></a><em>任务二：使用元组的解包接受多个函数返回值</em></h4><p>知识点(补充知识)： <strong>函数传递多个返回值</strong></p>
+<p>在C++中，函数允许最多传回一个返回值，否则<strong>会出错</strong></p>
+<p>在Python中，通过<strong>元组</strong>可以实现传递函数的多个返回值功能。对函数的多个返回值使用<strong>元组</strong>进行<strong>打包</strong>，然后在函数调用之处进行<strong>解包</strong>赋值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#观察divmod()函数</span></span><br><span class="line"><span class="comment"># 返回值：商和余数，被打包在一个元组</span></span><br><span class="line">print(<span class="built_in">divmod</span>(<span class="number">15</span>, <span class="number">2</span>))</span><br><span class="line"><span class="comment"># (7, 1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过元组解包，接受函数的多个返回值</span></span><br><span class="line">x, y = <span class="built_in">divmod</span>(<span class="number">15</span>, <span class="number">2</span>)</span><br><span class="line">print(<span class="string">&#x27;divmod(15, 2)，商：&#123;&#125;，余数：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(x, y))</span><br><span class="line"><span class="comment"># divmod(15, 2)，商：7，余数：1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：定义拥有多个返回值的函数"><a href="#任务三：定义拥有多个返回值的函数" class="headerlink" title="任务三：定义拥有多个返回值的函数"></a><em>任务三：定义拥有多个返回值的函数</em></h4><p>知识点：定义拥有多个返回值的函数</p>
+<p>元组可以包含多个数据，因此可以使用元组让函数一次返回多个值</p>
+<p>类似于元组的创建，函数的返回值如果是元组，那么小括号**()**可以省略</p>
+<p><strong>函数的用法后续章节会详细讲解</strong>，这里仅为了深入地讲解元组的封包和解包功能</p>
+<p>函数定义语法：<strong>def 函数名(用逗号,隔开的形参):</strong></p>
+<p>冒号**:**不要忘记，后面紧跟着的是被缩进的语句块</p>
+<p><strong>def</strong>为函数定义的关键字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义函数, 有多个返回值(返回元组)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">measure</span>():</span>  </span><br><span class="line">   print(<span class="string">&quot;测量开始...&quot;</span>)</span><br><span class="line">   <span class="comment"># 两个值的输入可以使用input()</span></span><br><span class="line">   hight = <span class="number">1.8</span></span><br><span class="line">   weight = <span class="number">60</span></span><br><span class="line">   </span><br><span class="line">   <span class="comment"># return (hight, weight)</span></span><br><span class="line">   <span class="comment"># 小括号可以省略</span></span><br><span class="line">   <span class="keyword">return</span> hight, weight</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：函数的多个返回值处理"><a href="#任务四：函数的多个返回值处理" class="headerlink" title="任务四：函数的多个返回值处理"></a><em>任务四：函数的多个返回值处理</em></h4><p>知识点：函数的多个返回值处理：</p>
+<p>方式1：使用一个变量直接接受函数返回的元组，然后再通过索引方式来访问元组元素</p>
+<p>方式2：使用多个变量直接对函数返回值进行解包</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方式1：用一个变量接受函数返回的元组</span></span><br><span class="line">result = measure()</span><br><span class="line">print(result) <span class="comment"># (1.8, 60)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 需要单独的处理身高或体重 - 不方便</span></span><br><span class="line">print(result[<span class="number">0</span>]) <span class="comment"># 1.8</span></span><br><span class="line">print(result[<span class="number">1</span>]) <span class="comment"># 60</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方式2：可使用多个变量，一次接收函数的返回结果</span></span><br><span class="line"><span class="comment"># 使用多个变量接收时，变量个数必须和函数返回的个数保持一致</span></span><br><span class="line">res_height, res_weight = measure()</span><br><span class="line"></span><br><span class="line">print(res_height) <span class="comment"># 1.8</span></span><br><span class="line">print(res_weight) <span class="comment"># 60</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-3-6-实例：利用元组实现变量值的交换"><a href="#6-3-6-实例：利用元组实现变量值的交换" class="headerlink" title="6.3.6   实例：利用元组实现变量值的交换"></a>6.3.6   实例：利用元组实现变量值的交换</h3><h4 id="任务一：两个变量值的交换"><a href="#任务一：两个变量值的交换" class="headerlink" title="任务一：两个变量值的交换"></a><em>任务一：两个变量值的交换</em></h4><p>变量值的相互交换在设计排序算法中，非常重要。下面介绍3种值交换方式，前面两种适用于任何语言，最后种为Python独有</p>
+<p><strong>方式1</strong>：引入额外的其他变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">6</span></span><br><span class="line">y = <span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;交换前&#x27;</span>, x, y) <span class="comment"># 交换前 6 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方式1：使用其他变量</span></span><br><span class="line">z = x</span><br><span class="line">x = y</span><br><span class="line">y = z</span><br><span class="line">print(<span class="string">&#x27;交换后&#x27;</span>, x, y) <span class="comment"># 交换后 100 6</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>方式2</strong>：使用算术运算，仅适用于数值类型的变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">6</span></span><br><span class="line">y = <span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;交换前&#x27;</span>, x, y) <span class="comment"># 交换前 6 100</span></span><br><span class="line">x = x + y</span><br><span class="line">y = x - y</span><br><span class="line">x = x - y</span><br><span class="line">print(<span class="string">&#x27;交换后&#x27;</span>, x, y) <span class="comment"># 交换后 100 6</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>方式3</strong>：使用元组的<strong>封包和解包</strong>操作(Python独有)。可以省略等号创建元组可以省略**()**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">6</span></span><br><span class="line">y = <span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;交换前&#x27;</span>, x, y) <span class="comment"># 交换前 6 100</span></span><br><span class="line">y, x = (x, y)</span><br><span class="line">print(<span class="string">&#x27;交换后&#x27;</span>, x, y) <span class="comment"># 交换后 100 6</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 等号右边是一个元组，可以直接省略()</span></span><br><span class="line">y, x = x, y</span><br><span class="line">print(<span class="string">&#x27;再次交换后&#x27;</span>, x, y) <span class="comment"># 再次交换后 6 100</span></span><br></pre></td></tr></table></figure>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://waxll.top/2021/06/17/py%206.html>http://waxll.top/2021/06/17/py%206.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-17T00:29:38+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年6月17日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://waxll.top/2021/06/17/py%206.html&title=Python学习笔记6 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://waxll.top/2021/06/17/py%206.html&title=Python学习笔记6 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://waxll.top/2021/06/17/py%206.html&title=Python学习笔记6 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/06/17/py7.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python学习笔记7</p>
+          <p class='content'>
+
+
+第七章   if条件判断7.1   初识if语句知识点：控制结构
+到目前为止，Python程序都是按顺序流程，逐条语句执行。然而，顺序流程并不能解决所有问题。因此，需要改变程序的逻辑运行结...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/06/17/py5.html'>
+          <p class='title'>Python学习笔记5<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+第五章 列表：遍历遍历整个列表为何需要循环任务：为何需要循环？假设有一个班级名单(列表)，需要将其中每个同学名字都打印出来，并对他/她说一句问候语。按之前学到的Python知识，可以分别地...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-%E9%87%8D%E8%A6%81-%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-text">6.1   (重要) 列表推导式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-1-%E4%B8%BA%E4%BD%95%E8%A6%81%E7%94%A8%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-text">6.1.1   为何要用列表推导式?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E7%94%9F%E6%88%90%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="toc-text">任务一：生成列表元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%88%9D%E8%AF%86%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-text">任务二：初识列表推导式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F%E7%9A%84%E7%AD%89%E4%BB%B7%E5%BD%A2%E5%BC%8F"><span class="toc-text">任务三：列表推导式的等价形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%87%BD%E6%95%B0%E6%98%A0%E5%B0%84%E8%A7%92%E5%BA%A6%E6%9D%A5%E7%90%86%E8%A7%A3%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-text">任务四：函数映射角度来理解列表推导式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-2-%E6%B7%B1%E5%85%A5%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F%E7%94%A8%E6%B3%95"><span class="toc-text">6.1.2   深入列表推导式用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%86%8D%E8%AF%86%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-text">任务一：再识列表推导式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%B8%A6if%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-text">任务二：使用带if条件的列表推导式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E4%BA%8C%E9%87%8D%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-text">任务三：二重循环的列表推导式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%A4%9A%E4%B8%AA%E5%88%97%E8%A1%A8%E5%90%8C%E6%97%B6%E9%81%8D%E5%8E%86%E7%9A%84%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-text">任务四：多个列表同时遍历的列表推导式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9A%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-text">任务五：调用函数的列表推导式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%85%AD%EF%BC%9A%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F%E7%9A%84%E5%B5%8C%E5%A5%97"><span class="toc-text">任务六：列表推导式的嵌套</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A"><span class="toc-text">习题：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E5%88%87%E7%89%87%EF%BC%9A%E5%88%97%E8%A1%A8%E7%B4%A2%E5%BC%95"><span class="toc-text">6.2  切片：列表索引</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-%E5%88%87%E7%89%87%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">6.2.1   切片的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%88%9D%E8%AF%86%E5%88%87%E7%89%87"><span class="toc-text">任务一：初识切片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%88%87%E7%89%87%E4%B8%8D%E5%8C%85%E5%90%ABstop%E5%85%83%E7%B4%A0"><span class="toc-text">任务二：切片不包含stop元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-2-%E9%87%8D%E8%A6%81-%E6%B7%B1%E5%85%A5%E5%88%87%E7%89%87"><span class="toc-text">6.2.2  (重要) 深入切片</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%8E%8C%E6%8F%A1%E5%88%87%E7%89%87%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95"><span class="toc-text">任务一：掌握切片常见用法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-3-%E5%8F%82%E6%95%B0%E7%BC%BA%E7%9C%81%E7%9A%84%E5%88%87%E7%89%87"><span class="toc-text">6.2.3   参数缺省的切片</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%8E%8C%E6%8F%A1%E5%8F%82%E6%95%B0%E7%BC%BA%E7%9C%81%E7%9A%84%E5%88%87%E7%89%87%E4%BD%BF%E7%94%A8"><span class="toc-text">任务一：掌握参数缺省的切片使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-4-%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%8B%B7%E8%B4%9D%E6%96%B9%E5%BC%8F"><span class="toc-text">6.2.4   列表元素的两种拷贝方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0%E7%9A%84%E8%B5%8B%E5%80%BC%E6%8B%B7%E8%B4%9D"><span class="toc-text">任务一：列表元素的赋值拷贝</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%87%E7%89%87%E5%85%83%E7%B4%A0%E6%8B%B7%E8%B4%9D"><span class="toc-text">任务二：列表元素的切片元素拷贝</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-5-%E5%88%87%E7%89%87%E7%9A%84%E9%80%BB%E8%BE%91%E4%BD%8D%E7%BD%AE%E8%BD%AC%E6%8D%A2%E5%85%AC%E5%BC%8F"><span class="toc-text">6.2.5   切片的逻辑位置转换公式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%8E%8C%E6%8F%A1%E5%8F%82%E6%95%B0%E4%B8%BA%E8%B4%9F%E7%9A%84%E5%88%87%E7%89%87"><span class="toc-text">任务一：掌握参数为负的切片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%8E%8C%E6%8F%A1%E9%80%BB%E8%BE%91%E4%BD%8D%E7%BD%AE%E8%BD%AC%E6%8D%A2%E5%85%AC%E5%BC%8F"><span class="toc-text">任务二：掌握逻辑位置转换公式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-6-%E9%81%8D%E5%8E%86%E5%88%87%E7%89%87"><span class="toc-text">6.2.6   遍历切片</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8for%E9%81%8D%E5%8E%86%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="toc-text">任务一：使用for遍历列表元素</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-%E5%85%83%E7%BB%84%EF%BC%9A%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%88%97%E8%A1%A8"><span class="toc-text">6.3   元组：不可变列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-1-%E5%85%83%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">6.3.1   元组的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%B8%BA%E4%BD%95%E9%9C%80%E8%A6%81%E5%85%83%E7%BB%84%EF%BC%9F"><span class="toc-text">任务一：为何需要元组？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%85%83%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">任务二：元组的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%88%9B%E5%BB%BA%E7%A9%BA%E5%85%83%E7%BB%84"><span class="toc-text">任务三：创建空元组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%8F%AA%E5%90%AB%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%85%83%E7%BB%84%E5%88%9B%E5%BB%BA"><span class="toc-text">任务四：只含一个元素的元组创建</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-2-%E5%85%83%E7%BB%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%B8%8E%E9%81%8D%E5%8E%86"><span class="toc-text">6.3.2   元组的基本操作与遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%EF%BC%9A%E4%BD%BF%E7%94%A8-%E8%AE%BF%E9%97%AE%E5%85%83%E7%BB%84%E5%85%83%E7%B4%A0"><span class="toc-text">任务：使用[]访问元组元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%85%83%E7%BB%84%E7%9A%84%E5%85%83%E7%B4%A0%E7%BB%9F%E8%AE%A1%E4%B8%8E%E7%B4%A2%E5%BC%95%E8%8E%B7%E5%8F%96"><span class="toc-text">任务二：元组的元素统计与索引获取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E9%81%8D%E5%8E%86%E5%85%83%E7%BB%84%E5%85%83%E7%B4%A0"><span class="toc-text">任务三：遍历元组元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-3-%E5%85%83%E7%BB%84%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">6.3.3   元组的应用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%85%83%E7%BB%84%E7%9A%84%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">任务一：元组的主要应用场景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">任务二：%字符串格式化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-4-%E9%87%8D%E8%A6%81-%E5%85%83%E7%BB%84%E7%9A%84%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%80%A7%E8%B4%A8"><span class="toc-text">6.3.4   (重要) 元组的不可变性质</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%85%83%E7%BB%84%E7%9A%84%E5%85%83%E7%B4%A0%E5%80%BC%E4%B8%8D%E5%8F%AF%E8%A2%AB%E4%BF%AE%E6%94%B9"><span class="toc-text">任务一：元组的元素值不可被修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%85%83%E7%BB%84%E5%8F%98%E9%87%8F%E5%85%81%E8%AE%B8%E8%A2%AB%E9%87%8D%E6%96%B0%E8%B5%8B%E5%80%BC"><span class="toc-text">任务二：元组变量允许被重新赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%85%83%E7%BB%84%E5%92%8C%E5%88%97%E8%A1%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-text">任务三：元组和列表之间的转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-5-%E9%87%8D%E8%A6%81-%E5%85%83%E7%BB%84%E7%9A%84%E8%A7%A3%E5%8C%85%E5%92%8C%E5%A4%9A%E4%B8%AA%E8%BF%94%E5%9B%9E%E5%80%BC%E5%87%BD%E6%95%B0"><span class="toc-text">6.3.5   (重要) 元组的解包和多个返回值函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%85%83%E7%BB%84%E7%9A%84%E8%A7%A3%E5%8C%85"><span class="toc-text">任务一：元组的解包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%85%83%E7%BB%84%E7%9A%84%E8%A7%A3%E5%8C%85%E6%8E%A5%E5%8F%97%E5%A4%9A%E4%B8%AA%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">任务二：使用元组的解包接受多个函数返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%AE%9A%E4%B9%89%E6%8B%A5%E6%9C%89%E5%A4%9A%E4%B8%AA%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">任务三：定义拥有多个返回值的函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%A4%9A%E4%B8%AA%E8%BF%94%E5%9B%9E%E5%80%BC%E5%A4%84%E7%90%86"><span class="toc-text">任务四：函数的多个返回值处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-6-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%88%A9%E7%94%A8%E5%85%83%E7%BB%84%E5%AE%9E%E7%8E%B0%E5%8F%98%E9%87%8F%E5%80%BC%E7%9A%84%E4%BA%A4%E6%8D%A2"><span class="toc-text">6.3.6   实例：利用元组实现变量值的交换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E5%80%BC%E7%9A%84%E4%BA%A4%E6%8D%A2"><span class="toc-text">任务一：两个变量值的交换</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Python学习笔记6";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5119353317'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <!-- <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div> -->
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题 | 由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>强力驱动
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://waxll.top/">Copyright © 2019-2020 XieSenshi</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $('#cover-backstretch').backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/friends/
+        
+        
+        
+        
+          id="friends"
+        >
+        <i class='fa fa-users fa-fw'></i> 友链
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/journal/
+        
+        
+        
+        
+          id="journal"
+        >
+        <i class='fa fa-calendar fa-fw'></i> 日志
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/about/
+        
+        
+        
+        
+          id="about"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 关于
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> Dark mode
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5119353317';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz","appKey":"jM85yucqi5IuVYCCQS1cUwko","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz',
+    app_key: 'jM85yucqi5IuVYCCQS1cUwko',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://waxll.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>

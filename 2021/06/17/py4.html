@@ -1,0 +1,2375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Python学习笔记4 - Waxll&#39;Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Waxll'Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/waxll/Imag/gif-2.png">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    <div id="clickCanvas" style=" position:fixed;left:0;top:0;z-index:999999999;pointer-events:none;"><canvas class=" sketch" height="0" width="0"></canvas></div>
+    <script src="js/dj.js"></script>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Waxll's Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="A Wonderful Theme for Hexo" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fas fa-book fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <i class='fa fa-map-signs fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/photo/"
+              
+              
+              id="photo">
+              <i class='fas fa-images fa-fw'></i><p>图库</p>
+            </a>
+          
+            <a href="/journal/"
+              
+              
+              id="journal">
+              <i class='fas fa-calendar fa-fw'></i><p>日志</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              id="friends">
+              <i class='fa fa-users fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python学习笔记4
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://7bu.top/2020/07/14/8ba61fac048a2.jpeg">
+    <p>XieSenshi</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年6月17日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：9.5k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：40分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python学习笔记4" data-path="/2021/06/17/py4.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2021/06/17/py4.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2021/06/17/py4.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p><img src="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210414220707008.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210414220707008.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210414220707008"></p>
+<span id="more"></span>
+
+<h1 id="第四章-数据类型：list列表"><a href="#第四章-数据类型：list列表" class="headerlink" title="第四章   数据类型：list列表"></a>第四章   数据类型：list列表</h1><h2 id="4-1-列表-序列-的定义"><a href="#4-1-列表-序列-的定义" class="headerlink" title="4.1   列表(序列)的定义"></a>4.1   列表(序列)的定义</h2><h4 id="任务一：Python内置数据类型"><a href="#任务一：Python内置数据类型" class="headerlink" title="任务一：Python内置数据类型"></a><em>任务一：Python内置数据类型</em></h4><p>知识点：</p>
+<p>Python内置(<strong>build-in</strong>)数据类型可以分为<strong>数值型</strong>和<strong>非数值型</strong></p>
+<p><strong>数值型</strong>：整型(<strong>int</strong>)、浮点型(<strong>float</strong>)、布尔型(<strong>bool</strong>) 、复数型 (<strong>complex</strong>)</p>
+<p><strong>非数值型</strong>(序列)：字符串、列表、元组、字典</p>
+<p>知识点：</p>
+<p>非数值类都是一个 <strong>序列 sequence</strong>，也可以理解为<strong>容器</strong>。它们都支持以下功能：</p>
+<p>索引取值**[]**</p>
+<p>遍历元素<strong>for in</strong></p>
+<p><strong>计算序列长度、最大/最小值、比较、删除</strong></p>
+<p><strong>拼接+<strong>运算符和</strong>重复</strong>*运算符</p>
+<p><strong>切片</strong>技术</p>
+<h4 id="任务二：认识什么是列表"><a href="#任务二：认识什么是列表" class="headerlink" title="任务二：认识什么是列表"></a><em>任务二：认识什么是列表</em></h4><p><strong>列表</strong>由一系列按特定<strong>顺序</strong>排列的元素组成。列表是对象，是<strong>集合/容器</strong>类型的对象</p>
+<p>用<strong>方括号</strong>（**[]<strong>）来表示列表，并用</strong>逗号**来分隔其中的元素</p>
+<p>下面是一个简单的列表示例，这个列表包含几种自行车：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>, <span class="string">&#x27;cannondale&#x27;</span>, <span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">print(bicycles, <span class="built_in">type</span>(bicycles))</span><br></pre></td></tr></table></figure>
+
+<p>1、鉴于列表通常包含多个元素，给列表指定一个表示复数的名称（如<strong>letters</strong>、<strong>digits</strong>或<strong>names</strong>）是个不错的主意</p>
+<p>2、与Java或C的数组区别：</p>
+<p>数组的数据类型必须是一样，而列表可以不一样；</p>
+<p>数组长度事先声明固定长度，列表长度可增可减</p>
+<p>3、Python列表元素可以是任意类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">things = [<span class="number">1</span>, <span class="string">&#x27;car&#x27;</span>, <span class="number">4.2</span>, [<span class="number">2</span>, <span class="number">1</span>]]</span><br><span class="line">print(things, <span class="built_in">type</span>(things))</span><br><span class="line">print(<span class="built_in">id</span>(things))</span><br></pre></td></tr></table></figure>
+
+<h3 id="习题："><a href="#习题：" class="headerlink" title="习题："></a>习题：</h3><p>1、输入你最喜欢的四个朋友，并把她们名字打印(英语名)</p>
+<p>2、使用type() 查看类型</p>
+<p>3、id() 查看列表引用地址</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;ONeal&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">print(names, <span class="built_in">type</span>(names))</span><br><span class="line">print(<span class="built_in">id</span>(names))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;ONeal&#x27;</span>, <span class="string">&#x27;Jordan&#x27;</span>] &lt;<span class="class"><span class="keyword">class</span> &#x27;<span class="title">list</span>&#x27;&gt;</span></span><br><span class="line"><span class="class">2203212688320</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-1-1-访问列表元素"><a href="#4-1-1-访问列表元素" class="headerlink" title="4.1.1   访问列表元素"></a>4.1.1   访问列表元素</h3><h4 id="任务一：使用索引访问列表元素"><a href="#任务一：使用索引访问列表元素" class="headerlink" title="任务一：使用索引访问列表元素"></a><em>任务一：使用索引访问列表元素</em></h4><p>列表是<strong>有序</strong>的容器类数据类型，要访问列表元素，只需将该元素的位置或索引</p>
+<p>即<strong>列表名[索引]<strong>。列表的</strong>第1个元素索引从0开始</strong>。例如，下面的代码从列表<strong>bicycles</strong>中提取第一款自行车：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>, <span class="string">&#x27;cannondale&#x27;</span>, <span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">print(bicycles[<span class="number">3</span>]) <span class="comment">#索引值为当前位置-1</span></span><br></pre></td></tr></table></figure>
+
+<p>当你请求获取列表元素时，Python只返回该元素，而不包括方括号和引号：<strong>trek</strong>。可以进一步对返回的列表元素调用特定的方法。例如，可使用方法**title()<strong>让元素</strong>‘trek’**格式更整洁：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>, <span class="string">&#x27;cannondale&#x27;</span>, <span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">print(bicycles[<span class="number">0</span>].title(), bicycles[<span class="number">1</span>].upper(), bicycles[<span class="number">2</span>].lower())</span><br></pre></td></tr></table></figure>
+
+<p>这个示例的输出与前一个示例相同，只是首字母T是大写的</p>
+<h4 id="任务二：列表的索引"><a href="#任务二：列表的索引" class="headerlink" title="任务二：列表的索引"></a><em>任务二：列表的索引</em></h4><p>知识点：元素索引</p>
+<p>列表的<strong>索引</strong>从<strong>0</strong> 开始</p>
+<p>所谓的<strong>索引</strong>就是元素在<strong>列表</strong>中的位置编号，<strong>索引</strong>又名为<strong>下标</strong>序号。</p>
+<p>从列表中取值时，如果<strong>超出索引范围</strong>，程序触发异常<strong>IndexError</strong></p>
+<h3 id="4-1-2-索引访问"><a href="#4-1-2-索引访问" class="headerlink" title="4.1.2   索引访问"></a>4.1.2   索引访问</h3><h4 id="任务一：第1个元素的索引是0"><a href="#任务一：第1个元素的索引是0" class="headerlink" title="任务一：第1个元素的索引是0"></a><em>任务一：第1个元素的索引是0</em></h4><p>知识点：</p>
+<p>在Python中，第一个列表元素的索引为0，而不是1</p>
+<p>第二个列表元素的索引为1</p>
+<p>根据这种简单的计数方式，要访问列表的任何元素，<strong>都可将其位置减1，并将结果作为索引</strong></p>
+<p>例如，要访问第4个列表元素，可使用索引3</p>
+<p>下面的代码访问索引1和3处的自行车，这些代码返回列表中的第二个和第四个元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>, <span class="string">&#x27;cannondale&#x27;</span>, <span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">print(bicycles[<span class="number">1</span>])</span><br><span class="line">print(bicycles[<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>Python为列表提供了一种更强大的元素访问机制，切片索引，来获得一个区间索引中的元素</p>
+<p>切片索引区间：<strong>list[n:m]<strong>索引，其中</strong>n</strong>为起始，<strong>m</strong>为终止，元素区间**[n,m)**返回索引为n到m-1的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>, <span class="string">&#x27;cannondale&#x27;</span>, <span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">print(bicycles[<span class="number">1</span>:])</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p><strong>负索引</strong>(重要)：在不知道列表长度的情况下访问最后的元素</p>
+<p>Python为访问最后一个列表元素提供了一种特殊语法</p>
+<p>通过将索引指定为**-1<strong>，返回</strong>最后一个列表元素**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;---------倒数第一个元素是-1索引---------&#x27;</span>)</span><br><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>, <span class="string">&#x27;cannondale&#x27;</span>, <span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">print(bicycles[-<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<p>这些代码返回**’specialized’<strong>。这种约定也适用于其他负数索引，例如，索引</strong>-2<strong>返回倒数第二个列表元素，索引</strong>-3**返回倒数第三个列表元素，以此类推</p>
+<h3 id="4-1-3-使用列表中的值"><a href="#4-1-3-使用列表中的值" class="headerlink" title="4.1.3   使用列表中的值"></a>4.1.3   使用列表中的值</h3><h4 id="任务一：如何使用列表中的元素值"><a href="#任务一：如何使用列表中的元素值" class="headerlink" title="任务一：如何使用列表中的元素值"></a><em>任务一：如何使用列表中的元素值</em></h4><p>知识点：</p>
+<p>使用索引得到的元素进行后续操作。</p>
+<p>例如，可以使用<strong>拼接</strong>根据列表中的值来创建消息</p>
+<p>下面来尝试从列表中提取第一款自行车，并使用这个值来创建一条消息：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>, <span class="string">&#x27;cannondale&#x27;</span>, <span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">message = <span class="string">&quot;My first bicycle was a &quot;</span> + bicycles[<span class="number">0</span>].title() + <span class="string">&quot;.&quot;</span></span><br><span class="line">print(message)</span><br></pre></td></tr></table></figure>
+
+<p>使用<strong>bicycles[0]<strong>的值生成了一个句子，并将其存储在变量</strong>message</strong>中。输出是一个简单的句子，其中包含列表中的第一款自行车：<strong>My first bicycle was a Trek.</strong></p>
+<h3 id="习题：-1"><a href="#习题：-1" class="headerlink" title="习题："></a>习题：</h3><p>1、将一些朋友的姓名存储在一个列表中，并将其命名为<strong>names</strong>。依次访问该列表中的每个元素，从而将每个朋友的姓名都打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">print(names)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">James</span><br><span class="line">Kobe</span><br><span class="line">Jordan</span><br></pre></td></tr></table></figure>
+
+<p>2、继续上一题，但不打印每个朋友的姓名，而为每人打印一条消息。每条消息都包含相同的问候语，但抬头为相应朋友的姓名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">print(names[<span class="number">0</span>] + <span class="string">&quot;,&quot;</span> + <span class="string">&quot; how is everything going on &quot;</span> + <span class="string">&quot;?&quot;</span>) </span><br><span class="line">print(names[<span class="number">1</span>] + <span class="string">&quot;,&quot;</span> + <span class="string">&quot; how is everything going on &quot;</span> + <span class="string">&quot;?&quot;</span>)</span><br><span class="line">print(names[<span class="number">2</span>] + <span class="string">&quot;,&quot;</span> + <span class="string">&quot; how is everything going on &quot;</span> + <span class="string">&quot;?&quot;</span>) </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">James, how is everything going on ?</span><br><span class="line">Kobe, how is everything going on ?</span><br><span class="line">Jordan, how is everything going on ?</span><br></pre></td></tr></table></figure>
+
+<p>3、为朋友输入他们喜欢的交通方式，如骑摩托车或开汽车，并创建一个包含多种交通方式的列表。根据该列表打印一系列有关这些交通方式的宣言，朋友名字和交通工具字符为全大写，如“Lilei would like to own a Honda motorcycle”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">&#x27;JAMES&#x27;</span>,<span class="string">&#x27;KOBE&#x27;</span>,<span class="string">&#x27;JORDAN&#x27;</span>]</span><br><span class="line">transportations =[<span class="string">&#x27;BIKE&#x27;</span>,<span class="string">&#x27;MOTORCYCLE&#x27;</span>,<span class="string">&#x27;CAR&#x27;</span>]</span><br><span class="line">print(names[<span class="number">0</span>] + <span class="string">&quot; would like to ride a &quot;</span> + transportations[<span class="number">0</span>] + <span class="string">&quot;.&quot;</span>)</span><br><span class="line">print(names[<span class="number">1</span>] + <span class="string">&quot; would like to ride a &quot;</span> + transportations[<span class="number">1</span>] + <span class="string">&quot;.&quot;</span>)</span><br><span class="line">print(names[<span class="number">2</span>] + <span class="string">&quot; would like to drive a &quot;</span> + transportations[<span class="number">2</span>] + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JAMES would like to ride a BIKE.</span><br><span class="line">KOBE would like to ride a MOTORCYCLE.</span><br><span class="line">JORDAN would like to drive a CAR.</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-1-4-列表的通用操作"><a href="#4-1-4-列表的通用操作" class="headerlink" title="4.1.4   列表的通用操作"></a>4.1.4   列表的通用操作</h3><h2 id="4-2（重要）变量内涵"><a href="#4-2（重要）变量内涵" class="headerlink" title="4.2（重要）变量内涵"></a>4.2（重要）变量内涵</h2><h4 id="任务一：变量的内涵"><a href="#任务一：变量的内涵" class="headerlink" title="任务一：变量的内涵"></a><em>任务一：变量的内涵</em></h4><p>变量是Python语言最基本的元素。变量是指向具体数据(对象)的<strong>地址引用</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = `python`</span><br><span class="line">b = <span class="number">1</span></span><br><span class="line">b = b + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>变量：门牌号；具体内容：房间</p>
+<p>通过赋值(=)语句进行关联</p>
+<p><strong>误区：变量中直接存储了具体了数据/对象</strong>。程序通过变量来<strong>间接访问和操作</strong>变量所指的对象</p>
+<p>变量中存的地址引用可通过**id()**查看</p>
+<p>python内存共享优化机制：</p>
+<p>在python中，所有的对象(变量所指向的具体内容)都存活在系统堆上</p>
+<p>对于小整数和字符串对象，可能在程序中会经常的使用。如果将这些经常使用的小整数对象也放在系统堆上，python就会<strong>经常的在堆上申请空间，释放空间，会严重的影响python的整体性能</strong></p>
+<p>对于小整数和字符串(不可变对象)对象做了一些优化，通过使用了<strong>对象池技术</strong>，将它们驻留在程序缓存中</p>
+<p>变量共享引用相同的地址，小整数[-5,256] 和 字符串(不含空格)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;trek1111 111111111111111111111111111111&#x27;</span>  </span><br><span class="line">b = <span class="string">&#x27;trek1111 111111111111111111111111111111&#x27;</span>    </span><br><span class="line">print(<span class="built_in">id</span>(a), <span class="built_in">id</span>(b), a <span class="keyword">is</span> b)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">bicycles1 = [<span class="string">&#x27;trek&#x27;</span>, <span class="string">&#x27;cannondale&#x27;</span>, <span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">bicycles2 = [<span class="string">&#x27;trek&#x27;</span>, <span class="string">&#x27;cannondale&#x27;</span>, <span class="string">&#x27;redline&#x27;</span>, <span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">print(<span class="string">&#x27;bicycles1 id:&#x27;</span>, <span class="built_in">id</span>(bicycles1))</span><br><span class="line">print(<span class="string">&#x27;bicycles2 id:&#x27;</span>, <span class="built_in">id</span>(bicycles2))</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;bicycles1[0] id:&#x27;</span>, <span class="built_in">id</span>(bicycles1[<span class="number">0</span>]))  <span class="comment"># 常量字符串共享内存</span></span><br><span class="line">print(<span class="string">&#x27;bicycles2[0] id:&#x27;</span>, <span class="built_in">id</span>(bicycles2[<span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;-------通过is关键字判断两个对象是否是同一个对象(否是来自同个内存地址的数据)----&#x27;</span>)</span><br><span class="line">print(bicycles1 <span class="keyword">is</span> bicycles2)</span><br><span class="line">print(bicycles1[<span class="number">0</span>] <span class="keyword">is</span> bicycles2[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-3-修改、添加和删除列表元素"><a href="#4-3-修改、添加和删除列表元素" class="headerlink" title="4.3   修改、添加和删除列表元素"></a>4.3   修改、添加和删除列表元素</h2><h3 id="4-3-1-修改元素"><a href="#4-3-1-修改元素" class="headerlink" title="4.3.1   修改元素"></a>4.3.1   修改元素</h3><p>知识点：修改列表元素的语法与访问列表元素的语法类似</p>
+<p>首先可指定列表名和要修改的元素的<strong>索引</strong>；</p>
+<p>再通过赋值语句，<strong>为该元素赋新的值</strong></p>
+<p>例如，假设有一个摩托车列表，其中的第一个元素为**’honda’**，如何修改它的值呢？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">print(motorcycles)</span><br><span class="line"><span class="comment"># [&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#motorcycles[0] = [[111,111,111],&#x27;hello&#x27;] # 列表元素存的是指向具体内容的内存地址！！</span></span><br><span class="line">motorcycles[<span class="number">0</span>] = <span class="string">&#x27;ducati&#x27;</span></span><br><span class="line">print(motorcycles)</span><br><span class="line"><span class="comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<p>首先定义一个摩托车列表，其中的第一个元素为**’honda’**</p>
+<p>接下来，将第一个元素的值改为**’ducati’**</p>
+<p>输出表明，第一个元素的值确实变了，但其他列表元素的值没变</p>
+<h3 id="4-3-2-添加元素"><a href="#4-3-2-添加元素" class="headerlink" title="4.3.2   添加元素"></a>4.3.2   添加元素</h3><p>补充知识：<strong>Python是面向对象编程语言</strong></p>
+<p>通俗讲<strong>对象就是某种类型的变量</strong></p>
+<p>比如字符串对象，整形对象，浮点数对象等</p>
+<p>在python中，可以按需求自定义类型，设计<strong>新的类</strong></p>
+<p>从面向对象OO(Object Oriented)的概念来讲，对象是类的一个实例；<strong>类是对象/实例的类型</strong></p>
+<p>比如str message，这里的str是类，而message是str类型的对象或str类型的实例</p>
+<h4 id="任务一：在列表末尾添加元素append"><a href="#任务一：在列表末尾添加元素append" class="headerlink" title="任务一：在列表末尾添加元素append()"></a><em>任务一：在列表末尾添加元素append()</em></h4><p>知识点：</p>
+<p><strong>append()<strong>方法用于在列表末尾</strong>动态添加新的对象</strong></p>
+<p>语法：<strong>list.append(obj)</strong></p>
+<p>参数：<strong>obj</strong>为添加到列表末尾的元素</p>
+<p>返回：该方法无返回值，<strong>直接会修改原来的列表</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Runoob&#x27;</span>, <span class="string">&#x27;Taobao&#x27;</span>]</span><br><span class="line">list1.append(<span class="string">&#x27;Baidu&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;更新后的列表 : &quot;</span>, list1)</span><br><span class="line"><span class="comment"># 更新后的列表 :  [&#x27;Google&#x27;, &#x27;Runoob&#x27;, &#x27;Taobao&#x27;, &#x27;Baidu&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<p>例子：继续使用前一个示例中的列表，在其末尾添加新元素**’ducati’<strong>。方法</strong>append()<strong>将元素</strong>‘ducati’**添加到了列表末尾，而不影响列表中的其他所有元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">motorcycles.append(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line">print(motorcycles)</span><br><span class="line"><span class="comment"># [&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;ducati&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：创建空列表并动态添加元素"><a href="#任务二：创建空列表并动态添加元素" class="headerlink" title="任务二：创建空列表并动态添加元素"></a><em>任务二：创建空列表并动态添加元素</em></h4><p>知识点：</p>
+<p>经常要等程序运行后，你才知道用户要在程序中存储哪些数据</p>
+<p>为控制用户，可首先创建一个空列表，用于存储用户将要输入的值，然后将用户提供的每个新值附加到列表中</p>
+<p>此外，方法<strong>append()<strong>让动态地创建列表易如反掌。例如，可以先创建一个空列表，再使用一系列的</strong>append()<strong>语句添加元素。下面来创建一个空列表，再在其中添加元素</strong>‘honda’<strong>、</strong>‘yamaha’<strong>和</strong>‘suzuki</strong>‘，最终的列表与前述示例中的列表完全相同：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [] <span class="comment"># 创建空列表</span></span><br><span class="line">motorcycles.append(<span class="string">&#x27;honda&#x27;</span>)</span><br><span class="line">print(motorcycles)</span><br><span class="line">motorcycles.append(<span class="string">&#x27;yamaha&#x27;</span>)</span><br><span class="line">print(motorcycles)</span><br><span class="line">motorcycles.append(<span class="string">&#x27;suzuki&#x27;</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：在列表的指定位置插入新元素insert"><a href="#任务三：在列表的指定位置插入新元素insert" class="headerlink" title="任务三：在列表的指定位置插入新元素insert()"></a><em>任务三：在列表的指定位置插入新元素insert()</em></h4><p>知识点：</p>
+<p><strong>insert()<strong>方法用于将</strong>指定对象</strong>插入列表的<strong>指定位置</strong>。为此，需要指定新元素(对象)的索引和值</p>
+<p>语法：<strong>list.insert(index, obj)</strong></p>
+<p><strong>. 可以看作是该方法的对象作用域</strong>。指明该方法仅仅是针对<strong>某个具体的list对象</strong>进行操作</p>
+<p>参数：<strong>index</strong>为元素<strong>obj</strong>需要插入的索引位置</p>
+<p>参数：<strong>obj</strong>为添加到列表的元素</p>
+<p>返回：该方法无返回值，<strong>但会在列表指定位置插入对象</strong></p>
+<p>注意：<strong>将列表中原索引(包括)之后的所有元素都右移一个位置</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Runoob&#x27;</span>, <span class="string">&#x27;Taobao&#x27;</span>]</span><br><span class="line">list1.insert(<span class="number">1</span>, <span class="string">&#x27;Baidu&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;列表插入元素后为 : &#x27;</span>, list1)</span><br><span class="line"><span class="comment"># 列表插入元素后为 :  [&#x27;Google&#x27;, &#x27;Baidu&#x27;, &#x27;Runoob&#x27;, &#x27;Taobao&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<p>例子：将值**’ducati**’存储到这个地方</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">motorcycles.insert(<span class="number">1</span>,<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line">print(motorcycles)</span><br><span class="line"><span class="comment"># [&#x27;honda&#x27;, &#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-3-删除元素"><a href="#4-3-3-删除元素" class="headerlink" title="4.3.3   删除元素"></a>4.3.3   删除元素</h3><p>知识点：</p>
+<p>根据位置或值从列表中<strong>删除一个或多个元素</strong></p>
+<p>玩家将空中的一个外星人射杀后，那么就要将其从存活的外星人列表中删除；</p>
+<p>当用户在你创建的Web网站中注销登录的账户时，将该用户从活跃用户列表中删除</p>
+<h4 id="任务一：使用del语句删除元素"><a href="#任务一：使用del语句删除元素" class="headerlink" title="任务一：使用del语句删除元素"></a><em>任务一：使用<strong>del</strong>语句删除元素</em></h4><p>知识点：</p>
+<p>语法：<strong>del list[index]</strong></p>
+<p>描述：<strong>del</strong>方法用于将<strong>指定位置</strong>的列表元素永久删除。为此，需要指定删除元素的索引</p>
+<p><strong>del</strong>其实<strong>并不属于</strong>列表的方法或者函数</p>
+<p><strong>list[index]<strong>为特定列表</strong>list</strong>的<strong>index</strong>索引位置的原始</p>
+<p><strong>条件</strong>：使用<strong>del</strong>可删除任何位置处的列表元素，条件是知道其<strong>索引</strong></p>
+<p>注意：<strong>del</strong>是直接删除list元素内容，无法再访问被删除的元素</p>
+<p>例子：使用<strong>del</strong>删除了列表<strong>motorcycles</strong>中的第一个元素——**’honda’**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">0</span>]</span><br><span class="line">print(motorcycles)</span><br><span class="line"><span class="comment"># [&#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">0</span>]</span><br><span class="line">print(motorcycles)</span><br><span class="line"><span class="comment"># [&#x27;suzuki&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：使用方法pop-删除元素"><a href="#任务二：使用方法pop-删除元素" class="headerlink" title="任务二：使用方法pop()删除元素"></a><em>任务二：使用方法pop()删除元素</em></h4><p>知识点：</p>
+<p>语法：<strong>obj list.pop([index=-1])</strong></p>
+<p>描述：移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</p>
+<p><strong>将元素从列表中删除，并接着使用它的值</strong></p>
+<p>参数: <strong>带方括号的参数指可选参数</strong></p>
+<p>**[index=-1]**可选参数，指明要移除列表元素的索引值，不能超过列表总长度，默认为 <strong>index=-1</strong>，删除最后一个列表值</p>
+<p>返回值: 该方法返回从列表中移除的元素对象<strong>obj</strong></p>
+<p>例子：下面从列表<strong>motorcycles</strong>中弹出一款摩托车：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">popped_motorcycle = motorcycles.pop()</span><br><span class="line">print(motorcycles)</span><br><span class="line"><span class="comment"># [&#x27;honda&#x27;, &#x27;yamaha&#x27;]</span></span><br><span class="line">print(popped_motorcycle)</span><br><span class="line"><span class="comment"># suzuki</span></span><br></pre></td></tr></table></figure>
+
+<p>分析：</p>
+<p>首先定义并打印了列表<strong>motorcycles</strong></p>
+<p>接下来，我们从这个列表中弹出一个值，并将其存储到变量<strong>popped_motorcycle</strong>中</p>
+<p>然后我们打印这个列表，以核实从其中删除了一个值</p>
+<p>最后，我们打印弹出的值，以证明我们依然能够访问被删除的值</p>
+<p>输出表明，列表末尾的值**’suzuki’<strong>已删除，它现在存储在变量</strong>popped_motorcycle**中</p>
+<p>知识点：</p>
+<p>方法**pop()**是怎么起作用的呢？</p>
+<p>被删除的元素还有用于他用</p>
+<p>假设列表中的摩托车是按购买时间存储的，就可使用方法**pop()**打印一条消息，指出最后购买的是哪款摩托车，输出是一个简单的句子，指出了最新购买的是哪款摩托车：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">last_owned = motorcycles.pop()</span><br><span class="line">print(<span class="string">&quot;The last motorcycle I owned was a &quot;</span> + last_owned.title() + <span class="string">&quot;.&quot;</span>)</span><br><span class="line"><span class="comment"># The last motorcycle I owned was a Suzuki.</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：pop-列表中任何位置处的元素"><a href="#任务三：pop-列表中任何位置处的元素" class="headerlink" title="任务三：pop()列表中任何位置处的元素"></a><em>任务三：pop()列表中任何位置处的元素</em></h4><p>实际上，你可以使用<strong>pop()<strong>来</strong>删除列表中任何位置的元素</strong>，只需在括号中指定要删除的元素的索引即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">print(motorcycles)</span><br><span class="line">print(<span class="string">&quot;---------first_owned = motorcycles.pop(-1)---------&quot;</span>)</span><br><span class="line">first_owned = motorcycles.pop(<span class="number">0</span>)</span><br><span class="line">print(motorcycles)</span><br><span class="line">print(<span class="string">&#x27;The first motorcycle I owned was a &#x27;</span> + first_owned.title() + <span class="string">&#x27;.&#x27;</span>)</span><br><span class="line"><span class="comment"># The first motorcycle I owned was a Honda.</span></span><br></pre></td></tr></table></figure>
+
+<p>首先，弹出列表中的第一款摩托车，然后打印了一条有关这辆摩托车的消息</p>
+<p>输出是一个简单的句子，描述了我购买的第一辆摩托车</p>
+<p>知识点：</p>
+<p>每当使用<strong>pop()<strong>时，</strong>被弹出的元素就不再在列表中了</strong></p>
+<p>如果不确定该使用<strong>del</strong>语句还是**pop()**方法，下面是一个简单的判断标准：</p>
+<p>如果你要从列表中删除一个元素，且不再以任何方式使用它，就使用<strong>del</strong>语句；</p>
+<p>如果你要在删除元素后还能继续使用它，就使用方法<strong>pop()</strong></p>
+<h4 id="任务四：使用remove-方法，根据值删除元素"><a href="#任务四：使用remove-方法，根据值删除元素" class="headerlink" title="任务四：使用remove()方法，根据值删除元素"></a><em>任务四：使用remove()方法，根据值删除元素</em></h4><p>知识点：</p>
+<p>语法：<strong>list.remove(obj)</strong></p>
+<p>描述：<strong>remove()<strong>方法用于</strong>移除列表中某个值的第一个匹配项</strong></p>
+<p>参数: <strong>obj</strong>为列表中要移除的元素</p>
+<p>返回值：该方法<strong>没有返回值</strong>，但是会移除列表中的某个值的<strong>第一个匹配项</strong></p>
+<p><strong>条件</strong>：只要知道要删除的元素的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Runoob&#x27;</span>, <span class="string">&#x27;Taobao&#x27;</span>, <span class="string">&#x27;Baidu&#x27;</span>]</span><br><span class="line">list1.remove(<span class="string">&#x27;Taobao&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;列表现在为 : &quot;</span>, list1)</span><br><span class="line"><span class="comment"># 列表现在为 :  [&#x27;Google&#x27;, &#x27;Runoob&#x27;, &#x27;Baidu&#x27;]</span></span><br><span class="line"></span><br><span class="line">list1.remove(<span class="string">&#x27;Baidu&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;列表现在为 : &quot;</span>, list1)</span><br><span class="line"><span class="comment"># 列表现在为 :  [&#x27;Google&#x27;, &#x27;Runoob&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<p>知识点：**remove()**返回值为空</p>
+<p>例子：从列表<strong>motorcycles</strong>中删除值**’ducati’<strong>。通过调用</strong>remove()<strong>方法，查询</strong>‘ducati’**出现在列表的什么地方，并将该元素删除：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>, <span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line">res = motorcycles.remove(<span class="string">&#x27;yamaha&#x27;</span>)</span><br><span class="line">print(motorcycles)</span><br><span class="line"><span class="comment"># [&#x27;honda&#x27;, &#x27;suzuki&#x27;, &#x27;ducati&#x27;]</span></span><br><span class="line">print(res)</span><br><span class="line"><span class="comment"># None  remove()返回值为空</span></span><br></pre></td></tr></table></figure>
+
+<p>例子：下面删除值**’ducati’**，并打印一条消息，指出要将其从列表中删除的原因</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>, <span class="string">&#x27;ducati&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span> , <span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line">print(motorcycles)</span><br><span class="line"></span><br><span class="line">too_expensive = <span class="string">&#x27;ducati&#x27;</span> <span class="comment"># 该变量为remove()所删除的元素</span></span><br><span class="line">motorcycles.remove(too_expensive)</span><br><span class="line">print(motorcycles)</span><br><span class="line">print(<span class="string">&quot;\nA &quot;</span> + too_expensive.title() + <span class="string">&quot; is too expensive for me.&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>定义列表后，我们将值**’ducati’<strong>存储在变量</strong>too_expensive**中</p>
+<p>接下来，我们使用这个变量来告诉Python将哪个值从列表中删除</p>
+<p>最后，值**’ducati’<strong>已经从列表中删除，但它还存储在变量</strong>too_expensive<strong>中，让我们能够打印一条消息，指出将</strong>‘ducati’<strong>从列表</strong>motorcycles**中删除的原因</p>
+<p>知识点：</p>
+<p><strong>remove()<strong>只</strong>删除第一个指定的值</strong></p>
+<p>如果要删除的值可能在列表中出现多次，就需要使用循环来判断是否删除了所有这样的值</p>
+<h3 id="习题：-2"><a href="#习题：-2" class="headerlink" title="习题："></a>习题：</h3><p>1、<strong>3-4 嘉宾名单</strong>：如果你可以邀请任何人一起共进晚餐（无论是在世的还是故去的），你会邀请哪些人？请创建一个列表，其中包含至少3个你想邀请的人；然后，使用这个列表打印消息，邀请这些人来与你共进晚餐</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">customs = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">0</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">1</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">2</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Wish James would attend my party</span><br><span class="line">Wish Kobe would attend my party</span><br><span class="line">Wish Jordan would attend my party</span><br></pre></td></tr></table></figure>
+
+<p>2、<strong>3-5 修改嘉宾名单</strong>：你刚得知有位嘉宾无法赴约，因此需要另外邀请一位嘉宾</p>
+<p>以完成练习3-4 时编写的程序为基础，在程序末尾添加一条<strong>print</strong>语句，指出哪位嘉宾无法赴约</p>
+<p>修改嘉宾名单，将无法赴约的嘉宾的姓名替换为新邀请的嘉宾的姓名</p>
+<p>再次打印一系列消息，向名单中的每位嘉宾发出邀请</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">customs = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">print(customs[<span class="number">2</span>] + <span class="string">&quot; can`t attend the party&quot;</span>)</span><br><span class="line">customs[<span class="number">2</span>] = <span class="string">&#x27;ONeal&#x27;</span></span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">0</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">1</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">2</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Jordan can`t attend the party</span><br><span class="line">Wish James would attend my party</span><br><span class="line">Wish Kobe would attend my party</span><br><span class="line">Wish ONeal would attend my party</span><br></pre></td></tr></table></figure>
+
+<p>3、<strong>3-6 添加嘉宾</strong>：你刚找到了一个更大的餐桌，可容纳更多的嘉宾。请想想你还想邀请哪三位嘉宾</p>
+<p>以完成练习3-4 或练习3-5时编写的程序为基础，在程序末尾添加一条<strong>print</strong>语句，指出你找到了一个更大的餐桌</p>
+<p>使用**insert()**将一位新嘉宾添加到名单开头</p>
+<p>使用**insert()**将另一位新嘉宾添加到名单中间</p>
+<p>使用**append()**将最后一位新嘉宾添加到名单末尾</p>
+<p>打印一系列消息，向名单中的每位嘉宾发出邀请</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">customs = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">customs[<span class="number">2</span>] = <span class="string">&#x27;ONeal&#x27;</span></span><br><span class="line">print(<span class="string">&quot;I found a bigger table&quot;</span>)</span><br><span class="line">customs.insert(<span class="number">0</span> ,<span class="string">&#x27;Curry&#x27;</span>)</span><br><span class="line">customs.insert(<span class="built_in">int</span>(<span class="built_in">len</span>(customs) / <span class="number">2</span>) ,<span class="string">&#x27;Garnett&#x27;</span>)</span><br><span class="line">customs.append(<span class="string">&#x27;Davis&#x27;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">0</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">1</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">2</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">3</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">4</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Wish &quot;</span> + customs[<span class="number">5</span>] + <span class="string">&quot; would attend my party&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">I found a bigger table</span><br><span class="line">Wish Curry would attend my party</span><br><span class="line">Wish James would attend my party</span><br><span class="line">Wish Garnett would attend my party</span><br><span class="line">Wish Kobe would attend my party</span><br><span class="line">Wish ONeal would attend my party</span><br><span class="line">Wish Davis would attend my party</span><br></pre></td></tr></table></figure>
+
+<p>4、<strong>3-7 缩减名单</strong>：你刚得知新购买的餐桌无法及时送达，因此只能邀请两位嘉宾</p>
+<p>以完成练习3-6时编写的程序为基础，在程序末尾添加一行代码，打印一条你只能邀请两位嘉宾共进晚餐的消息</p>
+<p>使用**pop()**不断地删除名单中的嘉宾，直到只有两位嘉宾为止。每次从名单中弹出一位嘉宾时，都打印一条消息，让该嘉宾知悉你很抱歉，无法邀请他来共进晚餐</p>
+<p>对于余下的两位嘉宾中的每一位，都打印一条消息，指出他依然在受邀人之列</p>
+<p>使用<strong>del</strong>将最后两位嘉宾从名单中删除，让名单变成空的。打印该名单，核实程序结束时名单确实是空的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">customs = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">customs[<span class="number">2</span>] = <span class="string">&#x27;ONeal&#x27;</span></span><br><span class="line">customs.insert(<span class="number">0</span> ,<span class="string">&#x27;Curry&#x27;</span>)</span><br><span class="line">customs.insert(<span class="built_in">int</span>(<span class="built_in">len</span>(customs) / <span class="number">2</span>) ,<span class="string">&#x27;Garnett&#x27;</span>)</span><br><span class="line">customs.append(<span class="string">&#x27;Davis&#x27;</span>)</span><br><span class="line">print(<span class="string">&quot;I can only invite two customs to the party&quot;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="built_in">len</span>(customs) != <span class="number">2</span> :</span><br><span class="line">       custom= customs.pop()</span><br><span class="line">       print(custom + <span class="string">&quot;, I`m sorry. You can`t attend this party&quot;</span>)</span><br><span class="line"><span class="keyword">del</span> customs[:]</span><br><span class="line">print(customs)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I can only invite two customs to the party</span><br><span class="line">Davis, I`m sorry. You can`t attend this party</span><br><span class="line">ONeal, I`m sorry. You can`t attend this party</span><br><span class="line">Kobe, I`m sorry. You can`t attend this party</span><br><span class="line">Garnett, I`m sorry. You can`t attend this party</span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-4-将列表用作栈和队列"><a href="#4-3-4-将列表用作栈和队列" class="headerlink" title="4.3.4   将列表用作栈和队列"></a>4.3.4   将列表用作栈和队列</h3><h4 id="任务一：将列表用作栈和队列"><a href="#任务一：将列表用作栈和队列" class="headerlink" title="任务一：将列表用作栈和队列"></a><em>任务一：将列表用作栈和队列</em></h4><p>知识点：列表实现<strong>栈</strong></p>
+<p>栈是通常所说的一种LIFO(Last In First Out 后进先出)数据结构</p>
+<p>它的意思是<strong>最后进入的数据第一个出来</strong></p>
+<p>一个最简单的例子往一端封闭的管道放入一些弹珠然后取出来，如果想把弹珠取出来，必须从最后放入弹珠的位置挨个拿出来。</p>
+<p>使用**append()**将元素追加到列表尾部</p>
+<p>使用 <strong>pop()</strong> 将最后个的元素弹出列</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">print(<span class="string">&#x27;出栈之前的列表：&#x27;</span>, a)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;pop()栈尾部弹出元素：&#x27;</span>, a.pop())</span><br><span class="line"><span class="comment"># pop()栈尾部弹出元素： 6</span></span><br><span class="line">print(<span class="string">&#x27;pop()栈尾部弹出元素：&#x27;</span>, a.pop())</span><br><span class="line"><span class="comment"># pop()栈尾部弹出元素： 5</span></span><br><span class="line">print(<span class="string">&#x27;pop()栈尾部弹出元素：&#x27;</span>, a.pop())</span><br><span class="line"><span class="comment"># pop()栈尾部弹出元素： 4</span></span><br><span class="line">print(<span class="string">&#x27;pop()栈尾部弹出元素：&#x27;</span>, a.pop())</span><br><span class="line"><span class="comment"># pop()栈尾部弹出元素： 3</span></span><br><span class="line">print(<span class="string">&#x27;出栈之后的列表：&#x27;</span>, a)</span><br><span class="line"><span class="comment"># 出栈之后的列表： [1, 2]</span></span><br><span class="line"></span><br><span class="line">a.append(<span class="number">34</span>)</span><br><span class="line">print(<span class="string">&#x27;append()栈尾部加入元素：&#x27;</span>, a)</span><br><span class="line"><span class="comment"># append()栈尾部加入元素： [1, 2, 34]</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的代码中使用了一个列表的 **pop()<strong>和</strong>append()**方法实现出栈和入栈操作</p>
+<p>知识点：列表实现<strong>队列</strong></p>
+<p>在日常生活中会经常遇到队列，比如售票窗口、图书馆、超市的结账出口</p>
+<p><strong>队列</strong> 是一种在<strong>末尾追加数据以及在开始弹出数据</strong>的数据结构</p>
+<p>与栈不同，它是 <strong>FIFO</strong>(First In First Out 先进先出)的数据结构</p>
+<p>使用**append()**将元素追加到列表尾部</p>
+<p>使用 <strong>pop(0)</strong> 将第0位置的元素弹出列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">print(<span class="string">&#x27;出栈之前的列表：&#x27;</span>, a)</span><br><span class="line"><span class="comment"># 出栈之前的列表： [1, 2, 3, 4, 5]</span></span><br><span class="line"></span><br><span class="line">a.append(<span class="number">1</span>)</span><br><span class="line">print(<span class="string">&#x27;append()队列尾部加入元素：&#x27;</span>, a)</span><br><span class="line"><span class="comment"># append()队列尾部加入元素： [1, 2, 3, 4, 5, 1]</span></span><br><span class="line">print(<span class="string">&#x27;pop(0)队列首部弹出元素：&#x27;</span>, a.pop(<span class="number">0</span>))</span><br><span class="line"><span class="comment"># pop(0)队列首部弹出元素： 1</span></span><br><span class="line">print(<span class="string">&#x27;pop(0)队列首部弹出元素：&#x27;</span>, a.pop(<span class="number">0</span>))</span><br><span class="line"><span class="comment"># pop(0)队列首部弹出元素： 2</span></span><br><span class="line">print(<span class="string">&#x27;出队列之后的列表：&#x27;</span>, a)</span><br><span class="line"><span class="comment"># 出队列之后的列表： [3, 4, 5, 1]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-4-列表的排序"><a href="#4-4-列表的排序" class="headerlink" title="4.4   列表的排序"></a>4.4   列表的排序</h2><h3 id="4-4-1-list-sort-方法进行永久性排序"><a href="#4-4-1-list-sort-方法进行永久性排序" class="headerlink" title="4.4.1  list.sort()方法进行永久性排序"></a>4.4.1  list.sort()方法进行永久性排序</h3><h4 id="任务一：列表的永久排序"><a href="#任务一：列表的永久排序" class="headerlink" title="任务一：列表的永久排序"></a><em>任务一：列表的永久排序</em></h4><p>所谓<strong>永久性排序</strong>，指调用**list.sort()**方法会改变原列表</p>
+<p>知识点：</p>
+<p>描述：<strong>list.sort()<strong>方法用于对列表进行排序；默认情况下，</strong>sort()<strong>方法对列表进行</strong>(ascending)升序排序</strong>；还可以通过<strong>自定义比较函数来设置排序规则</strong></p>
+<p>语法：<strong>list.sort(reverse=False|True, key=myFunc)</strong></p>
+<p>参数:</p>
+<p>reverse – 可选。reverse=True 将对列表进行<strong>降序</strong>排序。默认是 reverse=False</p>
+<p>key – 可选。指定排序标准的函数</p>
+<p>返回值：该方法没有返回值</p>
+<p>该排序方法会修改了列表list元素的排列顺序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vowels list</span></span><br><span class="line">vowels = [<span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;i&#x27;</span>]</span><br><span class="line">print(<span class="string">&#x27;排序前的list:&#x27;</span>, vowels)</span><br><span class="line"></span><br><span class="line">vowels.sort()</span><br><span class="line">print(<span class="string">&#x27;排序后的list:&#x27;</span>, vowels)</span><br></pre></td></tr></table></figure>
+
+<p><strong>例子</strong>：假设你有一个汽车列表，并要让其中的汽车<strong>按字母顺序排列</strong>。为简化这项任务，假设该列表中的所有值都是小写的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;toyota&#x27;</span>, <span class="string">&#x27;subaru&#x27;</span>, <span class="string">&#x27;abmw&#x27;</span>, <span class="string">&#x27;abudi&#x27;</span>]</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------------cars.sort()--------------&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;------通过print(cars)发现sort()方法永久改变原列表------------&#x27;</span>)</span><br><span class="line">cars.sort()</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;------------cars.sort(reverse=True) 降序排列--------------&#x27;</span>)</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>)</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
+
+<p>方法<strong>sort()永久性地修改了列表元素的排列顺序</strong>。现在，汽车是按字母顺序排列的，再也无法恢复到原来的排列顺序</p>
+<p>还可以按与字母顺序相反的顺序排列列表元素，为此，只需向<strong>sort()<strong>方法传递参数</strong>reverse=True</strong></p>
+<h4 id="任务二：通过sort-的参数key，自定义排序规则"><a href="#任务二：通过sort-的参数key，自定义排序规则" class="headerlink" title="任务二：通过sort()的参数key，自定义排序规则"></a><em>任务二：通过sort()的参数key，自定义排序规则</em></h4><p><strong>例子</strong>：按照值的长度对列表进行排序：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义函数：返回值为元素的长度</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myFunc</span>(<span class="params">e</span>):</span> <span class="comment">#e为形参</span></span><br><span class="line">   <span class="keyword">return</span> <span class="built_in">len</span>(e)</span><br><span class="line"></span><br><span class="line">cars = [<span class="string">&#x27;toyotaa&#x27;</span>, <span class="string">&#x27;subaru&#x27;</span>, <span class="string">&#x27;abmw&#x27;</span>, <span class="string">&#x27;abudi&#x27;</span>]</span><br><span class="line">print(<span class="string">&#x27;原来的list:&#x27;</span>, cars)</span><br><span class="line"></span><br><span class="line">cars.sort(key=myFunc)</span><br><span class="line">print(<span class="string">&#x27;排序(升序)后的list&#x27;</span>, cars)</span><br><span class="line"></span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>, key=myFunc)</span><br><span class="line">print(<span class="string">&#x27;排序(降序)后的list&#x27;</span>, cars)</span><br></pre></td></tr></table></figure>
+
+<p><strong>例子</strong>：按二维数组的第二个元素值进行排序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">takeSecond</span>(<span class="params">elem</span>):</span></span><br><span class="line">   <span class="keyword">return</span> elem[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">digits = [[<span class="number">2</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>], [<span class="number">4</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">3</span>]]</span><br><span class="line">print(<span class="string">&#x27;排序前的list:&#x27;</span>, digits)</span><br><span class="line"></span><br><span class="line">digits.sort(key=takeSecond)</span><br><span class="line">print(<span class="string">&#x27;排序后的list:&#x27;</span>, digits)</span><br></pre></td></tr></table></figure>
+
+<h3 id="练习："><a href="#练习：" class="headerlink" title="练习："></a>练习：</h3><p>1、输入5个数，存到列表中，然后使用**sort()**，对该列表进行按升序、降序进行排序，并输出结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;5&#x27;</span>]</span><br><span class="line">print(numbers)</span><br><span class="line">numbers.sort()</span><br><span class="line">print(numbers)</span><br><span class="line">numbers.sort(reverse=<span class="literal">True</span>)</span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;5&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;5&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;1&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>2、构造拥有5个城市名字元素的列表cities，然后使用**sort()**，对该列表进行按升序、降序、字符串长度方式进行排序，并输出结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">citis = [<span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;America&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;England&#x27;</span>,<span class="string">&#x27;Japan&#x27;</span>]</span><br><span class="line">another_city = <span class="built_in">sorted</span>(citis)</span><br><span class="line">print(<span class="string">&#x27;sorted()排序后(升序默认):&#x27;</span>,another_city)</span><br><span class="line">another_city.sort(reverse = <span class="literal">True</span>)</span><br><span class="line">print(<span class="string">&#x27;list.sort()排序后(降序):&#x27;</span>,another_city)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sorted</span>()排序后(升序默认): [<span class="string">&#x27;America&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;England&#x27;</span>, <span class="string">&#x27;Japan&#x27;</span>]</span><br><span class="line"><span class="built_in">list</span>.sort()排序后(降序): [<span class="string">&#x27;Japan&#x27;</span>, <span class="string">&#x27;England&#x27;</span>, <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;America&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-2-sorted-函数进行临时排序"><a href="#4-4-2-sorted-函数进行临时排序" class="headerlink" title="4.4.2   sorted()函数进行临时排序"></a>4.4.2   sorted()函数进行临时排序</h3><h4 id="任务一：列表的临时排序"><a href="#任务一：列表的临时排序" class="headerlink" title="任务一：列表的临时排序"></a><em>任务一：列表的临时排序</em></h4><p><strong>list.sort()<strong>方法是将排序结果覆盖</strong>修改原列表</strong></p>
+<p>新需求：希望得到列表的排序，但而不希望对原列表进行修改。函数**sorted()**让我们能够对列表进行元素排序(返回一个新的临时列表)，但不影响原始排列顺序</p>
+<p>知识点：</p>
+<p>描述： <strong>sorted()</strong> 函数对所有可迭代的对象进行排序操作</p>
+<p>语法：<strong>sorted(iterable, key=None, reverse=False)</strong></p>
+<p>参数：</p>
+<p>iterable – 可迭代对象。通俗讲是该对象的元素是可以被循环遍历的。通常是集合或序列类型，比如list, str</p>
+<p>key – 可选。指定排序标准的函数</p>
+<p>reverse – 可选。reverse=True 将对列表进行降序排序。默认是 reverse=False</p>
+<p>返回值：返回重新排序的<strong>列表</strong>(与原列表无关)</p>
+<p><strong>注意：传进去的是可迭代对象，而返回的是列表(非原来对象类型)</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># list 列表对象</span></span><br><span class="line">py_list = [<span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;i&#x27;</span>]</span><br><span class="line">print(<span class="string">&#x27;排序前:&#x27;</span>, py_list)</span><br><span class="line">print(<span class="string">&#x27;排序后:&#x27;</span>, <span class="built_in">sorted</span>(py_list))</span><br><span class="line"></span><br><span class="line"><span class="comment"># string 字符串对象</span></span><br><span class="line">py_string = <span class="string">&#x27;Python&#x27;</span></span><br><span class="line">print(<span class="string">&#x27;排序前:&#x27;</span>, py_string)</span><br><span class="line">print(<span class="string">&#x27;排序后:&#x27;</span>, <span class="built_in">sorted</span>(py_string, reverse=<span class="literal">True</span>))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：自定义排序规则"><a href="#任务二：自定义排序规则" class="headerlink" title="任务二：自定义排序规则"></a><em>任务二：自定义排序规则</em></h4><p>**sorted()**函数的第二个元素的值为自定义排序规则</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">takeSecond</span>(<span class="params">elem</span>):</span></span><br><span class="line">   <span class="keyword">return</span> elem[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">digits = [[<span class="number">2</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>], [<span class="number">4</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">3</span>]]</span><br><span class="line">print(<span class="string">&#x27;排序前:&#x27;</span>, digits)</span><br><span class="line">print(<span class="string">&#x27;排序后:&#x27;</span>, <span class="built_in">sorted</span>(digits, key=takeSecond))</span><br><span class="line">print(<span class="string">&#x27;原来列表:&#x27;</span>, digits)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>, <span class="string">&#x27;audi&#x27;</span>, <span class="string">&#x27;toyota&#x27;</span>, <span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;排序前:&#x27;</span>,cars) <span class="comment">#按原始顺序打印列表</span></span><br><span class="line"></span><br><span class="line">another_car = <span class="built_in">sorted</span>(cars) <span class="comment">#调用sorted(),按字母顺序排序列表</span></span><br><span class="line">print(<span class="string">&#x27;sorted()排序后(升序默认):&#x27;</span>,another_car)</span><br><span class="line"></span><br><span class="line">another_car.sort(reverse = <span class="literal">True</span>) <span class="comment">#调用sorted(),按字母降序排序列表</span></span><br><span class="line">print(<span class="string">&#x27;list.sort()排序后(降序):&#x27;</span>,another_car)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;原列表, sorted()并不改变原列表:&#x27;</span>,cars)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：sorted-是python的一个全局函数"><a href="#任务三：sorted-是python的一个全局函数" class="headerlink" title="任务三：sorted()是python的一个全局函数"></a><em>任务三：sorted()是python的一个全局函数</em></h4><p>知识点：</p>
+<p><strong>sorted()<strong>是python的一个全局函数，不是</strong>list</strong>的方法，因此不能通过**list.sorted()**方式调用</p>
+<p><strong>方法</strong>：属于对象的函数</p>
+<p><strong>函数</strong>：全局函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;------------不能通过cars.sorted()-------------&quot;</span>)</span><br><span class="line">print(cars.<span class="built_in">sorted</span>())</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-3-list-reverse-方法对列表进行逆序"><a href="#4-4-3-list-reverse-方法对列表进行逆序" class="headerlink" title="4.4.3   list.reverse()方法对列表进行逆序"></a>4.4.3   list.reverse()方法对列表进行逆序</h3><p>要反转列表元素的排列顺序，可使用方法<strong>list.reverse()</strong></p>
+<p>知识点：</p>
+<p>描述：**list.reverse()**方法反转元素的排序顺序</p>
+<p>语法：<strong>list.reverse()</strong></p>
+<p>参数：无</p>
+<p>返回值：无</p>
+<p><strong>注意：永久性的修改原列表</strong></p>
+<p>假设汽车列表是按购买时间排列的，可轻松地按相反的顺序排列其中的汽车：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>, <span class="string">&#x27;audi&#x27;</span>, <span class="string">&#x27;toyota&#x27;</span>, <span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">print(<span class="string">&#x27;原列表：&#x27;</span>, cars)</span><br><span class="line"></span><br><span class="line">cars.reverse()</span><br><span class="line">print(<span class="string">&#x27;reverse()后的列表：&#x27;</span>,cars)</span><br><span class="line"></span><br><span class="line">cars.reverse()</span><br><span class="line">print(<span class="string">&#x27;再次reverse()后的列表：&#x27;</span>,cars)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p><strong>reverse()<strong>不是指按与字母顺序相反的顺序排列列表元素，而只是</strong>反转列表元素的排列顺序</strong></p>
+<p>方法<strong>reverse()永久性地修改列表元素的排列顺序</strong>，但可随时恢复到原来的排列顺序，为此只需对列表再次调用**reverse()**即可</p>
+<h3 id="习题：-3"><a href="#习题：-3" class="headerlink" title="习题："></a>习题：</h3><p>1、创建一个列表，通过**reverse()**对元素顺序进行翻转，再恢复原来的排序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;Jordan&#x27;</span>, <span class="string">&#x27;ONeal&#x27;</span>]</span><br><span class="line">print(<span class="string">&#x27;原列表：&#x27;</span>, names)</span><br><span class="line">names.reverse()</span><br><span class="line">print(<span class="string">&#x27;reverse()后的列表：&#x27;</span>,names)</span><br><span class="line">names.reverse()</span><br><span class="line">print(<span class="string">&#x27;再次reverse()后的列表：&#x27;</span>,names)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">原列表： [<span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;Jordan&#x27;</span>, <span class="string">&#x27;ONeal&#x27;</span>]</span><br><span class="line">reverse()后的列表： [<span class="string">&#x27;ONeal&#x27;</span>, <span class="string">&#x27;Jordan&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;James&#x27;</span>]</span><br><span class="line">再次reverse()后的列表： [<span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;Jordan&#x27;</span>, <span class="string">&#x27;ONeal&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>2、输入多个字符串，存在列表中，然后调用**reverse()**对元素顺序进行翻转，并输出结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">messages = [<span class="string">&quot;Hello Python world!&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Kobe&quot;</span>,<span class="string">&quot;Jordan&quot;</span>]</span><br><span class="line">print(<span class="string">&#x27;原列表：&#x27;</span>, messages)</span><br><span class="line">messages.reverse()</span><br><span class="line">print(<span class="string">&#x27;reverse()后的列表：&#x27;</span>,messages)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">原列表： [<span class="string">&#x27;Hello Python world!&#x27;</span>, <span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">reverse()后的列表： [<span class="string">&#x27;Jordan&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Hello Python world!&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-4-len-函数查询长度"><a href="#4-4-4-len-函数查询长度" class="headerlink" title="4.4.4   len()函数查询长度"></a>4.4.4   len()函数查询长度</h3><h4 id="任务一：使用len-查询列表长度"><a href="#任务一：使用len-查询列表长度" class="headerlink" title="任务一：使用len()查询列表长度"></a><em>任务一：使用len()查询列表长度</em></h4><p>知识点：</p>
+<p>描述：**len()**函数获得列表的长度</p>
+<p>语法：<strong>len(object)</strong></p>
+<p>参数：集合或序列类型的对象。比如<strong>list，str</strong>等</p>
+<p>返回：长度值</p>
+<p>属性：Python的build-in(内建)函数。所谓内建，就是Python自带的函数，类似于<strong>sorted()</strong></p>
+<p>在下面的示例中，列表包含4个元素，因此其长度为4：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cars =  [<span class="string">&#x27;bmw&#x27;</span>,  <span class="string">&#x27;audi&#x27;</span>,  <span class="string">&#x27;toyota&#x27;</span>,  <span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">print(<span class="string">&#x27;长度：&#x27;</span>,<span class="built_in">len</span>(cars))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mylist = <span class="string">&quot;Hello&quot;</span></span><br><span class="line">print(<span class="string">&#x27;长度：&#x27;</span>, <span class="built_in">len</span>(mylist))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line"><span class="built_in">len</span>(a)</span><br></pre></td></tr></table></figure>
+
+<h3 id="习题：-4"><a href="#习题：-4" class="headerlink" title="习题："></a>习题：</h3><p><strong>3-8 放眼世界</strong>：想出至少5个你渴望去旅游的地方</p>
+<p>将这些地方存储在一个列表中，并确保其中的元素不是按字母顺序排列的</p>
+<p>按原始排列顺序打印该列表。不要考虑输出是否整洁的问题，只管打印原始Python列表</p>
+<p>使用**sorted()**按字母顺序打印这个列表，同时不要修改它</p>
+<p>再次打印该列表，核实排列顺序未变</p>
+<p>使用**sorted()**按与字母顺序相反的顺序打印这个列表，同时不要修改它</p>
+<p>再次打印该列表，核实排列顺序未变</p>
+<p>使用**reverse()**修改列表元素的排列顺序。打印该列表，核实排列顺序确实变了</p>
+<p>使用**reverse()**再次修改列表元素的排列顺序。打印该列表，核实已恢复到原来的排列顺序</p>
+<p>使用**sort()**修改该列表，使其元素按字母顺序排列。打印该列表，核实排列顺序确实变了</p>
+<p>使用**sort()**修改该列表，使其元素按与字母顺序相反的顺序排列。打印该列表，核实排列顺序确实变了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">places =[<span class="string">&#x27;Japan&#x27;</span>,<span class="string">&#x27;America&#x27;</span>,<span class="string">&#x27;Canada&#x27;</span>,<span class="string">&#x27;Switzerland&#x27;</span>,<span class="string">&#x27;Norway&#x27;</span>]</span><br><span class="line">print(places)</span><br><span class="line">print(<span class="built_in">sorted</span>(places))</span><br><span class="line">print(places)</span><br><span class="line">print(<span class="built_in">sorted</span>(places,reverse = <span class="literal">True</span>))</span><br><span class="line">print(places)</span><br><span class="line">places.reverse()</span><br><span class="line">print(places)</span><br><span class="line">places.reverse()</span><br><span class="line">print(places)</span><br><span class="line">places.sort()</span><br><span class="line">print(places)</span><br><span class="line">places.sort(reverse = <span class="literal">True</span>)</span><br><span class="line">print(places)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;Japan&#x27;</span>, <span class="string">&#x27;America&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;Switzerland&#x27;</span>, <span class="string">&#x27;Norway&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;America&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;Japan&#x27;</span>, <span class="string">&#x27;Norway&#x27;</span>, <span class="string">&#x27;Switzerland&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;Japan&#x27;</span>, <span class="string">&#x27;America&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;Switzerland&#x27;</span>, <span class="string">&#x27;Norway&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;Switzerland&#x27;</span>, <span class="string">&#x27;Norway&#x27;</span>, <span class="string">&#x27;Japan&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;America&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;Japan&#x27;</span>, <span class="string">&#x27;America&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;Switzerland&#x27;</span>, <span class="string">&#x27;Norway&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;Norway&#x27;</span>, <span class="string">&#x27;Switzerland&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;America&#x27;</span>, <span class="string">&#x27;Japan&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;Japan&#x27;</span>, <span class="string">&#x27;America&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;Switzerland&#x27;</span>, <span class="string">&#x27;Norway&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;America&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;Japan&#x27;</span>, <span class="string">&#x27;Norway&#x27;</span>, <span class="string">&#x27;Switzerland&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;Switzerland&#x27;</span>, <span class="string">&#x27;Norway&#x27;</span>, <span class="string">&#x27;Japan&#x27;</span>, <span class="string">&#x27;Canada&#x27;</span>, <span class="string">&#x27;America&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p><strong>3-9 晚餐嘉宾</strong>：在完成练习3-4~练习3-7时编写的程序之一中，使用**len()**打印一条消息，指出你邀请了多少位嘉宾来与你共进晚餐</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">customs = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">customs[<span class="number">2</span>] = <span class="string">&#x27;ONeal&#x27;</span></span><br><span class="line">print(<span class="string">&quot;I found a bigger table&quot;</span>)</span><br><span class="line">customs.insert(<span class="number">0</span> ,<span class="string">&#x27;Curry&#x27;</span>)</span><br><span class="line">customs.insert(<span class="built_in">int</span>(<span class="built_in">len</span>(customs) / <span class="number">2</span>) ,<span class="string">&#x27;Garnett&#x27;</span>)</span><br><span class="line">customs.append(<span class="string">&#x27;Davis&#x27;</span>)</span><br><span class="line">print(<span class="built_in">len</span>(customs))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I found a bigger table</span><br><span class="line"><span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>3-10 尝试使用各个函数</strong>：想想可存储到列表中的东西，如山岳、河流、国家、城市、语言或你喜欢的任何东西。编写一个程序，在其中创建一个包含这些元素的列表，然后，对于本章介绍的每个函数，都至少使用一次来处理这个列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">customs = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">customs[<span class="number">2</span>] = <span class="string">&#x27;ONeal&#x27;</span></span><br><span class="line">customs.insert(<span class="number">0</span> ,<span class="string">&#x27;Curry&#x27;</span>)</span><br><span class="line">customs.insert(<span class="built_in">int</span>(<span class="built_in">len</span>(customs) / <span class="number">2</span>) ,<span class="string">&#x27;Garnett&#x27;</span>)</span><br><span class="line">customs.append(<span class="string">&#x27;Davis&#x27;</span>)</span><br><span class="line">print(<span class="built_in">len</span>(customs))</span><br><span class="line">print(<span class="built_in">sorted</span>(customs))</span><br><span class="line">customs.sort()</span><br><span class="line">print(customs)</span><br><span class="line">customs.reverse()</span><br><span class="line">print(customs)</span><br><span class="line">print(customs.pop())</span><br><span class="line">customs.remove(<span class="string">&#x27;Kobe&#x27;</span>)</span><br><span class="line">print(customs)</span><br><span class="line"><span class="keyword">del</span> customs[:]</span><br><span class="line">print(customs)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span></span><br><span class="line">[<span class="string">&#x27;Curry&#x27;</span>, <span class="string">&#x27;Davis&#x27;</span>, <span class="string">&#x27;Garnett&#x27;</span>, <span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;ONeal&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;Curry&#x27;</span>, <span class="string">&#x27;Davis&#x27;</span>, <span class="string">&#x27;Garnett&#x27;</span>, <span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;ONeal&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;ONeal&#x27;</span>, <span class="string">&#x27;Kobe&#x27;</span>, <span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Garnett&#x27;</span>, <span class="string">&#x27;Davis&#x27;</span>, <span class="string">&#x27;Curry&#x27;</span>]</span><br><span class="line">Curry</span><br><span class="line">[<span class="string">&#x27;ONeal&#x27;</span>, <span class="string">&#x27;James&#x27;</span>, <span class="string">&#x27;Garnett&#x27;</span>, <span class="string">&#x27;Davis&#x27;</span>]</span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-5-列表list常用操作"><a href="#4-4-5-列表list常用操作" class="headerlink" title="4.4.5   列表list常用操作"></a>4.4.5   列表list常用操作</h3><h2 id="4-5-使用列表时避免索引错误"><a href="#4-5-使用列表时避免索引错误" class="headerlink" title="4.5   使用列表时避免索引错误"></a>4.5   使用列表时避免索引错误</h2><h4 id="任务一：熟悉列表常见的索引错误"><a href="#任务一：熟悉列表常见的索引错误" class="headerlink" title="任务一：熟悉列表常见的索引错误"></a><em>任务一：熟悉列表常见的索引错误</em></h4><p>刚开始使用列表时，经常会遇到一种错误。假设你有一个包含三个元素的列表，想获得最后一个元素，误用索引为3：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">print(motorcycles[<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<p>Python试图向你提供位于索引3处的元素，但它搜索列表<strong>motorcycles</strong>时，却发现索引3处没有元素。鉴于列表索引差一的特征，这种错误很常见。有些人从1开始数，因此以为第三个元素的索引为3；但在Python中，第三个元素的索引为2，因为索引是从0开始的</p>
+<p>知识点：</p>
+<p>索引错误意味着Python无法理解你指定的索引</p>
+<p>程序发生索引错误时，请尝试将你指定的索引减1，然后再次运行程序，看看结果是否正确</p>
+<p>每当需要访问最后一个列表元素时，都可使用索引**-1**。对于列表长度发生变化的情形特别有效：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>, <span class="string">&#x27;yamaha&#x27;</span>, <span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">print(motorcycles[-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<p>索引**-1<strong>总是</strong>返回最后一个列表元素<strong>，这里为值</strong>‘suzuki’**。仅当列表为空时，这种访问最后一个元素的方式才会导致错误：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = []</span><br><span class="line">print(motorcycles, <span class="built_in">len</span>(motorcycles))</span><br><span class="line">print(motorcycles[-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>找不到解决办法时，<strong>请尝试将列表或其长度打印出来</strong></p>
+<p><strong>列表可能与想象中的截然不同</strong>，在程序对其进行了动态处理时尤其如此。通过查看列表或其包含的元素数，可帮助找出这种逻辑错误</p>
+<h3 id="习题：-5"><a href="#习题：-5" class="headerlink" title="习题："></a>习题：</h3><p><strong>3-11 有意引发错误</strong>：如果你还没有在程序中遇到过索引错误，就尝试引发一个这种错误。在你的一个程序中，修改其中的索引，以引发索引错误。关闭程序前，务必消除这个错误</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">print(names[<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line">IndexError                                Traceback (most recent call last)</span><br><span class="line">&lt;ipython-<span class="built_in">input</span>-<span class="number">97</span>-8e4ac68e70ad&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">      <span class="number">1</span> names = [<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Kobe&#x27;</span>,<span class="string">&#x27;Jordan&#x27;</span>]</span><br><span class="line">----&gt; 2 print(names[3])</span><br><span class="line"></span><br><span class="line">IndexError: <span class="built_in">list</span> index out of <span class="built_in">range</span></span><br></pre></td></tr></table></figure>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://waxll.top/2021/06/17/py4.html>http://waxll.top/2021/06/17/py4.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-17T00:25:23+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年6月17日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://waxll.top/2021/06/17/py4.html&title=Python学习笔记4 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://waxll.top/2021/06/17/py4.html&title=Python学习笔记4 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://waxll.top/2021/06/17/py4.html&title=Python学习笔记4 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/06/17/py5.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python学习笔记5</p>
+          <p class='content'>
+
+
+第五章 列表：遍历遍历整个列表为何需要循环任务：为何需要循环？假设有一个班级名单(列表)，需要将其中每个同学名字都打印出来，并对他/她说一句问候语。按之前学到的Python知识，可以分别地...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/04/01/p3.html'>
+          <p class='title'>Python学习笔记3<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+第三章 数据类型：字符串字符串字符串使用语法使用引号创建字符串类型数据 知识点：
+
+字符串就是一系列字符。
+使用引号创建字符串，引号必须要用英文输入法，中文会出错！。
+用引号括起的都是字符...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E5%88%97%E8%A1%A8-%E5%BA%8F%E5%88%97-%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">4.1   列表(序列)的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9APython%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">任务一：Python内置数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E8%AE%A4%E8%AF%86%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%97%E8%A1%A8"><span class="toc-text">任务二：认识什么是列表</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-1-%E8%AE%BF%E9%97%AE%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="toc-text">4.1.1   访问列表元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8%E7%B4%A2%E5%BC%95%E8%AE%BF%E9%97%AE%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="toc-text">任务一：使用索引访问列表元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%88%97%E8%A1%A8%E7%9A%84%E7%B4%A2%E5%BC%95"><span class="toc-text">任务二：列表的索引</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-2-%E7%B4%A2%E5%BC%95%E8%AE%BF%E9%97%AE"><span class="toc-text">4.1.2   索引访问</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E7%AC%AC1%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E7%B4%A2%E5%BC%95%E6%98%AF0"><span class="toc-text">任务一：第1个元素的索引是0</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-3-%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%80%BC"><span class="toc-text">4.1.3   使用列表中的值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E5%80%BC"><span class="toc-text">任务一：如何使用列表中的元素值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-1"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-4-%E5%88%97%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-text">4.1.4   列表的通用操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89%E5%8F%98%E9%87%8F%E5%86%85%E6%B6%B5"><span class="toc-text">4.2（重要）变量内涵</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%8F%98%E9%87%8F%E7%9A%84%E5%86%85%E6%B6%B5"><span class="toc-text">任务一：变量的内涵</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-%E4%BF%AE%E6%94%B9%E3%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="toc-text">4.3   修改、添加和删除列表元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-1-%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0"><span class="toc-text">4.3.1   修改元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-2-%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="toc-text">4.3.2   添加元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%9C%A8%E5%88%97%E8%A1%A8%E6%9C%AB%E5%B0%BE%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0append"><span class="toc-text">任务一：在列表末尾添加元素append()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%88%9B%E5%BB%BA%E7%A9%BA%E5%88%97%E8%A1%A8%E5%B9%B6%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="toc-text">任务二：创建空列表并动态添加元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%9C%A8%E5%88%97%E8%A1%A8%E7%9A%84%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E6%8F%92%E5%85%A5%E6%96%B0%E5%85%83%E7%B4%A0insert"><span class="toc-text">任务三：在列表的指定位置插入新元素insert()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-3-%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-text">4.3.3   删除元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8del%E8%AF%AD%E5%8F%A5%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-text">任务一：使用del语句删除元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95pop-%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-text">任务二：使用方法pop()删除元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9Apop-%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BB%BB%E4%BD%95%E4%BD%8D%E7%BD%AE%E5%A4%84%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-text">任务三：pop()列表中任何位置处的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E4%BD%BF%E7%94%A8remove-%E6%96%B9%E6%B3%95%EF%BC%8C%E6%A0%B9%E6%8D%AE%E5%80%BC%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-text">任务四：使用remove()方法，根据值删除元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-2"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-4-%E5%B0%86%E5%88%97%E8%A1%A8%E7%94%A8%E4%BD%9C%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97"><span class="toc-text">4.3.4   将列表用作栈和队列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%B0%86%E5%88%97%E8%A1%A8%E7%94%A8%E4%BD%9C%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97"><span class="toc-text">任务一：将列表用作栈和队列</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-%E5%88%97%E8%A1%A8%E7%9A%84%E6%8E%92%E5%BA%8F"><span class="toc-text">4.4   列表的排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-1-list-sort-%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E6%B0%B8%E4%B9%85%E6%80%A7%E6%8E%92%E5%BA%8F"><span class="toc-text">4.4.1  list.sort()方法进行永久性排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%88%97%E8%A1%A8%E7%9A%84%E6%B0%B8%E4%B9%85%E6%8E%92%E5%BA%8F"><span class="toc-text">任务一：列表的永久排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E9%80%9A%E8%BF%87sort-%E7%9A%84%E5%8F%82%E6%95%B0key%EF%BC%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99"><span class="toc-text">任务二：通过sort()的参数key，自定义排序规则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%9A"><span class="toc-text">练习：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-2-sorted-%E5%87%BD%E6%95%B0%E8%BF%9B%E8%A1%8C%E4%B8%B4%E6%97%B6%E6%8E%92%E5%BA%8F"><span class="toc-text">4.4.2   sorted()函数进行临时排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%88%97%E8%A1%A8%E7%9A%84%E4%B8%B4%E6%97%B6%E6%8E%92%E5%BA%8F"><span class="toc-text">任务一：列表的临时排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99"><span class="toc-text">任务二：自定义排序规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9Asorted-%E6%98%AFpython%E7%9A%84%E4%B8%80%E4%B8%AA%E5%85%A8%E5%B1%80%E5%87%BD%E6%95%B0"><span class="toc-text">任务三：sorted()是python的一个全局函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-3-list-reverse-%E6%96%B9%E6%B3%95%E5%AF%B9%E5%88%97%E8%A1%A8%E8%BF%9B%E8%A1%8C%E9%80%86%E5%BA%8F"><span class="toc-text">4.4.3   list.reverse()方法对列表进行逆序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-3"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-4-len-%E5%87%BD%E6%95%B0%E6%9F%A5%E8%AF%A2%E9%95%BF%E5%BA%A6"><span class="toc-text">4.4.4   len()函数查询长度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8len-%E6%9F%A5%E8%AF%A2%E5%88%97%E8%A1%A8%E9%95%BF%E5%BA%A6"><span class="toc-text">任务一：使用len()查询列表长度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-4"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-5-%E5%88%97%E8%A1%A8list%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-text">4.4.5   列表list常用操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8%E6%97%B6%E9%81%BF%E5%85%8D%E7%B4%A2%E5%BC%95%E9%94%99%E8%AF%AF"><span class="toc-text">4.5   使用列表时避免索引错误</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E7%86%9F%E6%82%89%E5%88%97%E8%A1%A8%E5%B8%B8%E8%A7%81%E7%9A%84%E7%B4%A2%E5%BC%95%E9%94%99%E8%AF%AF"><span class="toc-text">任务一：熟悉列表常见的索引错误</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-5"><span class="toc-text">习题：</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Python学习笔记4";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5119353317'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <!-- <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div> -->
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题 | 由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>强力驱动
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://waxll.top/">Copyright © 2019-2020 XieSenshi</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $('#cover-backstretch').backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/friends/
+        
+        
+        
+        
+          id="friends"
+        >
+        <i class='fa fa-users fa-fw'></i> 友链
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/journal/
+        
+        
+        
+        
+          id="journal"
+        >
+        <i class='fa fa-calendar fa-fw'></i> 日志
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/about/
+        
+        
+        
+        
+          id="about"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 关于
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> Dark mode
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5119353317';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz","appKey":"jM85yucqi5IuVYCCQS1cUwko","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz',
+    app_key: 'jM85yucqi5IuVYCCQS1cUwko',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://waxll.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>

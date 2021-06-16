@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Python学习笔记8 - Waxll&#39;Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Waxll'Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/waxll/Imag/gif-2.png">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    <div id="clickCanvas" style=" position:fixed;left:0;top:0;z-index:999999999;pointer-events:none;"><canvas class=" sketch" height="0" width="0"></canvas></div>
+    <script src="js/dj.js"></script>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Waxll's Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="A Wonderful Theme for Hexo" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fas fa-book fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <i class='fa fa-map-signs fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/photo/"
+              
+              
+              id="photo">
+              <i class='fas fa-images fa-fw'></i><p>图库</p>
+            </a>
+          
+            <a href="/journal/"
+              
+              
+              id="journal">
+              <i class='fas fa-calendar fa-fw'></i><p>日志</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              id="friends">
+              <i class='fa fa-users fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python学习笔记8
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://7bu.top/2020/07/14/8ba61fac048a2.jpeg">
+    <p>XieSenshi</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年6月17日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：11k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：46分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python学习笔记8" data-path="/2021/06/17/py8.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2021/06/17/py8.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2021/06/17/py8.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p><img src="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210517200120122.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210517200120122.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210517200120122"></p>
+<span id="more"></span>
+
+<h1 id="第八章-数据类型：dict字典"><a href="#第八章-数据类型：dict字典" class="headerlink" title="第八章   数据类型：dict字典"></a>第八章   数据类型：dict字典</h1><h2 id="8-1-初识字典"><a href="#8-1-初识字典" class="headerlink" title="8.1   初识字典"></a>8.1   初识字典</h2><h3 id="8-1-1-为何需要字典？"><a href="#8-1-1-为何需要字典？" class="headerlink" title="8.1.1   为何需要字典？"></a>8.1.1   为何需要字典？</h3><h4 id="任务一：为何需要字典？"><a href="#任务一：为何需要字典？" class="headerlink" title="任务一：为何需要字典？"></a><em>任务一：为何需要字典？</em></h4><p>知识点：</p>
+<p><strong>字典</strong>也是Python提供的一种常用的<strong>容器类型</strong>的数据结构，它用于存放一组具有<strong>映射关系</strong>的数据</p>
+<p>例如，个人信息，姓名：小明，年龄：18，性别：男，身高：1.75</p>
+<p>这组数据看上去像两个列表，但这两个列表的元素之间<strong>有一定的关联关系</strong></p>
+<p>如果单纯使用两个列表来保存这组数据，则无法记录两组数据之间的关联关系</p>
+<p>为了保存具有映射关系的数据，Python提供了字典，字典相当于保存了两组数据，其中一组数据是关键数据，被称为 <strong>key</strong>；另一组数据可通过<strong>key</strong>来访问，被称为value</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 希望将key和val成对绑定</span></span><br><span class="line">key = [<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;age&#x27;</span>, <span class="string">&#x27;gender&#x27;</span>, <span class="string">&#x27;height&#x27;</span>]</span><br><span class="line">val = [<span class="string">&quot;小明&quot;</span>, <span class="number">18</span>, <span class="literal">True</span>, <span class="number">1.75</span>]</span><br><span class="line">print(key, val)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 无法直接绑定信息，只能通过索引隐式的绑定</span></span><br><span class="line">print(<span class="string">f&#x27;<span class="subst">&#123;key[<span class="number">0</span>]&#125;</span>:<span class="subst">&#123;val[<span class="number">0</span>]&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：字典的定义"><a href="#任务二：字典的定义" class="headerlink" title="任务二：字典的定义"></a><em>任务二：字典的定义</em></h4><p>知识点：</p>
+<p>字典(<strong>dictionary</strong>)是 <strong>除列表以外</strong>， <strong>Python</strong> 之中 <strong>最灵活</strong>的数据类型</p>
+<p>字典用来<strong>存储多个数据</strong>，是一种<strong>无序</strong>的可变容器模型，且可存储任意类型对象。字典可以存储用于<strong>描述某个物体 的额外信息</strong> </p>
+<p>字典与列表区别：</p>
+<p><strong>列表</strong>是<strong>有序</strong>的对象集合</p>
+<p><strong>字典</strong>是<strong>无序</strong>的对象集合</p>
+<p>知识点：定义字典</p>
+<p>语法：<strong>d = {key1:value1, key2:value2}</strong></p>
+<p>字典使用**{}** 来定义和标识</p>
+<p>字典使用<strong>键值对</strong>(<strong>key-value</strong>)存储数据，键值对之间使用 , 分隔</p>
+<p><strong>键 key</strong> 是索引，必须是<strong>唯一</strong>的</p>
+<p><strong>值 value</strong> 是数据，可以取任何数据类型</p>
+<p>每个<strong>键值对</strong>中的<strong>键</strong>和<strong>值</strong>用冒号**:**分割</p>
+<p><strong>值</strong>可以取任何数据类型，但<strong>键</strong> 只能使用<strong>字符串</strong>、<strong>数字</strong>或 <strong>元组</strong></p>
+<p><strong>dict</strong>为字典类型，避免使用<strong>dict</strong>作为变量名</p>
+<h4 id="任务三：解析字典数据结构"><a href="#任务三：解析字典数据结构" class="headerlink" title="任务三：解析字典数据结构"></a><em>任务三：解析字典数据结构</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建个人信息字典</span></span><br><span class="line">info = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小明&quot;</span>,</span><br><span class="line">           <span class="string">&quot;age&quot;</span>: <span class="number">18</span>,</span><br><span class="line">           <span class="string">&quot;gender&quot;</span>: <span class="literal">True</span>,</span><br><span class="line">           <span class="string">&quot;height&quot;</span>: <span class="number">1.75</span>&#125;</span><br><span class="line"></span><br><span class="line">print(<span class="built_in">type</span>(info), info)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以使用key作为索引访问字典元素</span></span><br><span class="line">print(info[<span class="string">&#x27;height&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：字典变量的适用场景"><a href="#任务四：字典变量的适用场景" class="headerlink" title="任务四：字典变量的适用场景"></a><em>任务四：字典变量的适用场景</em></h4><p>知识点：</p>
+<p>字典一般用于<strong>描述某个物体属性信息</strong></p>
+<p>字典的<strong>key</strong>通常为字符串，用于描述<strong>value</strong></p>
+<p>字典是<strong>无序</strong>的数据集合</p>
+<h3 id="8-1-2-字典的创建"><a href="#8-1-2-字典的创建" class="headerlink" title="8.1.2   字典的创建"></a>8.1.2   字典的创建</h3><p>常用的有两种字典创建方式，一种是使用**{}<strong>创建字典；另外种是通过</strong>dict()**函数</p>
+<h4 id="任务一：使用-创建字典"><a href="#任务一：使用-创建字典" class="headerlink" title="任务一：使用{}创建字典"></a><em>任务一：使用{}创建字典</em></h4><p>知识点：</p>
+<p><strong>d = {key1:value1, key2:value2}<strong>，将多个</strong>key-value</strong>对作为字典元素，放在**{}**中创建字典</p>
+<p>**d = {}**为创建空字典</p>
+<p>使用**{}<strong>方式创建字典，只能手动添加</strong>key-value**对</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vegetables = &#123;<span class="string">&#x27;celery&#x27;</span>: <span class="number">1.58</span>, <span class="string">&#x27;brocoli&#x27;</span>: <span class="number">1.29</span>, <span class="string">&#x27;lettuce&#x27;</span>: <span class="number">2.19</span>&#125;</span><br><span class="line">print(vegetables)</span><br><span class="line"></span><br><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line">empty_dict = &#123;&#125;</span><br><span class="line">print(empty_dict)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：使用dict-创建字典"><a href="#任务二：使用dict-创建字典" class="headerlink" title="任务二：使用dict()创建字典"></a><em>任务二：使用dict()创建字典</em></h4><p>知识点：</p>
+<p>在使用<strong>dict()<strong>函数创建字典时，可以传入</strong>嵌套的列表或元组参数</strong>作为<strong>key-value</strong>对</p>
+<p>每个列表的元素为由两个元素构成的子列表或元组，作为字典的一个<strong>key-value</strong>对</p>
+<p>**dict()**函数可以从已有的数据(列表或元组)创建字典</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建包含3组key-value对的字典</span></span><br><span class="line">vegetables = [(<span class="string">&#x27;celery&#x27;</span>, <span class="number">1.58</span>), (<span class="string">&#x27;brocoli&#x27;</span>, <span class="number">1.29</span>), (<span class="string">&#x27;lettuce&#x27;</span>, <span class="number">2.19</span>)]</span><br><span class="line">dict3 = <span class="built_in">dict</span>(vegetables)</span><br><span class="line">print(dict3)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建包含3组key-value对的字典</span></span><br><span class="line">cars = [[<span class="string">&#x27;BMW&#x27;</span>, <span class="number">8.5</span>], [<span class="string">&#x27;BENS&#x27;</span>, <span class="number">8.3</span>], [<span class="string">&#x27;AUDI&#x27;</span>, <span class="number">7.9</span>]]</span><br><span class="line">dict4 = <span class="built_in">dict</span>(cars)</span><br><span class="line">print(dict4)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：如果不为**dict()**函数传入任何参数，则代表创建一个空的字典</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建空的字典</span></span><br><span class="line">dict5 = <span class="built_in">dict</span>()</span><br><span class="line">print(dict5)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>通过为<strong>dict()<strong>函数指定</strong>关键字</strong>参数创建字典，此时字典的<strong>key</strong>不允许使用表达式</p>
+<p><strong>dict()<strong>函数会</strong>关键字</strong>参数作为字典的<strong>key</strong>，不需要将它们写成字符串形式，<strong>dict()<strong>函数会自动将它们转化为字符串格式的</strong>key</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接写spinach、cabbage而非字符串</span></span><br><span class="line">dict6 = <span class="built_in">dict</span>(spinach = <span class="number">1.39</span>, cabbage = <span class="number">2.59</span>)</span><br><span class="line">print(dict6)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：三种括号对应的数据类型"><a href="#任务三：三种括号对应的数据类型" class="headerlink" title="任务三：三种括号对应的数据类型"></a><em>任务三：三种括号对应的数据类型</em></h4><p>知识点(总结)：三种括号对应的数据类型</p>
+<p>列表<strong>list</strong>的标识为**[]<strong>；元组</strong>tuple<strong>的标识为</strong>()<strong>；字典</strong>dict<strong>的标识为</strong>{}**</p>
+<p>相对于列表和元组用<strong>数字</strong>来索引元素，字典可以使用<strong>自定义有意义</strong>的<strong>key</strong>来索引元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 空列表、元组、字典创建</span></span><br><span class="line">list_val = []</span><br><span class="line">print(<span class="built_in">type</span>(list_val), list_val)</span><br><span class="line"></span><br><span class="line">tuple_val = ()</span><br><span class="line">print(<span class="built_in">type</span>(tuple_val), tuple_val)</span><br><span class="line"></span><br><span class="line">dict_val = &#123;&#125;</span><br><span class="line">print(<span class="built_in">type</span>(dict_val), dict_val)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list_val = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">print(<span class="built_in">type</span>(list_val), list_val)</span><br><span class="line"></span><br><span class="line">tuple_val = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">print(<span class="built_in">type</span>(tuple_val), tuple_val)</span><br><span class="line"></span><br><span class="line">dict_val = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">4</span>&#125;</span><br><span class="line">print(<span class="built_in">type</span>(dict_val), dict_val)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列表和元组用数字来索引元素</span></span><br><span class="line"><span class="comment"># 字典使用key来索引元素</span></span><br><span class="line">print(list_val[<span class="number">0</span>], tuple_val[<span class="number">0</span>])</span><br><span class="line">print(dict_val[<span class="string">&#x27;a&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-2-深入字典"><a href="#8-2-深入字典" class="headerlink" title="8.2   深入字典"></a>8.2   深入字典</h2><h3 id="8-2-1-字典元素：键值对"><a href="#8-2-1-字典元素：键值对" class="headerlink" title="8.2.1   字典元素：键值对"></a>8.2.1   字典元素：键值对</h3><h4 id="任务一：字典元素是key-value键值对"><a href="#任务一：字典元素是key-value键值对" class="headerlink" title="任务一：字典元素是key-value键值对"></a><em>任务一：字典元素是key-value键值对</em></h4><p>知识点：<strong>d = {key1:value1, key2:value2}</strong></p>
+<p>字典的元素是<strong>键值对</strong>(<strong>key-value</strong>)</p>
+<p>每个<strong>key-value</strong>用冒号**:<strong>分割，每对之间用逗号</strong>,<strong>分割，整个字典包括在大括号</strong>{}**中</p>
+<p>每个<strong>key</strong>都有与之关联的<strong>value</strong>，可以通过<strong>key</strong>来访问(索引)相应的<strong>value</strong>。例如，<strong>value = d[key]</strong></p>
+<p>字典的<strong>key</strong>是唯一，<strong>value</strong>可以重复</p>
+<p>知识点：</p>
+<p>通过字典的<strong>key</strong>可以索引<strong>value</strong>，也可以对<strong>value</strong>进行修改</p>
+<p>例如，访问元素<strong>val = d[key1]<strong>；修改元素</strong>d[key1] = new_value</strong></p>
+<p>列表、元组是有序的，它的索引是从0开始的序号；字典是无序的，它的索引是<strong>key</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line"><span class="comment"># 通过key来访问value</span></span><br><span class="line">print(cars[<span class="string">&#x27;BMW&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过key修改value值</span></span><br><span class="line">cars[<span class="string">&#x27;BMW&#x27;</span>] = <span class="number">10.1</span></span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：字典特性-key是唯一的"><a href="#任务二：字典特性-key是唯一的" class="headerlink" title="任务二：字典特性(key是唯一的)"></a><em>任务二：字典特性(key是唯一的)</em></h4><p>知识点：</p>
+<p>字典的<strong>key</strong>必须是<strong>唯一</strong>的，但<strong>value</strong>可以重复</p>
+<p>如果字典中<strong>存在重复</strong>的<strong>key</strong>，那么后面一个<strong>key</strong>的<strong>value</strong>会<strong>覆盖</strong>前个<strong>key</strong>的<strong>value</strong></p>
+<p>字典的<strong>key</strong>是唯一的。例如，两组相同的<strong>key：’height’: 1.8</strong>和**’height’: 80<strong>。那么，</strong>‘height’<strong>的</strong>value**会被80覆盖</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># key是唯一的</span></span><br><span class="line">info = &#123;<span class="string">&#x27;height&#x27;</span>: <span class="number">1.8</span>, <span class="string">&#x27;height&#x27;</span>: <span class="number">80</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;sex&#x27;</span>: <span class="number">0</span>&#125;</span><br><span class="line">print(<span class="built_in">type</span>(info), info)</span><br></pre></td></tr></table></figure>
+
+<p>不同的<strong>key</strong>可以使用相同的<strong>value</strong>。例如，**’height’: 1.8<strong>和</strong>‘weight’: 1.8**，它们相互不影响</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># value可以重复</span></span><br><span class="line">info = &#123;<span class="string">&#x27;height&#x27;</span>: <span class="number">1.8</span>, <span class="string">&#x27;weight&#x27;</span>: <span class="number">1.8</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;sex&#x27;</span>: <span class="number">0</span>&#125;</span><br><span class="line">print(<span class="built_in">type</span>(info), info)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：字典特性-key必须是不可变类型"><a href="#任务三：字典特性-key必须是不可变类型" class="headerlink" title="任务三：字典特性(key必须是不可变类型)"></a><em>任务三：字典特性(key必须是不可变类型)</em></h4><p>知识点：<strong>key</strong>和<strong>value</strong>的类型要求</p>
+<p><strong>key</strong>：必须是<strong>不可变类型</strong>，包括数值类型、字符串和元组<strong>tuple</strong></p>
+<p><strong>value</strong>：可以是任意类型的对象</p>
+<p>建议<strong>key</strong>使用有意义的字符串。<strong>key</strong>的目的是为了<strong>方便地索引</strong>字典元素</p>
+<p>知识点(注意)：</p>
+<p>元组是不可变类型，因此元组<strong>tuple</strong>可以作为字典的<strong>key</strong></p>
+<p>列表是可变类型，因此列表<strong>list</strong>不能作为字典的<strong>key</strong>，否则会引起<strong>TypeError</strong></p>
+<p>下面例子中，第1个元素的<strong>key</strong>为字符串，第2个为整形，第3个为浮点数，第4个元组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不同类型的key</span></span><br><span class="line">info = &#123;<span class="string">&#x27;height&#x27;</span>: <span class="number">1.8</span>, <span class="number">80</span>: <span class="string">&#x27;weight&#x27;</span>, <span class="number">3.1</span>: &#123;<span class="number">20</span>, <span class="number">11</span>&#125;, (<span class="number">0</span>, ): <span class="string">&#x27;sex&#x27;</span>&#125;</span><br><span class="line">print(<span class="built_in">type</span>(info), info)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 可变类型的列表不能作为key</span></span><br><span class="line">info = &#123;<span class="string">&#x27;height&#x27;</span>: <span class="number">1.8</span>, [<span class="number">1</span>,<span class="number">1</span>]: <span class="string">&#x27;weight&#x27;</span>, <span class="number">3.1</span>: &#123;<span class="number">20</span>, <span class="number">11</span>&#125;, (<span class="number">0</span>, ): <span class="string">&#x27;sex&#x27;</span>&#125;</span><br><span class="line">print(<span class="built_in">type</span>(info), info)</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2-2-字典元素操作"><a href="#8-2-2-字典元素操作" class="headerlink" title="8.2.2   字典元素操作"></a>8.2.2   字典元素操作</h3><h4 id="任务一：字典基本使用"><a href="#任务一：字典基本使用" class="headerlink" title="任务一：字典基本使用"></a><em>任务一：字典基本使用</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">xiaoming_dict = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小明&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 取值</span></span><br><span class="line">print(xiaoming_dict[<span class="string">&quot;name&quot;</span>])</span><br><span class="line"><span class="comment"># 在取值的时候，如果指定的key不存在，程序会报错！</span></span><br><span class="line"><span class="comment"># print(xiaoming_dict[&quot;name123&quot;])</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 增加/修改</span></span><br><span class="line"><span class="comment"># 如果key不存在，会新增键值对</span></span><br><span class="line">xiaoming_dict[<span class="string">&quot;age&quot;</span>] = <span class="number">18</span></span><br><span class="line"><span class="comment"># 如果key存在，会修改已经存在的键值对</span></span><br><span class="line">xiaoming_dict[<span class="string">&quot;name&quot;</span>] = <span class="string">&quot;小小明&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 删除</span></span><br><span class="line">xiaoming_dict.pop(<span class="string">&quot;name&quot;</span>)</span><br><span class="line"><span class="comment"># 在删除指定键值对的时候，如果指定的key不存在，程序会报错！</span></span><br><span class="line"><span class="comment"># xiaoming_dict.pop(&quot;name123&quot;)</span></span><br><span class="line"></span><br><span class="line">print(xiaoming_dict)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：添加新元素"><a href="#任务二：添加新元素" class="headerlink" title="任务二：添加新元素"></a><em>任务二：添加新元素</em></h4><p>知识点：为字典添加新的<strong>key-value</strong>，只需通过对<strong>不存在</strong>的<strong>key</strong>赋值即可</p>
+<p>语法：<strong>d[key]=value</strong></p>
+<p>如果<strong>key</strong>存在，那么修改<strong>key</strong>对应的<strong>value</strong></p>
+<p>如果<strong>key</strong>不存在，那么对<strong>dict</strong>添加新的<strong>key-value</strong>元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 不存在的key添加新元素</span></span><br><span class="line">cars[<span class="string">&#x27;Ford&#x27;</span>] = <span class="number">10.1</span></span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 存在的key修改value</span></span><br><span class="line">cars[<span class="string">&#x27;BMW&#x27;</span>] = <span class="number">9.1</span></span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：访问不存在的字典元素"><a href="#任务三：访问不存在的字典元素" class="headerlink" title="任务三：访问不存在的字典元素"></a><em>任务三：访问不存在的字典元素</em></h4><p>知识点：如果使用不存在的<strong>key</strong>来访问<strong>dict</strong>中元素，那么就会引发异常<strong>KeyError</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line">print(cars[<span class="string">&#x27;Ferraris&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：删除字典元素和整个字典"><a href="#任务四：删除字典元素和整个字典" class="headerlink" title="任务四：删除字典元素和整个字典"></a><em>任务四：删除字典元素和整个字典</em></h4><p>知识点：使用<strong>del</strong>可以删除整个字典或者是字典中的某个元素，<strong>永远消失</strong></p>
+<p>删除单个元素：<strong>del d[key]</strong></p>
+<p>删除整个字典：<strong>del d</strong></p>
+<p>在删除整个字典后，字典在内存中被销毁，如果再次使用该字典会引发异常<strong>NameError</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除&#x27;BENS&#x27;键值对</span></span><br><span class="line"><span class="keyword">del</span> cars[<span class="string">&#x27;BENS&#x27;</span>]</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除整个字典cars</span></span><br><span class="line"><span class="keyword">del</span> cars</span><br><span class="line"><span class="comment"># 由于cars在内存中被删除，因此打印cars会出错</span></span><br><span class="line"><span class="comment"># print(cars)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务五：检查字典是否包含指定的key"><a href="#任务五：检查字典是否包含指定的key" class="headerlink" title="任务五：检查字典是否包含指定的key"></a><em>任务五：检查字典是否包含指定的key</em></h4><p>知识点：类似于列表，使用<strong>in</strong>或<strong>not in</strong>运算符来检查<strong>dict</strong>是否包含某个<strong>key</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line"><span class="comment"># 判断cars是否包含名为&#x27;AUDI&#x27;的key</span></span><br><span class="line">print(<span class="string">&#x27;AUDI&#x27;</span> <span class="keyword">in</span> cars)</span><br><span class="line">print(<span class="string">&#x27;PORSCHE&#x27;</span> <span class="keyword">in</span> cars)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断cars是否不包含名为&#x27;LAMBORGHINI&#x27;的key</span></span><br><span class="line">print(<span class="string">&#x27;LAMBORGHINI&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> cars)</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2-3-字典和列表的比较"><a href="#8-2-3-字典和列表的比较" class="headerlink" title="8.2.3   字典和列表的比较"></a>8.2.3   字典和列表的比较</h3><h4 id="任务一：字典的key和列表的索引比较"><a href="#任务一：字典的key和列表的索引比较" class="headerlink" title="任务一：字典的key和列表的索引比较"></a><em>任务一：字典的key和列表的索引比较</em></h4><p>知识点：</p>
+<p><strong>key</strong>是字典的精髓，用于元素的索引</p>
+<p><strong>key</strong>类型可以是整数、浮点数、字符串和元组</p>
+<p>字典通过<strong>key</strong>来实现对元素的访问、添加、删除等操作</p>
+<p>知识点：</p>
+<p><strong>区别1</strong>：列表的索引必须是整数**(0,1,2,…)**，从0开始、连续逐渐增大；但字典的索引即便是整数类型，也不需要从0开始，而且也不需要按顺序</p>
+<p><strong>区别2</strong>：列表不允许对不存在的索引进行赋值，否则会触发异常<strong>IndexError</strong>；但字典则允许直接对不存在的<strong>key</strong>进行赋值，字典自动添加新元素</p>
+<p>换句话说，列表和字典都支持用<strong>索引</strong>来访问任意值，但是字典的<strong>key</strong>可用的数据类型比列表的索引要多得多</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列表整数索引</span></span><br><span class="line">list_age = [<span class="number">20</span>,<span class="number">11</span>,<span class="number">18</span>,<span class="number">30</span>]</span><br><span class="line">print(list_age[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#对于不存在的索引赋值会出错</span></span><br><span class="line">list_age[<span class="number">5</span>] = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#字典key索引</span></span><br><span class="line">dict_age = &#123;<span class="string">&#x27;zhang&#x27;</span>:<span class="number">20</span>, <span class="string">&#x27;li&#x27;</span>:<span class="number">11</span>, <span class="string">&#x27;wang&#x27;</span>:<span class="number">18</span>, <span class="string">&#x27;xu&#x27;</span>:<span class="number">30</span>&#125;</span><br><span class="line">print(dict_age[<span class="string">&#x27;zhang&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以对不存在的key赋值，添加为新元素</span></span><br><span class="line">dict_age[<span class="string">&#x27;xi&#x27;</span>] = <span class="number">28</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：列表和字典的值可以放任意类型对象"><a href="#任务二：列表和字典的值可以放任意类型对象" class="headerlink" title="任务二：列表和字典的值可以放任意类型对象"></a><em>任务二：列表和字典的值可以放任意类型对象</em></h4><p>知识点(相同)：列表和字典的值都可以存放<strong>任何类型的对象</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list_age = [<span class="string">&#x27;20&#x27;</span>, <span class="number">11</span>, [<span class="number">18</span>], &#123;<span class="string">&#x27;zhang&#x27;</span>:<span class="number">20</span>&#125;]</span><br><span class="line">print(list_age)</span><br><span class="line"></span><br><span class="line">dict_age = &#123;<span class="string">&#x27;zhang&#x27;</span>:<span class="string">&#x27;20&#x27;</span>, <span class="string">&#x27;li&#x27;</span>:<span class="number">11</span>, <span class="string">&#x27;wang&#x27;</span>:[<span class="number">18</span>], <span class="string">&#x27;xu&#x27;</span>:<span class="number">30</span>&#125;</span><br><span class="line">print(dict_age)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：列表和字典的储存方式"><a href="#任务三：列表和字典的储存方式" class="headerlink" title="任务三：列表和字典的储存方式"></a><em>任务三：列表和字典的储存方式</em></h4><p>知识点(不同)：</p>
+<p><strong>列表的元素是有序储存的</strong>，Python使用这些连续的整数(位置信息)来访问元素</p>
+<p><strong>字典的元素是无序储存的</strong>，<strong>key</strong>并不需要与具体元素存储的位置相对应，因此字典<strong>key</strong>可以是任意的不可变类型</p>
+<h4 id="任务四：字典是一种映射方式"><a href="#任务四：字典是一种映射方式" class="headerlink" title="任务四：字典是一种映射方式"></a><em>任务四：字典是一种映射方式</em></h4><p>知识点：字典提供了一种<strong>映射手段，可从一组任意对象映射到有关联的另一组任意对象</strong>。类似于现实世界中的字典、辞典和翻译书</p>
+<p>下面给出了一段将颜色从英文转换为法文的定义：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;---  创建空字典&quot;</span>)</span><br><span class="line">english_to_french = &#123;&#125;    </span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;---  存入3个单词&quot;</span>)</span><br><span class="line">english_to_french[<span class="string">&#x27;red&#x27;</span>] = <span class="string">&#x27;rouge&#x27;</span>      </span><br><span class="line">english_to_french[<span class="string">&#x27;blue&#x27;</span>] = <span class="string">&#x27;bleu&#x27;</span></span><br><span class="line">english_to_french[<span class="string">&#x27;green&#x27;</span>] = <span class="string">&#x27;vert&#x27;</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;---  获取“red”对应的值&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;red is&quot;</span>, english_to_french[<span class="string">&#x27;red&#x27;</span>])</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;--访问：列表和字典，访问元素时，该元素必须存在，否则会出错--&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;--赋值：列表赋值元素必须存在，字典赋值元素不一定存在--&#x27;</span>)</span><br><span class="line">color = <span class="built_in">input</span>(<span class="string">&#x27;input color:&#x27;</span>)</span><br><span class="line">print(color + <span class="string">&quot; is&quot;</span>, english_to_french[color])</span><br><span class="line">print(<span class="string">&#x27;&#123;&#125; is &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(color, english_to_french[color]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="习题："><a href="#习题：" class="headerlink" title="习题："></a>习题：</h3><p><strong>6-1 人</strong>：使用一个字典来存储一个熟人的信息，包括名、姓、年龄和居住的城市。该字典应包含键<strong>first_name</strong>、<strong>last_name</strong>、<strong>age</strong>和<strong>city</strong>。将存储在该字典中的每项信息都打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;<span class="string">&#x27;first name&#x27;</span>:<span class="string">&#x27;LeBron&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;last name&#x27;</span>:<span class="string">&#x27;James&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;37&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;city&#x27;</span>:<span class="string">&#x27;Cleveland&#x27;</span>,</span><br><span class="line">	  &#125;</span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> dic.items():</span><br><span class="line">	print(<span class="string">&#x27;His &#x27;</span> + each[<span class="number">0</span>] + <span class="string">&#x27; is &#x27;</span> + each[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">His first name <span class="keyword">is</span> LeBron</span><br><span class="line">His last name <span class="keyword">is</span> James</span><br><span class="line">His age <span class="keyword">is</span> <span class="number">37</span></span><br><span class="line">His city <span class="keyword">is</span> Cleveland</span><br></pre></td></tr></table></figure>
+
+<p><strong>6-2 喜欢的数字</strong>：使用一个字典来存储一些人喜欢的数字。请想出5个人的名字，并将这些名字用作字典中的键；想出每个人喜欢的一个数字，并将这些数字作为值存储在字典中。打印每个人的名字和喜欢的数字。为让这个程序更有趣，通过询问朋友确保数据是真实的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">favorite_nums = &#123;<span class="string">&#x27;James&#x27;</span>:<span class="number">1</span>,</span><br><span class="line">                 <span class="string">&#x27;Kobe&#x27;</span>:<span class="number">2</span>,</span><br><span class="line">                 <span class="string">&#x27;Garnett&#x27;</span>:<span class="number">3</span>,</span><br><span class="line">                 <span class="string">&#x27;Duncan&#x27;</span>:<span class="number">4</span>,</span><br><span class="line">                 <span class="string">&#x27;Jordan&#x27;</span>:<span class="number">5</span>,</span><br><span class="line">                 &#125;</span><br><span class="line"><span class="keyword">for</span> name,numb <span class="keyword">in</span> favorite_nums.items():</span><br><span class="line">    print(name.title()+<span class="string">&quot;&#x27;s favorite number is &quot;</span>+<span class="built_in">str</span>(numb))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">James<span class="string">&#x27;s favorite number is 1</span></span><br><span class="line"><span class="string">Kobe&#x27;</span>s favorite number <span class="keyword">is</span> <span class="number">2</span></span><br><span class="line">Garnett<span class="string">&#x27;s favorite number is 3</span></span><br><span class="line"><span class="string">Duncan&#x27;</span>s favorite number <span class="keyword">is</span> <span class="number">4</span></span><br><span class="line">Jordan<span class="string">&#x27;s favorite number is 5</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>6-3 词汇表</strong>：Python字典可用于模拟现实生活中的字典，但为避免混淆，我们将后者称为词汇表。</p>
+<p>想出你在前面学过的5个python关键字(转换为字符串)，将它们用作词汇表中的键，并将它们的含义作为值存储在词汇表中。</p>
+<p>以整洁的方式打印每个词汇及其含义。为此，可以先打印词汇，在它后面加上一个冒号，再打印词汇的含义；也可在一行打印词汇，再使用换行符（<strong>\n</strong>）插入一个空行，然后在下一行以缩进的方式打印词汇的含义</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">programming_vocabulary=&#123;</span><br><span class="line">	<span class="string">&#x27;str()&#x27;</span>:<span class="string">&#x27;将非字符串值表示为字符串&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;del&#x27;</span>:<span class="string">&#x27;彻底删除一个元素&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;sort()&#x27;</span>:<span class="string">&#x27;对列表进行永久性排序&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;sorted()&#x27;</span>:<span class="string">&#x27;对列表进行临时排序&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;range()&#x27;</span>:<span class="string">&#x27;生成一系列数字&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">print(<span class="string">&#x27;\nstr()&#x27;</span>+<span class="string">&#x27;:\n\t&#x27;</span>+programming_vocabulary[<span class="string">&#x27;str()&#x27;</span>])</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;\ndel&#x27;</span>+<span class="string">&#x27;:\n\t&#x27;</span>+programming_vocabulary[<span class="string">&#x27;del&#x27;</span>])</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;\nsort()&#x27;</span>+<span class="string">&#x27;:\n\t&#x27;</span>+programming_vocabulary[<span class="string">&#x27;sort()&#x27;</span>])</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;\nsorted()&#x27;</span>+<span class="string">&#x27;:\n\t&#x27;</span>+programming_vocabulary[<span class="string">&#x27;sorted()&#x27;</span>])</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;\nrange()&#x27;</span>+<span class="string">&#x27;:\n\t&#x27;</span>+programming_vocabulary[<span class="string">&#x27;range()&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span>():</span><br><span class="line">	将非字符串值表示为字符串</span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span>:</span><br><span class="line">	彻底删除一个元素</span><br><span class="line"></span><br><span class="line">sort():</span><br><span class="line">	对列表进行永久性排序</span><br><span class="line"></span><br><span class="line"><span class="built_in">sorted</span>():</span><br><span class="line">	对列表进行临时排序</span><br><span class="line"></span><br><span class="line"><span class="built_in">range</span>():</span><br><span class="line">	生成一系列数字</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-3-遍历字典"><a href="#8-3-遍历字典" class="headerlink" title="8.3   遍历字典"></a>8.3   遍历字典</h2><h3 id="8-3-1-概述字典的遍历"><a href="#8-3-1-概述字典的遍历" class="headerlink" title="8.3.1   概述字典的遍历"></a>8.3.1   概述字典的遍历</h3><h4 id="任务一：初识字典的遍历"><a href="#任务一：初识字典的遍历" class="headerlink" title="任务一：初识字典的遍历"></a><em>任务一：初识字典的遍历</em></h4><p>知识点：</p>
+<p>字典可能只包含几个<strong>key-value</strong>，也可能包含数百万个<strong>key-value</strong>。鉴于字典可能包含大量的数据，Python为字典提供了3种遍历方式：</p>
+<p>遍历<strong>key-value：for key, val in dict.items()</strong></p>
+<p>遍历<strong>key：for key in dict.keys()</strong></p>
+<p>遍历<strong>value：for val in dict.value()</strong></p>
+<p>字典的<strong>遍历</strong>就是<strong>依次</strong>从<strong>字典</strong>中获取所有<strong>键值对</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">xiaoming = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小明&quot;</span>,</span><br><span class="line">           <span class="string">&quot;age&quot;</span>: <span class="number">18</span>,</span><br><span class="line">           <span class="string">&quot;gender&quot;</span>: <span class="literal">True</span>,</span><br><span class="line">           <span class="string">&quot;height&quot;</span>: <span class="number">1.75</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># for 循环内部使用的 `key 的变量` in 字典</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> xiaoming:</span><br><span class="line">   print(<span class="string">f&quot;<span class="subst">&#123;k&#125;</span>: <span class="subst">&#123;xiaoming[k]&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>注意：在实际开发中，由于字典中每一个键值对保存数据的类型是不同的，所以针对字典的循环遍历<strong>需求并不是很多</strong></p>
+<h4 id="任务二：字典和列表综合遍历"><a href="#任务二：字典和列表综合遍历" class="headerlink" title="任务二：字典和列表综合遍历"></a><em>任务二：字典和列表综合遍历</em></h4><p>需求分析：</p>
+<p>尽管可以使用 <strong>for in</strong> 遍历 <strong>字典</strong></p>
+<p>但是在开发中，更多的应用场景是：</p>
+<p>使用<strong>多个键值对</strong>，来存储<strong>描述某个 物体 的相关信息</strong> —— 描述更复杂的数据信息</p>
+<p>将<strong>多个物体(字典)<strong>放在</strong>一个列表</strong>中，再进行遍历，在循环体内部针对每一个字典进行<strong>相同的处理</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用多个键值对，存储描述一个物体的相关信息</span></span><br><span class="line"><span class="comment"># 来描述更复杂的数据信息。</span></span><br><span class="line"><span class="comment"># 将多个字典放在一个列表中，再进行遍历。</span></span><br><span class="line">card_list = [</span><br><span class="line">   &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">    <span class="string">&quot;qq&quot;</span>: <span class="string">&quot;12345&quot;</span>,</span><br><span class="line">    <span class="string">&quot;phone&quot;</span>: <span class="string">&quot;110&quot;</span>&#125;,</span><br><span class="line">   &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">    <span class="string">&quot;qq&quot;</span>: <span class="string">&quot;54321&quot;</span>,</span><br><span class="line">    <span class="string">&quot;phone&quot;</span>: <span class="string">&quot;10086&quot;</span>&#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> card_info <span class="keyword">in</span> card_list:</span><br><span class="line">   print(card_info)</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-3-2-items-遍历字典key-value"><a href="#8-3-2-items-遍历字典key-value" class="headerlink" title="8.3.2   items()遍历字典key-value"></a>8.3.2   items()遍历字典key-value</h3><h4 id="任务一：items-函数返回key-value数组"><a href="#任务一：items-函数返回key-value数组" class="headerlink" title="任务一：items()函数返回key-value数组"></a><em>任务一：items()函数返回key-value数组</em></h4><p>知识点：</p>
+<p>语法：<strong>dict.items()</strong></p>
+<p>描述： 为字典<strong>dict</strong>返回可遍历的(键, 值)元组数组</p>
+<p>参数：无</p>
+<p>返回：<strong>class ‘dict_items’<strong>数组类型(可迭代对象)，元素为</strong>key-value</strong>的元组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">d_items = cars.items()</span><br><span class="line">print(<span class="built_in">type</span>(d_items), d_items)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：items-函数遍历字典的key-value"><a href="#任务二：items-函数遍历字典的key-value" class="headerlink" title="任务二：items()函数遍历字典的key-value"></a><em>任务二：items()函数遍历字典的key-value</em></h4><p>知识点：遍历字典所有的<strong>key-value</strong></p>
+<p>语法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="built_in">dict</span>.items():</span><br><span class="line"> &lt;缩进语句块&gt;</span><br></pre></td></tr></table></figure>
+
+<p>类似于<strong>enumerate()<strong>函数，每次迭代</strong>items()<strong>返回的是一个包含</strong>(key, value)<strong>的键值对</strong>元组</strong></p>
+<p>因此，这里需要使用两个临时变量<strong>k</strong>和<strong>v</strong>对遍历的元组(字典元素)进行<strong>解包</strong></p>
+<p><strong>k</strong>变量：储存键值对的<strong>key</strong>。<strong>v</strong>变量：储存键值对的<strong>value</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> cars.items():</span><br><span class="line">   print(<span class="string">f&#x27;<span class="subst">&#123;k.title()&#125;</span>:<span class="subst">&#123;v&#125;</span>&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>将字典的<strong>key</strong>和<strong>value</strong>组成一个新的列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">result = []</span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> cars.items():</span><br><span class="line">   result.append((k, v))</span><br><span class="line"></span><br><span class="line">print(result)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表推导式</span></span><br><span class="line">print([(k, v) <span class="keyword">for</span> k, v <span class="keyword">in</span> cars.items()])</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-3-3-keys-遍历字典key"><a href="#8-3-3-keys-遍历字典key" class="headerlink" title="8.3.3   keys()遍历字典key"></a>8.3.3   keys()遍历字典key</h3><h4 id="任务一：keys-返回字典key数组"><a href="#任务一：keys-返回字典key数组" class="headerlink" title="任务一：keys()返回字典key数组"></a><em>任务一：keys()返回字典key数组</em></h4><p>知识点：</p>
+<p>语法：<strong>dict.keys()</strong></p>
+<p>描述： 为字典<strong>dict</strong>返回可遍历的<strong>key</strong>数组</p>
+<p>参数：无</p>
+<p>返回：**’class dict_keys’<strong>数组类型(可迭代对象)，元素为</strong>key**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">d_keys = cars.keys()</span><br><span class="line">print(<span class="built_in">type</span>(d_keys), d_keys)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：keys-函数遍历字典的key"><a href="#任务二：keys-函数遍历字典的key" class="headerlink" title="任务二：keys()函数遍历字典的key"></a><em>任务二：keys()函数遍历字典的key</em></h4><p>知识点：遍历字典所有的<strong>key</strong></p>
+<p>语法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">dict</span>.keys():</span><br><span class="line"> &lt;缩进语句块&gt;</span><br></pre></td></tr></table></figure>
+
+<p>每次迭代<strong>keys()<strong>返回的是一个元素的</strong>key</strong>值，存储在临时变量<strong>k</strong>中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> cars.keys():</span><br><span class="line">   print(<span class="string">f&#x27;<span class="subst">&#123;k.title()&#125;</span>&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：查询某个key是否在字典中"><a href="#任务三：查询某个key是否在字典中" class="headerlink" title="任务三：查询某个key是否在字典中"></a><em>任务三：查询某个key是否在字典中</em></h4><p>知识点：</p>
+<p>语法：<strong>if k in dict.keys():</strong> 或 <strong>if k not in dict.keys():</strong></p>
+<p>描述：查询变量<strong>k</strong>是否是字典<strong>dict</strong>的<strong>key</strong></p>
+<p>方法<strong>keys()<strong>并非只能用于遍历；实际上，它返回一个包含字典所有</strong>key</strong>的数组，然后，使用关键字<strong>in</strong>和<strong>not in</strong>来查询是否包括某个<strong>key</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;Ford&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> cars.keys():</span><br><span class="line">   print(<span class="string">&quot;Ford not in cars&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：使用sorted-对字典的key进行排序"><a href="#任务四：使用sorted-对字典的key进行排序" class="headerlink" title="任务四：使用sorted()对字典的key进行排序"></a><em>任务四：使用sorted()对字典的key进行排序</em></h4><p>知识点：</p>
+<p>由于字典储存<strong>key-value</strong>是无序的。因此，使用**keys()**获得元素也是无序的</p>
+<p>如果希望对字典的<strong>key</strong>按升序或降序方式排序，可以使用**sorted(dict.keys())**方式</p>
+<p>**sorted(dict.keys())**仅返回排序的拷贝，对字典本身无影响</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 按升序排序</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">sorted</span>(cars.keys(), reverse=<span class="literal">False</span>):</span><br><span class="line">   <span class="comment">#cars[k]为通过k返回对于的value</span></span><br><span class="line">   print(<span class="string">f&#x27;<span class="subst">&#123;k&#125;</span>:<span class="subst">&#123;cars[k]&#125;</span> &#x27;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-3-4-values-遍历字典value"><a href="#8-3-4-values-遍历字典value" class="headerlink" title="8.3.4   values()遍历字典value"></a>8.3.4   values()遍历字典value</h3><h4 id="任务一：values-字典value数组"><a href="#任务一：values-字典value数组" class="headerlink" title="任务一：values()字典value数组"></a><em>任务一：values()字典value数组</em></h4><p>知识点：</p>
+<p>语法：<strong>dict.values()</strong></p>
+<p>描述： 为字典<strong>dict</strong>返回可遍历的<strong>value</strong>数组</p>
+<p>参数：无</p>
+<p>返回：**’class dict_values’<strong>数组类型(可迭代对象)，元素为</strong>value**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">d_values = cars.values()</span><br><span class="line">print(<span class="built_in">type</span>(d_values), d_values)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：遍历字典所有的<strong>value</strong></p>
+<p>语法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> <span class="built_in">dict</span>.value():</span><br><span class="line"> &lt;缩进语句块&gt;</span><br></pre></td></tr></table></figure>
+
+<p>每次迭代<strong>values()<strong>返回的是一个元素的</strong>value</strong>值，存储在临时变量<strong>v</strong>中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">languages = &#123;</span><br><span class="line">   <span class="string">&#x27;jen&#x27;</span>: <span class="string">&#x27;python&#x27;</span>,</span><br><span class="line">   <span class="string">&#x27;sarah&#x27;</span>: <span class="string">&#x27;c&#x27;</span>,</span><br><span class="line">   <span class="string">&#x27;edward&#x27;</span>: <span class="string">&#x27;ruby&#x27;</span>,</span><br><span class="line">   <span class="string">&#x27;phil&#x27;</span>: <span class="string">&#x27;python&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> languages.values():</span><br><span class="line">   print(v.title())</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>这条for语句提取字典中的每个值，并将它们依次存储到变量<strong>language</strong>中</p>
+<p>通过打印这些值，就获得了一个列表，其中包含被调查者选择的各种语言</p>
+<p><strong>这种做法提取字典中所有的值，而没有考虑是否重复</strong>。涉及的值很少时，这也许不是问题，但如果被调查者很多，最终的列表可能包含大量的重复项</p>
+<h4 id="任务二：set-剔除重复值"><a href="#任务二：set-剔除重复值" class="headerlink" title="任务二：set()剔除重复值"></a><em>任务二：set()剔除重复值</em></h4><p>知识点：</p>
+<p><strong>为剔除重复项，可使用集合set类型</strong></p>
+<p>**class ‘set’**为容器类型(迭代对象)的数据结构</p>
+<p><strong>set</strong>对象，使用**{}**包含元素，每个元素是唯一的、不重复的</p>
+<p><strong>set()<strong>函数可以将某个序列转换为</strong>set</strong>类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">languages = &#123;</span><br><span class="line">   <span class="string">&#x27;jen&#x27;</span>: <span class="string">&#x27;python&#x27;</span>,</span><br><span class="line">   <span class="string">&#x27;sarah&#x27;</span>: <span class="string">&#x27;c&#x27;</span>,</span><br><span class="line">   <span class="string">&#x27;edward&#x27;</span>: <span class="string">&#x27;ruby&#x27;</span>,</span><br><span class="line">   <span class="string">&#x27;phil&#x27;</span>: <span class="string">&#x27;python&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;--set数据结构：1.无序 2.不重复 3.&#123;&#125;包含元素--&quot;</span>)</span><br><span class="line">set_languages = <span class="built_in">set</span>(languages.values())</span><br><span class="line">print(<span class="built_in">type</span>(set_languages), set_languages)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历set元素</span></span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> set_languages:</span><br><span class="line">   print(v.title())</span><br></pre></td></tr></table></figure>
+
+<h3 id="习题：-1"><a href="#习题：-1" class="headerlink" title="习题："></a>习题：</h3><p><strong>6-4 词汇表2</strong>：既然你知道了如何遍历字典，现在请整理你为完成练习6-3而编写的代码，将其中的一系列<strong>print</strong>语句替换为一个遍历字典中的键和值的循环。确定该循环正确无误后，再在词汇表中添加5个Python术语。当你再次运行这个程序时，这些新术语及其含义将自动包含在输出中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">programming_vocabulary=&#123;</span><br><span class="line">	<span class="string">&#x27;str()&#x27;</span>:<span class="string">&#x27;将非字符串值表示为字符串&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;del&#x27;</span>:<span class="string">&#x27;彻底删除一个元素&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;sort()&#x27;</span>:<span class="string">&#x27;对列表进行永久性排序&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;sorted()&#x27;</span>:<span class="string">&#x27;对列表进行临时排序&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;range()&#x27;</span>:<span class="string">&#x27;生成一系列数字&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">programming_vocabulary[<span class="string">&#x27;title()&#x27;</span>]=<span class="string">&#x27;首字母大写&#x27;</span></span><br><span class="line"></span><br><span class="line">programming_vocabulary[<span class="string">&#x27;lower()&#x27;</span>]=<span class="string">&#x27;全部字母小写&#x27;</span></span><br><span class="line"></span><br><span class="line">programming_vocabulary[<span class="string">&#x27;upper()&#x27;</span>]=<span class="string">&#x27;全部字母大写&#x27;</span></span><br><span class="line"></span><br><span class="line">programming_vocabulary[<span class="string">&#x27;append()&#x27;</span>]=<span class="string">&#x27;在列表末尾添加元素&#x27;</span></span><br><span class="line"></span><br><span class="line">programming_vocabulary[<span class="string">&#x27;insert()&#x27;</span>]=<span class="string">&#x27;在列表中插元素&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> programming_vocabulary.items():</span><br><span class="line">	print(key+<span class="string">&#x27;:\n\t&#x27;</span>+value+<span class="string">&#x27;.&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span>():</span><br><span class="line">	将非字符串值表示为字符串.</span><br><span class="line"><span class="keyword">del</span>:</span><br><span class="line">	彻底删除一个元素.</span><br><span class="line">sort():</span><br><span class="line">	对列表进行永久性排序.</span><br><span class="line"><span class="built_in">sorted</span>():</span><br><span class="line">	对列表进行临时排序.</span><br><span class="line"><span class="built_in">range</span>():</span><br><span class="line">	生成一系列数字.</span><br><span class="line">title():</span><br><span class="line">	首字母大写.</span><br><span class="line">lower():</span><br><span class="line">	全部字母小写.</span><br><span class="line">upper():</span><br><span class="line">	全部字母大写.</span><br><span class="line">append():</span><br><span class="line">	在列表末尾添加元素.</span><br><span class="line">insert():</span><br><span class="line">	在列表中插元素.</span><br></pre></td></tr></table></figure>
+
+<p><strong>6-5 河流</strong>：创建一个字典，在其中存储三条大河流及其流经的国家。其中一个键—值对可能是**’nile’: ‘egypt’**</p>
+<p>使用循环为每条河流打印一条消息，如“The Nile runs through Egypt.”</p>
+<p>使用循环将该字典中每条河流的名字都打印出来</p>
+<p>使用循环将该字典包含的每个国家的名字都打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;<span class="string">&#x27;Euphrates&#x27;</span>:<span class="string">&#x27;Iraq&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;Nile&#x27;</span>:<span class="string">&#x27;Egypt&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;Huanghe&#x27;</span>:<span class="string">&#x27;China&#x27;</span>,</span><br><span class="line">	  &#125;</span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> dic.items():</span><br><span class="line">	print(<span class="string">&#x27;The &#x27;</span> + key + <span class="string">&#x27; runs through &#x27;</span> + value)</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dic.keys():</span><br><span class="line">	print(key)</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> dic.values():</span><br><span class="line">	print(value)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">The Euphrates runs through Iraq</span><br><span class="line">The Nile runs through Egypt</span><br><span class="line">The Huanghe runs through China</span><br><span class="line">Euphrates</span><br><span class="line">Nile</span><br><span class="line">Huanghe</span><br><span class="line">Iraq</span><br><span class="line">Egypt</span><br><span class="line">China</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-3-5-list-获得key和value列表"><a href="#8-3-5-list-获得key和value列表" class="headerlink" title="8.3.5   list()获得key和value列表"></a>8.3.5   list()获得key和value列表</h3><h4 id="任务一：list-获得key和value列表"><a href="#任务一：list-获得key和value列表" class="headerlink" title="任务一：list()获得key和value列表"></a><em>任务一：list()获得key和value列表</em></h4><p>知识点：</p>
+<p><strong>items()<strong>、</strong>keys()<strong>和</strong>values()<strong>获得的数据类型</strong>不是列表类型</strong>，不能对它们实施列表相关操作，比如元素修改、添加或删除、排序等。否则会引起异常<strong>TypeError</strong></p>
+<p>为此，可以通过**list()**函数将它们转换为列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">d_items = cars.items()</span><br><span class="line">print(<span class="built_in">type</span>(d_items), d_items)</span><br><span class="line"></span><br><span class="line"><span class="comment">#不能对items()返回结果进行操作，TypeError</span></span><br><span class="line">d_items[<span class="number">1</span>] = (<span class="string">&#x27;BMW&#x27;</span>, <span class="number">10.5</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将items()转换为列表</span></span><br><span class="line"><span class="comment"># 或l_items = list(cars.items())</span></span><br><span class="line">l_items = <span class="built_in">list</span>(d_items)</span><br><span class="line">print(<span class="built_in">type</span>(l_items), l_items)</span><br><span class="line">l_items[<span class="number">1</span>] = (<span class="string">&#x27;BMW&#x27;</span>, <span class="number">10.5</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-4-字典内置函数和方法"><a href="#8-4-字典内置函数和方法" class="headerlink" title="8.4   字典内置函数和方法"></a>8.4   字典内置函数和方法</h2><h4 id="任务一：查看字典常用操作"><a href="#任务一：查看字典常用操作" class="headerlink" title="任务一：查看字典常用操作"></a><em>任务一：查看字典常用操作</em></h4><p>知识点：</p>
+<p>在python中，字典类型是<strong>dict</strong>类</p>
+<p>可以通过**dir(dict)**函数查看字典对象里里所包含的属性和方法</p>
+<p>暂时忽略**__<strong>下划线的属性和方法。</strong>dict<strong>类为字典操作提供：</strong>‘clear()’, ‘copy()’, ‘fromkeys()’, ‘get()’, ‘items()’, ‘keys()’, ‘pop()’, ‘popitem()’, ‘setdefault()’, ‘update()’, ‘values()’**方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="built_in">dir</span>(<span class="built_in">dict</span>), end=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>根据Jupyter智能联想功能，查看字典的函数。步骤如下：</p>
+<p>定义一个<strong>字典</strong>，例如：<strong>xiaoming = {}</strong></p>
+<p>输入 <strong>xiaoming.</strong> 再按下<strong>TAB</strong>键(装有智能联想插件后，不需要按<strong>TAB</strong>键)，<strong>Jupyter</strong>会提示智能联想<strong>字典</strong>的所有函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xiaoming.clear       xiaoming.items       xiaoming.setdefault</span><br><span class="line">xiaoming.copy        xiaoming.keys        xiaoming.update</span><br><span class="line">xiaoming.fromkeys    xiaoming.pop         xiaoming.values</span><br><span class="line">xiaoming.get         xiaoming.popitem  </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">xiaoming_dict = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小明&quot;</span>,</span><br><span class="line">                <span class="string">&quot;age&quot;</span>: <span class="number">18</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 统计键值对数量</span></span><br><span class="line">print(<span class="built_in">len</span>(xiaoming_dict))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 合并字典</span></span><br><span class="line">temp_dict = &#123;<span class="string">&quot;height&quot;</span>: <span class="number">1.75</span>,</span><br><span class="line">            <span class="string">&quot;age&quot;</span>: <span class="number">20</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意：如果被合并的字典中包含已经存在的键值对，会覆盖原有的键值对</span></span><br><span class="line">xiaoming_dict.update(temp_dict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 清空字典</span></span><br><span class="line">xiaoming_dict.clear()</span><br><span class="line"></span><br><span class="line">print(xiaoming_dict)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：len-dict-函数返回字典元素个数"><a href="#任务二：len-dict-函数返回字典元素个数" class="headerlink" title="任务二：len(dict)函数返回字典元素个数"></a><em>任务二：len(dict)函数返回字典元素个数</em></h4><p>知识点：**len(dict)**返回字典元素(<strong>key-value</strong>)的个数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">print(<span class="built_in">len</span>(cars))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：clear-方法清空字典"><a href="#任务三：clear-方法清空字典" class="headerlink" title="任务三：clear()方法清空字典"></a><em>任务三：clear()方法清空字典</em></h4><p>知识点：</p>
+<p>语法：<strong>dict.clear()</strong></p>
+<p>描述：用于清空字典<strong>dict</strong>中所有的<strong>key-value</strong>。对一个字典执行<strong>clear()<strong>方法之后，该字典就会变成一个</strong>空字典</strong></p>
+<p>参数和返回：无</p>
+<p>和<strong>del dict</strong>区别：<strong>del dict</strong>将字典从内存中销毁，而<strong>dict.clear()<strong>只是清空字典，字典</strong>dict</strong>在内存中依然存在</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清空cars所有key-value</span></span><br><span class="line">cars.clear()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在内存中销毁字典cars对象, 之后的语句cars不存在</span></span><br><span class="line"><span class="keyword">del</span> cars</span><br><span class="line"><span class="comment"># print会出错</span></span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：get-方法获取字典元素"><a href="#任务四：get-方法获取字典元素" class="headerlink" title="任务四：get()方法获取字典元素"></a><em>任务四：get()方法获取字典元素</em></h4><p>知识点：</p>
+<p>语法：<strong>dict.get(key)</strong></p>
+<p>描述：根据<strong>key</strong>来获取<strong>value</strong>，它相当于方括号语法**dict[key]**的增强版</p>
+<p><strong>dict[key]<strong>：访问并不存在的</strong>key</strong>时，字典会引发<strong>KeyError</strong>错误</p>
+<p><strong>dict.get(key)<strong>：访问并不存在的</strong>key</strong>时，会简单地返回<strong>None</strong>，不会导致错误</p>
+<p>参数：要查询的<strong>key</strong>，不管元素是否存在</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line"><span class="comment"># 获取&#x27;BMW&#x27;对应的value</span></span><br><span class="line">print(cars.get(<span class="string">&#x27;BMW&#x27;</span>)) <span class="comment"># 8.5</span></span><br><span class="line">print(cars.get(<span class="string">&#x27;PORSCHE&#x27;</span>)) <span class="comment"># None</span></span><br><span class="line">print(cars[<span class="string">&#x27;PORSCHE&#x27;</span>]) <span class="comment"># KeyError</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务五：setdefault-方法查询字典元素"><a href="#任务五：setdefault-方法查询字典元素" class="headerlink" title="任务五：setdefault()方法查询字典元素"></a><em>任务五：setdefault()方法查询字典元素</em></h4><p>知识点：</p>
+<p>语法：<strong>dict.setdefault(key, default=None)</strong></p>
+<p>描述：类似于<strong>get()<strong>方法, 根据</strong>key</strong>来获取对应<strong>value</strong>的值。是增强版的**get()**方法</p>
+<p>和<strong>get()<strong>方法的相同：如果</strong>key</strong>存在，则直接返回<strong>key</strong>对应的<strong>value</strong></p>
+<p>和<strong>get()<strong>方法的区别：如果</strong>key</strong>不存在，先将默认值<strong>default</strong>作为<strong>value</strong>和<strong>key</strong>一起添加到字典，然后再返回对应的<strong>value</strong>；</p>
+<p>参数：要查询的<strong>key</strong>。<strong>default</strong>为<strong>key</strong>不存在时的默认值<strong>value</strong></p>
+<p>返回：<strong>key</strong>对应的<strong>value</strong>或<strong>default</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置默认值，该key在dict中不存在，新增key-value对</span></span><br><span class="line">print(cars.setdefault(<span class="string">&#x27;PORSCHE&#x27;</span>, <span class="number">9.2</span>)) <span class="comment"># 9.2</span></span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置默认值，该key在dict中存在，不会修改dict内容</span></span><br><span class="line">print(cars.setdefault(<span class="string">&#x27;BMW&#x27;</span>, <span class="number">3.4</span>)) <span class="comment"># 8.5</span></span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务六：update-方法更新字典元素"><a href="#任务六：update-方法更新字典元素" class="headerlink" title="任务六：update()方法更新字典元素"></a><em>任务六：update()方法更新字典元素</em></h4><p>知识点：</p>
+<p>语法：<strong>dict.update(sub_dict)</strong></p>
+<p>描述：使用一个字典<strong>sub_dict</strong>中所包含的<strong>key-value</strong>来更新字典<strong>dict</strong></p>
+<p>如果被更新的字典<strong>dict</strong>中己包含对应的<strong>key-value</strong>，那么原<strong>value</strong>会被覆盖</p>
+<p>如果被更新的字典<strong>dict</strong>中不包含对应的<strong>key-value</strong>，则添加该<strong>key-value</strong></p>
+<p>参数：字典<strong>sub_dict</strong>，元素包含需要添加的<strong>key-value</strong></p>
+<p>返回：无</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x27;BMW&#x27;被更新，&#x27;PORSCHE&#x27;被添加</span></span><br><span class="line">cars.update(&#123;<span class="string">&#x27;BMW&#x27;</span>:<span class="number">4.5</span>, <span class="string">&#x27;PORSCHE&#x27;</span>: <span class="number">9.3</span>&#125;)</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务七：pop-方法弹出字典元素"><a href="#任务七：pop-方法弹出字典元素" class="headerlink" title="任务七：pop()方法弹出字典元素"></a><em>任务七：pop()方法弹出字典元素</em></h4><p>知识点：</p>
+<p>语法：<strong>dict.pop(key)</strong></p>
+<p>描述：获取指定<strong>key</strong>对应的<strong>value</strong>，并把这个<strong>key-value</strong>从字典<strong>dict</strong>中删除</p>
+<p>参数：输入字典<strong>dict</strong>需要弹出元素的<strong>key</strong></p>
+<p>返回：<strong>key</strong>对应的<strong>value</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cars = &#123;<span class="string">&#x27;BMW&#x27;</span>: <span class="number">8.5</span>, <span class="string">&#x27;BENS&#x27;</span>: <span class="number">8.3</span>, <span class="string">&#x27;AUDI&#x27;</span>: <span class="number">7.9</span>&#125;</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line">print(cars.pop(<span class="string">&#x27;AUDI&#x27;</span>)) <span class="comment"># 7.9</span></span><br><span class="line">print(cars) <span class="comment"># &#123;&#x27;BMW&#x27;: 8.5, &#x27;BENS&#x27;: 8.3&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="习题：-2"><a href="#习题：-2" class="headerlink" title="习题："></a>习题：</h3><p><strong>6-7 人</strong>：在为完成练习6-1而编写的程序中，再创建两个表示人的字典，然后将这三个字典都存储在一个名为<strong>people</strong>的列表中。遍历这个列表，将其中每个人的所有信息都打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">dic1 = &#123;<span class="string">&#x27;first_name&#x27;</span>:<span class="string">&#x27;jiajia&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;last_name&#x27;</span>:<span class="string">&#x27;amy&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;18&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;city&#x27;</span>:<span class="string">&#x27;shantou&#x27;</span>,</span><br><span class="line">	  &#125;</span><br><span class="line">dic2 = &#123;<span class="string">&#x27;first_name&#x27;</span>:<span class="string">&#x27;yinyin&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;last_name&#x27;</span>:<span class="string">&#x27;mike&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;28&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;city&#x27;</span>:<span class="string">&#x27;NewYork&#x27;</span>,</span><br><span class="line">	  &#125;</span><br><span class="line">dic3 = &#123;<span class="string">&#x27;first_name&#x27;</span>:<span class="string">&#x27;bai&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;last_name&#x27;</span>:<span class="string">&#x27;LI&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;38&#x27;</span>,</span><br><span class="line">	   <span class="string">&#x27;city&#x27;</span>:<span class="string">&#x27;shanghai&#x27;</span>,</span><br><span class="line">	  &#125;</span><br><span class="line">dic_ls = [dic1, dic2, dic3]</span><br><span class="line"><span class="keyword">for</span> index, each <span class="keyword">in</span> <span class="built_in">enumerate</span>(dic_ls):</span><br><span class="line">	<span class="keyword">for</span> key, value <span class="keyword">in</span> each.items():</span><br><span class="line">		print(<span class="built_in">str</span>(index) + <span class="string">&#x27;\&#x27;s &#x27;</span> + key + <span class="string">&#x27; is &#x27;</span> + value)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span><span class="string">&#x27;s first_name is jiajia</span></span><br><span class="line"><span class="string">0&#x27;</span>s last_name <span class="keyword">is</span> amy</span><br><span class="line"><span class="number">0</span><span class="string">&#x27;s age is 18</span></span><br><span class="line"><span class="string">0&#x27;</span>s city <span class="keyword">is</span> shantou</span><br><span class="line"><span class="number">1</span><span class="string">&#x27;s first_name is yinyin</span></span><br><span class="line"><span class="string">1&#x27;</span>s last_name <span class="keyword">is</span> mike</span><br><span class="line"><span class="number">1</span><span class="string">&#x27;s age is 28</span></span><br><span class="line"><span class="string">1&#x27;</span>s city <span class="keyword">is</span> NewYork</span><br><span class="line"><span class="number">2</span><span class="string">&#x27;s first_name is bai</span></span><br><span class="line"><span class="string">2&#x27;</span>s last_name <span class="keyword">is</span> LI</span><br><span class="line"><span class="number">2</span><span class="string">&#x27;s age is 38</span></span><br><span class="line"><span class="string">2&#x27;</span>s city <span class="keyword">is</span> shanghai</span><br></pre></td></tr></table></figure>
+
+<p><strong>6-8 宠物</strong>：创建多个字典，对于每个字典，都使用一个宠物的名称来给它命名；在每个字典中，包含宠物的类型及其主人的名字。将这些字典存储在一个名为<strong>pets</strong>的列表中，再遍历该列表，并将宠物的所有信息都打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">pets = []</span><br><span class="line">pet = &#123;</span><br><span class="line">    <span class="string">&#x27;animal type&#x27;</span>: <span class="string">&#x27;python&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;owner&#x27;</span>: <span class="string">&#x27;guido&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;weight&#x27;</span>: <span class="number">43</span>,</span><br><span class="line">    <span class="string">&#x27;eats&#x27;</span>: <span class="string">&#x27;bugs&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">pets.append(pet)</span><br><span class="line"></span><br><span class="line">pet = &#123;</span><br><span class="line">    <span class="string">&#x27;animal type&#x27;</span>: <span class="string">&#x27;chicken&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;clarence&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;owner&#x27;</span>: <span class="string">&#x27;tiffany&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;weight&#x27;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&#x27;eats&#x27;</span>: <span class="string">&#x27;seeds&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">pets.append(pet)</span><br><span class="line"></span><br><span class="line">pet = &#123;</span><br><span class="line">    <span class="string">&#x27;animal type&#x27;</span>: <span class="string">&#x27;dog&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;peso&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;owner&#x27;</span>: <span class="string">&#x27;eric&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;weight&#x27;</span>: <span class="number">37</span>,</span><br><span class="line">    <span class="string">&#x27;eats&#x27;</span>: <span class="string">&#x27;shoes&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">pets.append(pet)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> pet <span class="keyword">in</span> pets:</span><br><span class="line">    print(<span class="string">&quot;\nHere&#x27;s what I know about &quot;</span> + pet[<span class="string">&#x27;name&#x27;</span>].title() + <span class="string">&quot;:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> pet.items():</span><br><span class="line">        print(<span class="string">&quot;\t&quot;</span> + key + <span class="string">&quot;: &quot;</span> + <span class="built_in">str</span>(value))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Here<span class="string">&#x27;s what I know about John:</span></span><br><span class="line"><span class="string">	animal type: python</span></span><br><span class="line"><span class="string">	name: john</span></span><br><span class="line"><span class="string">	owner: guido</span></span><br><span class="line"><span class="string">	weight: 43</span></span><br><span class="line"><span class="string">	eats: bugs</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Here&#x27;</span>s what I know about Clarence:</span><br><span class="line">	animal <span class="built_in">type</span>: chicken</span><br><span class="line">	name: clarence</span><br><span class="line">	owner: tiffany</span><br><span class="line">	weight: <span class="number">2</span></span><br><span class="line">	eats: seeds</span><br><span class="line"></span><br><span class="line">Here<span class="string">&#x27;s what I know about Peso:</span></span><br><span class="line"><span class="string">	animal type: dog</span></span><br><span class="line"><span class="string">	name: peso</span></span><br><span class="line"><span class="string">	owner: eric</span></span><br><span class="line"><span class="string">	weight: 37</span></span><br><span class="line"><span class="string">	eats: shoes</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>6-9 喜欢的地方</strong>：创建一个名为<strong>favorite_places</strong>的字典。在这个字典中，将三个人的名字用作键；对于其中的每个人，都存储他喜欢的1~3个地方。为让这个练习更有趣些，可让一些朋友指出他们喜欢的几个地方。遍历这个字典，并将其中每个人的名字及其喜欢的地方打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">favorite_places=&#123;</span><br><span class="line">    <span class="string">&#x27;James&#x27;</span>:[<span class="string">&#x27;hangzhou&#x27;</span>,<span class="string">&#x27;wuhan&#x27;</span>,<span class="string">&#x27;changsha&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;Kobe&#x27;</span>: [<span class="string">&#x27;hawaii&#x27;</span>, <span class="string">&#x27;iceland&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;Jordan&#x27;</span>: [<span class="string">&#x27;verstovia&#x27;</span>, <span class="string">&#x27;the playground&#x27;</span>, <span class="string">&#x27;south carolina&#x27;</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> name,places <span class="keyword">in</span> favorite_places.items():</span><br><span class="line">    print(name.title()+<span class="string">&quot; likes &quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> place <span class="keyword">in</span> places:</span><br><span class="line">        print(<span class="string">&quot;- &quot;</span> + place.title())</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">James likes </span><br><span class="line">- Hangzhou</span><br><span class="line">- Wuhan</span><br><span class="line">- Changsha</span><br><span class="line">Kobe likes </span><br><span class="line">- Hawaii</span><br><span class="line">- Iceland</span><br><span class="line">Jordan likes </span><br><span class="line">- Verstovia</span><br><span class="line">- The Playground</span><br><span class="line">- South Carolina</span><br></pre></td></tr></table></figure>
+
+<p><strong>6-10 喜欢的数字</strong>：修改为完成练习6-2而编写的程序，让每个人都可以有多个喜欢的数字，然后将每个人的名字及其喜欢的数字打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">favorite_numbers = &#123;</span><br><span class="line">    <span class="string">&#x27;James&#x27;</span>: [<span class="number">23</span>,<span class="number">6</span>],</span><br><span class="line">    <span class="string">&#x27;Kobe&#x27;</span>: [<span class="number">24</span>,<span class="number">8</span>],</span><br><span class="line">    <span class="string">&#x27;Jordan&#x27;</span>: [<span class="number">45</span>,<span class="number">23</span>,<span class="number">0</span>],</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">for</span> people,number <span class="keyword">in</span> favorite_numbers.items():</span><br><span class="line">    print(people+<span class="string">&#x27; like &#x27;</span>+<span class="built_in">str</span>(number))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">James like [<span class="number">23</span>, <span class="number">6</span>]</span><br><span class="line">Kobe like [<span class="number">24</span>, <span class="number">8</span>]</span><br><span class="line">Jordan like [<span class="number">45</span>, <span class="number">23</span>, <span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<p><strong>6-11 城市</strong>：创建一个名为<strong>cities</strong>的字典，其中将三个城市名用作键；对于每座城市，都创建一个字典，并在其中包含该城市所属的国家、人口约数以及一个有关该城市的事实。在表示每座城市的字典中，应包含<strong>country</strong>、<strong>population</strong>和<strong>fact</strong>等键。将每座城市的名字以及有关它们的信息都打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">cities=&#123;</span><br><span class="line">    <span class="string">&#x27;武汉&#x27;</span>:&#123;</span><br><span class="line">        <span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;China&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;population&#x27;</span>:<span class="string">&#x27;1121.20W&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;fact&#x27;</span>:<span class="string">&#x27;Gui&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;杭州&#x27;</span>:&#123;</span><br><span class="line">        <span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;China&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;population&#x27;</span>:<span class="string">&#x27;1036W&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;fact&#x27;</span>:<span class="string">&#x27;Tian Mu&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;kathmandu&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;nepal&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;population&#x27;</span>: <span class="number">1003285</span>,</span><br><span class="line">        <span class="string">&#x27;fact&#x27;</span>: <span class="string">&#x27;himilaya&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> city, city_info <span class="keyword">in</span> cities.items():</span><br><span class="line">    country = city_info[<span class="string">&#x27;country&#x27;</span>].title()</span><br><span class="line">    population = city_info[<span class="string">&#x27;population&#x27;</span>]</span><br><span class="line">    mountain = city_info[<span class="string">&#x27;fact&#x27;</span>].title()</span><br><span class="line">    </span><br><span class="line">    print(<span class="string">&quot;\n&quot;</span> + city.title() + <span class="string">&quot; is in &quot;</span> + country + <span class="string">&quot;.&quot;</span>)</span><br><span class="line">    print(<span class="string">&quot;  It has a population of about &quot;</span> + <span class="built_in">str</span>(population) + <span class="string">&quot;.&quot;</span>)</span><br><span class="line">    print(<span class="string">&quot;  The &quot;</span> + mountain + <span class="string">&quot; mountain is nearby.&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">武汉 <span class="keyword">is</span> <span class="keyword">in</span> China.</span><br><span class="line">  It has a population of about <span class="number">1121.20</span>W.</span><br><span class="line">  The Gui mountain <span class="keyword">is</span> nearby.</span><br><span class="line"></span><br><span class="line">杭州 <span class="keyword">is</span> <span class="keyword">in</span> China.</span><br><span class="line">  It has a population of about 1036W.</span><br><span class="line">  The Tian Mu mountain <span class="keyword">is</span> nearby.</span><br><span class="line"></span><br><span class="line">Kathmandu <span class="keyword">is</span> <span class="keyword">in</span> Nepal.</span><br><span class="line">  It has a population of about <span class="number">1003285.</span></span><br><span class="line">  The Himilaya mountain <span class="keyword">is</span> nearby.</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-5-实例：词频统计"><a href="#8-5-实例：词频统计" class="headerlink" title="8.5   实例：词频统计"></a>8.5   实例：词频统计</h2><p>编写一个用于分析文档并<strong>计算每个单词在文档中出现的次数</strong>的程序。这种文档分析常被用于检测两个文档内容的相似度，也被用于自动索引和归档程序（如互联网搜索引擎）</p>
+<p>需求分析：</p>
+<p>从程序角度上，只需<strong>遍历文档</strong>，对每个出现的单词进行<strong>累加计数</strong></p>
+<p>这里将使用本章学习到的字典，为每个单词建立一个<strong>计数器</strong></p>
+<h4 id="任务一：构建词频统计字典"><a href="#任务一：构建词频统计字典" class="headerlink" title="任务一：构建词频统计字典"></a><em>任务一：构建词频统计字典</em></h4><p>建立维护单词计数器的字典<strong>counts</strong>，其中<strong>key</strong>是代表文档中的单词的字符串，<strong>value</strong>是计算单词出现次数的整数。要更新特定单词<strong>w</strong>的计数，只需要一行代码，当遍历到单词<strong>w</strong>，那么就将它的计数+1</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># w为单词字符串</span></span><br><span class="line">counts[w] = counts[w] + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：更新词频统计"><a href="#任务二：更新词频统计" class="headerlink" title="任务二：更新词频统计"></a><em>任务二：更新词频统计</em></h4><p>对词频字典<strong>counts</strong>更新词频的统计。在这里使用字典会遇到一个Bug。第一次遇到一个单词时，由于字典<strong>counts</strong>中还没有该单词，如果对它进行访问<strong>counts[w]<strong>会引起</strong>KeyError</strong>异常。为了防范这种情况，需要在算法中做出判断：</p>
+<p>如果字典<strong>counts</strong>中已经存在单词<strong>w</strong>那么就对它进行+1</p>
+<p>如果单词<strong>w</strong>不存在，那么就向字典添加新元素</p>
+<p>方法一：为检测某个<strong>key</strong>是否在字典中存在，可以使用<strong>in</strong>运算符：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> w <span class="keyword">in</span> counts:</span><br><span class="line">   counts[w] = counts[w] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   counts[w] = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>方法二：更优雅的方法是使用<strong>setdefault()<strong>方法，如果</strong>w</strong>不在字典中，将返回0，结果是<strong>w</strong>的条目设置为1：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果不存在，则添加新元素，初始值为0</span></span><br><span class="line">counts[w] = counts.setdefault(w,<span class="number">0</span>) + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：文件输入和预处理"><a href="#任务三：文件输入和预处理" class="headerlink" title="任务三：文件输入和预处理"></a><em>任务三：文件输入和预处理</em></h4><p>在分析文件词频前，需要对文本文档拆分成一系列的单词。但在拆分之前，需要做如下两个操作：</p>
+<p>将所有文本单词统一转换为小写(这样出现“Foo”将匹配“foo”)</p>
+<p>消除标点符号（这样“foo,”匹配“foo”）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入文件名比如 &#x27;hello.txt&#x27;</span></span><br><span class="line">fname = <span class="built_in">input</span>(<span class="string">&quot;File to analyze: &quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将整个文件读取为一个长字符串</span></span><br><span class="line"><span class="comment"># open(fname,&quot;r&quot;)为&#x27;r&#x27;只读模式打开文件，然后再调用read()读文件</span></span><br><span class="line"><span class="comment"># encoding = &#x27;UTF-8&#x27;指定文件编码类型&#x27;UTF-8&#x27;</span></span><br><span class="line">text = <span class="built_in">open</span>(fname,<span class="string">&#x27;r&#x27;</span>, encoding = <span class="string">&#x27;UTF-8&#x27;</span>).read()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 所有字符转换为小写</span></span><br><span class="line">text = text.lower()</span><br><span class="line"><span class="comment"># 删除标点，将文本的标点符号统一替换为空格&#x27; &#x27;</span></span><br><span class="line"><span class="keyword">for</span> ch <span class="keyword">in</span> <span class="string">&#x27;!&quot;#$%&amp;()*+,-./:;&lt;=&gt;?@[\\]^_‘&#123;|&#125;~&#x27;</span>:</span><br><span class="line">　　text = text.replace(ch, <span class="string">&quot; &quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字符串的split()方法将字符串按空格拆分为words列表</span></span><br><span class="line">words = text.split()</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：更新字典词频"><a href="#任务四：更新字典词频" class="headerlink" title="任务四：更新字典词频"></a><em>任务四：更新字典词频</em></h4><p>遍历单词列表<strong>words</strong>，构建字典<strong>counts</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">counts = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> w <span class="keyword">in</span> words:</span><br><span class="line">   counts[w] = counts.get(w, <span class="number">0</span>) + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务五：对词频进行排序"><a href="#任务五：对词频进行排序" class="headerlink" title="任务五：对词频进行排序"></a><em>任务五：对词频进行排序</em></h4><p>按词频的降序排序，总结<strong>counts</strong>的内容</p>
+<p>方法一：打印所有单词。按字母顺序打印出单词列表及其关联的计数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获得所有单词，即字典的key</span></span><br><span class="line">uniqueWords = <span class="built_in">list</span>(counts.keys())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对单词列表进行排序</span></span><br><span class="line">uniqueWords.sort()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再打印排序结果</span></span><br><span class="line"><span class="keyword">for</span> w <span class="keyword">in</span> uniqueWords:</span><br><span class="line">   print(w, counts[w])</span><br></pre></td></tr></table></figure>
+
+<p>方法二：打印前<strong>n</strong>个单词。然而，对于一个大文件，很多单词仅出现少数几次。更好的方式是打印文档中前<strong>n</strong>个最常见单词的计数。为此，需要创建一个按计数排序的列表<strong>c_words</strong>，然后从列表中选择前<strong>n</strong>项</p>
+<p>首先用字典的<strong>items()<strong>方法，获取键值对的列表，这里的</strong>c_words</strong>是一个字典的<strong>key-value</strong>元组列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将items()返回结果转换为list类型</span></span><br><span class="line">c_words = <span class="built_in">list</span>(counts.items())</span><br></pre></td></tr></table></figure>
+
+<p>然后，对列表<strong>c_words</strong>进行排序</p>
+<p>如果直接使用列表排序**c_words.sort()**，Python会按默认的排序方法</p>
+<p>然而，当Python比较<strong>元组</strong>时，它会按部分<strong>从左到右</strong>排序。由于<strong>key-value</strong>元组的第一个部分是单词，所以<strong>c_words.sort()<strong>将会按</strong>照字母顺序</strong>排列此列表</p>
+<p>为了能让列表排序按<strong>词频</strong>(<strong>key-value</strong>元组的第二个部分)，可以自定义**sort()<strong>的排序规则。注意，元组像列表一样从0开始索引，所以</strong>pair[1]**将元组的词频部分返回</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自定义排序规则，pair为列表元素(元组)，按词频pair[1]排序</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">byFreq</span>(<span class="params">pair</span>):</span></span><br><span class="line">   <span class="keyword">return</span> pair[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>将排序规则通过<strong>key</strong>参数传给**c_words.sort()**函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设定排序规则函数</span></span><br><span class="line">c_words.sort(key=byFreq)</span><br></pre></td></tr></table></figure>
+
+<p><strong>双重排序</strong>：希望对的列表主要按词频排序，但在词频相同时按字母顺序排列。如何处理这种双重排序呢？</p>
+<p>解决方法：如果在按词频排序之前，所有单词按照字母顺序排列，那么具有相同词频的单词仍将按照字母顺序排列。为此，只需要对列表进行两次排序，先按单词排序，再按频率排序：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c_words.sort() <span class="comment">#先按单词字母升序排序</span></span><br><span class="line">c_words.sort(key=byFreq, reverse=<span class="literal">True</span>) <span class="comment">#后按词频降序排序</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务六：输出结果"><a href="#任务六：输出结果" class="headerlink" title="任务六：输出结果"></a><em>任务六：输出结果</em></h4><p>按照从最频繁到最不频繁的顺序排列，打印前 <strong>n</strong> 个最常见的单词的报告。通过格式化字符串形式遍历列表<strong>c_words</strong>前<strong>n</strong>个元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">   <span class="comment">#列表元素是元组，解包元组</span></span><br><span class="line">   word, count = c_words[i]</span><br><span class="line">   print(<span class="string">&quot;&#123;0:&lt;15&#125;&#123;1:&gt;5&#125;&quot;</span>.<span class="built_in">format</span>(word, count))</span><br></pre></td></tr></table></figure>
+
+<p>索引<strong>i</strong>用于从列表<strong>c_words</strong>中获取<strong>c_words[i]<strong>元素(元组)，并将该元组解包到</strong>word</strong>和<strong>count</strong>中。</p>
+<p>然后通过**.format()**函数格式化输出字符串，单词格式15个空格左对齐，词频5个空格右对齐</p>
+<h4 id="任务七：最终程序"><a href="#任务七：最终程序" class="headerlink" title="任务七：最终程序"></a><em>任务七：最终程序</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">byFreq</span>(<span class="params">pair</span>):</span></span><br><span class="line">　　<span class="keyword">return</span> pair[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;此程序对文件单词(英语)进行词频分析&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;并输出前n个词频最高的单词.\n&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入文件：Python_Data.txt</span></span><br><span class="line">fname = <span class="built_in">input</span>(<span class="string">&quot;File to analyze: &quot;</span>)</span><br><span class="line">text = <span class="built_in">open</span>(fname,<span class="string">&#x27;r&#x27;</span>, encoding = <span class="string">&#x27;UTF-8&#x27;</span>).read()</span><br><span class="line">text = text.lower()</span><br><span class="line"><span class="keyword">for</span> ch <span class="keyword">in</span> ’!<span class="string">&quot;#$%&amp;()*+,-./:;&lt;=&gt;?@[\\]^_‘&#123;|&#125;~’:</span></span><br><span class="line"><span class="string"> text = text.replace(ch, ’ ’)</span></span><br><span class="line"><span class="string"> words = text.split()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 构建词频统计字典</span></span><br><span class="line"><span class="string">counts = &#123;&#125;</span></span><br><span class="line"><span class="string">for w in words:</span></span><br><span class="line"><span class="string"> counts[w] = counts.setdefault(w,0) + 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 排序前n项词频统计</span></span><br><span class="line">n = eval(input(&quot;Output analysis of how many words? &quot;))</span><br><span class="line">c_words = <span class="built_in">list</span>(counts.items())</span><br><span class="line">c_words.sort()</span><br><span class="line">c_words.sort(key=byFreq, reverse=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 格式化输出结果</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line"> word, count = c_words[i]</span><br><span class="line"> print(<span class="string">&quot;&#123;0:&lt;15&#125;&#123;1:&gt;5&#125;&quot;</span>.<span class="built_in">format</span>(word, count))</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="8-6-总结-四大容器类型公共方法"><a href="#8-6-总结-四大容器类型公共方法" class="headerlink" title="8.6   (总结) 四大容器类型公共方法"></a>8.6   (总结) 四大容器类型公共方法</h2><h3 id="8-6-1-内置函数"><a href="#8-6-1-内置函数" class="headerlink" title="8.6.1   内置函数"></a>8.6.1   内置函数</h3><p>对于容器类型，Python包含了以下内置函数：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>len(item)</strong></td>
+<td>计算容器中元素个数</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>del(item)</strong></td>
+<td>删除变量</td>
+<td><strong>del</strong>有两种方式</td>
+</tr>
+<tr>
+<td><strong>max(item)</strong></td>
+<td>返回容器中元素最大值</td>
+<td>如果是字典，只针对 <strong>key</strong>比较</td>
+</tr>
+<tr>
+<td><strong>min(item)</strong></td>
+<td>返回容器中元素最小值</td>
+<td>如果是字典，只针对 <strong>key</strong>比较</td>
+</tr>
+</tbody></table>
+<p>知识点：比较运算符</p>
+<p>直接使用比较运算符来对<strong>有序</strong>类型数据作比较</p>
+<p>**cmp(item1, item2)**函数在Python3中已被淘汰</p>
+<p>知识点：</p>
+<p><strong>字符串</strong>的比较规则按<strong>Unicode</strong>码顺序</p>
+<p>数字字符**&lt;<strong>大写字母</strong>&lt;**小写字母。即 “0” <strong>&lt;</strong> “A” <strong>&lt;</strong> “a”</p>
+<p>知识点：<strong>Unicode</strong>码扩展自<strong>ASCII</strong>码</p>
+<p><strong>ASCII</strong>使用8位宽(1字节)来对字符进行编码</p>
+<p><strong>Unicode</strong>使用16位宽(2字节)</p>
+<p>这使得<strong>Unicode</strong>能够表示世界上所有的书写语言中可能用於电脑通讯的字元、象形文字和其他符号</p>
+<p>前127个的<strong>Unicode</strong>码与<strong>ASCII</strong>码一样</p>
+<h3 id="8-6-2-切片"><a href="#8-6-2-切片" class="headerlink" title="8.6.2   切片"></a>8.6.2   切片</h3><p>知识点：</p>
+<p>切片适合<strong>字符串、列表、元组</strong>数据类型</p>
+<p><strong>切片</strong>使用<strong>索引值</strong>来限定范围，提取子序列</p>
+<p><strong>字符串</strong>的切片操作：从一个大的<strong>字符串</strong>中<strong>切出</strong>小的<strong>字符串</strong>。例如：**”0123456789”[::-2]**，切片结果为 <strong>“97531”</strong></p>
+<p><strong>列表</strong>和<strong>元组</strong>的切片操作：它们都是<strong>有序</strong>的集合，都能够<strong>通过索引值</strong>获取到对应的数据。因此，也支持切片操作</p>
+<p><strong>字典</strong> 是一个<strong>无序</strong>的集合，是使用<strong>键值对</strong>保存数据。不能使用切片操作</p>
+<h3 id="8-6-3-运算符"><a href="#8-6-3-运算符" class="headerlink" title="8.6.3   运算符"></a>8.6.3   运算符</h3><table>
+<thead>
+<tr>
+<th><strong>运算符</strong></th>
+<th><strong>表达式</strong></th>
+<th>结果</th>
+<th><strong>描述</strong></th>
+<th>支持的数据类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>[1, 2] + [3, 4]</td>
+<td>[1, 2, 3, 4]</td>
+<td>合并</td>
+<td>字符串、列表、元组</td>
+</tr>
+<tr>
+<td>*</td>
+<td>[“Hi!”] * 4</td>
+<td>[‘Hi!’, ‘Hi!’, ‘Hi!’, ‘Hi!’]</td>
+<td>重复</td>
+<td>字符串、列表、元组</td>
+</tr>
+<tr>
+<td>in</td>
+<td>3 in (1, 2, 3)</td>
+<td>True</td>
+<td>元素是否存在</td>
+<td>字符串、列表、元组、字典</td>
+</tr>
+<tr>
+<td>not in</td>
+<td>4 not in (1, 2, 3)</td>
+<td>True</td>
+<td>元素是否不存在</td>
+<td>字符串、列表、元组、字典</td>
+</tr>
+<tr>
+<td>&gt; &gt;= == &lt; &lt;=</td>
+<td>(1, 2, 3) &lt; (2, 2, 3)</td>
+<td>True</td>
+<td>元素比较</td>
+<td>字符串、列表、元组</td>
+</tr>
+</tbody></table>
+<p>知识点：<strong>in</strong> 和 <strong>not in</strong> 被称为<strong>成员运算符</strong></p>
+<p>成员运算符用于<strong>测试</strong>序列中是否包含指定的<strong>成员</strong></p>
+<p><strong>in</strong>运算符：</p>
+<p>如果在指定的序列中找到值返回 <strong>True</strong>，否则返回 <strong>False</strong></p>
+<p><strong>3 in (1, 2, 3)</strong> 返回 <strong>True</strong></p>
+<p><strong>not in</strong>运算符：</p>
+<p>如果在指定的序列中找不到值返回 <strong>True</strong>，否则返回 <strong>False</strong></p>
+<p><strong>3 not in (1, 2, 3)</strong> 返回 <strong>False</strong></p>
+<p>注意：在对<strong>字典</strong>操作时，判断的是<strong>字典的key</strong></p>
+<h3 id="8-6-4-完整的for-else循环语法"><a href="#8-6-4-完整的for-else循环语法" class="headerlink" title="8.6.4   完整的for-else循环语法"></a>8.6.4   完整的for-else循环语法</h3><p>在 <strong>Python</strong> 中完整 <strong>for 循环</strong> 的语法是带有<strong>else</strong>语句块的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> 变量 <span class="keyword">in</span> 集合:    </span><br><span class="line">   循环体代码</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   没有通过 <span class="keyword">break</span> 退出循环，循环结束后，会执行的代码</span><br></pre></td></tr></table></figure>
+
+<p>需求：当<strong>迭代遍历</strong>嵌套的数据类型时，要判断某个字典中<strong>是否存在</strong>指定的值</p>
+<p>如果<strong>存在</strong>，提示并且退出循环</p>
+<p>如果<strong>不存在</strong>，在<strong>循环整体结束</strong>后，希望<strong>得到一个统一的提示</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">students = [</span><br><span class="line">   &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;阿土&quot;</span>,</span><br><span class="line">    <span class="string">&quot;age&quot;</span>: <span class="number">20</span>,</span><br><span class="line">    <span class="string">&quot;gender&quot;</span>: <span class="literal">True</span>,</span><br><span class="line">    <span class="string">&quot;height&quot;</span>: <span class="number">1.7</span>,</span><br><span class="line">    <span class="string">&quot;weight&quot;</span>: <span class="number">75.0</span>&#125;,</span><br><span class="line">   &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小美&quot;</span>,</span><br><span class="line">    <span class="string">&quot;age&quot;</span>: <span class="number">19</span>,</span><br><span class="line">    <span class="string">&quot;gender&quot;</span>: <span class="literal">False</span>,</span><br><span class="line">    <span class="string">&quot;height&quot;</span>: <span class="number">1.6</span>,</span><br><span class="line">    <span class="string">&quot;weight&quot;</span>: <span class="number">45.0</span>&#125;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">find_name = <span class="string">&quot;阿土&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> stu_dict <span class="keyword">in</span> students:</span><br><span class="line"></span><br><span class="line">   print(stu_dict)</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 判断当前遍历的字典中姓名是否为find_name</span></span><br><span class="line">   <span class="keyword">if</span> stu_dict[<span class="string">&quot;name&quot;</span>] == find_name:</span><br><span class="line">       print(<span class="string">&quot;找到了&quot;</span>)</span><br><span class="line"></span><br><span class="line">       <span class="comment"># 如果已经找到，直接退出循环，就不需要再对后续的数据进行比较</span></span><br><span class="line">       <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   print(<span class="string">&quot;没有找到&quot;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;循环结束&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://waxll.top/2021/06/17/py8.html>http://waxll.top/2021/06/17/py8.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-17T00:34:48+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年6月17日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://waxll.top/2021/06/17/py8.html&title=Python学习笔记8 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://waxll.top/2021/06/17/py8.html&title=Python学习笔记8 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://waxll.top/2021/06/17/py8.html&title=Python学习笔记8 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/06/17/py9.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python学习笔记9</p>
+          <p class='content'>
+
+
+第九章   不定循环：while循环9.1   （回顾）用户输入与for循环9.1.1   用户输入任务一：用户输入input()函数知识点：接收用户输入
+语法：input([prompt...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/06/17/py7.html'>
+          <p class='title'>Python学习笔记7<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+第七章   if条件判断7.1   初识if语句知识点：控制结构
+到目前为止，Python程序都是按顺序流程，逐条语句执行。然而，顺序流程并不能解决所有问题。因此，需要改变程序的逻辑运行结...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-%E5%88%9D%E8%AF%86%E5%AD%97%E5%85%B8"><span class="toc-text">8.1   初识字典</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-1-%E4%B8%BA%E4%BD%95%E9%9C%80%E8%A6%81%E5%AD%97%E5%85%B8%EF%BC%9F"><span class="toc-text">8.1.1   为何需要字典？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%B8%BA%E4%BD%95%E9%9C%80%E8%A6%81%E5%AD%97%E5%85%B8%EF%BC%9F"><span class="toc-text">任务一：为何需要字典？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%AD%97%E5%85%B8%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">任务二：字典的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E8%A7%A3%E6%9E%90%E5%AD%97%E5%85%B8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">任务三：解析字典数据结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%AD%97%E5%85%B8%E5%8F%98%E9%87%8F%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">任务四：字典变量的适用场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-2-%E5%AD%97%E5%85%B8%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-text">8.1.2   字典的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8-%E5%88%9B%E5%BB%BA%E5%AD%97%E5%85%B8"><span class="toc-text">任务一：使用{}创建字典</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8dict-%E5%88%9B%E5%BB%BA%E5%AD%97%E5%85%B8"><span class="toc-text">任务二：使用dict()创建字典</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E4%B8%89%E7%A7%8D%E6%8B%AC%E5%8F%B7%E5%AF%B9%E5%BA%94%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">任务三：三种括号对应的数据类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-%E6%B7%B1%E5%85%A5%E5%AD%97%E5%85%B8"><span class="toc-text">8.2   深入字典</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-1-%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0%EF%BC%9A%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="toc-text">8.2.1   字典元素：键值对</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0%E6%98%AFkey-value%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="toc-text">任务一：字典元素是key-value键值对</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%AD%97%E5%85%B8%E7%89%B9%E6%80%A7-key%E6%98%AF%E5%94%AF%E4%B8%80%E7%9A%84"><span class="toc-text">任务二：字典特性(key是唯一的)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%AD%97%E5%85%B8%E7%89%B9%E6%80%A7-key%E5%BF%85%E9%A1%BB%E6%98%AF%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B"><span class="toc-text">任务三：字典特性(key必须是不可变类型)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-2-%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0%E6%93%8D%E4%BD%9C"><span class="toc-text">8.2.2   字典元素操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%AD%97%E5%85%B8%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-text">任务一：字典基本使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%96%B0%E5%85%83%E7%B4%A0"><span class="toc-text">任务二：添加新元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0"><span class="toc-text">任务三：访问不存在的字典元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%88%A0%E9%99%A4%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0%E5%92%8C%E6%95%B4%E4%B8%AA%E5%AD%97%E5%85%B8"><span class="toc-text">任务四：删除字典元素和整个字典</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9A%E6%A3%80%E6%9F%A5%E5%AD%97%E5%85%B8%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E7%9A%84key"><span class="toc-text">任务五：检查字典是否包含指定的key</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-3-%E5%AD%97%E5%85%B8%E5%92%8C%E5%88%97%E8%A1%A8%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-text">8.2.3   字典和列表的比较</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%AD%97%E5%85%B8%E7%9A%84key%E5%92%8C%E5%88%97%E8%A1%A8%E7%9A%84%E7%B4%A2%E5%BC%95%E6%AF%94%E8%BE%83"><span class="toc-text">任务一：字典的key和列表的索引比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%AD%97%E5%85%B8%E7%9A%84%E5%80%BC%E5%8F%AF%E4%BB%A5%E6%94%BE%E4%BB%BB%E6%84%8F%E7%B1%BB%E5%9E%8B%E5%AF%B9%E8%B1%A1"><span class="toc-text">任务二：列表和字典的值可以放任意类型对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%AD%97%E5%85%B8%E7%9A%84%E5%82%A8%E5%AD%98%E6%96%B9%E5%BC%8F"><span class="toc-text">任务三：列表和字典的储存方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%AD%97%E5%85%B8%E6%98%AF%E4%B8%80%E7%A7%8D%E6%98%A0%E5%B0%84%E6%96%B9%E5%BC%8F"><span class="toc-text">任务四：字典是一种映射方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A"><span class="toc-text">习题：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-%E9%81%8D%E5%8E%86%E5%AD%97%E5%85%B8"><span class="toc-text">8.3   遍历字典</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-1-%E6%A6%82%E8%BF%B0%E5%AD%97%E5%85%B8%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-text">8.3.1   概述字典的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%88%9D%E8%AF%86%E5%AD%97%E5%85%B8%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-text">任务一：初识字典的遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%AD%97%E5%85%B8%E5%92%8C%E5%88%97%E8%A1%A8%E7%BB%BC%E5%90%88%E9%81%8D%E5%8E%86"><span class="toc-text">任务二：字典和列表综合遍历</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-2-items-%E9%81%8D%E5%8E%86%E5%AD%97%E5%85%B8key-value"><span class="toc-text">8.3.2   items()遍历字典key-value</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Aitems-%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9Ekey-value%E6%95%B0%E7%BB%84"><span class="toc-text">任务一：items()函数返回key-value数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Aitems-%E5%87%BD%E6%95%B0%E9%81%8D%E5%8E%86%E5%AD%97%E5%85%B8%E7%9A%84key-value"><span class="toc-text">任务二：items()函数遍历字典的key-value</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-3-keys-%E9%81%8D%E5%8E%86%E5%AD%97%E5%85%B8key"><span class="toc-text">8.3.3   keys()遍历字典key</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Akeys-%E8%BF%94%E5%9B%9E%E5%AD%97%E5%85%B8key%E6%95%B0%E7%BB%84"><span class="toc-text">任务一：keys()返回字典key数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Akeys-%E5%87%BD%E6%95%B0%E9%81%8D%E5%8E%86%E5%AD%97%E5%85%B8%E7%9A%84key"><span class="toc-text">任务二：keys()函数遍历字典的key</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E6%9F%A5%E8%AF%A2%E6%9F%90%E4%B8%AAkey%E6%98%AF%E5%90%A6%E5%9C%A8%E5%AD%97%E5%85%B8%E4%B8%AD"><span class="toc-text">任务三：查询某个key是否在字典中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E4%BD%BF%E7%94%A8sorted-%E5%AF%B9%E5%AD%97%E5%85%B8%E7%9A%84key%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F"><span class="toc-text">任务四：使用sorted()对字典的key进行排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-4-values-%E9%81%8D%E5%8E%86%E5%AD%97%E5%85%B8value"><span class="toc-text">8.3.4   values()遍历字典value</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Avalues-%E5%AD%97%E5%85%B8value%E6%95%B0%E7%BB%84"><span class="toc-text">任务一：values()字典value数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Aset-%E5%89%94%E9%99%A4%E9%87%8D%E5%A4%8D%E5%80%BC"><span class="toc-text">任务二：set()剔除重复值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-1"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-5-list-%E8%8E%B7%E5%BE%97key%E5%92%8Cvalue%E5%88%97%E8%A1%A8"><span class="toc-text">8.3.5   list()获得key和value列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Alist-%E8%8E%B7%E5%BE%97key%E5%92%8Cvalue%E5%88%97%E8%A1%A8"><span class="toc-text">任务一：list()获得key和value列表</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-%E5%AD%97%E5%85%B8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-text">8.4   字典内置函数和方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%9F%A5%E7%9C%8B%E5%AD%97%E5%85%B8%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-text">任务一：查看字典常用操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Alen-dict-%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0"><span class="toc-text">任务二：len(dict)函数返回字典元素个数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9Aclear-%E6%96%B9%E6%B3%95%E6%B8%85%E7%A9%BA%E5%AD%97%E5%85%B8"><span class="toc-text">任务三：clear()方法清空字典</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9Aget-%E6%96%B9%E6%B3%95%E8%8E%B7%E5%8F%96%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0"><span class="toc-text">任务四：get()方法获取字典元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9Asetdefault-%E6%96%B9%E6%B3%95%E6%9F%A5%E8%AF%A2%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0"><span class="toc-text">任务五：setdefault()方法查询字典元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%85%AD%EF%BC%9Aupdate-%E6%96%B9%E6%B3%95%E6%9B%B4%E6%96%B0%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0"><span class="toc-text">任务六：update()方法更新字典元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%83%EF%BC%9Apop-%E6%96%B9%E6%B3%95%E5%BC%B9%E5%87%BA%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0"><span class="toc-text">任务七：pop()方法弹出字典元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-2"><span class="toc-text">习题：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E8%AF%8D%E9%A2%91%E7%BB%9F%E8%AE%A1"><span class="toc-text">8.5   实例：词频统计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%9E%84%E5%BB%BA%E8%AF%8D%E9%A2%91%E7%BB%9F%E8%AE%A1%E5%AD%97%E5%85%B8"><span class="toc-text">任务一：构建词频统计字典</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%9B%B4%E6%96%B0%E8%AF%8D%E9%A2%91%E7%BB%9F%E8%AE%A1"><span class="toc-text">任务二：更新词频统计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E6%96%87%E4%BB%B6%E8%BE%93%E5%85%A5%E5%92%8C%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-text">任务三：文件输入和预处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E6%9B%B4%E6%96%B0%E5%AD%97%E5%85%B8%E8%AF%8D%E9%A2%91"><span class="toc-text">任务四：更新字典词频</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9A%E5%AF%B9%E8%AF%8D%E9%A2%91%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F"><span class="toc-text">任务五：对词频进行排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%85%AD%EF%BC%9A%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C"><span class="toc-text">任务六：输出结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%83%EF%BC%9A%E6%9C%80%E7%BB%88%E7%A8%8B%E5%BA%8F"><span class="toc-text">任务七：最终程序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-6-%E6%80%BB%E7%BB%93-%E5%9B%9B%E5%A4%A7%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95"><span class="toc-text">8.6   (总结) 四大容器类型公共方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-1-%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="toc-text">8.6.1   内置函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-2-%E5%88%87%E7%89%87"><span class="toc-text">8.6.2   切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-3-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">8.6.3   运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-4-%E5%AE%8C%E6%95%B4%E7%9A%84for-else%E5%BE%AA%E7%8E%AF%E8%AF%AD%E6%B3%95"><span class="toc-text">8.6.4   完整的for-else循环语法</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Python学习笔记8";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5119353317'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <!-- <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div> -->
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题 | 由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>强力驱动
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://waxll.top/">Copyright © 2019-2020 XieSenshi</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $('#cover-backstretch').backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/friends/
+        
+        
+        
+        
+          id="friends"
+        >
+        <i class='fa fa-users fa-fw'></i> 友链
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/journal/
+        
+        
+        
+        
+          id="journal"
+        >
+        <i class='fa fa-calendar fa-fw'></i> 日志
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/about/
+        
+        
+        
+        
+          id="about"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 关于
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> Dark mode
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5119353317';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz","appKey":"jM85yucqi5IuVYCCQS1cUwko","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz',
+    app_key: 'jM85yucqi5IuVYCCQS1cUwko',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://waxll.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>

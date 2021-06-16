@@ -1,0 +1,2577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Python学习笔记7 - Waxll&#39;Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Waxll'Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/waxll/Imag/gif-2.png">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    <div id="clickCanvas" style=" position:fixed;left:0;top:0;z-index:999999999;pointer-events:none;"><canvas class=" sketch" height="0" width="0"></canvas></div>
+    <script src="js/dj.js"></script>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Waxll's Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="A Wonderful Theme for Hexo" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fas fa-book fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <i class='fa fa-map-signs fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/photo/"
+              
+              
+              id="photo">
+              <i class='fas fa-images fa-fw'></i><p>图库</p>
+            </a>
+          
+            <a href="/journal/"
+              
+              
+              id="journal">
+              <i class='fas fa-calendar fa-fw'></i><p>日志</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              id="friends">
+              <i class='fa fa-users fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python学习笔记7
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://7bu.top/2020/07/14/8ba61fac048a2.jpeg">
+    <p>XieSenshi</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年6月17日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：11.9k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：48分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python学习笔记7" data-path="/2021/06/17/py7.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2021/06/17/py7.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2021/06/17/py7.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p><img src="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210617003312883.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/image-20210617003312883.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210617003312883"></p>
+<span id="more"></span>
+
+<h1 id="第七章-if条件判断"><a href="#第七章-if条件判断" class="headerlink" title="第七章   if条件判断"></a>第七章   if条件判断</h1><h2 id="7-1-初识if语句"><a href="#7-1-初识if语句" class="headerlink" title="7.1   初识if语句"></a>7.1   初识if语句</h2><p>知识点：控制结构</p>
+<p>到目前为止，Python程序都是按<strong>顺序流程，逐条语句</strong>执行。然而，<strong>顺序流程</strong>并不能解决所有问题。因此，需要改变程序的<strong>逻辑运行结构</strong>，来适应特定场景的需求</p>
+<p>在现实中，很多场合都需要<strong>有选择的执行程序</strong>。例如，电梯需要根据用户的选择楼层来运行；空调需要根据设定模式来运行制冷或制热</p>
+<p>Python提供了<strong>控制结构</strong>来实现上述功能。通过<strong>if</strong>条件判断语句，使程序可以<strong>根据条件来有选择地执行语句</strong></p>
+<h3 id="7-1-1-判断的背景介绍"><a href="#7-1-1-判断的背景介绍" class="headerlink" title="7.1.1   判断的背景介绍"></a>7.1.1   判断的背景介绍</h3><h4 id="任务一：判断的定义"><a href="#任务一：判断的定义" class="headerlink" title="任务一：判断的定义"></a><em>任务一：判断的定义</em></h4><p>知识点：</p>
+<p>如果 <strong>条件满足</strong>，才能做某件事情</p>
+<p>如果 <strong>条件不满足</strong>，就做另外一件事情，或者什么也不做</p>
+<p>正是因为有了判断，才使得程序世界丰富多彩，充满变化</p>
+<p><strong>判断语句</strong> 又被称为 “<strong>分支语句</strong>”，正是因为有了判断，才让程序有了很多的分支</p>
+<h3 id="7-1-2-if判断语句基本语法"><a href="#7-1-2-if判断语句基本语法" class="headerlink" title="7.1.2   if判断语句基本语法"></a>7.1.2   if判断语句基本语法</h3><h4 id="任务一：BMI健康指数计算程序"><a href="#任务一：BMI健康指数计算程序" class="headerlink" title="任务一：BMI健康指数计算程序"></a><em>任务一：BMI健康指数计算程序</em></h4><p>知识点(背景介绍)：BMI健康指数</p>
+<p>BMI健康指数(BMI，Body Mass Index)是国际上常用的衡量人体肥胖程度和是否健康的重要标准。肥胖程度的判断不能采用体重的绝对值，它天然与身高有关。因此，<strong>BMI 通过人体体重和身高两个数值获得相对客观的参数</strong>，并用这个参数所处范围衡量身体质量</p>
+<p>BMI=体重/身高的平方，单位：kg/㎡</p>
+<p>目前，BMI健康指数的正常范围是18.5至24.9之间，这范围是比较健康的标准体重</p>
+<p>BMI计算程序：根据的输入身高(m)和体重(kg)来计算BMI健康指数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义BMI健康计算函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">BMI_calc</span>(<span class="params">weight, height</span>):</span></span><br><span class="line">   BMI = weight / height**<span class="number">2</span></span><br><span class="line">   <span class="keyword">return</span> BMI</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入身高和体重，要转换为浮点数</span></span><br><span class="line">weight = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入体重(kg)：&#x27;</span>))</span><br><span class="line">height = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入身高(m)：&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用BMI计算函数</span></span><br><span class="line">BMI = BMI_calc(weight, height)</span><br><span class="line">print(<span class="string">&quot;BMI:&#123;&#125;, 体重:&#123;&#125;, 身高:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(BMI, weight, height))</span><br></pre></td></tr></table></figure>
+
+<p>接下来，让程序变的聪明些，根据BMI值做出些判断。为实现上述功能，Python提供了<strong>if</strong>判断控制语句</p>
+<h4 id="任务二：if条件判断语句"><a href="#任务二：if条件判断语句" class="headerlink" title="任务二：if条件判断语句"></a><em>任务二：if条件判断语句</em></h4><p>在 <strong>Python</strong> 中，<strong>if 语句</strong> 就是用来进行判断的，格式如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> &lt;condition&gt;:</span><br><span class="line">　　&lt;statement&gt;</span><br></pre></td></tr></table></figure>
+
+<p>知识点：<strong>if</strong>语句由<strong>if <condition>:<strong>头部和</strong>缩进</strong>部分的**<statement>**组成，具体如下：</p>
+<p><strong>if</strong>为判断的关键字。**:**为语句块标识符</p>
+<p><strong><condition><strong>：</strong>判断条件</strong>，是一个值为<strong>True</strong>或<strong>False</strong>的表达式</p>
+<p>如果为<strong>True</strong>，执行紧跟在<strong>if</strong>语句后面的**<statement>**语句块</p>
+<p>如果为<strong>False</strong>，就**跳过<statement>**语句块</p>
+<p>注意，<strong>if</strong>的语句块是否执行取决于条件是否满足</p>
+<p>**<statement>**：条件成立时，要做的事情</p>
+<p>知识点：<strong>缩进的重要性</strong></p>
+<p>和<strong>for</strong>循环类似，<strong>if</strong>语句块也使用<strong>缩进来标识语句块</strong></p>
+<p>一般缩进为一个 <strong>Tab</strong> 键，或者 <strong>4</strong> 个空格</p>
+<p>建议，在**:<strong>之后敲回车，它之后的语句</strong>Jupyte**r会自动缩进</p>
+<p>在 Python 开发中，<strong>Tab</strong>和<strong>空格</strong>不要混用</p>
+<h4 id="任务三：判断年龄"><a href="#任务三：判断年龄" class="headerlink" title="任务三：判断年龄"></a><em>任务三：判断年龄</em></h4><p>需求分析：</p>
+<p>定义一个整数变量记录年龄</p>
+<p>判断是否满 18 岁 （**&gt;=**）</p>
+<p>如果满 18 岁，允许进网吧嗨皮</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 定义年龄变量</span></span><br><span class="line">age = <span class="number">18</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 判断是否满 18 岁</span></span><br><span class="line"><span class="comment"># if 语句以及缩进部分的代码是一个完整的代码块</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">   print(<span class="string">&quot;可以进网吧嗨皮……&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 思考！- 无论条件是否满足都会执行</span></span><br><span class="line">print(<span class="string">&quot;这句代码什么时候执行?&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p><strong>if</strong> 语句以及缩进部分是一个 <strong>完整的代码块</strong></p>
+<p>使用Jupyter代码折叠插件(左边的<strong>下三角</strong>)，可以查看<strong>if</strong>语句的具体语句块范围</p>
+<h4 id="任务四：判断BMI健康程度"><a href="#任务四：判断BMI健康程度" class="headerlink" title="任务四：判断BMI健康程度"></a><em>任务四：判断BMI健康程度</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入身高和体重，要转换为浮点数</span></span><br><span class="line">weight = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入体重(kg)：&#x27;</span>))</span><br><span class="line">height = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入身高(m)：&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用BMI计算函数</span></span><br><span class="line">BMI = BMI_calc(weight, height)</span><br><span class="line">print(<span class="string">&quot;BMI:&#123;&#125;, 体重:&#123;&#125;, 身高:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(BMI, weight, height))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> BMI &lt; <span class="number">18.5</span>:</span><br><span class="line">   print(<span class="string">&#x27;太苗条了！去吃顿大餐！&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> BMI &gt; <span class="number">24.9</span>:</span><br><span class="line">   print(<span class="string">&#x27;太重了！去操场思过吧！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务五：保留字True和False"><a href="#任务五：保留字True和False" class="headerlink" title="任务五：保留字True和False"></a><em>任务五：保留字True和False</em></h4><p>知识点：</p>
+<p><strong>True</strong>和<strong>False</strong>，为布尔类型``，是Python的保留字，代表<strong>逻辑真和假</strong></p>
+<p><strong>true</strong>和<strong>false</strong>为自定义的变量名，是“普通老百姓”</p>
+<p>Python敏感于大小写。<strong>首字母大写的是保留字</strong></p>
+<p>为避免歧义，请尽量<strong>避免</strong>使用与关键字相似的词来命名变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="literal">True</span></span><br><span class="line">print(<span class="built_in">type</span>(a), a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#a是布尔类型，可以作为if判断条件</span></span><br><span class="line"><span class="keyword">if</span> a:</span><br><span class="line">   print(<span class="string">&#x27;执行if&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 小写的true是变量</span></span><br><span class="line">true = <span class="literal">False</span></span><br><span class="line">print(<span class="built_in">type</span>(true), true)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 由于true变量是False，if不执行</span></span><br><span class="line"><span class="keyword">if</span> true:</span><br><span class="line">   print(<span class="string">&#x27;执行if&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务六：空列表、空字符串和数字零作为判断条件"><a href="#任务六：空列表、空字符串和数字零作为判断条件" class="headerlink" title="任务六：空列表、空字符串和数字零作为判断条件"></a><em>任务六：空列表、空字符串和数字零作为判断条件</em></h4><p>知识点：</p>
+<p>对于空列表**[]<strong>、空字符串</strong>“”<strong>或</strong>‘’<strong>、数字</strong>0<strong>作为</strong><condition><strong>判断条件时，都判断为</strong>False**</p>
+<p>但是字符串**’0’<strong>判断为</strong>True**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#False</span></span><br><span class="line">condition = []</span><br><span class="line"><span class="keyword">if</span> condition:</span><br><span class="line">   print(<span class="string">&#x27;True&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#False</span></span><br><span class="line">condition = <span class="number">0</span></span><br><span class="line"><span class="keyword">if</span> condition:</span><br><span class="line">   print(<span class="string">&#x27;True&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#True</span></span><br><span class="line">condition = <span class="string">&#x27;0&#x27;</span></span><br><span class="line"><span class="keyword">if</span> condition:</span><br><span class="line">   print(<span class="string">&#x27;True&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-1-3-if-else语句"><a href="#7-1-3-if-else语句" class="headerlink" title="7.1.3   if-else语句"></a>7.1.3   if-else语句</h3><h4 id="任务一：掌握if-else语句"><a href="#任务一：掌握if-else语句" class="headerlink" title="任务一：掌握if-else语句"></a><em>任务一：掌握if-else语句</em></h4><p><strong>思考</strong>：在使用 <strong>if</strong> 判断时，只能做到满足条件时要做的事情。那如果需要在 <strong>不满足条件的时候</strong>，做某些事情，该如何做呢</p>
+<p><strong>答案</strong>：使用<strong>else</strong>处理<strong>条件不满足</strong>的情况，格式如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> &lt;condition&gt;:</span><br><span class="line">　　&lt;<span class="keyword">if</span> statement&gt;</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   &lt;<span class="keyword">else</span> statement&gt;</span><br></pre></td></tr></table></figure>
+
+<p>知识点：<strong>if-else</strong>语句实现2路分支</p>
+<p>描述：当**<condition><strong>判断条件为</strong>True<strong>，执行分支</strong><if statement><strong>；不满足时，执行分支</strong><else statement>**</p>
+<p><strong>在if-else结构中，总是会执行两个操作中的一个</strong></p>
+<h4 id="任务二：判断年龄的改进"><a href="#任务二：判断年龄的改进" class="headerlink" title="任务二：判断年龄的改进"></a><em>任务二：判断年龄的改进</em></h4><p>需求分析：</p>
+<p>输入用户年龄</p>
+<p>判断是否满 18 岁 （**&gt;=**）</p>
+<p>如果满 18 岁，提示你成年了</p>
+<p>如果未满 18 岁，提示你还是小屁孩</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 输入用户年龄</span></span><br><span class="line">age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;今年多大了？&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 判断是否满 18 岁</span></span><br><span class="line"><span class="comment"># if 语句以及缩进部分的代码是一个完整的语法块</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">   print(<span class="string">&quot;你成年了&quot;</span>)</span><br><span class="line">   print(<span class="string">&quot;:)&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   print(<span class="string">&quot;你还是小屁孩&quot;</span>)</span><br><span class="line">   print(<span class="string">&quot;:(&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 思考！- 无论条件是否满足都会执行</span></span><br><span class="line">print(<span class="string">&quot;这句代码什么时候执行?&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>如果<strong>age &gt;= 18</strong>条件为<strong>True</strong>，就执行<strong>if</strong>的语句块</p>
+<p>如果为<strong>False</strong>，就执行<strong>else</strong>的语句块</p>
+<p>由于<strong>age=17</strong>小于18，条件判断为<strong>False</strong>，因此执行<strong>else</strong>的语句块</p>
+<p>知识点：</p>
+<p><strong>if</strong> 和 <strong>else</strong> 语句以及各自的缩进部分是一个<strong>完整的if-else结构</strong></p>
+<h3 id="习题："><a href="#习题：" class="headerlink" title="习题："></a>习题：</h3><p>题目要求：</p>
+<ul>
+<li>输入一个年份，判断当前是否是闰年，如果是则输出<strong>闰年</strong>，否则输出<strong>非闰年</strong>。(闰年条件：1. 能被4整除。2. 遇到100年，则需要被400整除)</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">year =<span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">&quot;输入年份:&quot;</span>)) <span class="comment"># 2021</span></span><br><span class="line"><span class="keyword">if</span>(year % <span class="number">4</span>==<span class="number">0</span> <span class="keyword">and</span> year % <span class="number">100</span>!=<span class="number">0</span>) <span class="keyword">or</span> year % <span class="number">400</span>==<span class="number">0</span>:</span><br><span class="line">  print(<span class="string">&quot;闰年&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">&quot;非闰年&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">非闰年</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-2-判断条件：布尔表达式"><a href="#7-2-判断条件：布尔表达式" class="headerlink" title="7.2   判断条件：布尔表达式"></a>7.2   判断条件：布尔表达式</h2><h3 id="7-2-1-初识布尔表达式"><a href="#7-2-1-初识布尔表达式" class="headerlink" title="7.2.1   初识布尔表达式"></a>7.2.1   初识布尔表达式</h3><h4 id="任务一：初识布尔表达式-条件判断"><a href="#任务一：初识布尔表达式-条件判断" class="headerlink" title="任务一：初识布尔表达式(条件判断)"></a><em>任务一：初识布尔表达式(条件判断)</em></h4><p>知识点(术语)：判断条件或<strong>布尔表达式</strong></p>
+<p><strong>布尔表达式</strong>语法：**<expr> <relop> <expr>**</p>
+<p>描述：通过比较**<relop><strong>两个表达式</strong><expr><strong>的值，返回结果是布尔值</strong>True<strong>或</strong>False**</p>
+<p><strong><expr><strong>是</strong>表达式</strong>的缩写。这里表达式可以是变量、运算结果、函数返回等</p>
+<p><strong><relop><strong>是</strong>关系运算符</strong>的缩写</p>
+<p>复杂的判断条件，可以通过<strong>逻辑运算符</strong>(<strong>and、or、not</strong>等)进行符合</p>
+<table>
+<thead>
+<tr>
+<th>Python</th>
+<th>数学</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;</td>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>≤</td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td>==</td>
+<td>=</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>≥</td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>≠</td>
+<td>不等于</td>
+</tr>
+</tbody></table>
+<p>与数学里不一样，Python使用**==<strong>表示逻辑相等，而</strong>=**表示赋值语句</p>
+<p>知识点：布尔表达式</p>
+<p>判断条件实际上是一种特殊的表达式，称为<strong>布尔表达式</strong>，为纪念乔治·布尔，一位19世纪英国数学家</p>
+<p>对一个布尔表达式求值，会产生值<strong>True</strong>(条件成立)或<strong>False</strong>(不成立)</p>
+<p>某些语言(C++)就用整数1和0来表示这些值。Java和Python有布尔表达式的专用数据类型<strong>bool</strong></p>
+<p>在Python中，布尔表达式类型为<strong>bool</strong>，布尔值由字面量<strong>True</strong>和<strong>False</strong>表示</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输出布尔表达式的结果</span></span><br><span class="line">print(<span class="number">3</span> &lt; <span class="number">4</span>)</span><br><span class="line">print((<span class="number">3</span> * <span class="number">4</span>) &lt; (<span class="number">3</span> + <span class="number">4</span>))</span><br><span class="line">print(<span class="string">&quot;hello&quot;</span> == <span class="string">&quot;hello&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;hello&quot;</span> &lt; <span class="string">&quot;hello&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;Hello&quot;</span> &lt; <span class="string">&quot;hello&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-2-深入布尔表达式"><a href="#7-2-2-深入布尔表达式" class="headerlink" title="7.2.2   深入布尔表达式"></a>7.2.2   深入布尔表达式</h3><h4 id="任务一：-相等逻辑判断"><a href="#任务一：-相等逻辑判断" class="headerlink" title="任务一：==相等逻辑判断"></a><em>任务一：==相等逻辑判断</em></h4><p>知识点：</p>
+<p>使用**==**来检查逻辑是否相等</p>
+<p>对于<strong>int、float、bool、str</strong>数值和字符串类型，可以用**==**来判断两个变量的值是否相同</p>
+<p>对于<strong>list、tuple</strong>等类型的变量(对象)，并不能通过**==**来判断变量值是否相同</p>
+<p>知识点(易错)：</p>
+<p><strong>=<strong>是赋值。将变量设置为</strong>=<strong>右边的值。例如：</strong>a=1</strong></p>
+<p><strong>==<strong>是逻辑相等的判断，结果为</strong>True</strong>或<strong>False</strong>的布尔值。判断**==<strong>两边的变量是否相等。例如，</strong>a==b**</p>
+<p>可以使用**=**赋值，将逻辑结果赋值给变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#对a和b进行赋值，然后使用a==b判断是否相等</span></span><br><span class="line">a = <span class="string">&#x27;LiLei&#x27;</span></span><br><span class="line">b = <span class="string">&#x27;LiLei&#x27;</span></span><br><span class="line">print(<span class="string">&#x27;&#123;&#125;==&#123;&#125;: &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(a,b,a==b))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将a==b的结果赋值给res</span></span><br><span class="line">res = a==b</span><br><span class="line"><span class="comment"># 建议加括号，避免出错</span></span><br><span class="line">res = (a==b)</span><br><span class="line">print(<span class="built_in">type</span>(res), res)</span><br><span class="line"></span><br><span class="line">a = <span class="string">&#x27;LiLei&#x27;</span></span><br><span class="line">b = <span class="string">&#x27;LiLei&#x27;</span></span><br><span class="line"><span class="comment"># 将逻辑判断用于if判断</span></span><br><span class="line"><span class="keyword">if</span> a==b:</span><br><span class="line">   print(<span class="string">&#x27;相等&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：如果<strong>字符串的大小写无关紧要，而只想检查变量的值</strong>，可将字符串统一转换为小写，再比较</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;LiLei&#x27;</span></span><br><span class="line">b = <span class="string">&#x27;liLei&#x27;</span></span><br><span class="line">res = (a.lower() == b.lower())</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+
+<p><strong>统一大小写后，再作逻辑判断功能很实用</strong></p>
+<p>例如，网站可能使用类似的测试来确保用户名是独一无二的，使用上述的==逻辑判断并不能满足这一需求。因此，需要对用户注册的新用户名，首先将把它转换为小写，然后再与数据库中的名字进行比较。如果数据库中存在**’liLei’<strong>名字(不管大小写如何)时，则用户名</strong>‘LiLei’**系统会提示已经被注册</p>
+<h4 id="任务二：-不等逻辑判断"><a href="#任务二：-不等逻辑判断" class="headerlink" title="任务二：!=不等逻辑判断"></a><em>任务二：!=不等逻辑判断</em></h4><p>知识点：要判断两个值是否不等，使用**!=(惊叹号和等号)<strong>，其中的惊叹号表示</strong>不**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;LiLei&#x27;</span></span><br><span class="line"><span class="comment"># 将!=逻辑判断用于if判断</span></span><br><span class="line"><span class="keyword">if</span> a!=<span class="string">&#x27;liLei&#x27;</span>:</span><br><span class="line">   print(<span class="string">&#x27;不相等&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>代码解析：</p>
+<p><strong>a!=’liLei’<strong>将</strong>a</strong>的值与字符串**’liLei’**进行比较</p>
+<p>如果不相等，将返回<strong>True</strong>，并执行<strong>if</strong>语句块</p>
+<p>如果这两个值相等，将返回<strong>False</strong>，不执行<strong>if</strong>语句块</p>
+<p>由于<strong>a</strong>的值不是**’liLei’<strong>，因此执行</strong>if<strong>语句块</strong>print()<strong>，输出：</strong>不相等**</p>
+<h3 id="习题：-1"><a href="#习题：-1" class="headerlink" title="习题："></a>习题：</h3><p>题目要求：</p>
+<p>1、外部输入一个字符串，然后使用<strong>if</strong>检测当前字符串是否与预设的字符串相等</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;LiLei&#x27;</span></span><br><span class="line">b = <span class="built_in">input</span>(<span class="string">&quot;输入字符串:&quot;</span>)</span><br><span class="line">res = (a.lower() == b.lower())</span><br><span class="line">print(res)</span><br><span class="line"><span class="comment">#a=4</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">false</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>2、外部输入一个数字，然后，检测当前的数字与预设的数字大小关系</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;1&#x27;</span></span><br><span class="line">b = <span class="built_in">input</span>(<span class="string">&quot;输入数字:&quot;</span>)</span><br><span class="line">print(<span class="string">&#x27;&#123;&#125;==&#123;&#125;: &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(a,b,a==b))</span><br><span class="line"><span class="comment">#b=4</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1&#x3D;&#x3D;4: False</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>3、比较数字的1和字符串的“1”是否相等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;1&#x27;</span></span><br><span class="line">b = <span class="string">&#x27;&quot;1&quot;&#x27;</span></span><br><span class="line">print(<span class="string">&#x27;&#123;&#125;==&#123;&#125;: &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(a,b,a==b))</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1&#x3D;&#x3D;&quot;1&quot;: False</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="任务三：字符串比较大小"><a href="#任务三：字符串比较大小" class="headerlink" title="任务三：字符串比较大小"></a><em>任务三：字符串比较大小</em></h4><p>知识点：字符串比较规则</p>
+<p>按双字节Unicode码(类似于ASCII)的排序进行比较，大写字母都在小写字母之前。例如<strong>B</strong>排在<strong>a</strong>之前</p>
+<p><strong>从左到右的顺序</strong>，依次比较字符串中的字符，当出现相同字符时，就比较下个字符，直到结束</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 大写排小写之前</span></span><br><span class="line">print(<span class="string">&#x27;Lilei&#x27;</span>&gt;<span class="string">&#x27;lilei&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第1个字符串比第2个多了字符1</span></span><br><span class="line">print(<span class="string">&#x27;Lilei1&#x27;</span>&gt;<span class="string">&#x27;Lilei&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：数字和字符串不能比较，出现<strong>TypeError</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;Lilei1&#x27;</span> &gt; <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># -----------------------------------------------------------</span></span><br><span class="line"><span class="comment"># TypeError                    Traceback (most recent call last)</span></span><br><span class="line"><span class="comment"># &lt;ipython-input-85-bcc8908c4afd&gt; in &lt;module&gt;</span></span><br><span class="line"><span class="comment"># ----&gt; 1 print(&#x27;Lilei1&#x27; &gt; 1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># TypeError: &#x27;&gt;&#x27; not supported between instances of &#x27;str&#x27; and &#x27;int&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入数字&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> (<span class="number">1</span> &lt;= num) <span class="keyword">and</span> (num&lt;=<span class="number">100</span>):</span><br><span class="line">   print(<span class="string">&#x27;哈哈，输入范围正确！&#x27;</span>)</span><br><span class="line">   </span><br><span class="line">print(<span class="string">&#x27;-----在python中，可以作连续比较1 &lt;= num &lt;=100 ----&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> (<span class="number">1</span> &lt;= num &lt;=<span class="number">100</span>):</span><br><span class="line">   print(<span class="string">&#x27;哈哈，输入范围正确！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-3-逻辑运算符"><a href="#7-2-3-逻辑运算符" class="headerlink" title="7.2.3   逻辑运算符"></a>7.2.3   逻辑运算符</h3><h4 id="任务一：逻辑运算符"><a href="#任务一：逻辑运算符" class="headerlink" title="任务一：逻辑运算符"></a><em>任务一：逻辑运算符</em></h4><p>知识点：<strong>使用逻辑运算符来复合多个表达式</strong></p>
+<p>在程序开发中，通常<strong>在判断条件时</strong>，会需要同时判断多个条件</p>
+<p>在Python中，<strong>逻辑运算符</strong>and、or和not可以把多个简单的条件(布尔表达式)按照<strong>特定逻辑规则</strong>进行连接(组合)，复合成更复杂的判断条件</p>
+<p>知识点：</p>
+<p><strong>and</strong>：逻辑<strong>与</strong>。只有<strong>所有</strong>布尔表达式都为<strong>True</strong>，结果才为<strong>True</strong></p>
+<p><strong>or</strong>：逻辑<strong>或</strong>。只要有<strong>一个</strong>布尔表达式为<strong>True</strong>，结果就为<strong>True</strong></p>
+<p><strong>not</strong>：逻辑<strong>非</strong>。如果是<strong>True</strong>，那么结果是<strong>False</strong>。反之亦然</p>
+<p>为改善可读性，建议将每个布尔表达式分别放在**括号()**内</p>
+<p>输入一个数字，判断当前数字是否在给定的范围**[1 100]<strong>区间</strong>之内**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入数字：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> (<span class="number">1</span> &lt;= num) <span class="keyword">and</span> (num &lt;= <span class="number">100</span>):</span><br><span class="line">   print(<span class="string">&#x27;输入范围正确！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：为了避免复合表达式过于复杂，影响程序的阅读性，建议将复合表达式的结果<strong>赋值给临时变量</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入数字：&#x27;</span>))</span><br><span class="line">res = (<span class="number">1</span> &lt;= num) <span class="keyword">and</span> (num &lt;= <span class="number">100</span>)</span><br><span class="line"><span class="comment"># 程序会变的简洁</span></span><br><span class="line"><span class="keyword">if</span> res:</span><br><span class="line">   print(<span class="string">&#x27;输入范围正确！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>Python专属，可以对数值类型的值作连续比较，省去<strong>and</strong>逻辑运算符</p>
+<p>例如，判断数是否在**[1 100]<strong>，可以使用</strong>1 &lt;= num &lt;=100**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入数字：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> (<span class="number">1</span> &lt;= num &lt;= <span class="number">100</span>):</span><br><span class="line">   print(<span class="string">&#x27;输入范围正确！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输入一个数字，判断当前数字是否在给定的范围**[1 100]<strong>区间</strong>之外**</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入数字：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> (<span class="number">1</span> &gt; num) <span class="keyword">or</span> (num &gt; <span class="number">100</span>):</span><br><span class="line">   print(<span class="string">&#x27;输入范围正确！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="习题：-2"><a href="#习题：-2" class="headerlink" title="习题："></a>习题：</h3><p>题目要求：</p>
+<p>1、定义一个整数变量 <strong>age</strong>，编写代码判断年龄是否正确。要求人的年龄在 0-120 之间</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">100</span></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">0</span> <span class="keyword">and</span> age &lt;= <span class="number">120</span>:</span><br><span class="line">    print(<span class="string">&quot;年龄正确&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;年龄不正确&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">年龄正确</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>2、定义两个整数变量 <strong>python_score、c_score</strong>，编写代码判断成绩。要求只要有一门成绩 <strong>&gt; 60</strong> 分就算合格</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">python_score = <span class="number">50</span></span><br><span class="line">c_score = <span class="number">50</span></span><br><span class="line"><span class="keyword">if</span> python_score &gt; <span class="number">60</span> <span class="keyword">or</span> c_score &gt; <span class="number">60</span>:</span><br><span class="line">    print(<span class="string">&quot;合格&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;不合格&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不合格</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>3、定义一个布尔型变量 <strong>is_employee</strong>，编写代码判断是否是本公司员工。如果不是提示不允许入内。提示：使用<strong>not</strong>运算符</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">is_employee = <span class="literal">False</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> is_employee:</span><br><span class="line">    print(<span class="string">&quot;不允许入内&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不允许入内</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7-2-4-重要-in关键字"><a href="#7-2-4-重要-in关键字" class="headerlink" title="7.2.4   (重要) in关键字"></a>7.2.4   (重要) in关键字</h3><h4 id="任务一：in检查是否包含某个值"><a href="#任务一：in检查是否包含某个值" class="headerlink" title="任务一：in检查是否包含某个值"></a><em>任务一：in检查是否包含某个值</em></h4><p>知识点：<strong>a in b</strong></p>
+<p><strong>a</strong>为变量，<strong>b</strong>为序列或集合类型的对象</p>
+<p>Python提供了关键字<strong>in</strong>，用于遍历<strong>a</strong>是否在<strong>包含</strong>在<strong>b</strong>中。返回的是<strong>True</strong>或<strong>False</strong></p>
+<p>关键字<strong>in</strong>适用于任何的序列和集合类型的数据，比如<strong>str</strong>、<strong>list</strong>、<strong>tuple</strong>等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列表</span></span><br><span class="line">nums = [<span class="number">2</span>, <span class="number">4</span>, -<span class="number">14</span>, <span class="number">32</span>, <span class="number">1</span>]</span><br><span class="line"><span class="comment"># res 为布尔值</span></span><br><span class="line">res = (<span class="number">2</span> <span class="keyword">in</span> nums)</span><br><span class="line">print(res) <span class="comment"># True</span></span><br><span class="line"></span><br><span class="line">res = (<span class="number">3</span> <span class="keyword">in</span> nums)</span><br><span class="line">print(res) <span class="comment"># False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 字符串</span></span><br><span class="line">name = <span class="string">&#x27;LiLei&#x27;</span></span><br><span class="line">res = (<span class="string">&#x27;L&#x27;</span> <span class="keyword">in</span> name)</span><br><span class="line">print(res) <span class="comment"># True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># range()对象</span></span><br><span class="line">res = (<span class="number">1</span> <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>))</span><br><span class="line">print(res) <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+
+<p>知识点：<strong>a not in b</strong></p>
+<p>使用<strong>not in</strong>来检查<strong>a</strong>是否<strong>不包含</strong>在<strong>b</strong>中</p>
+<p><strong>not</strong>关键字表示非</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">2</span>, <span class="number">4</span>, -<span class="number">14</span>, <span class="number">32</span>, <span class="number">1</span>]</span><br><span class="line"><span class="comment"># res 为布尔值</span></span><br><span class="line">res = (<span class="number">0</span> <span class="keyword">not</span> <span class="keyword">in</span> nums)</span><br><span class="line">print(res) <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：in用于if判断条件"><a href="#任务二：in用于if判断条件" class="headerlink" title="任务二：in用于if判断条件"></a><em>任务二：in用于if判断条件</em></h4><p>知识点：<strong>if a in b:</strong></p>
+<p><strong>a</strong>为变量，<strong>b</strong>为序列或集合类型的对象</p>
+<p><strong>in</strong>返回的是布尔值，因此可以用于<strong>if</strong>的判断条件</p>
+<p>当<strong>a</strong>存在于<strong>b</strong>之中时，<strong>a in b</strong>这个表达式的值为<strong>True</strong>，否则为假</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#接收外部输入，判断是否在列表中</span></span><br><span class="line">nums = [<span class="number">2</span>, <span class="number">4</span>, -<span class="number">14</span>, <span class="number">32</span>, <span class="number">1</span>]</span><br><span class="line">val = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入整数：&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> val <span class="keyword">in</span> nums:</span><br><span class="line">   print(<span class="string">&#x27;&#123;&#125;是列表元素！&#x27;</span>.<span class="built_in">format</span>(val))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入是2，输出是2是列表元素！</span></span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p><strong>if a not in b</strong>，判断<strong>a</strong>是否不被<strong>b</strong>包含</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#用户发言前，检查某用户是否在不黑名单中</span></span><br><span class="line">banned_users = [<span class="string">&#x27;zhang san&#x27;</span>, <span class="string">&#x27;li si&#x27;</span>, <span class="string">&#x27;wang wu&#x27;</span>]</span><br><span class="line">user = <span class="string">&#x27;Lilei&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> user <span class="keyword">not</span> <span class="keyword">in</span> banned_users:</span><br><span class="line">   print(user.title() + <span class="string">&quot;可以发言.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Lilei可以发言.</span></span><br></pre></td></tr></table></figure>
+
+<p>程序解析：<strong>if user not in banned_users:</strong></p>
+<p>如果<strong>user</strong>的值未包含在列表<strong>banned_users</strong>中，Python将返回<strong>True</strong>，并执行语句块</p>
+<p>用户**’Lilei’未包含<strong>在列表</strong>banned_users<strong>中，因此输出消息：</strong>Lilei可以发言.**</p>
+<h4 id="任务三：in用于for循环遍历元素"><a href="#任务三：in用于for循环遍历元素" class="headerlink" title="任务三：in用于for循环遍历元素"></a><em>任务三：in用于for循环遍历元素</em></h4><p>知识点：<strong>for a in b:</strong></p>
+<p>其中<strong>a</strong>为临时变量，<strong>b</strong>为序列或集合类型的对象(可迭代对象)</p>
+<p>将<strong>in</strong>用于<strong>for</strong>循环，表示从<strong>b</strong>中逐个取元素，放到<strong>a</strong>临时变量中</p>
+<p>当<strong>b</strong>中的元素取完，循环结束</p>
+<p>注意：Python中<strong>没有for a not in b</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">2</span>, <span class="number">4</span>, -<span class="number">14</span>, <span class="number">32</span>, <span class="number">1</span>]</span><br><span class="line"><span class="keyword">for</span> val <span class="keyword">in</span> nums:</span><br><span class="line">   print(val, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"><span class="comment"># 2 4 -14 32 1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="习题：-3"><a href="#习题：-3" class="headerlink" title="习题："></a>习题：</h3><p>题目要求：</p>
+<p><strong>5-2 更多的条件测试</strong>： 编写布尔表达式(<strong>if</strong>判断条件)，然后对其结果进行<strong>True</strong>和<strong>False</strong>的测试。</p>
+<p>检查两个字符串相等和不等</p>
+<p>使用函数**lower()**的测试</p>
+<p>检查两个数字相等、不等、大于、小于、大于等于和小于等于</p>
+<p>使用关键字<strong>and</strong>和<strong>or</strong>的测试</p>
+<p>测试特定的值是否包含在列表中</p>
+<p>测试特定的值是否未包含在列表中</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">1</span></span><br><span class="line">print(<span class="string">&quot;Is a=1? Ture&quot;</span>)</span><br><span class="line">print(a==<span class="number">1</span>)</span><br><span class="line">b=<span class="string">&quot;A&quot;</span></span><br><span class="line">print(b.lower()==<span class="string">&quot;a&quot;</span>)</span><br><span class="line"></span><br><span class="line">print(b.lower()==<span class="string">&quot;a&quot;</span> <span class="keyword">and</span> a==<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">print(b.lower()==<span class="string">&quot;a&quot;</span> <span class="keyword">or</span> a==<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Is a&#x3D;1? Ture</span><br><span class="line">True</span><br><span class="line">True</span><br><span class="line">True</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-3-进阶if语句"><a href="#7-3-进阶if语句" class="headerlink" title="7.3   进阶if语句"></a>7.3   进阶if语句</h2><h3 id="7-3-1-实例：二次方程求解"><a href="#7-3-1-实例：二次方程求解" class="headerlink" title="7.3.1   实例：二次方程求解"></a>7.3.1   实例：二次方程求解</h3><h4 id="任务一：二次方程求解"><a href="#任务一：二次方程求解" class="headerlink" title="任务一：二次方程求解"></a><em>任务一：二次方程求解</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 为了求开方，需要导入math数学模块</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一元二次方程求解函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solver</span>(<span class="params">a, b, c</span>):</span></span><br><span class="line">   print(<span class="string">&quot;求解一元二次方程的根(实数)\n&quot;</span>)</span><br><span class="line">   <span class="comment"># 对着公式理解程序</span></span><br><span class="line">   discRoot = math.sqrt(b * b - <span class="number">4</span> * a * c)</span><br><span class="line">   root1 = (-b + discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">   root2 = (-b - discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">   print(<span class="string">&quot;根为:&quot;</span>, root1, root2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 a: &quot;</span>))</span><br><span class="line">b = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 b: &quot;</span>))</span><br><span class="line">c = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 c: &quot;</span>))</span><br><span class="line"></span><br><span class="line">solver(a, b, c)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>输入<strong>a=1,b=2,c=-3</strong>，此时二次方程<strong>有实根</strong>，程序输出的解</p>
+<p>输入<strong>a=1,b=2,c=3</strong>，此时二次方程<strong>无实根</strong>，程序奔溃，触发<strong>ValueError: math domain error</strong></p>
+<p>程序奔溃的原因是当b²-4ac&lt;0时，程序试图<strong>对负数进行开方</strong>，所以<strong>math</strong>模块报告错误</p>
+<h4 id="任务二：使用if-else语句解决程序奔溃问题"><a href="#任务二：使用if-else语句解决程序奔溃问题" class="headerlink" title="任务二：使用if-else语句解决程序奔溃问题"></a><em>任务二：使用if-else语句解决程序奔溃问题</em></h4><p>为解决上述问题，需要使用if语句来对b²-4ac是否大于0进行判断</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一元二次方程求解函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solver</span>(<span class="params">a, b, c</span>):</span></span><br><span class="line">   print(<span class="string">&quot;求解一元二次方程的根(实数)\n&quot;</span>)</span><br><span class="line">   discrim = b * b - <span class="number">4</span> * a * c</span><br><span class="line">   <span class="keyword">if</span> discrim &lt; <span class="number">0</span>:</span><br><span class="line">       print(<span class="string">&quot;无实根&quot;</span>)</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       discRoot = math.sqrt(discrim)</span><br><span class="line">       root1 = (-b + discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">       root2 = (-b - discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">       print(<span class="string">&quot;根为:&quot;</span>, root1, root2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 a: &quot;</span>))</span><br><span class="line">b = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 b: &quot;</span>))</span><br><span class="line">c = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 c: &quot;</span>))</span><br><span class="line"></span><br><span class="line">solver(a, b, c)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>这个版本首先计算判别式的值，再<strong>if</strong>语句检查并确保它不是负数</p>
+<p>如果<strong>discrim</strong>为负数，该程序永远不会尝试调用**math.sqrt()**进而避免了程序奔溃</p>
+<p>该版本的二次方程求解程序解决了因为平方根为负导致程序奔溃问题，然而输入<strong>a=1,b=2,c=1</strong>时，程序输出为<strong>根为: -1.0 -1.0</strong>。相同的根，重复输出</p>
+<h4 id="任务三：嵌套if-else语句实现多路分支"><a href="#任务三：嵌套if-else语句实现多路分支" class="headerlink" title="任务三：嵌套if-else语句实现多路分支"></a><em>任务三：嵌套if-else语句实现多路分支</em></h4><p>为解决上述<strong>相同的根，重复输出</strong>问题，可以使用嵌套<strong>if-else</strong>语句来实现多路分支</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一元二次方程求解函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solver</span>(<span class="params">a, b, c</span>):</span></span><br><span class="line">   print(<span class="string">&quot;求解一元二次方程的根(实数)\n&quot;</span>)</span><br><span class="line">   discrim = b * b - <span class="number">4</span> * a * c</span><br><span class="line">   <span class="keyword">if</span> discrim &lt; <span class="number">0</span>:</span><br><span class="line">       print(<span class="string">&quot;无实根&quot;</span>)</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       <span class="keyword">if</span> discrim == <span class="number">0</span>:</span><br><span class="line">           root= -b / (<span class="number">2</span> * a)</span><br><span class="line">           print(<span class="string">&quot;单个根为:&quot;</span>, root)</span><br><span class="line">       <span class="keyword">else</span>:</span><br><span class="line">           discRoot = math.sqrt(discrim)</span><br><span class="line">           root1 = (-b + discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">           root2 = (-b - discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">           print(<span class="string">&quot;两个根为:&quot;</span>, root1, root2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 a: &quot;</span>))</span><br><span class="line">b = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 b: &quot;</span>))</span><br><span class="line">c = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 c: &quot;</span>))</span><br><span class="line"></span><br><span class="line">solver(a, b, c)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>使用了两个嵌套的<strong>if-else</strong>语句，根据<strong>discrim</strong>实现了3路分支，巧妙的满足了二次方程的无根、重根、和两个根的需求</p>
+<p>然而，如果程序需要5路分支，那要嵌套多少个<strong>if-else</strong>语句？结果肯定是非常繁琐。在下节，将介绍Python的<strong>if-elif-else</strong>语句来解决此问题</p>
+<h3 id="7-3-2-if-elif-else语句"><a href="#7-3-2-if-elif-else语句" class="headerlink" title="7.3.2   if-elif-else语句"></a>7.3.2   if-elif-else语句</h3><h4 id="任务一：掌握if-elif-else语句"><a href="#任务一：掌握if-elif-else语句" class="headerlink" title="任务一：掌握if-elif-else语句"></a><em>任务一：掌握if-elif-else语句</em></h4><p>需求分析：</p>
+<p>在开发中，使用 <strong>if</strong> 可以处理<strong>判断条件</strong>成立的情况</p>
+<p>使用 <strong>else</strong> 可以处理<strong>条件不成立</strong>的情况</p>
+<p>如果希望程序处理更复杂的情况，需要<strong>增加一些额外的条件，而不同的条件会执行不同的代码块</strong>，Python提供了 <strong>elif</strong>语句</p>
+<p>为解决多路分支的判断，Python提供了<strong>if-elif-else</strong>语句，语法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> &lt;condition1&gt;:</span><br><span class="line">　　&lt;case1 statement&gt;</span><br><span class="line"><span class="keyword">elif</span> &lt;condition2&gt;:</span><br><span class="line">　　&lt;case2 statement&gt;</span><br><span class="line"><span class="keyword">elif</span> &lt;condition3&gt;:</span><br><span class="line">　　&lt;case3 statement&gt;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">　　&lt;default statement&gt;</span><br></pre></td></tr></table></figure>
+
+<p>知识点：<strong>if-elif-else</strong>语句实现n路分支</p>
+<p><strong>if</strong>和<strong>elif</strong>分支：<strong>按顺序依次</strong>检查<condition>，执行<strong>首次</strong>满足条件的<statement>，执行完后直接<strong>结束</strong>整个if-elif-else语句，后续语句不会被执行</p>
+<p><strong>else</strong>分支：如果没有一个<condition>为<strong>True</strong>，则执行else的<defaultstatement>else<strong>分支是可选的</strong>。如果省略else分支，那么当不满足任何条件时，程序会跳出<strong>if</strong>语句</p>
+<p>知识点：</p>
+<p><strong>if-elif-else</strong>语句只执行<strong>首次</strong>条件为<strong>True</strong>的<statement>，剩余的条件语句块都不被执行。即使下面某个分支条件也为<strong>True</strong>，它的语句块也不会被执行</p>
+<p><strong>elif</strong> 和 <strong>else</strong> 都必须和 <strong>if</strong> 联合使用，而不能单独使用</p>
+<p>可以将 <strong>if</strong>、<strong>elif</strong> 和 <strong>else</strong> 以及各自缩进的代码，看成一个 <strong>完整的代码块</strong></p>
+<h4 id="任务二：对比逻辑运算符"><a href="#任务二：对比逻辑运算符" class="headerlink" title="任务二：对比逻辑运算符"></a><em>任务二：对比逻辑运算符</em></h4><p>知识点：</p>
+<p>逻辑运算符，对多个条件按特定逻辑进行复合为更复杂的条件</p>
+<p>相对于<strong>if-elif-else</strong>语句，逻辑运算符的复合条件会共享同一个代码块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件<span class="number">1</span> <span class="keyword">and</span> 条件<span class="number">2</span>:</span><br><span class="line">   条件<span class="number">1</span>满足 并且 条件<span class="number">2</span>满足 执行的代码</span><br><span class="line">   ……</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：输入数字实现多路判断"><a href="#任务三：输入数字实现多路判断" class="headerlink" title="任务三：输入数字实现多路判断"></a><em>任务三：输入数字实现多路判断</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入数字：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> a &gt; <span class="number">5</span>:</span><br><span class="line">   print(<span class="string">&#x27;a &gt; 5: &#x27;</span>, a)</span><br><span class="line"><span class="keyword">elif</span> a &gt; <span class="number">3</span>:</span><br><span class="line">   print(<span class="string">&#x27;a &gt; 3: &#x27;</span>, a)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   print(<span class="string">&#x27;else:&#x27;</span>, a)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;if语句之外&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：<strong>if-elif-else</strong>控制结构</p>
+<p>当输入<strong>a=10</strong>，程序首先检查<strong>if a &gt; 5</strong>，满足条件，则执行该条件下的语句，输出<strong>a &gt; 5:  10</strong>，并跳出剩余的语句块。虽然<strong>elif a &gt; 3</strong>也满足，程序不执行该条件下的语句</p>
+<p>当输入<strong>a=4</strong>，程序首先检查<strong>if a &gt; 5</strong>，不满足条件；依次再检查<strong>elif a &gt; 3</strong>，满足条件，则执行该条件下的语句，输出<strong>a &gt; 3:  4</strong>，并跳出剩余的语句块</p>
+<p>当输入<strong>a=1</strong>，程序首先检查<strong>if a &gt; 5</strong>，不满足条件；依次再检查<strong>elif a &gt; 3</strong>，不满足条件；此时所有条件都不满足，则程序执行<strong>else</strong>的语句块</p>
+<p>对于<strong>a=10</strong>，同时满足两个条件，虽然程序只执行了第一个条件，但是该程序设计的逻辑上出现了歧义，因此在实际程序设计中，避免条件有交集情况</p>
+<p>知识点：</p>
+<p>建议每个<condition>都是<strong>互斥</strong>的，即它们的交集为空</p>
+<p>如果条件不互斥，容易出现逻辑上的歧义</p>
+<h3 id="7-3-3-elif演练"><a href="#7-3-3-elif演练" class="headerlink" title="7.3.3   elif演练"></a>7.3.3   elif演练</h3><h4 id="任务一：女友的节日"><a href="#任务一：女友的节日" class="headerlink" title="任务一：女友的节日"></a><em>任务一：女友的节日</em></h4><p>需求分析：</p>
+<p>如果是 <strong>情人节</strong> 应该 <strong>买玫瑰／看电影</strong></p>
+<p>如果是 <strong>平安夜</strong> 应该 <strong>买苹果／吃大餐</strong></p>
+<p>如果是 <strong>生日</strong> 应该 <strong>买蛋糕</strong></p>
+<p>其他的日子每天都是节日啊……</p>
+<p>定义 <strong>holiday_name</strong> 字符串变量记录节日名称</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">holiday_name = <span class="string">&quot;平安夜&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> holiday_name == <span class="string">&quot;情人节&quot;</span>:</span><br><span class="line">   print(<span class="string">&quot;买玫瑰&quot;</span>)</span><br><span class="line">   print(<span class="string">&quot;看电影&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> holiday_name == <span class="string">&quot;平安夜&quot;</span>:</span><br><span class="line">   print(<span class="string">&quot;买苹果&quot;</span>)</span><br><span class="line">   print(<span class="string">&quot;吃大餐&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> holiday_name == <span class="string">&quot;生日&quot;</span>:</span><br><span class="line">   print(<span class="string">&quot;买蛋糕&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   print(<span class="string">&quot;每天都是节日啊……&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：游乐场门票"><a href="#任务二：游乐场门票" class="headerlink" title="任务二：游乐场门票"></a><em>任务二：游乐场门票</em></h4><p>在现实世界中，很多情况下需要考虑的情形都超过两个。例如，来看一个根据年龄段收费的游乐场：</p>
+<p>4岁以下免费</p>
+<p>4~18岁收费5元</p>
+<p>18~65岁收费10元</p>
+<p>65岁(含)收费5元</p>
+<p>下面的代码确定一个人所属的年龄段，并打印一条包含门票价格的消息：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 门票票价</span></span><br><span class="line">age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;输入年龄：&quot;</span>))</span><br><span class="line"><span class="keyword">if</span> <span class="number">0</span> &lt;= age &lt; <span class="number">4</span>:</span><br><span class="line">   price = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">4</span> &lt;= age &lt; <span class="number">18</span>:</span><br><span class="line">   price = <span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">18</span> &lt;= age &lt; <span class="number">65</span>:</span><br><span class="line">   price = <span class="number">10</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   price = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;票价为：&#123;&#125; 元！&quot;</span>.<span class="built_in">format</span>(price))</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>Python并<strong>不要求if-elif</strong>结构后面必须有<strong>else</strong>代码块</p>
+<p><strong>else</strong>是一条包罗万象的语句，只要不满足<strong>if-elif</strong>条件的任意情况，就会执行<strong>else</strong>分支的代码，这容易导致有些程序逻辑流程变的不可控。所以在使用<strong>else</strong>分支时，一定要仔细检查该分支的各种情况</p>
+<p>建议初学者<strong>if-elif-else</strong>语句，检查执行每个分支所需要满足的条件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 门票票价</span></span><br><span class="line">age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;输入年龄：&quot;</span>))</span><br><span class="line"><span class="keyword">if</span> <span class="number">0</span> &lt;= age &lt; <span class="number">4</span>:</span><br><span class="line">   price = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">4</span> &lt;= age &lt; <span class="number">18</span>:</span><br><span class="line">   price = <span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">18</span> &lt;= age &lt; <span class="number">65</span>:</span><br><span class="line">   price = <span class="number">10</span>    </span><br><span class="line"><span class="keyword">elif</span> <span class="number">65</span> &lt;= age: <span class="comment">#将else改为elif逻辑更清晰</span></span><br><span class="line">   price = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;票价为：&#123;&#125; 元！&quot;</span>.<span class="built_in">format</span>(price))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：二次方程的求解"><a href="#任务三：二次方程的求解" class="headerlink" title="任务三：二次方程的求解"></a><em>任务三：二次方程的求解</em></h4><p>之前使用了两个嵌套的<strong>if-else</strong>语句，实现了3路分支，巧妙的满足了二次方程的无根、重根、和两个根的需求。在本节，将使用<strong>if-elif-else</strong>语句来实现3路分支。相对于嵌套<strong>if-else</strong>语句，<strong>if-elif-else</strong>语句逻辑结构简明和清晰，不易出错</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一元二次方程求解函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solver</span>(<span class="params">a, b, c</span>):</span></span><br><span class="line">   print(<span class="string">&quot;求解一元二次方程的根(实数)\n&quot;</span>)</span><br><span class="line">   discrim = b * b - <span class="number">4</span> * a * c</span><br><span class="line">   <span class="comment"># 3路分支，相对嵌套if-else逻辑更清晰</span></span><br><span class="line">   <span class="keyword">if</span> discrim &lt; <span class="number">0</span>:</span><br><span class="line">       print(<span class="string">&quot;无实根&quot;</span>)</span><br><span class="line">   <span class="keyword">elif</span> discrim == <span class="number">0</span>:</span><br><span class="line">       root = -b / (<span class="number">2</span> * a)</span><br><span class="line">       print(<span class="string">&quot;单个根为:&quot;</span>, root)</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       discRoot = math.sqrt(discrim)</span><br><span class="line">       root1 = (-b + discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">       root2 = (-b - discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">       print(<span class="string">&quot;两个根为:&quot;</span>, root1, root2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 a: &quot;</span>))</span><br><span class="line">b = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 b: &quot;</span>))</span><br><span class="line">c = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 c: &quot;</span>))</span><br><span class="line"></span><br><span class="line">solver(a, b, c)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-3-4-深入if嵌套"><a href="#7-3-4-深入if嵌套" class="headerlink" title="7.3.4   深入if嵌套"></a>7.3.4   深入if嵌套</h3><h4 id="任务一：elif和if嵌套的应用场景"><a href="#任务一：elif和if嵌套的应用场景" class="headerlink" title="任务一：elif和if嵌套的应用场景"></a><em>任务一：elif和if嵌套的应用场景</em></h4><p>知识点：</p>
+<p><strong>elif</strong>语句：<strong>并联</strong>结构。同时判断多个条件，所有的条件是<strong>平级</strong>的</p>
+<p><strong>if</strong>嵌套语句：<strong>串联</strong>结构。在上个条件满足的前提下，再增加额外<strong>if</strong>判断</p>
+<p>知识点：</p>
+<p>在开发中，使用 <strong>if</strong> 进行条件判断，如果希望在条件成立的执行语句中再<strong>增加条件判断</strong>，就可以使用<strong>if</strong>嵌套语句</p>
+<p><strong>if</strong>嵌套的语法格式，除了<strong>在前一级的if代码块中缩进</strong>之外和<strong>if</strong>语句<strong>没有区别</strong></p>
+<p><strong>if</strong>嵌套的语法格式如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件 <span class="number">1</span>:</span><br><span class="line">   条件 <span class="number">1</span> 满足执行的代码</span><br><span class="line">   ……</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">if</span> 条件 <span class="number">1</span> 基础上的条件 <span class="number">2</span>:</span><br><span class="line">       条件 <span class="number">2</span> 满足时，执行的代码</span><br><span class="line">       ……    </span><br><span class="line">       </span><br><span class="line">   <span class="comment"># 条件 2 不满足的处理</span></span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       条件 <span class="number">2</span> 不满足时，执行的代码</span><br><span class="line">       </span><br><span class="line"><span class="comment"># 条件 1 不满足的处理</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   条件<span class="number">1</span> 不满足时，执行的代码</span><br><span class="line">   ……</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：火车站安检"><a href="#任务二：火车站安检" class="headerlink" title="任务二：火车站安检"></a><em>任务二：火车站安检</em></h4><p>需求分析：**(仔细看需求后，再思考程序结构)**</p>
+<p>1、定义布尔型变量 <strong>has_ticket</strong> 表示是否有车票</p>
+<p>2、定义整型变量 <strong>knife_length</strong> 表示刀的长度，单位：厘米</p>
+<p>3、首先检查是否有车票，如果有，才允许进行 <strong>安检</strong></p>
+<p>4、安检时，需要检查刀的长度，判断是否超过 20 厘米</p>
+<pre><code>  如果超过 20 厘米，提示刀的长度，不允许上车
+
+  如果不超过 20 厘米，安检通过
+</code></pre>
+<p>5、如果没有车票，不允许进门</p>
+<p>注意：<strong>if</strong>嵌套语句块的<strong>层级缩进</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义布尔型变量 has_ticket 表示是否有车票</span></span><br><span class="line">has_ticket = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义整数型变量 knife_length 表示刀的长度，单位：厘米</span></span><br><span class="line">knife_length = <span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 首先检查是否有车票，如果有，才允许进行 安检</span></span><br><span class="line"><span class="keyword">if</span> has_ticket:</span><br><span class="line">   print(<span class="string">&quot;有车票，可以开始安检...&quot;</span>)</span><br><span class="line">   <span class="comment"># 安检时，需要检查刀的长度，判断是否超过 20 厘米</span></span><br><span class="line">   <span class="comment"># 如果超过 20 厘米，提示刀的长度，不允许上车</span></span><br><span class="line">   <span class="keyword">if</span> knife_length &gt;= <span class="number">20</span>:</span><br><span class="line">       print(<span class="string">&quot;不允许携带 %d 厘米长的刀上车&quot;</span> % knife_length)</span><br><span class="line">   <span class="comment"># 如果不超过 20 厘米，安检通过</span></span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       print(<span class="string">&quot;安检通过，祝您旅途愉快……&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果没有车票，不允许进门</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   print(<span class="string">&quot;大哥，您要先买票啊&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-3-5-一个还是多个if语句"><a href="#7-3-5-一个还是多个if语句" class="headerlink" title="7.3.5   一个还是多个if语句?"></a>7.3.5   一个还是多个if语句?</h3><h4 id="任务一：何时使用一个或多个if语句"><a href="#任务一：何时使用一个或多个if语句" class="headerlink" title="任务一：何时使用一个或多个if语句"></a><em>任务一：何时使用一个或多个if语句</em></h4><p>知识点：</p>
+<p>这里，将整个<strong>if-elif-else</strong>控制结构称为一个<strong>if</strong>语句</p>
+<p><strong>如果多个条件只需要满足一个，请使用一个if语句</strong></p>
+<p><strong>if-elif-else</strong>结构功能强大，一系列的条件只需要一个满足的场景</p>
+<p>即当满足任意一个条件后，Python就跳过剩余的条件</p>
+<p><strong>多个条件相互独立，需要每个都被测试，请使用多个独立的if语句</strong></p>
+<p>如果每个条件都需要被检查是否满足，那么一个<strong>if-elif-else</strong>语句就不能满足这个需求了</p>
+<p>这时就需要用使用多个<strong>if</strong>语句，来分别检查每个条件是否满足</p>
+<h4 id="任务二：多个if语句检测多个条件"><a href="#任务二：多个if语句检测多个条件" class="headerlink" title="任务二：多个if语句检测多个条件"></a><em>任务二：多个if语句检测多个条件</em></h4><p>下面再来看前面比萨店示例。如果顾客点了两种配料，就需要确保在比萨中包含这些配料：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">requested_toppings = [<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;cheese&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;mushrooms&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> requested_toppings:</span><br><span class="line">   print(<span class="string">&quot;Adding mushrooms.&quot;</span>)</span><br><span class="line">   </span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;pepperoni&#x27;</span> <span class="keyword">in</span> requested_toppings:</span><br><span class="line">   print(<span class="string">&quot;Adding pepperoni.&quot;</span>)</span><br><span class="line">   </span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;extra cheese&#x27;</span> <span class="keyword">in</span> requested_toppings:</span><br><span class="line">   print(<span class="string">&quot;Adding extra cheese.&quot;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;\nFinished making your pizza!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<ul>
+<li>首先创建了一个列表<code>requested_toppings</code>，其中包含顾客点的配料</li>
+<li><code>if &#39;mushrooms&#39; not in requested_toppings:</code>语句检查是否点了配料蘑菇<code>&#39;mushrooms&#39;</code>，如果点了，就打印一条确认消息</li>
+<li><code>if &#39;pepperoni&#39; in requested_toppings:</code>语句检查配料是否加了辣香肠<code>&#39;pepperoni&#39;</code>，这里使用一个简单的<code>if</code>语句，而不是<code>elif</code>或<code>else</code>语句；因此不管前一个测试是否通过，都将进行执行这个判断条件</li>
+<li><code>if &#39;extra cheese&#39; in requested_toppings:</code>语句检查是否要求多加芝士<code>&#39;extra cheese&#39;</code>；这里也不管前面两个<code>if</code>语句的结果，都会执行这个<code>if</code>语句代码</li>
+<li>在这个例子中，程序会独立地检查每个判断条件</li>
+</ul>
+<h4 id="任务三：一个if语句不能检测多个条件"><a href="#任务三：一个if语句不能检测多个条件" class="headerlink" title="任务三：一个if语句不能检测多个条件"></a><em>任务三：一个if语句不能检测多个条件</em></h4><p>如果像下面这样转而使用<strong>if-elif-else</strong>结构，代码将不能正确地运行，因为有一个测试通过后，就会跳过余下的测试：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">requested_toppings = [<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;mushrooms&#x27;</span> <span class="keyword">in</span> requested_toppings:</span><br><span class="line">   print(<span class="string">&quot;Adding mushrooms.&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="string">&#x27;pepperoni&#x27;</span> <span class="keyword">in</span> requested_toppings:</span><br><span class="line">   print(<span class="string">&quot;Adding pepperoni.&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="string">&#x27;extra cheese&#x27;</span> <span class="keyword">in</span> requested_toppings:</span><br><span class="line">   print(<span class="string">&quot;Adding extra cheese.&quot;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;\nFinished making your pizza!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>第一个条件**if ‘mushrooms’ in requested_toppings:<strong>，检查列表中是否包含</strong>‘mushrooms’**，它通过了，因此将在比萨中添加蘑菇</p>
+<p>此时，Python会跳过<strong>if-elif-else</strong>结构的剩余条件，不再检查列表中是否包含**’extra cheese’<strong>和</strong>‘pepperoni’**</p>
+<p>其结果是，只添加了顾客点的第一种配料，但不会添加其他的配料</p>
+<p>总之，如果你只想执行一个代码块，就使用<strong>if-elif-else</strong>结构；如果要运行多个代码块，就使用一系列独立的<strong>if</strong>语句</p>
+<h3 id="习题：-4"><a href="#习题：-4" class="headerlink" title="习题："></a>习题：</h3><p>题目要求：</p>
+<p><strong>5-3 外星人颜色#1</strong>：假设在游戏中刚射杀了一个外星人，请创建一个名为<strong>alien_color</strong>的变量，并将其设置为**’green’<strong>、</strong>‘yellow’<strong>或</strong>‘red’**</p>
+<p>编写一条<strong>if</strong>语句，检查外星人是否是绿色的；如果是，就打印一条消息，指出玩家获得了5个点</p>
+<p>编写这个程序的两个版本，在一个版本中上述测试通过了，而在另一个版本中未通过（未通过测试时没有输出）</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alien_color = [<span class="string">&#x27;green&#x27;</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;green&#x27;</span><span class="keyword">in</span> alien_color:</span><br><span class="line">    print(<span class="string">&quot;The player get 5 points&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alien_color = [ <span class="string">&#x27;yellow&#x27;</span>, ]</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;green&#x27;</span> <span class="keyword">in</span> alien_color:</span><br><span class="line">    print(<span class="string">&quot;The player get 5 points&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The player get 5 points</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;</span><br><span class="line"></span><br><span class="line">题目要求：</span><br><span class="line"></span><br><span class="line">**5-4 外星人颜色#2**：像练习5-3那样设置外星人的颜色，并编写一个**if-else**结构</span><br><span class="line"></span><br><span class="line">如果外星人是绿色的，就打印一条消息，指出玩家因射杀该外星人获得了5个点</span><br><span class="line"></span><br><span class="line">如果外星人不是绿色的，就打印一条消息，指出玩家获得了10个点</span><br><span class="line"></span><br><span class="line">编写这个程序的两个版本，在一个版本中执行**if**代码块，而在另一个版本中执行**else**代码块。</span><br><span class="line"></span><br><span class="line">代码如下：</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">alien_color &#x3D; [&#39;green&#39;]</span><br><span class="line">if &#39;green&#39; in alien_color:</span><br><span class="line">    print(&quot;The player get 5 points&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;The player get 10 points&quot;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alien_color = [<span class="string">&#x27;green&#x27;</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;red&#x27;</span> <span class="keyword">in</span> alien_color:</span><br><span class="line">    print(<span class="string">&quot;The player get 5 points&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;The player get 10 points&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The player get 5 points</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The player get 10 points</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p><strong>5-5 外星人颜色#3</strong>：将练习5-4中的<strong>if-else</strong>结构改为<strong>if-elif-else</strong>结构</p>
+<p>如果外星人是绿色的，就打印一条消息，指出玩家获得了5个点</p>
+<p>如果外星人是黄色的，就打印一条消息，指出玩家获得了10个点</p>
+<p>如果外星人是红色的，就打印一条消息，指出玩家获得了15个点</p>
+<p>编写这个程序的三个版本，它们分别在外星人为绿色、黄色和红色时打印一条消息</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">alien_color = [<span class="string">&#x27;green&#x27;</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;green&#x27;</span> <span class="keyword">in</span> alien_color:</span><br><span class="line">    print(<span class="string">&quot;The player get 5 points&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="string">&#x27;yellow&#x27;</span> <span class="keyword">in</span> alien_color:</span><br><span class="line">    print(<span class="string">&quot;The player get 10 points&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;The player get 15 points&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The player get 5 points</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p><strong>5-6 人生的不同阶段：</strong>设置变量<strong>age</strong>的值，再编写一个<strong>if-elif-else</strong>结构，根据<strong>age</strong>的值判断处于人生的哪个阶段</p>
+<p>如果一个人的年龄小于2岁，就打印一条消息，指出他是婴儿</p>
+<p>如果一个人的年龄为2（含）～4岁，就打印一条消息，指出他正蹒跚学步</p>
+<p>如果一个人的年龄为4（含）～13岁，就打印一条消息，指出他是儿童</p>
+<p>如果一个人的年龄为13（含）～20岁，就打印一条消息，指出他是青少年</p>
+<p>如果一个人的年龄为20（含）～65岁，就打印一条消息，指出他是成年人</p>
+<p>如果一个人的年龄超过65（含）岁，就打印一条消息，指出他是老年人</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">18</span></span><br><span class="line"><span class="keyword">if</span> age &lt; <span class="number">2</span> :</span><br><span class="line">    string = <span class="string">&#x27;baby&#x27;</span></span><br><span class="line"><span class="keyword">if</span>  <span class="number">2</span>&lt; age &lt; <span class="number">4</span> :</span><br><span class="line">    string = <span class="string">&#x27;toddler&#x27;</span></span><br><span class="line"><span class="keyword">if</span>  <span class="number">4</span> &lt;= age &lt; <span class="number">13</span> :</span><br><span class="line">    string = <span class="string">&#x27;children&#x27;</span></span><br><span class="line"><span class="keyword">if</span>  <span class="number">13</span> &lt;= age &lt;<span class="number">20</span> :</span><br><span class="line">    string = <span class="string">&#x27;teenager&#x27;</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">20</span> &lt;= age &lt; <span class="number">65</span> :</span><br><span class="line">    string = <span class="string">&#x27;adult&#x27;</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">65</span>&lt;= age :</span><br><span class="line">    string = <span class="string">&#x27;older&#x27;</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;He is a &quot;</span> + <span class="built_in">str</span>(string) +<span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">He is a teenager.</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p><strong>5-7 喜欢的水果</strong>：创建一个列表，其中包含你喜欢的水果，再编写一系列独立的if语句，检查列表中是否包含特定的水果</p>
+<p>将该列表命名为<strong>favorite_fruits</strong>，并在其中包含三种水果</p>
+<p>编写5条<strong>if</strong>语句，每条都检查某种水果是否包含在列表中，如果包含在列表中，就打印一条消息，如“You really like bananas!”</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">favorite_fruits = [<span class="string">&#x27;banbana&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>, <span class="string">&#x27;grape&#x27;</span>, <span class="string">&#x27;tomato&#x27;</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;banana&#x27;</span> <span class="keyword">in</span> favorite_fruits:</span><br><span class="line">    print(<span class="string">&quot;You really like bananas!&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;apple&#x27;</span> <span class="keyword">in</span> favorite_fruits:</span><br><span class="line">    print(<span class="string">&quot;You really like apple!&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;watermelon&#x27;</span> <span class="keyword">in</span> favorite_fruits:</span><br><span class="line">    print(<span class="string">&quot;You really like watermelon!&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;grape&#x27;</span> <span class="keyword">in</span> favorite_fruits:</span><br><span class="line">    print(<span class="string">&quot;You really like grape!&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;pineapple&#x27;</span><span class="keyword">in</span> favorite_fruits:</span><br><span class="line">    print(<span class="string">&quot;You really like pineapple!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">You really like apple!</span><br><span class="line">You really like grape!</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-4-综合实例：石头剪刀布"><a href="#7-4-综合实例：石头剪刀布" class="headerlink" title="7.4   综合实例：石头剪刀布"></a>7.4   综合实例：石头剪刀布</h2><p>学习目标：</p>
+<p>强化 <strong>多个条件</strong> 的 <strong>逻辑运算</strong></p>
+<p>体会 <strong>import</strong> 导入模块（“工具包”）的使用</p>
+<p>需求分析：</p>
+<p>1、从控制台输入要出的拳：石头(1)/剪刀(2)/布(3)</p>
+<p>2、电脑<strong>随机</strong>出拳 ：先假定电脑只会出石头，完成整体代码功能。</p>
+<p>3、比较胜负</p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">规则</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">石头 胜 剪刀</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">剪刀 胜 布</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">布 胜 石头</td>
+</tr>
+</tbody></table>
+<h4 id="任务一：基础代码实现"><a href="#任务一：基础代码实现" class="headerlink" title="任务一：基础代码实现"></a><em>任务一：基础代码实现</em></h4><p>先<strong>假定电脑就只会出石头</strong>，完成整体代码功能。注意，可以使用**.format()<strong>或</strong>f-string<strong>方式来代替字符串的</strong>%**格式化输出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从控制台输入要出的拳 —— 石头(1)/剪刀(2)/布(3)</span></span><br><span class="line">player = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请出拳 石头(1)/剪刀(2)/布(3)：&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 电脑 随机 出拳 - 假定电脑永远出石头</span></span><br><span class="line">computer = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># format方式</span></span><br><span class="line">print(<span class="string">&#x27;玩家:&#123;&#125;，电脑：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(player,computer))</span><br><span class="line"><span class="comment"># f-string方式</span></span><br><span class="line">print(<span class="string">f&#x27;玩家:<span class="subst">&#123;player&#125;</span>，电脑：<span class="subst">&#123;computer&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较胜负</span></span><br><span class="line"><span class="comment"># 如果条件判断的内容太长，可以在最外侧的条件增加一对大括号</span></span><br><span class="line"><span class="comment"># 再在每一个条件之间，使用回车，PyCharm 可以自动增加 8 个空格</span></span><br><span class="line"><span class="keyword">if</span> ((player == <span class="number">1</span> <span class="keyword">and</span> computer == <span class="number">2</span>) <span class="keyword">or</span></span><br><span class="line">       (player == <span class="number">2</span> <span class="keyword">and</span> computer == <span class="number">3</span>) <span class="keyword">or</span></span><br><span class="line">       (player == <span class="number">3</span> <span class="keyword">and</span> computer == <span class="number">1</span>)):</span><br><span class="line"></span><br><span class="line">   print(<span class="string">&quot;噢耶！！！电脑弱爆了！！！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> player == computer:</span><br><span class="line">   print(<span class="string">&quot;心有灵犀，再来一盘！&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   print(<span class="string">&quot;不行，我要和你决战到天亮！&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：随机出拳"><a href="#任务二：随机出拳" class="headerlink" title="任务二：随机出拳"></a><em>任务二：随机出拳</em></h4><p>在 <strong>Python</strong> 中，要使用随机数，首先需要导入<strong>随机数</strong>的<strong>random</strong>模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br></pre></td></tr></table></figure>
+
+<p>导入模块后，可以直接在<strong>模块名称</strong>后面敲一个 . 然后按 <strong>Tab</strong> 键，会提示该模块中包含的所有函数。<strong>random.randint(a, b)</strong> ，返回 <strong>[a, b]</strong> 之间的整数，包含 <strong>a</strong> 和 <strong>b</strong>。例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">random.randint(<span class="number">12</span>, <span class="number">20</span>)  <span class="comment"># 生成的随机数n: 12 &lt;= n &lt;= 20  </span></span><br><span class="line">random.randint(<span class="number">20</span>, <span class="number">20</span>)  <span class="comment"># 结果永远是 20  </span></span><br><span class="line">random.randint(<span class="number">20</span>, <span class="number">10</span>)  <span class="comment"># 该语句是错误的，下限必须小于上限</span></span><br></pre></td></tr></table></figure>
+
+<img src="D:\前端\博客\blog_1\source\_posts\N7_1901周浩驰.assets\综合实例：石头剪刀布.png" class="lazyload" data-srcset="D:\前端\博客\blog_1\source\_posts\N7_1901周浩驰.assets\综合实例：石头剪刀布.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" style="zoom:50%;" />
+
+
+
+<h2 id="7-5-初识异常处理机制"><a href="#7-5-初识异常处理机制" class="headerlink" title="7.5   初识异常处理机制"></a>7.5   初识异常处理机制</h2><h3 id="7-5-1-if和try异常处理机制"><a href="#7-5-1-if和try异常处理机制" class="headerlink" title="7.5.1   if和try异常处理机制"></a>7.5.1   if和try异常处理机制</h3><h4 id="任务一：通过if语句来解决程序异常"><a href="#任务一：通过if语句来解决程序异常" class="headerlink" title="任务一：通过if语句来解决程序异常"></a><em>任务一：通过if语句来解决程序异常</em></h4><p>在二次方程求解程序的例子中，在调用<strong>sqrt</strong>函数前，使用了<strong>if判断结构，避免了负数平方根而引起的程序奔溃</strong>。通过设置判断条件，来避免特定的程序错误</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这程序是之前程序的片段，不需要运行</span></span><br><span class="line">discRt = otherSqrt(b*b -<span class="number">4</span>*a*c)</span><br><span class="line"><span class="keyword">if</span> discRt &lt; <span class="number">0</span>:</span><br><span class="line">　　print(<span class="string">&quot;No real roots.&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">　　do something</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>在开发过程中，如果程序发生了错误，开发者可以通过<strong>Traceback</strong>来追踪错误的发生地和错误的原因</p>
+<p>然而，当程序发布给用户之后，如果程序运行发生了错误，程序将会崩溃，而用户是无法通过修改程序来恢复程序正常使用的</p>
+<p>另如果为程序的每个环节都设置<strong>if</strong>判断语句，那么程序将会变的非常复杂</p>
+<h4 id="任务二：try异常处理机制"><a href="#任务二：try异常处理机制" class="headerlink" title="任务二：try异常处理机制"></a><em>任务二：try异常处理机制</em></h4><p>为了提高程序的稳定性和健壮性，Python提供了<strong>try异常处理机制</strong>，帮助解决此类设计问题。异常处理机制允许开发者通过编写一些代码，来<strong>捕获和处理程序运行时出现的错误</strong></p>
+<p>知识点：<strong>try</strong>是一个异常处理机制</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   &lt;body&gt;</span><br><span class="line"><span class="keyword">except</span> &lt;ErrorType1&gt;:</span><br><span class="line">   &lt;handler1&gt;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">   &lt;default handle&gt;</span><br></pre></td></tr></table></figure>
+
+<p>程序在执行中，当遇到<strong>try</strong>语句时，它尝试执行<body>语句</p>
+<p>如果<body>语句发生错误，Python会查找与错误类型<ErrorType>相匹配的except错误处理分支</p>
+<p>如果找到与之匹配的except <ErrorType>:分支，那么就执行错误处理<handler>代码块</p>
+<p>如果<strong>try</strong>语句中的<body>语句块没有发生错误，则不会执行任何except错误处理分支</p>
+<p><ErrorType>：<strong>Traceback</strong>中的错误类型。最常见的<strong>except</strong>类型是<strong>IndexError</strong>(索引错误)、<strong>ValueError</strong>(值错误)、<strong>KeyError</strong>(键错误)、<strong>TypeError</strong>类型不匹配等</p>
+<p>注意：<strong>try-except</strong>语句与<strong>if-elsif-else</strong>语句结构类似</p>
+<h3 id="7-5-2-常见的ErrorType"><a href="#7-5-2-常见的ErrorType" class="headerlink" title="7.5.2   常见的ErrorType"></a>7.5.2   常见的ErrorType</h3><h4 id="任务一：TypeError"><a href="#任务一：TypeError" class="headerlink" title="任务一：TypeError"></a><em>任务一：TypeError</em></h4><p><strong>TypeError</strong> 通常是由类型不匹配引起的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 会发生TypeError</span></span><br><span class="line">a = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">b = a + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#当发生错误后，该错误之后的语句是不能被执行的</span></span><br><span class="line">print(<span class="string">&#x27;something&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果用户输入数字则会触发异常错误</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   b = <span class="string">&#x27;hello&#x27;</span> + a</span><br><span class="line"><span class="keyword">except</span> TypeError:</span><br><span class="line">   print(<span class="string">&#x27;TypeError: &#x27;</span>, TypeError)</span><br><span class="line">   </span><br><span class="line"><span class="comment">#当发生错误后，try之后的语句依然能被执行</span></span><br><span class="line">print(<span class="string">&#x27;something&#x27;</span>)    </span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：as关键字提取错误信息"><a href="#任务二：as关键字提取错误信息" class="headerlink" title="任务二：as关键字提取错误信息"></a><em>任务二：as关键字提取错误信息</em></h4><p>知识点：</p>
+<p>**except TypeError:**只能捕获到错误，但不知道具体的错误。</p>
+<p><strong>except TypeError as e:<strong>通过</strong>as</strong>关键字，可以将详细的错误信息提取到变量<strong>e</strong>中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果用户输入数字则会触发异常错误</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   b = <span class="string">&#x27;hello&#x27;</span> + a</span><br><span class="line"><span class="keyword">except</span> TypeError <span class="keyword">as</span> e:</span><br><span class="line">   print(<span class="string">&#x27;TypeError: &#x27;</span>, <span class="built_in">repr</span>(e))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：ValueError"><a href="#任务三：ValueError" class="headerlink" title="任务三：ValueError"></a><em>任务三：ValueError</em></h4><p><strong>ValueError</strong>通常是数值的非法计算，比如对负数开方等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line">a = -<span class="number">1</span></span><br><span class="line">math.sqrt(a)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   math.sqrt(a)</span><br><span class="line"><span class="keyword">except</span> ValueError <span class="keyword">as</span> e:</span><br><span class="line">   print(<span class="built_in">repr</span>(e))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：ZeroDivisionError"><a href="#任务四：ZeroDivisionError" class="headerlink" title="任务四：ZeroDivisionError"></a><em>任务四：ZeroDivisionError</em></h4><p><strong>ZeroDivisionError</strong>通常是除数为0时发生的错误</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   a = <span class="number">1</span>/<span class="number">0</span></span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError <span class="keyword">as</span> e:</span><br><span class="line">   print(<span class="built_in">repr</span>(e))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务五：IndexError"><a href="#任务五：IndexError" class="headerlink" title="任务五：IndexError"></a><em>任务五：IndexError</em></h4><p><strong>IndexError</strong>通常是列表或序列类型的索引越界引起的错误</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   a = li[<span class="number">4</span>]</span><br><span class="line"><span class="keyword">except</span> IndexError <span class="keyword">as</span> e:</span><br><span class="line">   print(<span class="built_in">repr</span>(e))</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-5-3-使用异常机制的二次方程"><a href="#7-5-3-使用异常机制的二次方程" class="headerlink" title="7.5.3   使用异常机制的二次方程"></a>7.5.3   使用异常机制的二次方程</h3><h4 id="任务一：二次方程的异常处理"><a href="#任务一：二次方程的异常处理" class="headerlink" title="任务一：二次方程的异常处理"></a><em>任务一：二次方程的异常处理</em></h4><p>由于二次方程需要调用<strong>math.sqrt()<strong>，负数的平方根会引起程序异常。之前的程序通过</strong>if</strong>语句，让程序避免了错误的发生。这里，将使用<strong>try</strong>机制来实现程序的异常处理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一元二次方程求解函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solver</span>(<span class="params">a, b, c</span>):</span></span><br><span class="line">   print(<span class="string">&quot;求解一元二次方程的根(实数)\n&quot;</span>)</span><br><span class="line">   discrim = b * b - <span class="number">4</span> * a * c</span><br><span class="line">   <span class="keyword">try</span>:</span><br><span class="line">       <span class="keyword">if</span> discrim == <span class="number">0</span>:</span><br><span class="line">           root = -b / (<span class="number">2</span> * a)</span><br><span class="line">           print(<span class="string">&quot;单个根为:&quot;</span>, root)</span><br><span class="line">       <span class="keyword">else</span>:</span><br><span class="line">           <span class="comment"># try可以捕获discrim的异常到ValueError</span></span><br><span class="line">           discRoot = math.sqrt(discrim)</span><br><span class="line">           root1 = (-b + discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">           root2 = (-b - discRoot) / (<span class="number">2</span> * a)</span><br><span class="line">           print(<span class="string">&quot;两个根为:&quot;</span>, root1, root2)</span><br><span class="line">   <span class="keyword">except</span> ValueError:</span><br><span class="line">           print(<span class="string">&quot;无实根&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 a: &quot;</span>))</span><br><span class="line">b = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 b: &quot;</span>))</span><br><span class="line">c = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;输入 c: &quot;</span>))</span><br><span class="line"></span><br><span class="line">solver(a, b, c)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7-6-习题"><a href="#7-6-习题" class="headerlink" title="7.6   习题"></a>7.6   习题</h3><p>题目要求：</p>
+<p>1、当每周超出40小时以上的工作时间支付150%的工资。编写程序输入工作小时数和小时工资，并计算一周的总工资</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, wages, hours</span>):</span></span><br><span class="line">        self.wages = wages</span><br><span class="line">        self.hours = hours</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_wages</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">if</span> self.hours &gt; <span class="number">40</span>:</span><br><span class="line">            pay = ((<span class="number">40</span> * self.wages) + (<span class="number">1.5</span> * self.wages * (self.hours - <span class="number">40</span>)))</span><br><span class="line">            print(<span class="string">&quot;Gross pay for week is : $%s&quot;</span> % pay)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            pay = self.wages * self.hours</span><br><span class="line">            print(<span class="string">&quot;weeks total pay: $%.2f&quot;</span> % pay)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wages = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;Enter hourly wage: &quot;</span>))</span><br><span class="line">hours = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;Enter numbers of hours worked: &quot;</span>))</span><br><span class="line">p = Person(wages, hours)</span><br><span class="line">p.get_wages()</span><br><span class="line">   <span class="comment">#wages=5</span></span><br><span class="line">   <span class="comment">#hours=5</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weeks total pay: $25.00</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>2、某位CS教授给出了5分的小测验，评分等级为5-A，4-B，3-C，2-D，1-E，0-F。编写一个程序，接受测验得分作为输入，并使用判断结构来计算相应的等级</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">ls1=&#123;<span class="number">5</span>:<span class="string">&#x27;A&#x27;</span>,<span class="number">4</span>:<span class="string">&#x27;B&#x27;</span>,<span class="number">3</span>:<span class="string">&#x27;C&#x27;</span>,<span class="number">2</span>:<span class="string">&#x27;D&#x27;</span>,<span class="number">1</span>:<span class="string">&#x27;E&#x27;</span>,<span class="number">0</span>:<span class="string">&#x27;F&#x27;</span>&#125;</span><br><span class="line">print(ls1[a])</span><br><span class="line"><span class="comment">#5</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>3、某位CS教授给出了100分的考试，分级为90～100：A，80～89：B，70～79：C，60～69：D，&lt;60：F。编写一个程序，将考试分数作为输入，并使用判断结构来计算相应的等级</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gradeconvert</span>():</span></span><br><span class="line">    gradeLevel = <span class="string">&quot;FDCBA&quot;</span></span><br><span class="line">    grade = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;Enter the grade: &quot;</span>)) <span class="comment"># 80</span></span><br><span class="line">    gradeLev = <span class="built_in">int</span>(grade/<span class="number">10</span> - <span class="number">5</span>)</span><br><span class="line">    <span class="keyword">if</span> gradeLev &lt; <span class="number">0</span>:</span><br><span class="line">        print(<span class="string">&quot;The converted grade level is: F&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> gradeLev == <span class="built_in">len</span>(gradeLevel):</span><br><span class="line">        print(<span class="string">&quot;The converted grade level is: A&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">&quot;The converted grade level is: &quot;</span>, gradeLevel[gradeLev])</span><br><span class="line">gradeconvert()</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The converted grade level is:  B</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>4、某所大学根据学生拿到的学分对学生分年级。小于7学分的学生是大一新生。至少有7个学分才是大二，16分以上是大三，26分以上是大四。编写一个程序，根据获得的学分数计算年级</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">credit = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入学分：&quot;</span>))</span><br><span class="line"><span class="keyword">if</span> credit &lt; <span class="number">7</span> :</span><br><span class="line">    string = <span class="string">&#x27;大一新生&#x27;</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">7</span> &lt;= credit &lt; <span class="number">16</span> :</span><br><span class="line">    string = <span class="string">&#x27;大二学生&#x27;</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">16</span> &lt;= credit &lt;<span class="number">26</span> :</span><br><span class="line">    string = <span class="string">&#x27;大三学生&#x27;</span></span><br><span class="line"><span class="keyword">if</span> credit &gt;= <span class="number">26</span> :</span><br><span class="line">    string = <span class="string">&#x27;大四学生&#x27;</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;这是一名&quot;</span> + <span class="built_in">str</span>(string) +<span class="string">&quot;。&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#5</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这是一名大一新生。</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>5、身体质量指数（BMI）的计算公式是人的体重（以磅计）乘以720，再除以人的身高（以英寸计）的平方。BMI在19～25范围内（包括边界值）被认为是健康的。编写一个程序，计算人的BMI，并打印一条消息，告诉他们是在健康范围之上、之中还是之下</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">height = <span class="built_in">eval</span>((<span class="built_in">input</span>(<span class="string">&quot;请输入你的身高(m)：&quot;</span>)))</span><br><span class="line">weight =<span class="built_in">eval</span>((<span class="built_in">input</span>(<span class="string">&quot;请输入你的体重(kg)：&quot;</span>)))</span><br><span class="line">BMI = weight / <span class="built_in">pow</span>(height,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> BMI &lt; <span class="number">19</span>:</span><br><span class="line">    print(<span class="string">&quot;健康范围之下&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> (BMI &gt;= <span class="number">19</span> <span class="keyword">and</span> BMI &lt;= <span class="number">25</span>):</span><br><span class="line">    print(<span class="string">&quot;健康范围之中&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> BMI &gt; <span class="number">25</span>:</span><br><span class="line">    print(<span class="string">&quot;健康范围之上&quot;</span>)</span><br><span class="line">    <span class="comment">#1.76</span></span><br><span class="line">    <span class="comment">#65</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">健康范围之中</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>6、超速罚单政策：300元加上超速部分每mph（一英里每小时）40元，如果超过90mph再追加罚款500元。编写一个程序，接受速度限制和计时速度，并打印一条消息，表明速度合法，或者在速度非法时，打印罚款</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ask_limit</span>():</span></span><br><span class="line">    limit = <span class="built_in">float</span>(<span class="built_in">input</span> (<span class="string">&quot;What was the speed limit? &quot;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> limit</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ask_speed</span>():</span></span><br><span class="line">    speed = <span class="built_in">float</span>(<span class="built_in">input</span> (<span class="string">&quot;What was your clocked speed? &quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> speed</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findfine</span>(<span class="params">speed, limit</span>):</span></span><br><span class="line">    <span class="keyword">if</span> speed &gt; <span class="number">90</span>:</span><br><span class="line">        bigfine = ((speed - limit) * <span class="number">5</span> + <span class="number">500</span>)</span><br><span class="line">        print(<span class="string">&quot;your fine is&quot;</span>, bigfine)</span><br><span class="line">    <span class="keyword">elif</span> speed &lt;= limit:</span><br><span class="line">        print(<span class="string">&quot;you were traveling a legal speed&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        fine = ((speed - limit) * <span class="number">40</span> + <span class="number">300</span>)</span><br><span class="line">        print(<span class="string">&quot;your fine is&quot;</span>, fine)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    limit = ask_limit()</span><br><span class="line">    speed = ask_speed()</span><br><span class="line">    findfine(speed, limit)</span><br><span class="line">main()</span><br><span class="line"><span class="comment">#100</span></span><br><span class="line"><span class="comment">#80</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">you were traveling a legal speed</span><br></pre></td></tr></table></figure>
+
+<p>题目要求：</p>
+<p>7、计算1982～2048年的复活节的计算公式如下：令a = year%19, b = year%4, c = year%7, d = (19a + 24)%30, e = (2b +4c +6d + 5)%7。复活节的日期是3月22日+ d + e（可能在4月）。写一个程序，输入年份，验证它在适当的范围，然后打印出那一年复活节的日期</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">year=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">a=year%<span class="number">19</span></span><br><span class="line">b=year%<span class="number">4</span></span><br><span class="line">c=year%<span class="number">7</span></span><br><span class="line">d=(19a + <span class="number">24</span>)%<span class="number">30</span></span><br><span class="line">e= (2b +4c +6d + <span class="number">5</span>)%<span class="number">7</span></span><br><span class="line"><span class="built_in">sum</span>=<span class="number">22</span>+d+e </span><br><span class="line"><span class="keyword">if</span> <span class="built_in">sum</span>&lt;=<span class="number">31</span>:</span><br><span class="line"> 	print(<span class="string">f&#x27;3月<span class="subst">&#123;<span class="built_in">sum</span>&#125;</span>日&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	print(<span class="string">f&#x27;4月<span class="subst">&#123;<span class="built_in">sum</span>-<span class="number">31</span>&#125;</span>日&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://waxll.top/2021/06/17/py7.html>http://waxll.top/2021/06/17/py7.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-17T00:33:29+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年6月17日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://waxll.top/2021/06/17/py7.html&title=Python学习笔记7 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://waxll.top/2021/06/17/py7.html&title=Python学习笔记7 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://waxll.top/2021/06/17/py7.html&title=Python学习笔记7 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/06/17/py8.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python学习笔记8</p>
+          <p class='content'>
+
+
+第八章   数据类型：dict字典8.1   初识字典8.1.1   为何需要字典？任务一：为何需要字典？知识点：
+字典也是Python提供的一种常用的容器类型的数据结构，它用于存放一组具...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/06/17/py%206.html'>
+          <p class='title'>Python学习笔记6<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+第六章   列表：推导式与切片6.1   (重要) 列表推导式6.1.1   为何要用列表推导式?任务一：生成列表元素为创建一个元素为整数平方项的列表squares，可使用如下方式
+123...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-%E5%88%9D%E8%AF%86if%E8%AF%AD%E5%8F%A5"><span class="toc-text">7.1   初识if语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-1-%E5%88%A4%E6%96%AD%E7%9A%84%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="toc-text">7.1.1   判断的背景介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%88%A4%E6%96%AD%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">任务一：判断的定义</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-2-if%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">7.1.2   if判断语句基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9ABMI%E5%81%A5%E5%BA%B7%E6%8C%87%E6%95%B0%E8%AE%A1%E7%AE%97%E7%A8%8B%E5%BA%8F"><span class="toc-text">任务一：BMI健康指数计算程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Aif%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="toc-text">任务二：if条件判断语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%88%A4%E6%96%AD%E5%B9%B4%E9%BE%84"><span class="toc-text">任务三：判断年龄</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%88%A4%E6%96%ADBMI%E5%81%A5%E5%BA%B7%E7%A8%8B%E5%BA%A6"><span class="toc-text">任务四：判断BMI健康程度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9A%E4%BF%9D%E7%95%99%E5%AD%97True%E5%92%8CFalse"><span class="toc-text">任务五：保留字True和False</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%85%AD%EF%BC%9A%E7%A9%BA%E5%88%97%E8%A1%A8%E3%80%81%E7%A9%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E9%9B%B6%E4%BD%9C%E4%B8%BA%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6"><span class="toc-text">任务六：空列表、空字符串和数字零作为判断条件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-3-if-else%E8%AF%AD%E5%8F%A5"><span class="toc-text">7.1.3   if-else语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%8E%8C%E6%8F%A1if-else%E8%AF%AD%E5%8F%A5"><span class="toc-text">任务一：掌握if-else语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%88%A4%E6%96%AD%E5%B9%B4%E9%BE%84%E7%9A%84%E6%94%B9%E8%BF%9B"><span class="toc-text">任务二：判断年龄的改进</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A"><span class="toc-text">习题：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6%EF%BC%9A%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">7.2   判断条件：布尔表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-1-%E5%88%9D%E8%AF%86%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">7.2.1   初识布尔表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%88%9D%E8%AF%86%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="toc-text">任务一：初识布尔表达式(条件判断)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-2-%E6%B7%B1%E5%85%A5%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">7.2.2   深入布尔表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A-%E7%9B%B8%E7%AD%89%E9%80%BB%E8%BE%91%E5%88%A4%E6%96%AD"><span class="toc-text">任务一：&#x3D;&#x3D;相等逻辑判断</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A-%E4%B8%8D%E7%AD%89%E9%80%BB%E8%BE%91%E5%88%A4%E6%96%AD"><span class="toc-text">任务二：!&#x3D;不等逻辑判断</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-1"><span class="toc-text">习题：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83%E5%A4%A7%E5%B0%8F"><span class="toc-text">任务三：字符串比较大小</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-3-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">7.2.3   逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">任务一：逻辑运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-2"><span class="toc-text">习题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-4-%E9%87%8D%E8%A6%81-in%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">7.2.4   (重要) in关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Ain%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E6%9F%90%E4%B8%AA%E5%80%BC"><span class="toc-text">任务一：in检查是否包含某个值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Ain%E7%94%A8%E4%BA%8Eif%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6"><span class="toc-text">任务二：in用于if判断条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9Ain%E7%94%A8%E4%BA%8Efor%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E5%85%83%E7%B4%A0"><span class="toc-text">任务三：in用于for循环遍历元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-3"><span class="toc-text">习题：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-%E8%BF%9B%E9%98%B6if%E8%AF%AD%E5%8F%A5"><span class="toc-text">7.3   进阶if语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-1-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3"><span class="toc-text">7.3.1   实例：二次方程求解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3"><span class="toc-text">任务一：二次方程求解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8if-else%E8%AF%AD%E5%8F%A5%E8%A7%A3%E5%86%B3%E7%A8%8B%E5%BA%8F%E5%A5%94%E6%BA%83%E9%97%AE%E9%A2%98"><span class="toc-text">任务二：使用if-else语句解决程序奔溃问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%B5%8C%E5%A5%97if-else%E8%AF%AD%E5%8F%A5%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%B7%AF%E5%88%86%E6%94%AF"><span class="toc-text">任务三：嵌套if-else语句实现多路分支</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-2-if-elif-else%E8%AF%AD%E5%8F%A5"><span class="toc-text">7.3.2   if-elif-else语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%8E%8C%E6%8F%A1if-elif-else%E8%AF%AD%E5%8F%A5"><span class="toc-text">任务一：掌握if-elif-else语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%AF%B9%E6%AF%94%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">任务二：对比逻辑运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%97%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%B7%AF%E5%88%A4%E6%96%AD"><span class="toc-text">任务三：输入数字实现多路判断</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-3-elif%E6%BC%94%E7%BB%83"><span class="toc-text">7.3.3   elif演练</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%A5%B3%E5%8F%8B%E7%9A%84%E8%8A%82%E6%97%A5"><span class="toc-text">任务一：女友的节日</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%B8%B8%E4%B9%90%E5%9C%BA%E9%97%A8%E7%A5%A8"><span class="toc-text">任务二：游乐场门票</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B%E7%9A%84%E6%B1%82%E8%A7%A3"><span class="toc-text">任务三：二次方程的求解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-4-%E6%B7%B1%E5%85%A5if%E5%B5%8C%E5%A5%97"><span class="toc-text">7.3.4   深入if嵌套</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Aelif%E5%92%8Cif%E5%B5%8C%E5%A5%97%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">任务一：elif和if嵌套的应用场景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E7%81%AB%E8%BD%A6%E7%AB%99%E5%AE%89%E6%A3%80"><span class="toc-text">任务二：火车站安检</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-5-%E4%B8%80%E4%B8%AA%E8%BF%98%E6%98%AF%E5%A4%9A%E4%B8%AAif%E8%AF%AD%E5%8F%A5"><span class="toc-text">7.3.5   一个还是多个if语句?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8%E4%B8%80%E4%B8%AA%E6%88%96%E5%A4%9A%E4%B8%AAif%E8%AF%AD%E5%8F%A5"><span class="toc-text">任务一：何时使用一个或多个if语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E5%A4%9A%E4%B8%AAif%E8%AF%AD%E5%8F%A5%E6%A3%80%E6%B5%8B%E5%A4%9A%E4%B8%AA%E6%9D%A1%E4%BB%B6"><span class="toc-text">任务二：多个if语句检测多个条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E4%B8%80%E4%B8%AAif%E8%AF%AD%E5%8F%A5%E4%B8%8D%E8%83%BD%E6%A3%80%E6%B5%8B%E5%A4%9A%E4%B8%AA%E6%9D%A1%E4%BB%B6"><span class="toc-text">任务三：一个if语句不能检测多个条件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98%EF%BC%9A-4"><span class="toc-text">习题：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-%E7%BB%BC%E5%90%88%E5%AE%9E%E4%BE%8B%EF%BC%9A%E7%9F%B3%E5%A4%B4%E5%89%AA%E5%88%80%E5%B8%83"><span class="toc-text">7.4   综合实例：石头剪刀布</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">任务一：基础代码实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E9%9A%8F%E6%9C%BA%E5%87%BA%E6%8B%B3"><span class="toc-text">任务二：随机出拳</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-%E5%88%9D%E8%AF%86%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-text">7.5   初识异常处理机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-1-if%E5%92%8Ctry%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-text">7.5.1   if和try异常处理机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E9%80%9A%E8%BF%87if%E8%AF%AD%E5%8F%A5%E6%9D%A5%E8%A7%A3%E5%86%B3%E7%A8%8B%E5%BA%8F%E5%BC%82%E5%B8%B8"><span class="toc-text">任务一：通过if语句来解决程序异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Atry%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-text">任务二：try异常处理机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-2-%E5%B8%B8%E8%A7%81%E7%9A%84ErrorType"><span class="toc-text">7.5.2   常见的ErrorType</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9ATypeError"><span class="toc-text">任务一：TypeError</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9Aas%E5%85%B3%E9%94%AE%E5%AD%97%E6%8F%90%E5%8F%96%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="toc-text">任务二：as关键字提取错误信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9AValueError"><span class="toc-text">任务三：ValueError</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9AZeroDivisionError"><span class="toc-text">任务四：ZeroDivisionError</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9AIndexError"><span class="toc-text">任务五：IndexError</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-3-%E4%BD%BF%E7%94%A8%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6%E7%9A%84%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B"><span class="toc-text">7.5.3   使用异常机制的二次方程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-text">任务一：二次方程的异常处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-6-%E4%B9%A0%E9%A2%98"><span class="toc-text">7.6   习题</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Python学习笔记7";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5119353317'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <!-- <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div> -->
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题 | 由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>强力驱动
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://waxll.top/">Copyright © 2019-2020 XieSenshi</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $('#cover-backstretch').backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/friends/
+        
+        
+        
+        
+          id="friends"
+        >
+        <i class='fa fa-users fa-fw'></i> 友链
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/journal/
+        
+        
+        
+        
+          id="journal"
+        >
+        <i class='fa fa-calendar fa-fw'></i> 日志
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/about/
+        
+        
+        
+        
+          id="about"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 关于
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> Dark mode
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5119353317';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz","appKey":"jM85yucqi5IuVYCCQS1cUwko","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz',
+    app_key: 'jM85yucqi5IuVYCCQS1cUwko',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://waxll.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>

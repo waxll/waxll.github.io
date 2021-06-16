@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Python学习笔记11 - Waxll&#39;Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Waxll'Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/waxll/Imag/gif-2.png">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    <div id="clickCanvas" style=" position:fixed;left:0;top:0;z-index:999999999;pointer-events:none;"><canvas class=" sketch" height="0" width="0"></canvas></div>
+    <script src="js/dj.js"></script>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Waxll's Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="A Wonderful Theme for Hexo" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fas fa-book fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <i class='fa fa-map-signs fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/photo/"
+              
+              
+              id="photo">
+              <i class='fas fa-images fa-fw'></i><p>图库</p>
+            </a>
+          
+            <a href="/journal/"
+              
+              
+              id="journal">
+              <i class='fas fa-calendar fa-fw'></i><p>日志</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              id="friends">
+              <i class='fa fa-users fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python学习笔记11
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://7bu.top/2020/07/14/8ba61fac048a2.jpeg">
+    <p>XieSenshi</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年6月17日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：8.7k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：32分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python学习笔记11" data-path="/2021/06/17/py11.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2021/06/17/py11.html#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2021/06/17/py11.html">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p><img src="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/%E7%AC%AC11%E7%AB%A0%20%E5%87%BD%E6%95%B0%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/waxll/Imag@master/python/%E7%AC%AC11%E7%AB%A0%20%E5%87%BD%E6%95%B0%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="第11章 函数：返回值与进阶用法"></p>
+<span id="more"></span>
+
+<h1 id="第十一章-函数：返回值与进阶用法"><a href="#第十一章-函数：返回值与进阶用法" class="headerlink" title="第十一章   函数：返回值与进阶用法"></a>第十一章   函数：返回值与进阶用法</h1><h2 id="11-1-函数的返回值"><a href="#11-1-函数的返回值" class="headerlink" title="11.1   函数的返回值"></a>11.1   函数的返回值</h2><h3 id="11-1-1-向函数外部传递信息：返回值"><a href="#11-1-1-向函数外部传递信息：返回值" class="headerlink" title="11.1.1   向函数外部传递信息：返回值"></a>11.1.1   向函数外部传递信息：返回值</h3><h4 id="函数返回值的用法"><a href="#函数返回值的用法" class="headerlink" title="函数返回值的用法"></a>函数返回值的用法</h4><p><strong>需求</strong>：函数并非总是直接通过<strong>print()<strong>来显示结果。有时，希望</strong>函数在执行完成后，将有用的处理结果，返回给调用者</strong>，以便做后续的处理</p>
+<p>知识点：</p>
+<p><strong>返回值</strong>：在函数执行完后，<strong>返回</strong>给它的调用者一个结果</p>
+<p>如果把函数看作是一个黑箱的话，那么<strong>输入就是函数的参数，输出就是函数的返回值</strong></p>
+<p>通过使用函数的返回值，可以让将程序的大部分繁重工作都移到<strong>函数子程序</strong>中去完成，从而简化主程序</p>
+<p>知识点：</p>
+<p>在函数中，可使用<strong>return</strong>关键字来返回结果</p>
+<p>外部调用函数之处，可以<strong>使用变量</strong>来<strong>接收</strong>函数的返回</p>
+<h4 id="任务一：改进带返回的求和函数"><a href="#任务一：改进带返回的求和函数" class="headerlink" title="任务一：改进带返回的求和函数"></a><em>任务一：改进带返回的求和函数</em></h4><p>例子：带返回的两个数求和程序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_2_num</span>(<span class="params">num1, num2</span>):</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;对两个数字的求和&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> num1 + num2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用函数，并使用 result 变量接收计算结果</span></span><br><span class="line">result = sum_2_num(<span class="number">10</span>, <span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;计算结果是 <span class="subst">&#123;result&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：返回之后的代码将不被执行"><a href="#任务二：返回之后的代码将不被执行" class="headerlink" title="任务二：返回之后的代码将不被执行"></a><em>任务二：返回之后的代码将不被执行</em></h4><p><strong>注意</strong>：<strong>return</strong> 表示返回，当执行<strong>return</strong> 后，它后续代码<strong>都会不被执行</strong></p>
+<p>例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_2_num</span>(<span class="params">num1, num2</span>):</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;对两个数字的求和&quot;&quot;&quot;</span></span><br><span class="line">   <span class="keyword">return</span> num1 + num2</span><br><span class="line">   <span class="comment"># return之后的代码永远不被执行</span></span><br><span class="line">   num = <span class="number">1000</span></span><br><span class="line">   print(num)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用函数，并使用 result 变量接收计算结果</span></span><br><span class="line">result = sum_2_num(<span class="number">10</span>, <span class="number">20</span>)</span><br><span class="line">print(<span class="string">f&quot;计算结果是 <span class="subst">&#123;result&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-1-2-利用元组函数返回多个值"><a href="#11-1-2-利用元组函数返回多个值" class="headerlink" title="11.1.2   利用元组函数返回多个值"></a>11.1.2   利用元组函数返回多个值</h3><h4 id="任务一：函数多个返回值的需求分析"><a href="#任务一：函数多个返回值的需求分析" class="headerlink" title="任务一：函数多个返回值的需求分析"></a><em>任务一：函数多个返回值的需求分析</em></h4><p>问题：在Python中，一个函数执行后能否返回多个结果</p>
+<p>下面将通过一个例子来分析函数多个返回值的实际需求</p>
+<p>例子：温度和湿度测量程序。假设要开发一个函数能够同时返回当前的温度和湿度。首先，实现函数的单个返回值(温度)功能</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">measure</span>():</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;返回当前的温度&quot;&quot;&quot;</span>    </span><br><span class="line">   print(<span class="string">&quot;开始测量...&quot;</span>)</span><br><span class="line">   temp = <span class="number">39</span></span><br><span class="line">   print(<span class="string">&quot;测量结束...&quot;</span>)    </span><br><span class="line">   <span class="keyword">return</span> temp</span><br><span class="line"></span><br><span class="line">result = measure()</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：使用元组传递函数多个返回值"><a href="#任务二：使用元组传递函数多个返回值" class="headerlink" title="任务二：使用元组传递函数多个返回值"></a><em>任务二：使用元组传递函数多个返回值</em></h4><p>知识点(回顾)： <strong>函数传递多个返回值</strong></p>
+<p>在C++中，函数允许最多传回一个返回值，否则<strong>会出错</strong></p>
+<p>在Python中，通过<strong>元组</strong>可以实现传递函数的多个返回值功能。对函数的多个返回值使用<strong>元组</strong>进行<strong>打包</strong>，然后在函数调用之处进行<strong>解包</strong>赋值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#观察divmod()函数</span></span><br><span class="line"><span class="comment"># 返回值：商和余数，被打包在一个元组</span></span><br><span class="line">print(<span class="built_in">divmod</span>(<span class="number">15</span>, <span class="number">2</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过元组解包，接受函数的多个返回值</span></span><br><span class="line">x, y = <span class="built_in">divmod</span>(<span class="number">15</span>, <span class="number">2</span>)</span><br><span class="line">print(<span class="string">&#x27;divmod(15, 2)，商：&#123;&#125;，余数：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(x, y))</span><br></pre></td></tr></table></figure>
+
+<p>下面，将利用<strong>元组</strong>在返回温度的同时，也能够返回<strong>湿度</strong>信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">measure</span>():</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;测量温度和湿度&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">   print(<span class="string">&quot;测量开始...&quot;</span>)</span><br><span class="line">   temp = <span class="number">39</span></span><br><span class="line">   wetness = <span class="number">50</span></span><br><span class="line">   print(<span class="string">&quot;测量结束...&quot;</span>)</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 元组-可以包含多个数据，因此可以使用元组让函数一次返回多个值</span></span><br><span class="line">   <span class="comment"># 如果函数返回的类型是元组，小括号可以省略</span></span><br><span class="line">   <span class="comment"># return (temp, wetness)</span></span><br><span class="line">   <span class="keyword">return</span> temp, wetness</span><br><span class="line"></span><br><span class="line"><span class="comment"># 元组</span></span><br><span class="line">result = measure()</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+<p>知识点：</p>
+<p>如果一个函数返回值是<strong>元组</strong>，括号可以<strong>省略</strong></p>
+<p>在 <strong>Python</strong> 中，可以<strong>将一个元组</strong>通过<strong>赋值语句</strong>解包给给<strong>多个变量</strong></p>
+<p>注意：解包时，变量数量需要与元组元素数量保持一致</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 需要单独的处理温度或者湿度 - 不方便</span></span><br><span class="line">print(result[<span class="number">0</span>])</span><br><span class="line">print(result[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果函数返回的类型是元组，同时希望单独的处理元组中的元素</span></span><br><span class="line"><span class="comment"># 可以使用多个变量，一次接收函数的返回结果</span></span><br><span class="line"><span class="comment"># 注意：使用多个变量接收结果时，变量的个数应该和元组中元素的个数保持一致</span></span><br><span class="line">gl_temp, gl_wetness = measure()</span><br><span class="line"></span><br><span class="line">print(gl_temp)</span><br><span class="line">print(gl_wetness)</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-1-3-实例：交换两个数字"><a href="#11-1-3-实例：交换两个数字" class="headerlink" title="11.1.3   实例：交换两个数字"></a>11.1.3   实例：交换两个数字</h3><p><strong>要求</strong>：有两个整数变量 <strong>a = 6, b = 100</strong>，如果不使用其他变量，如何<strong>交换两个变量的值</strong></p>
+<h4 id="解法-1-——-使用其他变量"><a href="#解法-1-——-使用其他变量" class="headerlink" title="解法 1 —— 使用其他变量"></a>解法 1 —— 使用其他变量</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解法 1 - 使用临时变量</span></span><br><span class="line">a = <span class="number">6</span></span><br><span class="line">b = <span class="number">100</span></span><br><span class="line">print(a,b)</span><br><span class="line"></span><br><span class="line">c = b</span><br><span class="line">b = a</span><br><span class="line">a = c</span><br><span class="line">print(a,b)</span><br></pre></td></tr></table></figure>
+
+<h4 id="解法-2-——-不使用临时变量"><a href="#解法-2-——-不使用临时变量" class="headerlink" title="解法 2 —— 不使用临时变量"></a>解法 2 —— 不使用临时变量</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解法 2 - 不使用临时变量</span></span><br><span class="line">a = <span class="number">6</span></span><br><span class="line">b = <span class="number">100</span></span><br><span class="line">print(a,b)</span><br><span class="line"></span><br><span class="line">a = a + b</span><br><span class="line">b = a - b</span><br><span class="line">a = a - b</span><br><span class="line">print(a,b)</span><br></pre></td></tr></table></figure>
+
+<h4 id="解法-3-——-Python-专有，利用元组"><a href="#解法-3-——-Python-专有，利用元组" class="headerlink" title="解法 3 —— Python 专有，利用元组"></a>解法 3 —— Python 专有，利用元组</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过元组的封包和解包功能</span></span><br><span class="line">a = <span class="number">6</span></span><br><span class="line">b = <span class="number">100</span></span><br><span class="line">print(a,b)</span><br><span class="line"></span><br><span class="line">a, b = b, a</span><br><span class="line">print(a,b)</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-1-4-实例：人物信息构建"><a href="#11-1-4-实例：人物信息构建" class="headerlink" title="11.1.4   实例：人物信息构建"></a>11.1.4   实例：人物信息构建</h3><h4 id="任务一：带返回的姓名拼接函数"><a href="#任务一：带返回的姓名拼接函数" class="headerlink" title="任务一：带返回的姓名拼接函数"></a><em>任务一：带返回的姓名拼接函数</em></h4><p>需求：接受姓和名，并返回首字母大写的全名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_formatted_name</span>(<span class="params">first_name, last_name</span>):</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span></span><br><span class="line">   full_name = first_name + <span class="string">&#x27; &#x27;</span> + last_name</span><br><span class="line">   <span class="keyword">return</span> full_name.title()</span><br><span class="line"></span><br><span class="line">name = get_formatted_name(<span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;hendrix&#x27;</span>)</span><br><span class="line">print(name)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>函数<strong>get_formatted_name()<strong>接受两个参数</strong>first_name</strong>名和<strong>last_name</strong>姓</p>
+<p>函数体中，名和姓进行拼接(中间加1空格)，并将结果存储在变量<strong>full_name</strong>中</p>
+<p>然后，将<strong>full_name</strong>字符串调用**.title()**方法转换为首字母大写格式，并将其作为返回值</p>
+<p>主程序中，使用变量<strong>name</strong>接受函数**get_formatted_name()**的返回值，并打印输出结果</p>
+<h4 id="任务二：使用默认值实参改进姓名函数"><a href="#任务二：使用默认值实参改进姓名函数" class="headerlink" title="任务二：使用默认值实参改进姓名函数"></a><em>任务二：使用默认值实参改进姓名函数</em></h4><p>需求：有些人还拥有中间名</p>
+<p>因此，需要扩展函数<strong>get_formatted_name()<strong>，来满足</strong>中间名</strong>需求</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_formatted_name</span>(<span class="params">first_name, middle_name, last_name</span>):</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span></span><br><span class="line">   full_name = first_name + <span class="string">&#x27; &#x27;</span> + middle_name + <span class="string">&#x27; &#x27;</span> + last_name</span><br><span class="line">   <span class="keyword">return</span> full_name.title()</span><br><span class="line"></span><br><span class="line">name = get_formatted_name(<span class="string">&#x27;john&#x27;</span>, <span class="string">&#x27;lee&#x27;</span>, <span class="string">&#x27;hooker&#x27;</span>)</span><br><span class="line">print(name)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>在调用函数时，只需提供名、中间名和姓，**get_formatted_name()**函数就能正确地运行</p>
+<p>它根据三个实参，创建一个以空格为分隔符的拼接<strong>full_name</strong>字符串，并将结果转换为首字母大写格式</p>
+<p>需求：</p>
+<p><strong>并非所有的人都有中间名</strong>。如果调用函数时，只提供了名和姓两个实参，它将不能正确地运行</p>
+<p>为让中间名变成可选的，可给实参<strong>middle_name</strong>指定一个默认值——<strong>空字符串</strong>，并在用户没有提供中间名时不使用这个实参</p>
+<p>函数体中，需要对2个参数(名+姓)和3个参数(名+中间名+姓)进行分别处理，可以借助if语句实现流程控制</p>
+<p><strong>注意</strong>：带默认值的参数，必须要在非默认值参数<strong>之后</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_formatted_name</span>(<span class="params">first_name, last_name, middle_name=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span></span><br><span class="line">   <span class="keyword">if</span> middle_name:</span><br><span class="line">       full_name = first_name + <span class="string">&#x27; &#x27;</span> + middle_name + <span class="string">&#x27; &#x27;</span> + last_name</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       full_name = first_name + <span class="string">&#x27; &#x27;</span> + last_name</span><br><span class="line">   <span class="keyword">return</span> full_name.title()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">name = get_formatted_name(<span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;hendrix&#x27;</span>)</span><br><span class="line">print(name)</span><br><span class="line"></span><br><span class="line">name = get_formatted_name(<span class="string">&#x27;john&#x27;</span>, <span class="string">&#x27;hooker&#x27;</span>, <span class="string">&#x27;lee&#x27;</span>)</span><br><span class="line">print(name)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>由于每个人都拥有名和姓，因此在函数定义中首先给出这两个形参。<strong>中间名是可选的，因此在函数定义中最后列出该形参</strong>，并将其默认值设置为空字符串</p>
+<p>在函数体中，通过<strong>if</strong>判断检查参数<strong>middle_name</strong>是否为空。然后使用两种<strong>full_name</strong>的拼接方式，最后再将其修改为首字母大写格式，并返回给外部</p>
+<p><strong>位置参数</strong>调用函数时，必须要确保每个<strong>位置实参能正确地关联到相应的形参</strong>。调用函数时，如果只指定名和姓，调用起来将非常简单。如果需要指定中间名，就必须确保中间名传递给<strong>middle_name</strong>(最后个参数)</p>
+<h4 id="任务三：改进函数返回值为字典"><a href="#任务三：改进函数返回值为字典" class="headerlink" title="任务三：改进函数返回值为字典"></a><em>任务三：改进函数返回值为字典</em></h4><p>知识点：函数可返回<strong>任何类型的值</strong>，包括列表和字典等较复杂的数据结构</p>
+<p>例子：人物构建函数，接受名和姓，返回一个表示人属性的字典：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_person</span>(<span class="params">first_name, last_name</span>):</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;返回一个字典，其中包含有关一个人的信息&quot;&quot;&quot;</span></span><br><span class="line">   person = &#123;<span class="string">&#x27;first&#x27;</span>: first_name, <span class="string">&#x27;last&#x27;</span>: last_name&#125;</span><br><span class="line">   <span class="keyword">return</span> person</span><br><span class="line"></span><br><span class="line">name = build_person(<span class="string">&#x27;三&#x27;</span>, <span class="string">&#x27;张&#x27;</span>)</span><br><span class="line">print(name)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>函数**build_person()**接受名和姓，并将这些值封装到字典中</p>
+<p>存储<strong>first_name</strong>的值时，使用的键为**’first’<strong>；而存储</strong>last_name<strong>的值时，使用的键为</strong>‘last’**。最后，返回表示人属性的字典</p>
+<p>在主程序中，打印返回值(字典)，此时原来的两项文本信息存储在一个字典中：**{‘first’: ‘三’, ‘last’: ‘张’}**</p>
+<h4 id="任务四：改进函数接受年龄参数"><a href="#任务四：改进函数接受年龄参数" class="headerlink" title="任务四：改进函数接受年龄参数"></a><em>任务四：改进函数接受年龄参数</em></h4><p>扩展函数功能，让它能接受更多的参数，如中间名、年龄、职业或你要存储的其他任何信息。例如，下面程序可以储存姓名和年龄：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_person</span>(<span class="params">first_name, last_name, age=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;返回一个字典，其中包含有关一个人的信息&quot;&quot;&quot;</span></span><br><span class="line">   person = &#123;<span class="string">&#x27;first&#x27;</span>: first_name, <span class="string">&#x27;last&#x27;</span>: last_name&#125;</span><br><span class="line">   <span class="keyword">if</span> age:</span><br><span class="line">       person[<span class="string">&#x27;age&#x27;</span>] = age</span><br><span class="line">   <span class="keyword">return</span> person</span><br><span class="line"></span><br><span class="line">name = build_person(<span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;hendrix&#x27;</span>, age=<span class="number">27</span>)</span><br><span class="line">print(name)</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：</p>
+<p>在函数定义中，新增一个可选形参<strong>age</strong>，并将其默认值设置为空字符串</p>
+<p>如果函数调用中包含这个形参的值，就将该值将存储到字典中；否则，直接返回无年龄信息的字典</p>
+<h4 id="任务五：循环接受外部输入储存用户信息"><a href="#任务五：循环接受外部输入储存用户信息" class="headerlink" title="任务五：循环接受外部输入储存用户信息"></a><em>任务五：循环接受外部输入储存用户信息</em></h4><p>需求：</p>
+<p>使用<strong>while</strong>哨兵式循环，不断接受用户循环输入,直到输入<strong>q</strong>为止</p>
+<p>调用之前姓名构造函数，将用户输入作为函数的参数，并返回完整的姓名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_formatted_name</span>(<span class="params">first_name, last_name</span>):</span></span><br><span class="line">   <span class="string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span></span><br><span class="line">   full_name = first_name + <span class="string">&#x27; &#x27;</span> + last_name</span><br><span class="line">   <span class="keyword">return</span> full_name.title()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环条件为True</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">   print(<span class="string">&quot;\nPlease tell me your name:&quot;</span>)</span><br><span class="line">   print(<span class="string">&quot;(enter &#x27;q&#x27; at any time to quit)&quot;</span>)</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 遇到用户输入q，则退出循环</span></span><br><span class="line">   f_name = <span class="built_in">input</span>(<span class="string">&quot;First name: &quot;</span>)</span><br><span class="line">   <span class="keyword">if</span> f_name == <span class="string">&#x27;q&#x27;</span>:</span><br><span class="line">       <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">   l_name = <span class="built_in">input</span>(<span class="string">&quot;Last name: &quot;</span>)</span><br><span class="line">   <span class="keyword">if</span> l_name == <span class="string">&#x27;q&#x27;</span>:</span><br><span class="line">       <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">   <span class="comment"># 打印输出结果</span></span><br><span class="line">   formatted_name = get_formatted_name(f_name, l_name)</span><br><span class="line">   print(<span class="string">&quot;\nHello, &quot;</span> + formatted_name + <span class="string">&quot;!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在程序中，添加了一条消息来告诉用户如何退出，然后在每次提示用户输入时，都检查他输入的是否是退出值，如果是，就退出循环。现在，这个程序将不断地问候，直到用户输入的姓或名为**’q’**为止</p>
+<h2 id="11-2（重要）进阶函数"><a href="#11-2（重要）进阶函数" class="headerlink" title="11.2（重要）进阶函数"></a>11.2（重要）进阶函数</h2><h3 id="11-2-1-分析函数参数和返回值的作用"><a href="#11-2-1-分析函数参数和返回值的作用" class="headerlink" title="11.2.1   分析函数参数和返回值的作用"></a>11.2.1   分析函数参数和返回值的作用</h3><h4 id="任务一：四种组合形式"><a href="#任务一：四种组合形式" class="headerlink" title="任务一：四种组合形式"></a><em>任务一：四种组合形式</em></h4><p>知识点：函数根据<strong>有没有参数</strong>以及<strong>有没有返回值</strong>，可以<strong>相互组合</strong>，一共有<strong>4 种</strong>组合形式。</p>
+<p>无参数，无返回值</p>
+<p>无参数，有返回值</p>
+<p>有参数，无返回值</p>
+<p>有参数，有返回值</p>
+<p>知识点：</p>
+<p>定义函数时，<strong>是否接收参数，或者是否返回结果</strong>，是根据<strong>实际的功能需求</strong>来决定的</p>
+<p>如果函数<strong>内部处理的数据不确定</strong>，就可以将外界的数据以参数传递到函数内部。</p>
+<p>如果希望一个函数 <strong>执行完成后，向外界汇报执行结果</strong>，就可以增加函数的返回值</p>
+<h4 id="任务二：无参数，无返回值"><a href="#任务二：无参数，无返回值" class="headerlink" title="任务二：无参数，无返回值"></a><em>任务二：无参数，无返回值</em></h4><p>知识点：</p>
+<p>此类函数，不接收参数，也没有返回值</p>
+<p>应用场景：<strong>只是单纯地做一件事情</strong>，例如显示菜单、打印提示语等</p>
+<p>在函数内部<strong>针对全局变量进行操作</strong>，例如：<strong>新建名片</strong>，将最终结果<strong>记录在全局变量</strong>中</p>
+<p>注意：</p>
+<p>如果全局变量的数据类型是一个<strong>可变类型</strong>，在函数内部可以使用方法修改全局变量的内容，<strong>变量的引用不会改变</strong></p>
+<p>在函数内部，<strong>使用赋值语句</strong>才会<strong>修改变量的引用</strong></p>
+<h4 id="任务三：无参数，有返回值"><a href="#任务三：无参数，有返回值" class="headerlink" title="任务三：无参数，有返回值"></a><em>任务三：无参数，有返回值</em></h4><p>知识点：</p>
+<p>此类函数，不接收参数，但是有返回值</p>
+<p>例如，采集数据程序(<strong>温度计</strong>)。返回结果就是当前的温度，而不需要传递任何的参数</p>
+<h4 id="任务四：有参数，无返回值"><a href="#任务四：有参数，无返回值" class="headerlink" title="任务四：有参数，无返回值"></a><em>任务四：有参数，无返回值</em></h4><p>知识点：</p>
+<p>此类函数，接收参数，没有返回值</p>
+<p>函数内部的代码保持不变，针对<strong>不同的参数处理不同的数据</strong></p>
+<p>例如，<strong>名片管理系统</strong>针对<strong>找到的名片</strong>做<strong>修改、删除</strong>操作</p>
+<h4 id="任务五：有参数，有返回值"><a href="#任务五：有参数，有返回值" class="headerlink" title="任务五：有参数，有返回值"></a><em>任务五：有参数，有返回值</em></h4><p>知识点：</p>
+<p>此类函数，接收参数，同时有返回值</p>
+<p>应用场景：函数内部的代码保持不变，针对<strong>不同的参数 处理 不同的数据</strong>，并且<strong>返回期望的处理结果</strong></p>
+<p>例如，<strong>名片管理系统</strong>使用<strong>字典默认值</strong>和<strong>提示信息</strong>提示用户输入内容：如果输入，返回输入内容；如果没有输入，返回字典默认值</p>
+<h3 id="11-2-2-函数的嵌套调用"><a href="#11-2-2-函数的嵌套调用" class="headerlink" title="11.2.2   函数的嵌套调用"></a>11.2.2   函数的嵌套调用</h3><h4 id="任务一：嵌套的函数流程分析"><a href="#任务一：嵌套的函数流程分析" class="headerlink" title="任务一：嵌套的函数流程分析"></a><em>任务一：嵌套的函数流程分析</em></h4><p>知识点：所谓的<strong>函数嵌套调用</strong>就是在一个函数里面<strong>又调用</strong>了另外的函数</p>
+<p>例子：函数的嵌套使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test1</span>():</span></span><br><span class="line">   print(<span class="string">&quot;*&quot;</span> * <span class="number">50</span>)</span><br><span class="line">   print(<span class="string">&quot;test 1&quot;</span>)</span><br><span class="line">   print(<span class="string">&quot;*&quot;</span> * <span class="number">50</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test2</span>():</span></span><br><span class="line">   print(<span class="string">&quot;-&quot;</span> * <span class="number">50</span>)</span><br><span class="line">   print(<span class="string">&quot;test 2&quot;</span>)</span><br><span class="line">   <span class="comment">#先执行完的嵌套函数test1()再继续外层函数</span></span><br><span class="line">   test1()</span><br><span class="line">   print(<span class="string">&quot;-&quot;</span> * <span class="number">50</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">test2()</span><br></pre></td></tr></table></figure>
+
+<p>程序解析：如果函数 <strong>test2</strong> 中，调用了另外一个函数 <strong>test1</strong></p>
+<p>那么执行到调用 <strong>test1</strong> 函数时，会先把函数 <strong>test1</strong> 中的任务都执行完</p>
+<p>才会回到 <strong>test2</strong> 中调用函数 <strong>test1</strong> 的位置，继续执行后续的代码</p>
+<h4 id="任务二：百度网站解读函数嵌套调用"><a href="#任务二：百度网站解读函数嵌套调用" class="headerlink" title="任务二：百度网站解读函数嵌套调用"></a><em>任务二：百度网站解读函数嵌套调用</em></h4><p>例子：通过百度网站列举说明现实应用中的嵌套调用，仅为了直观解释什么是<strong>函数的嵌套</strong></p>
+<h4 id="实例：打印分隔符"><a href="#实例：打印分隔符" class="headerlink" title="实例：打印分隔符"></a>实例：打印分隔符</h4><p>知识点：</p>
+<p>程序往往会因需求而不停地<strong>调整</strong>和<strong>更新</strong></p>
+<p>通过函数可以实现对功能代码的<strong>统一管理</strong></p>
+<p>当需求发生变化时，只需对相应函数的<strong>内部进行更新</strong>，而其他外部代码不变</p>
+<p><strong>需求 1</strong>：定义一个 <strong>print_line</strong> 函数能够打印 ***** 组成的<strong>一条分隔线</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_line</span>(<span class="params">char</span>):</span></span><br><span class="line">   print(<span class="string">&quot;*&quot;</span> * <span class="number">50</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>需求 2</strong>：定义一个函数能够打印<strong>由任意字符组成</strong>的分隔线</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_line</span>(<span class="params">char</span>):</span></span><br><span class="line">   print(char * <span class="number">50</span>)    </span><br></pre></td></tr></table></figure>
+
+<p><strong>需求 3</strong>：定义一个函数能够打印<strong>任意重复次数</strong>的分隔线</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_line</span>(<span class="params">char, times</span>):</span></span><br><span class="line">   print(char * times)</span><br></pre></td></tr></table></figure>
+
+<p><strong>需求 4</strong>：定义一个函数能够打印<strong>5行</strong>的分隔线，分隔线要求符合<strong>需求3</strong></p>
+<p><strong>注意</strong>：在面对实际问题变化时，应该冷静思考，<strong>不要轻易修改之前已经完成的，能够正常执行的函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_line</span>(<span class="params">char, times</span>):</span></span><br><span class="line">   print(char * times)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_lines</span>(<span class="params">char, times</span>):</span></span><br><span class="line">   row = <span class="number">0</span>    </span><br><span class="line">   <span class="keyword">while</span> row &lt; <span class="number">5</span>:</span><br><span class="line">       print_line(char, times)</span><br><span class="line">       row += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-2-3-模块中的函数"><a href="#11-2-3-模块中的函数" class="headerlink" title="11.2.3   模块中的函数"></a>11.2.3   模块中的函数</h3><h4 id="任务一：认识模块的功能"><a href="#任务一：认识模块的功能" class="headerlink" title="任务一：认识模块的功能"></a><em>任务一：认识模块的功能</em></h4><p>知识点：</p>
+<p><strong>模块</strong>是Python程序架构的一个核心概念，将多个拥有功能类似的函数<strong>打包封装</strong>到模块中。它是比函数更高一级的程序集</p>
+<p><strong>模块</strong>就好比是拥有某种功能的<strong>工具包</strong>，如果要想使用工具包中的工具(函数)，就需要提前通过import导入该模块。</p>
+<p>每一个以扩展名 <strong>py</strong> 结尾的 <strong>Python</strong> 源代码文件都是一个<strong>模块</strong></p>
+<p><strong>模块名就是文件名</strong>。在其他程序中，通过<strong>import 模块名</strong>来导入该模块</p>
+<h4 id="实例：体验模块"><a href="#实例：体验模块" class="headerlink" title="实例：体验模块"></a>实例：体验模块</h4><p><strong>步骤一</strong>：新建 <strong>py_seplines.py</strong></p>
+<p><strong>步骤二</strong>：复制打印<strong>5行</strong>的分隔线程序，并添加一个额外的字符串变量<strong>name</strong></p>
+<p>注意：复制代码时<strong>小心</strong>代码块的缩进，建议先放<strong>cell</strong>中用<strong>小锤子插件</strong>格式化后，再复制到**.py**文件中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_line</span>(<span class="params">char, times</span>):</span></span><br><span class="line">   print(char * times)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_lines</span>(<span class="params">char, times</span>):</span></span><br><span class="line">   row = <span class="number">0</span></span><br><span class="line">   <span class="keyword">while</span> row &lt; <span class="number">5</span>:</span><br><span class="line">       print_line(char, times)</span><br><span class="line">       row += <span class="number">1</span></span><br><span class="line">       </span><br><span class="line">name = <span class="string">&#x27;张三的模块&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>步骤三</strong>：在Jupyter中，新建一个<strong>cell</strong>，并添加如下代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 模块名为文件名</span></span><br><span class="line"><span class="keyword">import</span> py_seplines</span><br><span class="line"></span><br><span class="line">py_seplines.print_line(<span class="string">&quot;-&quot;</span>, <span class="number">80</span>)</span><br><span class="line">print(py_seplines.name)</span><br></pre></td></tr></table></figure>
+
+<p>或者使用<strong>as</strong>关键字对<strong>import</strong>模块进行重命名：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> py_seplines <span class="keyword">as</span> py_sep</span><br><span class="line"></span><br><span class="line">py_sep.print_line(<span class="string">&quot;-&quot;</span>, <span class="number">80</span>)</span><br><span class="line">print(py_sep.name)</span><br></pre></td></tr></table></figure>
+
+<p>总结：</p>
+<p>可以<strong>在一个Python 文件</strong>中<strong>定义变量或者函数</strong></p>
+<p>然后在<strong>另外一个文件中</strong>使用 <strong>import</strong> 导入该模块</p>
+<p>导入之后，就可以使用 <strong>模块名.变量</strong> / <strong>模块名.函数</strong> 的方式，调用该模块中定义的变量或函数</p>
+<p><strong>模块</strong>可以让<strong>曾编写过的代码集</strong>方便的被<strong>复用</strong></p>
+<p><strong>函数</strong>是多行代码块的复用，而<strong>模块</strong>是多个函数和变量的复用</p>
+<h4 id="任务二：模块名也是一个标识符"><a href="#任务二：模块名也是一个标识符" class="headerlink" title="任务二：模块名也是一个标识符"></a><em>任务二：模块名也是一个标识符</em></h4><p>知识点：</p>
+<p>模块名、函数名、变量都属于<strong>标识符</strong></p>
+<p>标示符的命名可由<strong>字母、下划线</strong> 和<strong>数字</strong>组成</p>
+<p><strong>不能以数字开头</strong></p>
+<p><strong>不能与关键字或保留字重名</strong></p>
+<p>注意：如果在给Python文件起名时，<strong>以数字开头</strong>导入模块会出错</p>
+<h4 id="任务三：模块的Pyc文件"><a href="#任务三：模块的Pyc文件" class="headerlink" title="任务三：模块的Pyc文件"></a><em>任务三：模块的Pyc文件</em></h4><p>知识点：</p>
+<p>为了提高模块的运行效率，Python对模块进行预编译</p>
+<p>预编译后的模块名文件为**.pyc<strong>。放在与</strong>.py**模块源代码同级目录的__pycache__文件夹中</p>
+<p>这里的<strong>c</strong> 是 <strong>compiled 编译过</strong>的程序</p>
+<p>知识点：查看**.pyc**文件</p>
+<p>浏览与**.py**模块源代码同级目录的__pycache__文件夹</p>
+<p>该目录下会有一个 <strong>py_seplines.cpython-37.pyc</strong> 文件，<strong>cpython-37</strong> 表示 <strong>Python</strong> 解释器的版本是3.7</p>
+<p>这个 <strong>pyc</strong> 文件是由Python解释器将<strong>模块的源码</strong>转换为<strong>字节码</strong>。<strong>Python</strong> 通过<strong>字节码</strong>来优化代码运行效率</p>
+<p>知识点：字节码</p>
+<p><strong>Python</strong> 在解释源程序时是分成两个步骤的：</p>
+<p>首先处理源代码，<strong>编译</strong>生成一个二进制<strong>字节码</strong></p>
+<p>再对<strong>字节码</strong>进行处理，才会生成 CPU 能够识别的<strong>机器码</strong></p>
+<p>有了模块的字节码文件之后，下一次运行程序时，如果在<strong>上次保存字节码之后</strong>没有修改过源代码，Python将会<strong>直接</strong>加载 <strong>.pyc</strong>文件并跳过编译这个步骤。</p>
+<p>当 <strong>Python</strong> 重编译时，它会自动检查源文件和字节码文件的<strong>时间戳</strong>。如果发现源代码被修改，那么下次程序运行时，<strong>字节码</strong>将被重新创建</p>
+<p><strong>模块是Python程序架构的一个核心概念</strong></p>
+<h3 id="11-2-4-函数中的变量引用"><a href="#11-2-4-函数中的变量引用" class="headerlink" title="11.2.4   函数中的变量引用"></a>11.2.4   函数中的变量引用</h3><h4 id="任务一：变量与数据"><a href="#任务一：变量与数据" class="headerlink" title="任务一：变量与数据"></a><em>任务一：变量与数据</em></h4><p>知识点：函数通过引用传递数据</p>
+<p>变量和数据都是保存在<strong>内存</strong>中的</p>
+<p>在 <strong>Python</strong> 中<strong>函数的参数传递</strong>以及<strong>返回值</strong>都是靠<strong>引用</strong>传递的</p>
+<p>知识点：变量与数据</p>
+<p><strong>变量</strong>和<strong>数据</strong> 是分开存储的</p>
+<p><strong>数据</strong>保存在内存中的一个位置</p>
+<p><strong>变量</strong>中保存着数据在内存中的地址</p>
+<p><strong>变量</strong>中<strong>记录数据的地址</strong>，就叫做<strong>引用</strong></p>
+<p>使用 <strong>id()</strong> 函数可以查看变量中保存数据所在的<strong>内存地址</strong></p>
+<p>知识点：如果变量已经被定义，当给一个变量赋值的时候，本质上是 <strong>修改了数据的引用</strong></p>
+<p>变量<strong>不再</strong>对之前的数据引用</p>
+<p>变量<strong>改为</strong>对新赋值的数据引用</p>
+<h4 id="任务二：数据的赋值"><a href="#任务二：数据的赋值" class="headerlink" title="任务二：数据的赋值"></a><em>任务二：数据的赋值</em></h4><p>在 <strong>Python</strong> 中，变量类似于 贴在<strong>数据</strong>上的<strong>标签</strong></p>
+<p>定义一个整数变量 <strong>a</strong>，并且赋值为 <strong>1</strong>。<strong>a=1</strong></p>
+<p>将变量 <strong>a</strong> 赋值为 <strong>2</strong>。<strong>a = 2</strong></p>
+<p>定义一个整数变量 <strong>b</strong>，并且将变量 <strong>a</strong> 的值赋值给 <strong>b</strong>。<strong>b = a</strong></p>
+<p>变量 <strong>b</strong> 是第 2 个贴在数字 <strong>2</strong> 上的标签</p>
+<h4 id="任务三：函数的参数和返回值的传递"><a href="#任务三：函数的参数和返回值的传递" class="headerlink" title="任务三：函数的参数和返回值的传递"></a><em>任务三：函数的参数和返回值的传递</em></h4><p>知识点：在 <strong>Python</strong> 中，函数的<strong>实参/返回值</strong>都是是靠<strong>引用</strong>来传递来的</p>
+<p><strong>函数的参数是通过引用来传递</strong></p>
+<p><strong>函数的返回值也是通过引用来传递</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>(<span class="params">num</span>):</span></span><br><span class="line">   print(<span class="string">&quot;-&quot;</span> * <span class="number">50</span>)</span><br><span class="line">   print(<span class="string">f&quot;<span class="subst">&#123;num&#125;</span> 在函数内的内存地址是 <span class="subst">&#123;<span class="built_in">id</span>(num)&#125;</span>&quot;</span>)</span><br><span class="line">   result = <span class="number">100</span></span><br><span class="line">   print(<span class="string">f&quot;返回值 <span class="subst">&#123;result&#125;</span> 在内存中的地址是 <span class="subst">&#123;<span class="built_in">id</span>(result)&#125;</span>&quot;</span>)</span><br><span class="line">   print(<span class="string">&quot;-&quot;</span> * <span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span>  result</span><br><span class="line"></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line">print(<span class="string">f&quot;调用函数前 内存地址是 <span class="subst">&#123;<span class="built_in">id</span>(a)&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">r = test(a)</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;调用函数后 实参内存地址是 <span class="subst">&#123;<span class="built_in">id</span>(a)&#125;</span>&quot;</span>)</span><br><span class="line">print(<span class="string">f&quot;调用函数后 返回值内存地址是 <span class="subst">&#123;<span class="built_in">id</span>(r)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-2-5-不可变类型与哈希函数-重要"><a href="#11-2-5-不可变类型与哈希函数-重要" class="headerlink" title="11.2.5   不可变类型与哈希函数 (重要)"></a>11.2.5   不可变类型与哈希函数 (重要)</h3><h4 id="任务一：基本概念解析"><a href="#任务一：基本概念解析" class="headerlink" title="任务一：基本概念解析"></a><em>任务一：基本概念解析</em></h4><p>知识点：<strong>不可变类型</strong>，内存中的数据<strong>不允许</strong>被修改</p>
+<p>数字类型 <strong>int, bool, float, complex, long(2.x)</strong></p>
+<p>字符串 <strong>str</strong></p>
+<p>元组 <strong>tuple</strong></p>
+<p>知识点：<strong>可变类型</strong>，内存中的数据<strong>可以</strong>被修改</p>
+<p>列表 <strong>list</strong></p>
+<p>字典 <strong>dict</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line">a = <span class="string">&quot;hello&quot;</span></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">a = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：赋值与可变类型修改"><a href="#任务二：赋值与可变类型修改" class="headerlink" title="任务二：赋值与可变类型修改"></a><em>任务二：赋值与可变类型修改</em></h4><p>知识点：</p>
+<p>初学者很容易将赋值误认为是对变量对应内存内容修改</p>
+<p>通过<strong>赋值</strong>修改变量时，<strong>原内存内容不变</strong>，而内存地址变化。重新把标签贴在另个空间上</p>
+<p>可变类型数据，通过方法修改数据时，<strong>原内存内容变化</strong>，而内存地址不变化</p>
+<h4 id="任务三：列表和字典的修改和赋值"><a href="#任务三：列表和字典的修改和赋值" class="headerlink" title="任务三：列表和字典的修改和赋值"></a><em>任务三：列表和字典的修改和赋值</em></h4><p>知识点：</p>
+<p><strong>可变类型</strong>的数据修改，是通过<strong>方法</strong>来实现的</p>
+<p>如果给一个可变类型的变量，<strong>赋值</strong>了一个新的数据，<strong>引用会修改</strong></p>
+<p>变量<strong>不再</strong>对之前的数据引用。</p>
+<p>变量<strong>改为</strong>对新赋值的数据引用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">demo_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">print(<span class="string">f&quot;定义列表后的内存地址 <span class="subst">&#123;<span class="built_in">id</span>(demo_list)&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">demo_list.append(<span class="number">999</span>)</span><br><span class="line">demo_list.pop(<span class="number">0</span>)</span><br><span class="line">demo_list.remove(<span class="number">2</span>)</span><br><span class="line">demo_list[<span class="number">0</span>] = <span class="number">10</span></span><br><span class="line">print(<span class="string">f&quot;修改数据后的内存地址 <span class="subst">&#123;<span class="built_in">id</span>(demo_list)&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">demo_dict = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小明&quot;</span>&#125;</span><br><span class="line">print(<span class="string">f&quot;定义字典后的内存地址 <span class="subst">&#123;<span class="built_in">id</span>(demo_dict)&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">demo_dict[<span class="string">&quot;age&quot;</span>] = <span class="number">18</span></span><br><span class="line">demo_dict.pop(<span class="string">&quot;name&quot;</span>)</span><br><span class="line">demo_dict[<span class="string">&quot;name&quot;</span>] = <span class="string">&quot;老王&quot;</span></span><br><span class="line">print(<span class="string">f&quot;修改数据后的内存地址 <span class="subst">&#123;<span class="built_in">id</span>(demo_dict)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：字典的key是不可变类型"><a href="#任务四：字典的key是不可变类型" class="headerlink" title="任务四：字典的key是不可变类型"></a><em>任务四：字典的key是不可变类型</em></h4><p>知识点：字典的 <strong>key 只能使用不可变类型的数据</strong></p>
+<p><strong>允许</strong>：不可变类型可以作为<strong>key</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;&#125;</span><br><span class="line">d[<span class="string">&quot;name&quot;</span>] = <span class="string">&quot;xiaoming&quot;</span></span><br><span class="line">print(d)</span><br><span class="line"></span><br><span class="line">d[<span class="number">1</span>] = <span class="string">&quot;整数&quot;</span></span><br><span class="line">print(d)</span><br><span class="line"></span><br><span class="line">d[(<span class="number">1</span>,)] = <span class="string">&quot;元组&quot;</span></span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+
+<p><strong>不允许</strong>：可变类型不可以作为<strong>key</strong>。<strong>TypeError:unhashable type</strong>错误</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">d[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] = <span class="string">&quot;列表&quot;</span></span><br><span class="line">print(d)</span><br><span class="line"></span><br><span class="line">d[&#123;<span class="string">&quot;n&quot;</span>:<span class="string">&quot;xxx&quot;</span>&#125;] = <span class="string">&quot;字典&quot;</span></span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务五：认识哈希函数"><a href="#任务五：认识哈希函数" class="headerlink" title="任务五：认识哈希函数"></a><em>任务五：认识哈希函数</em></h4><p>知识点：哈希 <strong>(hash)</strong></p>
+<p><strong>Python</strong> 中内置有一个名字叫做 <strong>hash(o)</strong> 的函数</p>
+<p>参数：接收一个<strong>不可变类型</strong>的数据作为<strong>参数</strong></p>
+<p>返回：一个<strong>整数</strong></p>
+<p><strong>哈希</strong> 是一种<strong>算法</strong>，其作用就是提取数据的<strong>特征码(指纹)</strong></p>
+<p><strong>相同的内容</strong>得到<strong>相同的结果</strong></p>
+<p><strong>不同的内容</strong>得到<strong>不同的结果</strong></p>
+<p>在<strong>Python</strong>中，设置字典的<strong>键值对</strong>时，会首先对<strong>key</strong>进行 <strong>hash</strong> 来决定如何在内存中保存字典的数据，以便<strong>后续</strong>对字典的操作：<strong>增、删、改、查</strong></p>
+<p>键值对的 <strong>key</strong> 必须是不可变类型数据</p>
+<p>键值对的 <strong>value</strong> 可以是任意类型的数据</p>
+<p><strong>允许</strong>：不可变类型可以用hash函数生成它的特征码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h = <span class="built_in">hash</span>(<span class="number">1</span>)</span><br><span class="line">print(h)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 传入相同的数据，hash值永远一样</span></span><br><span class="line">h = <span class="built_in">hash</span>(<span class="string">&quot;hello&quot;</span>)</span><br><span class="line">print(h)</span><br><span class="line"></span><br><span class="line">h = <span class="built_in">hash</span>(<span class="string">&quot;hello&quot;</span>)</span><br><span class="line">print(h)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据稍微变化，hash值变化很大</span></span><br><span class="line">h = <span class="built_in">hash</span>(<span class="string">&quot;hello1&quot;</span>)</span><br><span class="line">print(h)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 元组是不可变类型</span></span><br><span class="line"><span class="comment"># hash函数生成元组数据特征码</span></span><br><span class="line">h = <span class="built_in">hash</span>((<span class="number">1</span>,))</span><br><span class="line">print(h)</span><br></pre></td></tr></table></figure>
+
+<p><strong>不允许</strong>：可变类型不可以用hash函数生成它的特征码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列表是可变类型</span></span><br><span class="line"><span class="comment"># unhashable type</span></span><br><span class="line">h = <span class="built_in">hash</span>([<span class="number">1</span>])</span><br><span class="line">print(h)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字典是可变类型</span></span><br><span class="line"><span class="comment"># unhashable type</span></span><br><span class="line">h = <span class="built_in">hash</span>(&#123;&#125;)</span><br><span class="line">print(h)</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-2-6-递归函数"><a href="#11-2-6-递归函数" class="headerlink" title="11.2.6   递归函数"></a>11.2.6   递归函数</h3><h4 id="任务一：递归函数的定义"><a href="#任务一：递归函数的定义" class="headerlink" title="任务一：递归函数的定义"></a><em>任务一：递归函数的定义</em></h4><p>知识点：</p>
+<p>在函数体内部，可以调用其他函数也可以调用自己。将函数调用自身的<strong>编程技巧</strong>称为<strong>递归</strong></p>
+<p>递归函数的特点：</p>
+<ul>
+<li><p>函数内部的<strong>代码</strong>是相同的，只是针对<strong>参数</strong>不同，<strong>处理的结果不同</strong></p>
+</li>
+<li><p>当<strong>参数满足递归终止条件</strong>时，函数不再执行。<strong>这个非常重要</strong>，通常被称为递归的出口，否则<strong>会出现死循环</strong></p>
+</li>
+</ul>
+<p>例子：递归函数实现倒计时程序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_numbers</span>(<span class="params">num</span>):</span></span><br><span class="line">   print(num)    </span><br><span class="line">   <span class="comment"># 递归的出口很重要，否则会出现死循环</span></span><br><span class="line">   <span class="keyword">if</span> num == <span class="number">1</span>:</span><br><span class="line">       <span class="keyword">return</span></span><br><span class="line">   </span><br><span class="line">   <span class="comment"># 当不满足终止条件，则进入递归</span></span><br><span class="line">   sum_numbers(num - <span class="number">1</span>)</span><br><span class="line">   </span><br><span class="line">sum_numbers(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="实例：递归实现计算数字累加"><a href="#实例：递归实现计算数字累加" class="headerlink" title="实例：递归实现计算数字累加"></a>实例：递归实现计算数字累加</h4><p>需求分析：</p>
+<p>定义一个函数 <strong>sum_numbers</strong></p>
+<p>能够接收一个 <strong>num</strong> 的整数参数</p>
+<p>计算 1 + 2 + … num的结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个函数 sum_numbers</span></span><br><span class="line"><span class="comment"># 能够接收一个 num 的整数参数</span></span><br><span class="line"><span class="comment"># 计算 1 + 2 + ... num 的结果</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_numbers</span>(<span class="params">num</span>):</span></span><br><span class="line"></span><br><span class="line">   <span class="comment"># 1. 出口</span></span><br><span class="line">   <span class="keyword">if</span> num == <span class="number">1</span>:</span><br><span class="line">       <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">   <span class="comment"># 2. 数字的累加 num + (1...num -1)</span></span><br><span class="line">   <span class="comment"># 假设 sum_numbers 能够正确的处理 1...num - 1</span></span><br><span class="line">   temp = sum_numbers(num - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 两个数字的相加</span></span><br><span class="line">   <span class="keyword">return</span> num + temp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result = sum_numbers(<span class="number">100</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+<p>提示：</p>
+<p>递归是一个<strong>编程技巧</strong>，初次接触递归会感觉有些吃力</p>
+<p>建议先想好<strong>递归通项</strong>和<strong>递归出口条件</strong>，然后再编写递归函数</p>
+<p>在处理<strong>不确定的循环条件时</strong>，格外的有用，例如：<strong>遍历整个文件目录的结构</strong></p>
+<p>递归可以等价看作是<strong>while</strong>循环+函数的流程结构</p>
+<h3 id="11-2-7-匿名函数lambda"><a href="#11-2-7-匿名函数lambda" class="headerlink" title="11.2.7   匿名函数lambda"></a>11.2.7   匿名函数lambda</h3><h3 id="11-2-8-eval-函数"><a href="#11-2-8-eval-函数" class="headerlink" title="11.2.8   eval()函数"></a>11.2.8   eval()函数</h3><h4 id="任务一：eval-函数基本用法"><a href="#任务一：eval-函数基本用法" class="headerlink" title="任务一：eval()函数基本用法"></a><em>任务一：eval()函数基本用法</em></h4><p>知识点：<strong>eval()<strong>函数十分强大，它</strong>将字符串</strong>当成<strong>有效的表达式</strong>来求值 并<strong>返回计算结果</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基本的数学计算</span></span><br><span class="line"><span class="comment"># Out: 2</span></span><br><span class="line">print(<span class="built_in">eval</span>(<span class="string">&quot;1 + 1&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字符串重复</span></span><br><span class="line"><span class="comment"># Out: &#x27;**********&#x27;</span></span><br><span class="line">print(<span class="built_in">eval</span>(<span class="string">&quot;&#x27;*&#x27; * 10&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将字符串转换成列表</span></span><br><span class="line"><span class="comment"># Out: list</span></span><br><span class="line">print(<span class="built_in">type</span>(<span class="built_in">eval</span>(<span class="string">&quot;[1, 2, 3, 4, 5]&quot;</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将字符串转换成字典</span></span><br><span class="line"><span class="comment"># Out: dict</span></span><br><span class="line">print(<span class="built_in">type</span>(<span class="built_in">eval</span>(<span class="string">&quot;&#123;&#x27;name&#x27;: &#x27;xiaoming&#x27;, &#x27;age&#x27;: 18&#125;&quot;</span>)))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：使用eval-函数实现计算器功能"><a href="#任务二：使用eval-函数实现计算器功能" class="headerlink" title="任务二：使用eval()函数实现计算器功能"></a><em>任务二：使用eval()函数实现计算器功能</em></h4><p><strong>需求分析</strong>：</p>
+<p>提示用户输入一个 <strong>加减乘除混合运算</strong></p>
+<p>返回计算结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">input_str = <span class="built_in">input</span>(<span class="string">&quot;请输入一个算术题：&quot;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="built_in">eval</span>(input_str))</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务三：-eval-函数的危险性"><a href="#任务三：-eval-函数的危险性" class="headerlink" title="任务三： eval()函数的危险性"></a><em>任务三： eval()函数的危险性</em></h4><p>危险：</p>
+<p>在开发时千万不要使用**eval()**直接转换 <strong>input</strong> 的结果</p>
+<p>用户就可以控制计算机做任何事情</p>
+<p>主要的原因是因为用户可以通过<strong>eval()<strong>函数间接的执行各种</strong>终端指令</strong></p>
+<p> <strong>eval()<strong>函数执行</strong>终端指令</strong>来对计算机进行各种操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">__import__</span>(<span class="string">&#x27;os&#x27;</span>).system(<span class="string">&#x27;ls&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>等价代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.system(<span class="string">&quot;ls&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>执行成功，返回 0</p>
+<p>执行失败，返回错误信息</p>
+<h2 id="11-3-局部变量和全局变量"><a href="#11-3-局部变量和全局变量" class="headerlink" title="11.3   局部变量和全局变量"></a>11.3   局部变量和全局变量</h2><h3 id="11-3-1-局部变量"><a href="#11-3-1-局部变量" class="headerlink" title="11.3.1   局部变量"></a>11.3.1   局部变量</h3><h4 id="任务一：局部变量和全局变量的基本概念"><a href="#任务一：局部变量和全局变量的基本概念" class="headerlink" title="任务一：局部变量和全局变量的基本概念"></a><em>任务一：局部变量和全局变量的基本概念</em></h4><p>知识点：</p>
+<p><strong>局部变量</strong>是在<strong>函数内部定义</strong>的变量，<strong>只能在函数内部使用</strong></p>
+<p><strong>全局变量</strong>是在<strong>函数外部定义</strong>的变量(<strong>没有定义在函数内</strong>)，<strong>所有函数</strong>内部<strong>都可以使用这个变量</strong></p>
+<p>区别：</p>
+<ul>
+<li><p>局部变量和全局变量的<strong>定义位置</strong>不一样</p>
+</li>
+<li><p>局部变量和全局变量的<strong>作用域</strong>范围不一样</p>
+</li>
+<li><p>全局变量一般用于在所有函数中共享全局信息。由于作用域范围太大，<strong>开发中慎用全局变量</strong>。如果全局变量出现错误，那么程序的错误调试将会变得非常复杂</p>
+</li>
+</ul>
+<h4 id="任务二：认识局部变量"><a href="#任务二：认识局部变量" class="headerlink" title="任务二：认识局部变量"></a><em>任务二：认识局部变量</em></h4><p>知识点：</p>
+<p><strong>局部变量</strong>是在<strong>函数内部</strong>定义的变量，<strong>只能在函数内部使用</strong></p>
+<p>作用域范围：函数执行结束后，<strong>函数内部的局部变量，会被系统回收</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo1</span>():</span></span><br><span class="line">   <span class="comment"># 局部变量出生：定义局部变量时，才会被创建    </span></span><br><span class="line">   num = <span class="number">10</span></span><br><span class="line">   print(<span class="string">f&quot;在demo1函数内部的变量是<span class="subst">&#123;num&#125;</span>&quot;</span>)</span><br><span class="line">   <span class="comment"># 局部变量死亡：函数执行完成之后</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo2</span>():</span>  </span><br><span class="line">   num = <span class="number">99</span></span><br><span class="line">   <span class="comment"># 此num和demo1相互独立无关</span></span><br><span class="line">   print(<span class="string">f&quot;demo2 ==&gt; <span class="subst">&#123;num&#125;</span>&quot;</span>)</span><br><span class="line">   <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在函数内部定义的变量，不能在其他位置使用</span></span><br><span class="line"><span class="comment"># print(f&quot;&#123;num&#125;&quot;)</span></span><br><span class="line"></span><br><span class="line">demo1()</span><br><span class="line">demo2()</span><br></pre></td></tr></table></figure>
+
+<h4 id="局部变量的生命周期-重要"><a href="#局部变量的生命周期-重要" class="headerlink" title="局部变量的生命周期(重要)"></a>局部变量的生命周期(重要)</h4><p>知识点：</p>
+<p>所谓<strong>生命周期</strong>就是变量从<strong>被创建</strong>到<strong>被系统回收</strong>的过程。</p>
+<p>出生：<strong>局部变量</strong>在<strong>函数执行时</strong>才会被创建。定义变量时被创建。</p>
+<p>消亡：<strong>函数执行结束后</strong>局部变量<strong>被系统回收</strong>。函数<strong>return</strong>或执行所有代码时，变量消亡。</p>
+<p><strong>在生命周期</strong>内，局部变量可以用来存储<strong>函数内部临时使用到的数据</strong></p>
+<h4 id="任务三：不同函数中的局部变量相互不影响"><a href="#任务三：不同函数中的局部变量相互不影响" class="headerlink" title="任务三：不同函数中的局部变量相互不影响"></a><em>任务三：不同函数中的局部变量相互不影响</em></h4><p>知识点：</p>
+<p><strong>不同的函数</strong>可以定义相同的名字的局部变量，但是<strong>彼此之间</strong>不会产生影响。</p>
+<p>在函数内部使用，局部变量用于<strong>临时</strong>保存<strong>函数内部需要使用的数据</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo1</span>():</span></span><br><span class="line">   <span class="comment"># 局部变量出生：定义局部变量时，才会被创建    </span></span><br><span class="line">   num = <span class="number">10</span></span><br><span class="line">   print(<span class="string">f&quot;在demo1函数内部的变量是<span class="subst">&#123;num&#125;</span>&quot;</span>)</span><br><span class="line">   <span class="comment"># 局部变量死亡：函数执行完成之后</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo2</span>():</span>  </span><br><span class="line">   <span class="comment"># num = 99</span></span><br><span class="line">   <span class="comment"># 由于局部变量相互独立，此num和demo1相互独立无关</span></span><br><span class="line">   print(<span class="string">f&quot;demo2 ==&gt; <span class="subst">&#123;num&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">demo1()</span><br><span class="line">demo2()</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-3-2-全局变量"><a href="#11-3-2-全局变量" class="headerlink" title="11.3.2   全局变量"></a>11.3.2   全局变量</h3><h4 id="任务一：认识全局变量"><a href="#任务一：认识全局变量" class="headerlink" title="任务一：认识全局变量"></a><em>任务一：认识全局变量</em></h4><p>知识点：</p>
+<p><strong>全局变量</strong>是在<strong>函数外部定义</strong>的变量</p>
+<p>作用域是整个程序，即所有函数内部都可以使用该变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个全局变量</span></span><br><span class="line">num = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo1</span>():</span>    </span><br><span class="line">   <span class="comment"># 函数内部可以使用全局变量num</span></span><br><span class="line">   print(<span class="string">f&quot;demo1 ==&gt; <span class="subst">&#123;num&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo2</span>():</span>    </span><br><span class="line">   <span class="comment"># 函数内部可以使用全局变量num</span></span><br><span class="line">   print(<span class="string">f&quot;demo2 ==&gt; <span class="subst">&#123;num&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">demo1()</span><br><span class="line">demo2()</span><br><span class="line">print(<span class="string">&quot;over&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务二：PyCharm单步调试解析全局变量"><a href="#任务二：PyCharm单步调试解析全局变量" class="headerlink" title="任务二：PyCharm单步调试解析全局变量"></a><em>任务二：PyCharm单步调试解析全局变量</em></h4><p>知识点：</p>
+<p>使用PyCharm调试功能，查看定义在函数和模块中的变量</p>
+<p><strong>注意</strong>：一个python源文件或主程序可以看作是一个模块</p>
+<p>在模块中，可以定义多个函数和变量</p>
+<p>在模块中定义的变量，相对于函数来说是全局变量。换言之，模块中的变量级别和函数是相同的</p>
+<h4 id="任务三：函数内部不能直接修改-全局变量的引用"><a href="#任务三：函数内部不能直接修改-全局变量的引用" class="headerlink" title="任务三：函数内部不能直接修改 全局变量的引用"></a><em>任务三：函数内部不能直接修改 全局变量的引用</em></h4><p>知识点：</p>
+<p><strong>全局变量</strong>：在<strong>函数外部定义</strong>的变量，与函数同一个级别。因此，<strong>所有函数</strong>内部<strong>都可以使用这个变量</strong></p>
+<p>虽然要慎用全局变量，但是它可以在各函数中，共享数据信息。所以，对某些需要共享数据的程序开发，使用全局变量会带来很大的便利，可以减少参数个数</p>
+<p>全局变量的<strong>只读属性</strong>，为了防止修改全局变量而影响其他函数的运行：</p>
+<blockquote>
+<ul>
+<li><p>在函数中，可以<strong>通过全局变量的引用获取对应的数据</strong></p>
+</li>
+<li><p>但是Python<strong>不允许直接修改全局变量的引用</strong> ，即不能通过赋值语句来修改全局变量的值</p>
+</li>
+</ul>
+</blockquote>
+<p>知识点：在函数中，如果<strong>使用赋值语句尝试着来修改全局变量值</strong>，会发生什么事情</p>
+<p>本质上，Python会定义一个新的<strong>和全局变量同名</strong>的局部变量</p>
+<p>因此，在对该变量赋值，本质上是对同名的局部变量进行修改，并<strong>不影响原全局变量的值</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo1</span>():</span></span><br><span class="line">   print(<span class="string">&quot;demo1&quot;</span> + <span class="string">&quot;-&quot;</span> * <span class="number">50</span>)</span><br><span class="line">   <span class="comment"># 只是定义了一个局部变量，不会修改到全局变量，只是变量名相同而已</span></span><br><span class="line">   num = <span class="number">100</span></span><br><span class="line">   print(num)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo2</span>():</span></span><br><span class="line">   print(<span class="string">&quot;demo2&quot;</span> + <span class="string">&quot;-&quot;</span> * <span class="number">50</span>)</span><br><span class="line">   print(num)</span><br><span class="line"></span><br><span class="line">demo1()</span><br><span class="line">demo2()</span><br><span class="line">print(<span class="string">&quot;over&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务四：函数变量查找过程的深度解析"><a href="#任务四：函数变量查找过程的深度解析" class="headerlink" title="任务四：函数变量查找过程的深度解析"></a><em>任务四：函数变量查找过程的深度解析</em></h4><p>知识点：函数执行时，<strong>需要处理变量时</strong> 会：</p>
+<p><strong>首先</strong>查找<strong>函数内部</strong>是否存在<strong>指定名称的局部变量</strong>，<strong>如果有，直接使用</strong>。</p>
+<p>如果没有，查找<strong>函数外部</strong>是否存在<strong>指定名称 的全局变量</strong>，<strong>如果有，直接使用</strong>。</p>
+<p>如果还没有，程序报错</p>
+<h4 id="任务五：global-关键字开启全局变量修改权限"><a href="#任务五：global-关键字开启全局变量修改权限" class="headerlink" title="任务五：global 关键字开启全局变量修改权限"></a><em>任务五：global 关键字开启全局变量修改权限</em></h4><p>知识点：</p>
+<p>在函数中需要修改全局变量，需要使用 <strong>global</strong> 关键字来进行声明</p>
+<p>通过 <strong>global</strong> 关键字<strong>开启全局变量修改权限</strong></p>
+<p>如果修改没有 <strong>global</strong> 前缀的全局变量，函数会新建一个同名的局部变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局变量</span></span><br><span class="line">num = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo1</span>():</span></span><br><span class="line"></span><br><span class="line">   <span class="comment"># 希望修改全局变量的值 - 使用 global 声明一下变量即可</span></span><br><span class="line">   <span class="comment"># global 关键字会告诉解释器后面的变量是一个全局变量</span></span><br><span class="line">   <span class="comment"># 再使用赋值语句时，就不会创建局部变量</span></span><br><span class="line">   <span class="keyword">global</span> num</span><br><span class="line">   num = <span class="number">99</span></span><br><span class="line">   print(<span class="string">f&quot;demo1 ==&gt; <span class="subst">&#123;num&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo2</span>():</span></span><br><span class="line">   print(<span class="string">f&quot;demo2 ==&gt; <span class="subst">&#123;num&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">demo1()</span><br><span class="line">demo2()</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务六：全局变量定义的位置"><a href="#任务六：全局变量定义的位置" class="headerlink" title="任务六：全局变量定义的位置"></a><em>任务六：全局变量定义的位置</em></h4><p>知识点：</p>
+<p>全局变量可以定义在函数定义之后</p>
+<p>全局变量必须要<strong>在函数调用之前被定义</strong>，否则会引发异常</p>
+<p>在Python程序运行中，程序遇到函数定义时<strong>会被跳过</strong>，而真正的函数代码执行会发生在函数调用</p>
+<p>因此，为了保障函数能够正确使用全局变量，建议<strong>将全局变量定义在函数定义之前</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意：在开发时，应该把模块中的所有全局变量</span></span><br><span class="line"><span class="comment"># 定义在所有函数上方，就可以保证所有的函数</span></span><br><span class="line"><span class="comment"># 都能够正常的访问到每一个全局变量了</span></span><br><span class="line">num = <span class="number">10</span></span><br><span class="line"><span class="comment"># 再定义一个全局变量</span></span><br><span class="line">title = <span class="string">&quot;编程爱好者&quot;</span></span><br><span class="line"><span class="comment"># 再定义一个全局变量</span></span><br><span class="line">name = <span class="string">&quot;小明&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo</span>():</span></span><br><span class="line"></span><br><span class="line">   print(num)</span><br><span class="line">   print(title)</span><br><span class="line">   print(name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在函数调用之前定义全局变量，不会异常</span></span><br><span class="line"><span class="comment"># title = &quot;编程爱好者&quot;</span></span><br><span class="line"></span><br><span class="line">demo()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 由于全局变量，是在调用函数之后，才定义的。</span></span><br><span class="line"><span class="comment"># 在执行函数时，变量还没有定义，所以程序会报错！</span></span><br><span class="line"><span class="comment"># name = &quot;小明&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>常用的代码结构规范如下图。关于<strong>shebang</strong>或**#!<strong>标识，属于Linux的</strong>shell**编程，有兴趣可以课外查阅相关资料</p>
+<h4 id="任务七：全局变量命名规范"><a href="#任务七：全局变量命名规范" class="headerlink" title="任务七：全局变量命名规范"></a><em>任务七：全局变量命名规范</em></h4><p>知识点：为了避免局部变量和全局变量出现混淆，在定义全局变量时，变量名前应该增加 <strong>g_</strong> 或者 <strong>gl_</strong> 的前缀</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">gl_num = <span class="number">10</span></span><br><span class="line"><span class="comment"># 再定义一个全局变量</span></span><br><span class="line">gl_title = <span class="string">&quot;编程爱好者&quot;</span></span><br><span class="line"><span class="comment"># 再定义一个全局变量</span></span><br><span class="line">gl_name = <span class="string">&quot;小明&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo</span>():</span></span><br><span class="line"></span><br><span class="line">   <span class="comment"># 如果局部变量的名字和全局变量的名字相同</span></span><br><span class="line">   <span class="comment"># pycharm会在局部变量下方显示一个灰色的虚线</span></span><br><span class="line">   num = <span class="number">99</span></span><br><span class="line">   <span class="comment"># 这里的num是局部变量</span></span><br><span class="line">   print(num)</span><br><span class="line">   </span><br><span class="line">   print(gl_title)</span><br><span class="line">   print(gl_name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # 再定义一个全局变量</span></span><br><span class="line"><span class="comment"># title = &quot;编程爱好者&quot;</span></span><br><span class="line"></span><br><span class="line">demo()</span><br></pre></td></tr></table></figure>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://waxll.top/2021/06/17/py11.html>http://waxll.top/2021/06/17/py11.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-17T00:41:30+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年6月17日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://waxll.top/2021/06/17/py11.html&title=Python学习笔记11 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://waxll.top/2021/06/17/py11.html&title=Python学习笔记11 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://waxll.top/2021/06/17/py11.html&title=Python学习笔记11 - Waxll'Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/06/17/py12.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python学习笔记12</p>
+          <p class='content'>
+
+
+第十三章   文件13.1   计算机眼中的文件任务一：文件的概念和作用知识点：
+计算机的文件，就是存储在某种长期储存设备上的一段数据
+存储设备包括：硬盘、U 盘、移动硬盘、光盘…
+文件的...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/06/17/py10.html'>
+          <p class='title'>Python学习笔记10<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+第十章   函数：定义与参数10.1   函数的定义10.1.1   为何需要函数？任务一：函数的需求分析函数的需求分析：
+代码的组织结构不清晰，可读性差
+遇到重复的功能只能重复编写实现相...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-1-%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">11.1   函数的返回值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-1-%E5%90%91%E5%87%BD%E6%95%B0%E5%A4%96%E9%83%A8%E4%BC%A0%E9%80%92%E4%BF%A1%E6%81%AF%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">11.1.1   向函数外部传递信息：返回值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">函数返回值的用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E6%94%B9%E8%BF%9B%E5%B8%A6%E8%BF%94%E5%9B%9E%E7%9A%84%E6%B1%82%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-text">任务一：改进带返回的求和函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E8%BF%94%E5%9B%9E%E4%B9%8B%E5%90%8E%E7%9A%84%E4%BB%A3%E7%A0%81%E5%B0%86%E4%B8%8D%E8%A2%AB%E6%89%A7%E8%A1%8C"><span class="toc-text">任务二：返回之后的代码将不被执行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-2-%E5%88%A9%E7%94%A8%E5%85%83%E7%BB%84%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC"><span class="toc-text">11.1.2   利用元组函数返回多个值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%87%BD%E6%95%B0%E5%A4%9A%E4%B8%AA%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="toc-text">任务一：函数多个返回值的需求分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%85%83%E7%BB%84%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0%E5%A4%9A%E4%B8%AA%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">任务二：使用元组传递函数多个返回值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-3-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E4%BA%A4%E6%8D%A2%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97"><span class="toc-text">11.1.3   实例：交换两个数字</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E6%B3%95-1-%E2%80%94%E2%80%94-%E4%BD%BF%E7%94%A8%E5%85%B6%E4%BB%96%E5%8F%98%E9%87%8F"><span class="toc-text">解法 1 —— 使用其他变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E6%B3%95-2-%E2%80%94%E2%80%94-%E4%B8%8D%E4%BD%BF%E7%94%A8%E4%B8%B4%E6%97%B6%E5%8F%98%E9%87%8F"><span class="toc-text">解法 2 —— 不使用临时变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E6%B3%95-3-%E2%80%94%E2%80%94-Python-%E4%B8%93%E6%9C%89%EF%BC%8C%E5%88%A9%E7%94%A8%E5%85%83%E7%BB%84"><span class="toc-text">解法 3 —— Python 专有，利用元组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-4-%E5%AE%9E%E4%BE%8B%EF%BC%9A%E4%BA%BA%E7%89%A9%E4%BF%A1%E6%81%AF%E6%9E%84%E5%BB%BA"><span class="toc-text">11.1.4   实例：人物信息构建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%B8%A6%E8%BF%94%E5%9B%9E%E7%9A%84%E5%A7%93%E5%90%8D%E6%8B%BC%E6%8E%A5%E5%87%BD%E6%95%B0"><span class="toc-text">任务一：带返回的姓名拼接函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8%E9%BB%98%E8%AE%A4%E5%80%BC%E5%AE%9E%E5%8F%82%E6%94%B9%E8%BF%9B%E5%A7%93%E5%90%8D%E5%87%BD%E6%95%B0"><span class="toc-text">任务二：使用默认值实参改进姓名函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E6%94%B9%E8%BF%9B%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%BA%E5%AD%97%E5%85%B8"><span class="toc-text">任务三：改进函数返回值为字典</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E6%94%B9%E8%BF%9B%E5%87%BD%E6%95%B0%E6%8E%A5%E5%8F%97%E5%B9%B4%E9%BE%84%E5%8F%82%E6%95%B0"><span class="toc-text">任务四：改进函数接受年龄参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9A%E5%BE%AA%E7%8E%AF%E6%8E%A5%E5%8F%97%E5%A4%96%E9%83%A8%E8%BE%93%E5%85%A5%E5%82%A8%E5%AD%98%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-text">任务五：循环接受外部输入储存用户信息</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-2%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89%E8%BF%9B%E9%98%B6%E5%87%BD%E6%95%B0"><span class="toc-text">11.2（重要）进阶函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-1-%E5%88%86%E6%9E%90%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E5%92%8C%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">11.2.1   分析函数参数和返回值的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%9B%9B%E7%A7%8D%E7%BB%84%E5%90%88%E5%BD%A2%E5%BC%8F"><span class="toc-text">任务一：四种组合形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%97%A0%E5%8F%82%E6%95%B0%EF%BC%8C%E6%97%A0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">任务二：无参数，无返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E6%97%A0%E5%8F%82%E6%95%B0%EF%BC%8C%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">任务三：无参数，有返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E6%9C%89%E5%8F%82%E6%95%B0%EF%BC%8C%E6%97%A0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">任务四：有参数，无返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9A%E6%9C%89%E5%8F%82%E6%95%B0%EF%BC%8C%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">任务五：有参数，有返回值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-2-%E5%87%BD%E6%95%B0%E7%9A%84%E5%B5%8C%E5%A5%97%E8%B0%83%E7%94%A8"><span class="toc-text">11.2.2   函数的嵌套调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%B5%8C%E5%A5%97%E7%9A%84%E5%87%BD%E6%95%B0%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-text">任务一：嵌套的函数流程分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E7%99%BE%E5%BA%A6%E7%BD%91%E7%AB%99%E8%A7%A3%E8%AF%BB%E5%87%BD%E6%95%B0%E5%B5%8C%E5%A5%97%E8%B0%83%E7%94%A8"><span class="toc-text">任务二：百度网站解读函数嵌套调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E6%89%93%E5%8D%B0%E5%88%86%E9%9A%94%E7%AC%A6"><span class="toc-text">实例：打印分隔符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-3-%E6%A8%A1%E5%9D%97%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">11.2.3   模块中的函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E8%AE%A4%E8%AF%86%E6%A8%A1%E5%9D%97%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-text">任务一：认识模块的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E4%BD%93%E9%AA%8C%E6%A8%A1%E5%9D%97"><span class="toc-text">实例：体验模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%A8%A1%E5%9D%97%E5%90%8D%E4%B9%9F%E6%98%AF%E4%B8%80%E4%B8%AA%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-text">任务二：模块名也是一个标识符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E6%A8%A1%E5%9D%97%E7%9A%84Pyc%E6%96%87%E4%BB%B6"><span class="toc-text">任务三：模块的Pyc文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-4-%E5%87%BD%E6%95%B0%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E5%BC%95%E7%94%A8"><span class="toc-text">11.2.4   函数中的变量引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE"><span class="toc-text">任务一：变量与数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%9A%84%E8%B5%8B%E5%80%BC"><span class="toc-text">任务二：数据的赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0%E5%92%8C%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E4%BC%A0%E9%80%92"><span class="toc-text">任务三：函数的参数和返回值的传递</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-5-%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0-%E9%87%8D%E8%A6%81"><span class="toc-text">11.2.5   不可变类型与哈希函数 (重要)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90"><span class="toc-text">任务一：基本概念解析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E8%B5%8B%E5%80%BC%E4%B8%8E%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B%E4%BF%AE%E6%94%B9"><span class="toc-text">任务二：赋值与可变类型修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%88%97%E8%A1%A8%E5%92%8C%E5%AD%97%E5%85%B8%E7%9A%84%E4%BF%AE%E6%94%B9%E5%92%8C%E8%B5%8B%E5%80%BC"><span class="toc-text">任务三：列表和字典的修改和赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%AD%97%E5%85%B8%E7%9A%84key%E6%98%AF%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B"><span class="toc-text">任务四：字典的key是不可变类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9A%E8%AE%A4%E8%AF%86%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0"><span class="toc-text">任务五：认识哈希函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-6-%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0"><span class="toc-text">11.2.6   递归函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">任务一：递归函数的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E6%95%B0%E5%AD%97%E7%B4%AF%E5%8A%A0"><span class="toc-text">实例：递归实现计算数字累加</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-7-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0lambda"><span class="toc-text">11.2.7   匿名函数lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-8-eval-%E5%87%BD%E6%95%B0"><span class="toc-text">11.2.8   eval()函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9Aeval-%E5%87%BD%E6%95%B0%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">任务一：eval()函数基本用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8eval-%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8%E5%8A%9F%E8%83%BD"><span class="toc-text">任务二：使用eval()函数实现计算器功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A-eval-%E5%87%BD%E6%95%B0%E7%9A%84%E5%8D%B1%E9%99%A9%E6%80%A7"><span class="toc-text">任务三： eval()函数的危险性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-3-%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-text">11.3   局部变量和全局变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-1-%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-text">11.3.1   局部变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">任务一：局部变量和全局变量的基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9A%E8%AE%A4%E8%AF%86%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-text">任务二：认识局部变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E9%87%8D%E8%A6%81"><span class="toc-text">局部变量的生命周期(重要)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E4%B8%8D%E5%90%8C%E5%87%BD%E6%95%B0%E4%B8%AD%E7%9A%84%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E7%9B%B8%E4%BA%92%E4%B8%8D%E5%BD%B1%E5%93%8D"><span class="toc-text">任务三：不同函数中的局部变量相互不影响</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-2-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-text">11.3.2   全局变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E8%AE%A4%E8%AF%86%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-text">任务一：认识全局变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9APyCharm%E5%8D%95%E6%AD%A5%E8%B0%83%E8%AF%95%E8%A7%A3%E6%9E%90%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-text">任务二：PyCharm单步调试解析全局变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%89%EF%BC%9A%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E7%9A%84%E5%BC%95%E7%94%A8"><span class="toc-text">任务三：函数内部不能直接修改 全局变量的引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%9B%9B%EF%BC%9A%E5%87%BD%E6%95%B0%E5%8F%98%E9%87%8F%E6%9F%A5%E6%89%BE%E8%BF%87%E7%A8%8B%E7%9A%84%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90"><span class="toc-text">任务四：函数变量查找过程的深度解析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%BA%94%EF%BC%9Aglobal-%E5%85%B3%E9%94%AE%E5%AD%97%E5%BC%80%E5%90%AF%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="toc-text">任务五：global 关键字开启全局变量修改权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%85%AD%EF%BC%9A%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="toc-text">任务六：全局变量定义的位置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E4%B8%83%EF%BC%9A%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-text">任务七：全局变量命名规范</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Python学习笔记11";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5119353317'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <!-- <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div> -->
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
+        作为主题 | 由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>强力驱动
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://waxll.top/">Copyright © 2019-2020 XieSenshi</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $('#cover-backstretch').backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/friends/
+        
+        
+        
+        
+          id="friends"
+        >
+        <i class='fa fa-users fa-fw'></i> 友链
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/journal/
+        
+        
+        
+        
+          id="journal"
+        >
+        <i class='fa fa-calendar fa-fw'></i> 日志
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/about/
+        
+        
+        
+        
+          id="about"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 关于
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> Dark mode
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5119353317';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.7';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz","appKey":"jM85yucqi5IuVYCCQS1cUwko","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'xuCr1vbMkIE6cGVFb6WyKvRz-gzGzoHsz',
+    app_key: 'jM85yucqi5IuVYCCQS1cUwko',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://waxll.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://waxll.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
