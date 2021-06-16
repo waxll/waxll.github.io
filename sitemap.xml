@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://waxll.top/2021/03/25/p2.html</loc>
+    
+    <lastmod>2021-06-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://waxll.top/2021/06/17/py12.html</loc>
     
     <lastmod>2021-06-16</lastmod>
@@ -72,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/2021/03/25/p2.html</loc>
-    
-    <lastmod>2021-03-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://waxll.top/2020/07/25/a1.html</loc>
     
     <lastmod>2021-03-24</lastmod>
@@ -100,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/vpn/index.html</loc>
-    
-    <lastmod>2021-03-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://waxll.top/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E6%95%88%E6%9E%9C/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
@@ -114,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/vpn/Shadowsocks/index.html</loc>
+    <loc>http://waxll.top/vpn/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -122,6 +115,13 @@
   
   <url>
     <loc>http://waxll.top/vpn/Quantumult/index.html</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://waxll.top/vpn/Shadowsocks/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -163,6 +163,13 @@
   </url>
   
   <url>
+    <loc>http://waxll.top/photo2/index.html</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://waxll.top/photo/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
@@ -177,13 +184,6 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/photo2/index.html</loc>
-    
-    <lastmod>2021-03-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://waxll.top/tags/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>http://waxll.top/blog/categories/index.html</loc>
+    <loc>http://waxll.top/blog/tags/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://waxll.top/blog/tags/index.html</loc>
+    <loc>http://waxll.top/blog/categories/index.html</loc>
     
     <lastmod>2021-03-24</lastmod>
     
